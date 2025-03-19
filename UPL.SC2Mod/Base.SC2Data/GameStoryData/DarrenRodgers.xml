@@ -43,35 +43,16 @@
         <EditorCategories value="Race:UPL"/>
         <AttributeBonus index="Structure" value="10"/>
     </CEffectDamage>
-    <CAbilEffectInstant id="DarrenRodgersSwapToShield">
-        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
-        <Flags index="Transient" value="1"/>
-        <Cost>
-            <Cooldown Link="Abil/DarrenRodgersWeaponSwitch" Location="Unit" TimeUse="2"/>
-        </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="DarrenRodgersSwapToShield" Requirements="HasNotDarrenRodgersShield"/>
-        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
-    </CAbilEffectInstant>
-    <CAbilEffectInstant id="DarrenRodgersSwapToShotgun">
-        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
-        <Flags index="Transient" value="1"/>
-        <Cost>
-            <Cooldown Link="Abil/DarrenRodgersWeaponSwitch" Location="Unit" TimeUse="2"/>
-        </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MyraDavisSwapToShotgun" Requirements="HasNotDarrenRodgersShotgun"/>
-        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
-    </CAbilEffectInstant>
-    <CAbilEffectInstant id="DarrenRodgersShield">
-        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
-        <Effect index="0" value="DarrenRodgersShield@Set"/>
-        <Flags index="Transient" value="1"/>
-        <Cost>
-            <Cooldown TimeUse="10"/>
-        </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="DarrenRodgersShield">
-            <Flags index="ToSelection" value="1"/>
-        </CmdButtonArray>
-    </CAbilEffectInstant>
+    <CValidatorPlayerRequirement id="GuardianUpgraded">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="HaveUPLGuardianShieldUpgrade"/>
+    </CValidatorPlayerRequirement>
+    <CRequirement id="HaveUPLGuardianShieldUpgrade">
+        <EditorCategories value="Race:UPL"/>
+        <NodeArray index="Use" Link="CountUpgradeRiotOfficerShieldCompleteOnly3245113607TechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountBehaviorDarrenRodgersShieldCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="HasNotDarrenRodgersShield">
         <NodeArray index="Use" Link="CountUpgradeRiotOfficerShieldCompleteOnly3245113607TechTreeCheat"/>
         <NodeArray index="Show" Link="NotCountBehaviorDarrenRodgersShieldCompleteOnlyAtUnit"/>
@@ -132,23 +113,14 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <Sound value="DarrenRodgersShield"/>
     </CActorSound>
-    <CActorUnit id="DarrenRodgers" parent="LOTC_OfficerBase" unitName="DarrenRodgers">
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
-        </GroupIcon>
-        <UnitIcon value="Assets\Textures\btn-unit-upl-uplriotofficer.dds"/>
-        <UnitKillRank Text="UnitKillRank/DarrenRodgers"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
-        </Wireframe>
-        <HeroIcon value="Assets\Textures\ui-heroicon-DarrenRodgers.dds"/>
-        <UnitBorderNormalColor value="150,150,150"/>
-        <UnitBorderSubgroupColor value="255,255,255"/>
+    <CActorUnit id="UPLInfantryGuardian" parent="LOTC_OfficerBase" unitName="UPLInfantryGuardian">
+        <Macros index="4" removed="1"/>
         <On index="81" Terms="Behavior.DarrenRodgersShield.Off" Send="AnimGroupRemove E Instant"/>
         <On index="82" Terms="Behavior.DarrenRodgersShield.Off" Send="AnimGroupRemove Cover Instant"/>
         <On index="84" Terms="Behavior.UPLRiotOfficerShotgun.On" Send="AnimGroupApply D {} {} Instant"/>
+        <On Terms="ActorCreation; ValidateUnit GuardianUpgraded" Send="Create RiotShield"/>
+        <On Terms="Upgrade.RiotOfficerShield.Add" Send="Create RiotShield"/>
         <On Terms="ActorCreation" Send="Create"/>
-        <On Terms="ActorCreation" Send="Create RiotShield"/>
         <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
         <On Terms="Abil.attack.ReadyStart" Send="StatusSet Ready 1"/>
         <On Terms="Abil.attack.ReadyStart" Send="Signal ReadyStart"/>
@@ -211,7 +183,130 @@
         <On Terms="UnitDamaged; IsStatus Weapon 4" Send="AnimPlay Hit Hit NonLooping"/>
         <On Terms="Behavior.DarrenRodgersShield.On" Send="Signal ClearReadyState"/>
         <On Terms="Behavior.DarrenRodgersShield.Off" Send="AnimClear Hit"/>
+        <Model value="DarrenRodgers"/>
+        <BuildModel value="DarrenRodgers"/>
+        <DeathArray index="Normal" ModelLink="DarrenRodgersDeath" VoiceLink="DarrenRodgers_Death"/>
+        <DeathArray index="Disintegrate" ModelLink="DarrenRodgersDeathAcid"/>
+        <DeathArray index="Fire" ModelLink="DarrenRodgersDeathFire"/>
+        <DeathCustoms index="5" ActorModel="UnitDeathRagdollWithTeamColor" ModelLink="DarrenRodgersDeathRagdoll" Name="RagdollBasic"/>
+        <DeathCustoms index="12" ActorModel="SpineCrawlerHurlDeathRagdollWithTeamColorBloodPrevent" ModelLink="DarrenRodgersDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
+        <PlacementModel value="DarrenRodgers"/>
+        <PortraitModel value="DarrenRodgersPortrait"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-DarrenRodgers.dds"/>
+        <SoundArray index="Ready" value="DarrenRodgers_Ready"/>
+        <SoundArray index="Help" value="DarrenRodgers_Help"/>
+        <SoundArray index="What" value="DarrenRodgers_What"/>
+        <SoundArray index="Yes" value="DarrenRodgers_Yes"/>
+        <SoundArray index="Attack" value="DarrenRodgers_Attack"/>
+        <SoundArray index="Pissed" value="DarrenRodgers_Pissed"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\btn-unit-upl-uplriotofficer.dds"/>
+        <UnitKillRank Text="UnitKillRank/UPLInfantryGuardian"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="UPLInfantryGuardianSieged" parent="LOTC_OfficerBase" unitName="UPLInfantryGuardianSieged">
         <Macros index="4" removed="1"/>
+<!--        <On index="81" Terms="Behavior.DarrenRodgersShield.Off" Send="AnimGroupRemove E Instant"/>-->
+<!--        <On index="82" Terms="Behavior.DarrenRodgersShield.Off" Send="AnimGroupRemove Cover Instant"/>-->
+<!--        <On index="84" Terms="Behavior.UPLRiotOfficerShotgun.On" Send="AnimGroupApply D {} {} Instant"/>-->
+        <On Terms="ActorCreation" Send="Create"/>
+<!--        <On Terms="ActorCreation" Send="Create RiotShield"/>-->
+        <On Terms="ActorCreation" Send="Signal ClearReadyState"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply E"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Cover"/>
+<!--        <On Terms="Behavior.DarrenRodgersShield.Off" Send="AnimClear Hit"/>-->
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="Abil.attack.ReadyStart" Send="StatusSet Ready 1"/>
+        <On Terms="Abil.attack.ReadyStart" Send="Signal ReadyStart"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimClear Ready"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimClear ReadyTransient"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimPlay ReadyTransient Stand,Ready PlayForever"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimClear Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimClear ReadyTransient"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimPlay ReadyTransient Stand,Ready PlayForever"/>
+        <On Terms="Abil.attack.ReadyStart" Send="StatusSet AttackReady 1"/>
+        <On Terms="Abil.attack.ReadyStart" Send="TimerKill StandReadyOutroDuration"/>
+        <On Terms="Abil.attack.ReadyStop" Send="StatusSet AttackReady 0"/>
+        <On Terms="Abil.attack.ReadyStop; IsStatus Weapon 4" Send="Signal ClearReadyState"/>
+        <On Terms="Abil.attack.ReadyStop; !IsStatus Weapon 4" Send="TimerSet 2.350000,2.500000 StandReadyOutroDuration"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady" Send="AnimGroupRemove Ready"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady; !UnitWalking; IsStatus WeaponTargetHeight 0" Send="AnimPlay Ready Stand,Ready,End 0 0.000000 0.000000"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady; !UnitWalking; IsStatus WeaponTargetHeight 1" Send="AnimPlay Ready Stand,Ready,Inferior,End 0 0.000000 0.000000"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady; !UnitWalking; IsStatus WeaponTargetHeight 2" Send="AnimPlay Ready Stand,Ready,Superior,End 0 0.000000 0.000000"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady" Send="StatusSet WeaponTargetHeight 0"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady" Send="StatusSet Ready 0"/>
+        <On Terms="TimerExpired; TimerName StandReadyOutroDuration; !HasStatus AttackReady" Send="AnimClear ReadyTransient"/>
+        <On Terms="AnimDone; AnimName Ready; AnimPlayingProps Stand,Ready,End" Send="Signal ClearReadyState"/>
+        <On Terms="ActorCreation" Send="StatusSet WeaponTargetHeight 0"/>
+        <On Terms="WeaponStart.*.AttackStart; !IsStatus WeaponTargetHeight 0" Send="StatusSet WeaponTargetHeight 0"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="StatusSet WeaponTargetHeight 1"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="StatusSet WeaponTargetHeight 2"/>
+        <On Terms="StatusSet.*.WeaponTargetHeight; IsStatus WeaponTargetHeight 0" Send="AnimGroupRemove Superior"/>
+        <On Terms="StatusSet.*.WeaponTargetHeight; IsStatus WeaponTargetHeight 0" Send="AnimGroupRemove Inferior"/>
+        <On Terms="StatusSet.*.WeaponTargetHeight; IsStatus WeaponTargetHeight 1" Send="AnimGroupApply Inferior"/>
+        <On Terms="StatusSet.*.WeaponTargetHeight; IsStatus WeaponTargetHeight 2" Send="AnimGroupApply Superior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="Signal AttackStartSignal"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="Signal AttackStopSignal"/>
+        <On Terms="UnitMovementUpdate.*.Walk; !IsStatus WeaponTargetHeight 0" Send="StatusSet WeaponTargetHeight 0"/>
+        <On Terms="UnitMovementUpdate.*.Walk; !HasStatus AttackReady" Send="Signal ClearReadyState"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Ready Stand,Ready,End" Send="AnimClear Ready"/>
+        <On Terms="AnimPlay; AnimName Talk" Send="Signal ClearReadyState"/>
+        <On Terms="AnimBracketStop; AnimName WorkSpell" Send="Signal ApplyReady"/>
+        <On Terms="Signal.*.ApplyReady" Send="AnimGroupApply Ready"/>
+        <On Terms="Signal.*.ApplyReady" Send="AnimClear ReadyTransient"/>
+        <On Terms="Signal.*.ApplyReady" Send="AnimClear Ready"/>
+        <On Terms="Signal.*.ApplyReady" Send="AnimPlay ReadyTransient Stand,Ready PlayForever"/>
+        <On Terms="Signal.*.ApplyReady" Send="StatusSet Ready 1"/>
+        <On Terms="Signal.*.ApplyReady" Send="Signal ReadyStart"/>
+        <On Terms="Signal.*.ApplyReady" Send="TimerKill StandReadyOutroDuration"/>
+        <On Terms="Signal.*.ApplyReady; !IsStatus Weapon 4" Send="TimerSet 2.350000,2.500000 StandReadyOutroDuration"/>
+        <On Terms="Signal.*.ClearReadyState" Send="AnimGroupRemove Ready"/>
+        <On Terms="Signal.*.ClearReadyState" Send="AnimClear ReadyTransient"/>
+        <On Terms="Signal.*.ClearReadyState" Send="AnimClear Ready"/>
+        <On Terms="Signal.*.ClearReadyState" Send="TimerKill StandReadyOutroDuration"/>
+        <On Terms="Signal.*.ClearReadyState" Send="StatusSet Ready 0"/>
+        <On Terms="Signal.*.ClearReadyState" Send="StatusSet AttackReady 0"/>
+        <On Terms="Signal.*.ClearReadyState" Send="StatusSet WeaponTargetHeight 0"/>
+        <On Terms="Signal.*.ClearReadyState" Send="Signal ReadyEnd"/>
+        <On Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlayingName Attack" Send="AnimClear Attack"/>
+        <On Terms="AnimPlay; AnimName Spell; AnimPlayingName Attack" Send="AnimClear Attack"/>
+        <On Terms="Signal.*.AttackStartSignal" Send="AnimPlay Attack Attack"/>
+        <On Terms="Signal.*.AttackStopSignal" Send="AnimClear Attack"/>
+        <On Terms="UnitDamaged; IsStatus Weapon 4" Send="AnimPlay Hit Hit NonLooping"/>
+        <Model value="DarrenRodgers"/>
+        <BuildModel value="DarrenRodgers"/>
+        <DeathArray index="Normal" ModelLink="DarrenRodgersDeath" VoiceLink="DarrenRodgers_Death"/>
+        <DeathArray index="Disintegrate" ModelLink="DarrenRodgersDeathAcid"/>
+        <DeathArray index="Fire" ModelLink="DarrenRodgersDeathFire"/>
+        <DeathCustoms index="5" ActorModel="UnitDeathRagdollWithTeamColor" ModelLink="DarrenRodgersDeathRagdoll" Name="RagdollBasic"/>
+        <DeathCustoms index="12" ActorModel="SpineCrawlerHurlDeathRagdollWithTeamColorBloodPrevent" ModelLink="DarrenRodgersDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
+        <PlacementModel value="DarrenRodgers"/>
+        <PortraitModel value="DarrenRodgersPortrait"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\ui-heroicon-DarrenRodgers.dds"/>
+        <SoundArray index="Ready" value="DarrenRodgers_Ready"/>
+        <SoundArray index="Help" value="DarrenRodgers_Help"/>
+        <SoundArray index="What" value="DarrenRodgers_What"/>
+        <SoundArray index="Yes" value="DarrenRodgers_Yes"/>
+        <SoundArray index="Attack" value="DarrenRodgers_Attack"/>
+        <SoundArray index="Pissed" value="DarrenRodgers_Pissed"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\btn-unit-upl-uplriotofficer.dds"/>
+        <UnitKillRank Text="UnitKillRank/UPLInfantryGuardian"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\wireframe-upl-UPLRiotOfficer.dds"/>
+        </Wireframe>
     </CActorUnit>
     <CActorSiteOpLocalOffset id="RiotShieldOffset">
         <LocalOffset value="0.070000,-0.010000,-0.050000"/>
@@ -230,7 +325,7 @@
     </CActorModel>
     <CCharacter id="DarrenRodgers">
         <Image value="Assets\Textures\DarrenRodgers_Portrait_Static.tga"/>
-        <Unit value="DarrenRodgers"/>
+        <Unit value="UPLInfantryGuardian"/>
         <Variations Model="DarrenRodgersPortrait" Actor="PortraitActor">
             <DefaultCategories value="Default"/>
         </Variations>
@@ -382,18 +477,27 @@
     </CSound>
     <CDataCollectionUnit id="DarrenRodgers" parent="LotC_Unit">
         <EditorCategories value="ObjectType:Hero,DataGroup:Unit,DataFamily:Campaign,Race:UPL"/>
+        <DataRecord index="0" Entry="Actor,UPLInfantryGuardian"/>
+        <DataRecord index="3" Entry="Unit,UPLInfantryGuardian"/>
     </CDataCollectionUnit>
-    <CUnit id="DarrenRodgers" parent="UPLInfantryBase">
-        <UserTag value="Unit/ShortName/DarrenRodgers"/>
+    <CUnit id="UPLInfantryGuardian" parent="UPLInfantryBase">
+        <UserTag value="Unit/ShortName/UPLInfantryGuardian"/>
         <FlagArray index="AlwaysThreatens" value="1"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
+        <Food value="-1"/>
         <CostResource index="Minerals" value="50"/>
+        <RepairTime value="28"/>
         <AbilArray Link="DarrenRodgersSwapToShotgun"/>
         <AbilArray Link="DarrenRodgersSwapToShield"/>
+        <AbilArray Link="MorphToInfantryGuardian"/>
+        <AbilArray Link="MorphToInfantryGuardianSieged"/>
         <BehaviorArray Link="UPLRiotOfficerShotgun"/>
         <BehaviorArray Link="InfantryMedkit"/>
         <BehaviorArray Link="InfantryMedkit@Handler"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="MyraDavisSwapToShotgun" Type="AbilCmd" AbilCmd="DarrenRodgersSwapToShotgun,Execute" Row="2" Column="1"/>
+<!--            <LayoutButtons Face="MyraDavisSwapToShotgun" Type="AbilCmd" AbilCmd="DarrenRodgersSwapToShotgun,Execute" Row="2" Column="1"/>-->
+            <LayoutButtons Face="MyraDavisSwapToShotgun" Type="AbilCmd" AbilCmd="MorphToInfantryGuardian,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="InfantryMedkit" Type="Passive" Requirements="InfantryMedkit@ChargeAvailable" Row="2" Column="2"/>
             <LayoutButtons>
                 <Face value="InfantryMedkit"/>
@@ -404,7 +508,8 @@
                 <Row value="2"/>
                 <Column value="2"/>
             </LayoutButtons>
-            <LayoutButtons Face="DarrenRodgersShield" Type="AbilCmd" AbilCmd="DarrenRodgersSwapToShield,Execute" Row="2" Column="0"/>
+<!--            <LayoutButtons Face="DarrenRodgersShield" Type="AbilCmd" AbilCmd="DarrenRodgersSwapToShield,Execute" Row="2" Column="0"/>-->
+            <LayoutButtons Face="DarrenRodgersShield" Type="AbilCmd" AbilCmd="MorphToInfantryGuardianSieged,Execute" Row="2" Column="0"/>
             <LayoutButtons>
                 <Face value="LotCUPLRiotTrooperBlastShotgunPassive"/>
                 <Type value="Passive"/>
@@ -414,17 +519,13 @@
                 <Column value="2"/>
             </LayoutButtons>
         </CardLayouts>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <GlossaryPriority value="12"/>
-        <AlliedPushPriority value="20"/>
-        <Food value="-1"/>
-        <RepairTime value="28"/>
+        <Radius value="0.4375"/>
         <ScoreMake value="50"/>
         <ScoreKill value="50"/>
-        <LifeMax value="50"/>
-        <LifeStart value="50"/>
-        <GlossaryAlias value="DarrenRodgers"/>
-        <Radius value="0.4375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryPriority value="12"/>
+        <GlossaryAlias value="UPLInfantryGuardian"/>
+        <AlliedPushPriority value="20"/>
         <!--            <AbilArray Link="UPLGuardianSwapToShotgun"/>-->
         <!--            <AbilArray Link="UPLGuardianSwapToPistol"/>-->
         <!--            <AbilArray Link="UPLGuardianSwapToShield"/>-->
@@ -448,13 +549,99 @@
         <!--                <LayoutButtons Face="MyraDavisHealingPatch" Type="AbilCmd" AbilCmd="MyraDavisHealingPatch,Execute" Row="1" Column="4"/>-->
         <!--            </CardLayouts>-->
     </CUnit>
+    <CUnit id="UPLInfantryGuardianSieged" parent="UPLInfantryGuardian">
+        <BehaviorArray index="0" Link="DarrenRodgersShield"/>
+        <LifeStart value="150"/>
+        <LifeMax value="150"/>
+        <WeaponArray Link="RiotShield"/>
+    </CUnit>
+
+    <CAbilEffectInstant id="DarrenRodgersSwapToShotgun">
+        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown Link="Abil/DarrenRodgersWeaponSwitch" Location="Unit" TimeUse="2"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MyraDavisSwapToShotgun" Requirements="HasNotDarrenRodgersShotgun"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectInstant>
+<!--    <CAbilEffectInstant id="DarrenRodgersShield">-->
+<!--        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>-->
+<!--        <Effect index="0" value="DarrenRodgersShield@Set"/>-->
+<!--        <Flags index="Transient" value="1"/>-->
+<!--        <Cost>-->
+<!--            <Cooldown TimeUse="10"/>-->
+<!--        </Cost>-->
+<!--        <CmdButtonArray index="Execute" DefaultButtonFace="DarrenRodgersShield">-->
+<!--            <Flags index="ToSelection" value="1"/>-->
+<!--        </CmdButtonArray>-->
+<!--    </CAbilEffectInstant>-->
+    <CAbilEffectInstant id="DarrenRodgersSwapToShield">
+        <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown Link="Abil/DarrenRodgersWeaponSwitch" Location="Unit" TimeUse="2"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DarrenRodgersSwapToShield" Requirements="HasNotDarrenRodgersShield"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectInstant>
+
+    <CAbilMorph id="MorphToInfantryGuardianSieged">
+        <AbilSetId value="SiegeMode"/>
+        <EditorCategories value="Race:UPL,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DarrenRodgersShield" Requirements="HasNotDarrenRodgersShield">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="UPLInfantryGuardianSieged">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.1"/>
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.1"/>
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToInfantryGuardian">
+        <AbilSetId value="Unsieged"/>
+        <EditorCategories value="Race:UPL,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MyraDavisSwapToShotgun" Requirements="HasNotDarrenRodgersShotgun">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="UPLInfantryGuardian">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.1"/>
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.1"/>
+                <DurationArray index="Duration" value="0.1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+
     <CBehaviorBuff id="DarrenRodgersShield" parent="UPLPoliceOfficerWeaponBase">
         <InfoFlags index="Hidden" value="0"/>
         <InfoIcon value="Assets\Textures\btn-ability-UPL-ShieldDefense.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
         <Modification MoveSpeedMultiplier="0.66">
-            <VitalMaxFractionArray index="Life" value="1.5"/>
-            <WeaponArray index="0" Link="RiotShield"/>
+<!--            <VitalMaxFractionArray index="Life" value="1.5"/>-->
+<!--            <WeaponArray index="0" Link="RiotShield"/>-->
         </Modification>
     </CBehaviorBuff>
 </Catalog>

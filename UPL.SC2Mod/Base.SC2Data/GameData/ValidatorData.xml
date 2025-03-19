@@ -330,7 +330,7 @@
         <Value value="LillyRollins"/>
     </CValidatorUnitType>
     <CValidatorUnitType id="IsDarrenRodgers">
-        <Value value="DarrenRodgers"/>
+        <Value value="UPLInfantryGuardian"/>
     </CValidatorUnitType>
     <CValidatorUnitType id="IsMilesJenkins">
         <Value value="MilesJenkins"/>
@@ -566,7 +566,7 @@
         <Value value="UPLBattleStation"/>
     </CValidatorUnitType>
     <CValidatorUnitType id="IsUPLGuardian">
-        <Value value="DarrenRodgers"/>
+        <Value value="UPLInfantryGuardian"/>
     </CValidatorUnitType>
     <CValidatorUnitCompareBehaviorCount id="UnknownValidator3">
         <Value value="1"/>

@@ -2688,7 +2688,6 @@
         <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
         <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
         <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
-        <RingRadius value="0.750000"/>
     </CActorUnit>
     <CActorSiteOpLocalOffset id="TR17WheelsLeft">
         <LocalOffset value="0.550000,0.500000,0.000000"/>
@@ -3597,7 +3596,6 @@
         <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
         <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
         <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
-        <!--        <RingRadius value="0.500000"/>-->
     </CActorUnit>
     <CActorUnit id="A6" parent="GenericUnitMorph" unitName="A6">
         <Aliases value="_UnitLarge"/>

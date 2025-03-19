@@ -585,7 +585,7 @@
         </InfoArray>
         <InfoArray index="Train11" Time="30.8">
             <Button DefaultButtonFace="UPLTrainGuardian"/>
-            <Unit value="DarrenRodgers"/>
+            <Unit value="UPLInfantryGuardian"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilTrain id="UPLHeadquartersTrain">
@@ -2995,7 +2995,6 @@
         <SubgroupPriority value="3"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Other,ObjectFamily:Melee"/>
-        <GlossaryCategory value="Unit/Category/0UPLUnits"/>
         <GlossaryCategory value="Unit/Category/0UPLBuildings"/>
         <GlossaryPriority value="250"/>
         <HotkeyCategory value="Unit/Category/UPLUnits"/>

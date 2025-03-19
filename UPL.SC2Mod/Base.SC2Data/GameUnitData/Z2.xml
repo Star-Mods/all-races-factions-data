@@ -1043,7 +1043,7 @@
         <CardLayouts index="0">
             <LayoutButtons Face="Z2JumpJet" Type="AbilCmd" AbilCmd="Z2JumpJet,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="Z2Lorna" Type="AbilCmd" AbilCmd="Z2Lorna,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="Z2Dash" Type="AbilCmd" AbilCmd="UPLDash,255" Row="2" Column="2"/>
+            <LayoutButtons Face="Z2Dash" Type="AbilCmd" AbilCmd="UPLDash,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Z2Adrenaline" Type="AbilCmd" AbilCmd="Z2Adrenaline,Execute" Row="2" Column="3"/>
             <LayoutButtons>
                 <Face value="LotCUPLStarMechaPassive"/>

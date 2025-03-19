@@ -646,7 +646,7 @@ DataCollection/Name/ZHBRWarrior=[Hybrid] - Warrior
 DataCollection/Name/ZHBRWarriorDeconstruction=[Hybrid] - Warrior - Deconstruction
 DataCollection/Name/ZHBRWarriorWeapon=[Hybrid] - Warrior - Weapon
 DocInfo/DescLong=Main Data Mod used for including in the extension mods
-DocInfo/Name=[AR2] Zero Custom Races Data
+DocInfo/Name=[AR3] ZCR
 DocInfo/Website=https://discord.gg/Q5UfjRXfHa
 Effect/Name/GenericRemoveCaster=Generic - Remove Caster
 Effect/Name/RadiusTestSearchArea=Radius Test Search Area
@@ -991,6 +991,7 @@ RequirementNode/Tooltip/ProcessingCoreinNetwork=Atleast 1 Processing Core in Net
 RequirementNode/Tooltip/ZHBRArmorLevel1=Hybrid Ground Armor Level 1
 SimpleDisplay/ZHBRMinionHarvest@Gather=<IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">to Gather Resources</s>
 UI/HelpControl_RaceControl=Select All Structures and Minions<k val="WarpIn" count="100"/>
+UI/HelpMenuDialogTechGlossary_Control_Unit/Category/ZHBRUnits=Void Forces Army
 UI/ResourceSupplyToolTip_ZHBR=All living units cost supply. Build Ionic Crystals to increase supply. 
 UI/Teleporting=Teleporting
 UI/Tooltip/Protection=<c val="FFFFFF">Protection:</c> 
@@ -1149,4 +1150,3 @@ Weapon/Name/ZHBRWarbringerWeaponMaceCannon=Mace Cannon
 Weapon/Name/ZHBRWarbringerWeaponMaceStrike=Mace Strike
 Weapon/Name/ZHBRWarriorWeapon=Psi Orb
 e_cmdMustTargetZHBR=Must target Void Forces units.
-UI/HelpMenuDialogTechGlossary_Control_Unit/Category/ZHBRUnits=Void Forces Army

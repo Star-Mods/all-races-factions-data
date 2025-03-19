@@ -2703,7 +2703,7 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="ALLRACE2SynodBuoyActivateSiegeMode" Type="AbilCmd" AbilCmd="BuoySiege,On" Row="2" Column="0"/>
+            <LayoutButtons Face="SynoidBuoyActivateSiegeMode" Type="AbilCmd" AbilCmd="BuoySiege,On" Row="2" Column="0"/>
             <LayoutButtons Face="SynoidBuoyDeactivateSiegeMode" Type="AbilCmd" AbilCmd="BuoySiege,Off" Row="2" Column="0"/>
             <LayoutButtons Face="SynoidBuoyJump" Type="AbilCmd" AbilCmd="SynoidBuoyWrapJump,Execute" Row="2" Column="1"/>
         </CardLayouts>

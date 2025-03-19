@@ -1,5 +1,5 @@
 ﻿Button/Hotkey/=H
-Button/Hotkey/ALLRACE2SynodBuoyActivateSiegeMode=E
+Button/Hotkey/SynoidBuoyActivateSiegeMode=E
 Button/Hotkey/AnathemaLightningStorm=R
 Button/Hotkey/AnathemaMyoko=W
 Button/Hotkey/Assembly=S

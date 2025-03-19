@@ -367,9 +367,9 @@
         <Icon value="Assets\Textures\GriffonInterceptormode.dds"/>
         <AlertIcon value="Assets\Textures\GriffonInterceptormode.dds"/>
         <EditorCategories value="Race:Synoid"/>
-        <HotkeySet value="Activate Defense Field"/>
+        <HotkeySet value="ActivateDefenseField"/>
     </CButton>
-    <CButton id="ALLRACE2SynodBuoyActivateSiegeMode">
+    <CButton id="SynoidBuoyActivateSiegeMode">
         <Icon value="Assets\Textures\BuoySiege.dds"/>
         <AlertIcon value="Assets\Textures\BuoySiege.dds"/>
         <EditorCategories value="Race:Synoid"/>

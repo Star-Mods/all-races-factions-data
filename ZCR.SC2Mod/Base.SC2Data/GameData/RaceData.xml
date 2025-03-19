@@ -2,7 +2,7 @@
 <Catalog>
     <CRace id="ZHBR">
         <AttributeId value="ZHBR"/>
-        <Icon value="assets\Lobby\lobby-hybrid.dds"/>
+        <Icon value="assets\Icons\lobby-hybrid.dds"/>
         <GameMusic value="Music_ProtLow"/>
         <Flags index="Selectable" value="1"/>
         <Flags index="TrialAllowed" value="1"/>

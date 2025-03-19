@@ -79,7 +79,7 @@
         <WeaponArray index="0" removed="1"/>
         <ScoreMake value="50"/>
         <ScoreKill value="50"/>
-        <ReviveType value="DarrenRodgers"/>
+        <ReviveType value="UPLInfantryGuardian"/>
         <LifeStart value="45"/>
         <LifeMax value="45"/>
     </CUnit>

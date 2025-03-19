@@ -290,9 +290,9 @@
         <EffectArray Reference="Unit,KatherineHalseyElder,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,KatherineHalseyElder,LifeArmorLevel" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,KatherineHalseyElder,LifeArmorIcon" Value="##path####lvl##.dds"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeArmor" Value="1"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeArmorLevel" Value="1"/>
-        <EffectArray Operation="Set" Reference="Actor,DarrenRodgers,LifeArmorIcon" Value="##path####lvl##.dds"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeArmorLevel" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,UPLInfantryGuardian,LifeArmorIcon" Value="##path####lvl##.dds"/>
         <EffectArray Reference="Unit,MilesJenkins,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,MilesJenkins,LifeArmorLevel" Value="1"/>
         <EffectArray Operation="Set" Reference="Actor,MilesJenkins,LifeArmorIcon" Value="##path####lvl##.dds"/>
@@ -328,7 +328,7 @@
         <AffectedUnitArray value="KatherineHalsey"/>
         <AffectedUnitArray value="KatherineHalseyPistol"/>
         <AffectedUnitArray value="KatherineHalseyElder"/>
-        <AffectedUnitArray value="DarrenRodgers"/>
+        <AffectedUnitArray value="UPLInfantryGuardian"/>
         <AffectedUnitArray value="MilesJenkins"/>
         <AffectedUnitArray value="RusellPeters"/>
         <AffectedUnitArray value="GordonTrenchard"/>
@@ -473,10 +473,10 @@
         <Icon value="Assets\Textures\btn-ability-UPL-ShieldDefense.dds"/>
         <Race value="UPL"/>
         <ScoreAmount value="300"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeStart" Value="15"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeMax" Value="15"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeStart" Value="15"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeMax" Value="15"/>
         <EditorCategories value="Race:UPL,UpgradeType:Talents"/>
-        <AffectedUnitArray value="DarrenRodgers"/>
+        <AffectedUnitArray value="UPLInfantryGuardian"/>
     </CUpgrade>
     <CUpgrade id="SeekerShell">
         <Icon value="Assets\Textures\btn-upgrade-seekerdrone-permanentlycloaked.dds"/>
@@ -722,9 +722,9 @@
         <EffectArray index="56" Operation="Add" Reference="Unit,KatherineHalseyElder,LifeArmor" Value="1"/>
         <EffectArray index="57" Reference="Unit,KatherineHalseyElder,LifeArmorLevel" Value="1"/>
         <EffectArray index="58" Operation="Set" Reference="Actor,KatherineHalseyElder,LifeArmorIcon" Value="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl2.dds"/>
-        <EffectArray index="59" Operation="Add" Reference="Unit,DarrenRodgers,LifeArmor" Value="1"/>
-        <EffectArray index="60" Reference="Unit,DarrenRodgers,LifeArmorLevel" Value="1"/>
-        <EffectArray index="61" Operation="Set" Reference="Actor,DarrenRodgers,LifeArmorIcon" Value="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl2.dds"/>
+        <EffectArray index="59" Operation="Add" Reference="Unit,UPLInfantryGuardian,LifeArmor" Value="1"/>
+        <EffectArray index="60" Reference="Unit,UPLInfantryGuardian,LifeArmorLevel" Value="1"/>
+        <EffectArray index="61" Operation="Set" Reference="Actor,UPLInfantryGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl2.dds"/>
         <EffectArray index="62" Operation="Add" Reference="Unit,MilesJenkins,LifeArmor" Value="1"/>
         <EffectArray index="63" Reference="Unit,MilesJenkins,LifeArmorLevel" Value="1"/>
         <EffectArray index="64" Operation="Set" Reference="Actor,MilesJenkins,LifeArmorIcon" Value="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl2.dds"/>
@@ -736,11 +736,11 @@
         <EffectArray index="70" Operation="Set" Reference="Actor,GordonTrenchard,LifeArmorIcon" Value="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl2.dds"/>
         <EffectArray index="71" Operation="Add" Reference="Effect,RiotShieldDamage,Amount" Value="3"/>
         <EffectArray index="72" Operation="Set" Reference="Weapon,RiotShield,Level" Value="2"/>
-        <EffectArray index="73" Reference="Unit,DarrenRodgers,LifeMax" Value="5"/>
+        <EffectArray index="73" Reference="Unit,UPLInfantryGuardian,LifeMax" Value="5"/>
         <EffectArray index="74" Operation="Add" Reference="Unit,UPLSpecOps,LifeStart" Value="5"/>
         <EffectArray index="75" Reference="Unit,UPLScout,LifeMax" Value="5"/>
         <EffectArray index="76" Reference="Unit,InfantryHeavy,LifeMax" Value="5"/>
-        <EffectArray index="77" Operation="Add" Reference="Unit,DarrenRodgers,LifeStart" Value="5"/>
+        <EffectArray index="77" Operation="Add" Reference="Unit,UPLInfantryGuardian,LifeStart" Value="5"/>
         <EffectArray index="78" Reference="Unit,UPLSpecOps,LifeMax" Value="5"/>
         <EffectArray index="79" Reference="Unit,UPLScout,LifeStart" Value="5"/>
         <EffectArray index="80" Operation="Add" Reference="Unit,InfantryHeavy,LifeStart" Value="5"/>
@@ -767,8 +767,8 @@
         <EffectArray Reference="Effect,RiotShieldDamage,Amount" Value="3"/>
         <EffectArray Reference="Unit,InfantryRifle,LifeMax" Value="5"/>
         <EffectArray Reference="Unit,InfantryRifle,LifeStart" Value="5"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeStart" Value="5"/>
-        <EffectArray Reference="Unit,DarrenRodgers,LifeMax" Value="5"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeStart" Value="5"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardian,LifeMax" Value="5"/>
         <EffectArray Reference="Unit,UPLSpecOps,LifeStart" Value="5"/>
         <EffectArray Reference="Unit,UPLSpecOps,LifeMax" Value="5"/>
         <EffectArray Reference="Unit,InfantryHeavySieged,LifeArmorLevel" Value="1"/>
@@ -940,6 +940,6 @@
         <EffectArray Reference="Effect,UPLRiotOfficerShotgunDamage,Amount" Value="6"/>
         <EffectArray Reference="Weapon,UPLRiotOfficerShotgun,Level" Value="2"/>
         <EditorCategories value="Race:UPL,UpgradeType:Talents"/>
-        <AffectedUnitArray value="DarrenRodgers"/>
+        <AffectedUnitArray value="UPLInfantryGuardian"/>
     </CUpgrade>
 </Catalog>

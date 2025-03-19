@@ -3703,11 +3703,11 @@
         </CardLayouts>
         <SubgroupPriority value="12"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <GlossaryPriority value="21"/>
-        <AlliedPushPriority value="5"/>
-        <GlossaryCategory value=""/>
         <HotkeyAlias value=""/>
+        <GlossaryCategory value=""/>
+        <GlossaryPriority value="21"/>
         <HotkeyCategory value=""/>
+        <AlliedPushPriority value="5"/>
     </CUnit>
     <CUnit id="UPLInfantrySniper" parent="UPLInfantryBase">
         <Food value="-1"/>
@@ -4182,7 +4182,7 @@
         <EffectArray Reference="Weapon,UPLScout,Range" Value="1"/>
         <Race value="UPL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
-        <AffectedUnitArray value="DarrenRodgers"/>
+        <AffectedUnitArray value="UPLInfantryGuardian"/>
         <AffectedUnitArray value="InfantryHeavy"/>
         <AffectedUnitArray value="InfantryHeavySieged"/>
         <AffectedUnitArray value="UPLSpecOps"/>

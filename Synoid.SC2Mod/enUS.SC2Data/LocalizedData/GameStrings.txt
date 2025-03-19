@@ -139,7 +139,7 @@ Behavior/Tooltip/midastouch=THE PHARAOH'S CURSE
 Button/ChargeText/Requisition=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/RequisitionSource=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/SuperPowerRequirement=<d ref="$BehaviorStackCount:RequisitionRes$"/>
-Button/Name/ALLRACE2SynodBuoyActivateSiegeMode=Activate Siege Mode
+Button/Name/SynoidBuoyActivateSiegeMode=Activate Siege Mode
 Button/Name/AnathemaLightningStorm=EMP-PSI Scrambler
 Button/Name/AnathemaMyoko=Myoko Cannons
 Button/Name/Assembly=Deploy Assembly
@@ -252,7 +252,7 @@ Button/Name/UpgradeMechanicalPlatingLevel3=Upgrade Mechanical Plating Level 3
 Button/Name/WalkerBeacon=Assemble Walker Beacon
 Button/Name/WarhoundSawblade=Sawblade
 Button/Name/ZerglingProjection=Zergling Projection
-Button/Tooltip/ALLRACE2SynodBuoyActivateSiegeMode=Elevate Buoy and increase their line of sight from 14 to 20, disable movement and suspend ability cooldown timer.
+Button/Tooltip/SynoidBuoyActivateSiegeMode=Elevate Buoy and increase their line of sight from 14 to 20, disable movement and suspend ability cooldown timer.
 Button/Tooltip/ARESSynoid=Armored weapons platform. Can be outfitted with various specialized weapons.
 Button/Tooltip/ActuationCenter=Primary structure. Can receive gathered resources.<n/><n/><c val="ffff8a">Enables:</c><n/>- Catalysts <n/>- Power Supply
 Button/Tooltip/AnathemaLightningStorm=Disables all enemy mechanical units within <d ref="Effect,SJPirateLightningStorm,PeriodCount * 0.5 + 0.5"/> range for a short time.<n/>

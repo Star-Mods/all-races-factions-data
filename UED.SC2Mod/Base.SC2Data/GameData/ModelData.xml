@@ -661,7 +661,7 @@
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="SupplyDropModel2TomSawyer" parent="SupplyDepotAttachmentBase">
-        <Model value="Assets\Structures\UED_Sensor_Tower\UED_SensorTower_V1.m3"/>
+        <Model value="Assets\Buildings\UED_Sensor_Tower\UED_SensorTower_V1.m3"/>
         <EditorCategories value="Race:UED"/>
         <ScaleMax value="0.610000,0.610000,0.610000"/>
         <ScaleMin value="0.610000,0.610000,0.610000"/>
@@ -675,7 +675,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="MunitionsFactory" parent="ArmoryBase">
-        <Model value="Assets\Structures\UED\UED_Armory\UED_Armory.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Armory\UED_Armory.m3"/>
         <ScaleMax value="1.200000,1.200000,1.200000"/>
         <ScaleMin value="1.200000,1.200000,1.200000"/>
         <SelectionRadius value="2.300000"/>
@@ -683,13 +683,13 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StarshipMaintenancePlant" parent="ArmoryBase">
-        <Model value="Assets\Structures\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
         <SelectionRadius value="2.600000"/>
         <ShadowRadius value="2.600000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="MilitaryResearchStation" parent="ArmoryBase">
-        <Model value="Assets\Structures\UED\UED_FusionCore\UED_FusionCore_V3.m3"/>
+        <Model value="Assets\Buildings\UED\UED_FusionCore\UED_FusionCore_V3.m3"/>
         <SelectionRadius value="2.100000"/>
         <ShadowRadius value="2.100000"/>
         <EditorCategories value="Race:UED"/>
@@ -707,21 +707,21 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="MunitionsFactoryPlacement" parent="ArmoryPlacementBase" low="MunitionsFactory">
-        <Model value="Assets\Structures\UED\UED_Armory_Placement\UED_Armory_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Armory_Placement\UED_Armory_Placement.m3"/>
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StarshipMaintenancePlantPlacement" parent="ArmoryPlacementBase" low="StarshipMaintenancePlant">
-        <Model value="Assets\Structures\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
         <SelectionLayer value="2"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="MilitaryResearchStationPlacement" parent="ArmoryPlacementBase" low="MilitaryResearchStation">
-        <Model value="Assets\Structures\UED\UED_FusionCore_Placement\UED_FusionCore_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_FusionCore_Placement\UED_FusionCore_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -1486,7 +1486,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="OperationHeadquarters" parent="CommandCenterBase">
-        <Model value="Assets\Structures\UED_Biodome_Command_Center\UED_BiodomeCommand_V1.m3"/>
+        <Model value="Assets\Buildings\UED_Biodome_Command_Center\UED_BiodomeCommand_V1.m3"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="OperationHeadquartersDeath" parent="CommandCenterDeathBase">
@@ -1576,13 +1576,13 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TacticsAcademy" parent="EngineeringBayBase">
-        <Model value="Assets\Structures\UED_Science_Facility\UED_ScienceFacility_V1.m3"/>
+        <Model value="Assets\Buildings\UED_Science_Facility\UED_ScienceFacility_V1.m3"/>
         <SelectionRadius value="2.700000"/>
         <ShadowRadius value="2.700000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="FieldBureau" parent="EngineeringBayBase">
-        <Model value="Assets\Structures\UED_Merc_Compound\UED_MercCompound_V2.m3"/>
+        <Model value="Assets\Buildings\UED_Merc_Compound\UED_MercCompound_V2.m3"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
         <SelectionRadius value="2.100000"/>
@@ -1622,7 +1622,7 @@
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
     <CModel id="TachyonRelay" parent="FusionCoreBase">
-        <Model value="Assets\Structures\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
         <SelectionOffset value="0.000000,-0.500000,-0.300000"/>
         <SelectionRadius value="2.700000"/>
         <ShadowRadius value="2.700000"/>
@@ -1633,7 +1633,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TachyonRelayPlacement" parent="FusionCorePlacementBase" low="TachyonRelay">
-        <Model value="Assets\Structures\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -1906,7 +1906,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="Refinery2" parent="RefineryBase">
-        <Model value="Assets\Structures\UED_Refinery_Automated\UED_RefineryAutomated_V1.m3"/>
+        <Model value="Assets\Buildings\UED_Refinery_Automated\UED_RefineryAutomated_V1.m3"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="RefineryDeath2" parent="RefineryDeathBase">
@@ -1939,7 +1939,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TeleportationNode" parent="StarportBase">
-        <Model value="Assets\Structures\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
         <SelectionRadius value="2.800000"/>
@@ -1951,14 +1951,14 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TeleportationNodePlacement" parent="StarportPlacementBase" low="TeleportationNode">
-        <Model value="Assets\Structures\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
+        <Model value="Assets\Buildings\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="InfusionTower" parent="SupplyDepotBase">
-        <Model value="Assets\Structures\UED_Hive_Mind_Emulator\UED_HiveMindEmulator_V1.m3"/>
+        <Model value="Assets\Buildings\UED_Hive_Mind_Emulator\UED_HiveMindEmulator_V1.m3"/>
         <EditorCategories value="Race:UED"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
