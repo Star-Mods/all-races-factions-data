@@ -16,6 +16,8 @@ git clone Star-Mods/all-races-factions-data <SC2Directory>/MODS/all-races-factio
 
 [**SC2 All Races Discord Server**](https://discord.gg/tR6958REu2)
 
+## Mods Info
+
 | Mod                                | Faction                     | Version | Sync Date  | Arcade Mod Name                   | Authors         | Discord Server                                               |
 |------------------------------------|-----------------------------|---------|------------|-----------------------------------|-----------------|--------------------------------------------------------------|
 | [Broodwar.SC2Mod](Broodwar.SC2Mod) | BWZerg, BWTerran, BWProtoss | 1.12.2  | 05.02.2025 | SCEVo Core, SCEVo Multi           | Kat             | [SC: Evolution Complete](https://discord.gg/7EunXC2E8N)      |
