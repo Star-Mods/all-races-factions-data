@@ -14,7 +14,8 @@ git clone Star-Mods/all-races-factions-data <SC2Directory>/MODS/all-races-factio
 
 ## Contacts
 
-[**SC2 All Races Discord Server**](https://discord.gg/tR6958REu2)
+Discord Server -  [**SC2 All Races**](https://discord.gg/tR6958REu2)
+Contact - Visceroid
 
 ## Mods Info
 
