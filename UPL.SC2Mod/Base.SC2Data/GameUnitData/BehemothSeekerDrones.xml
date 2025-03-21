@@ -264,7 +264,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
-            <LayoutButtons Face="UPLSeekerDronExplode" Type="AbilCmd" AbilCmd="UPLSeekerDroneExplode,255" Row="2" Column="0"/>
+            <LayoutButtons Face="UPLSeekerDronExplode" Type="AbilCmd" AbilCmd="UPLSeekerDroneExplode,Execute" Row="2" Column="0"/>
             <LayoutButtons>
                 <Face value="LotCUPLSeekerShellPassive"/>
                 <Type value="Passive"/>

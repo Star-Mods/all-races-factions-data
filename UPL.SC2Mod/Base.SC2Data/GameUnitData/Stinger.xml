@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="UPLTrainStinger">
+        <Icon value="Assets\Textures\btn-unit-terran-stinger@scbw.dds"/>
+        <EditorCategories value="Race:UPL"/>
+    </CButton>
     <CEffectDamage id="StingerMissileWeapon@Damage">
         <EditorCategories value="Race:UPL"/>
         <ResponseFlags index="Acquire" value="1"/>

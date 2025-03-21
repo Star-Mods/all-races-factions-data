@@ -1393,6 +1393,7 @@ UI/Hotkey/Tooltip/MenuMessages=Toggles the Achievements menu.
 UI/Morphing=Morphing
 UI/ResourceSupplyToolTip_UPL=All living units cost supply. Build Fusion Generators to increase supply.
 UI/Undeploying=Undeploying
+UPL=
 Unit/Category/0UPLBuildings=UPL Buildings
 Unit/Category/0UPLHeroes=UPL Units
 Unit/Category/0UPLUnits=UPL

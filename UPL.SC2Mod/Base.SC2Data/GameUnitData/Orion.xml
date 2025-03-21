@@ -20,10 +20,6 @@
         <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="StartUPLOrion"/>
     </CAbilEffectInstant>
-    <CButton id="UPLTrainStinger">
-        <Icon value="Assets\Textures\btn-unit-terran-stinger@scbw.dds"/>
-        <EditorCategories value="Race:UPL"/>
-    </CButton>
     <CButton id="UPLOrion">
         <Icon value="Assets\Textures\Wireframe-terran-colonistvehicle00.dds"/>
         <EditorCategories value="Race:Terr"/>
