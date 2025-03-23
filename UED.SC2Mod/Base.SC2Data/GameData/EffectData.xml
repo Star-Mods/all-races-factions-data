@@ -75,7 +75,7 @@
         </VitalArray>
     </CEffectModifyUnit>
     <CEffectSwitch id="UEDLazarusResurrectionEnergyCostSwitch">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:UED"/>
         <CaseArray Validator="ValidateStrikeTrooperUED" Effect="UEDLazarusResurrectStrikeTrooperSet"/>
         <CaseArray Validator="ValidateTaranisUED" Effect="UEDLazarusResurrectTaranisSet"/>
         <CaseArray Validator="ValidateLazarusUED" Effect="UEDLazarusResurrectLazarusSet"/>

@@ -935,7 +935,7 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Z2_Ready" parent="UPLHeroReady" Unit="RileyJerico">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\RileyJerico\RileyJerico_Attack01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\RileyJerico\RileyJerico_Attack01.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="Z2_Explode" parent="UPLHeroDeath" Unit="RileyJerico">

@@ -190,18 +190,18 @@
         <On Terms="Behavior.UEDAlgoritmMorphAcelerationTrain.Off" Send="Destroy"/>
         <Sound value="UEDModelSoundUpgradeNode"/>
     </CActorSound>
-    <CActorUnit id="UEDUnitSpartan" parent="GenericUnitBase" unitName="DrakkarAPC">
+    <CActorUnit id="UEDUnitSpartan" parent="GenericUnitBase" unitName="UEDUnitSpartan">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
         <Macros value="TerrainSquibAnimations"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
-        <On index="0" Terms="UnitBirth.UEDUnitSpartan"/>
-        <On index="1" Terms="UnitBirth.UEDUnitSpartan"/>
-        <On index="2" Terms="UnitRevive.UEDUnitSpartan"/>
-        <On index="3" Terms="UnitRevive.UEDUnitSpartan"/>
-        <On index="4" Terms="UnitConstruction.UEDUnitSpartan.Start"/>
-        <On index="5" Terms="UnitConstruction.UEDUnitSpartan.Finish"/>
+        <!--        <On index="0" Terms="UnitBirth.UEDUnitSpartan"/>-->
+        <!--        <On index="1" Terms="UnitBirth.UEDUnitSpartan"/>-->
+        <!--        <On index="2" Terms="UnitRevive.UEDUnitSpartan"/>-->
+        <!--        <On index="3" Terms="UnitRevive.UEDUnitSpartan"/>-->
+        <!--        <On index="4" Terms="UnitConstruction.UEDUnitSpartan.Start"/>-->
+        <!--        <On index="5" Terms="UnitConstruction.UEDUnitSpartan.Finish"/>-->
         <On Terms="WeaponStart.UEDSpartanGunGround.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <On Terms="WeaponStop.UEDSpartanGunGround.AttackStop" Send="AnimBracketStop Attack"/>
         <Model value="UEDModelSpartan"/>
@@ -1267,7 +1267,7 @@
         <StageArray AnimProps="Stand,Work"/>
     </CActorProgress>
     <CActorModel id="UEDCalldownWithBeacon" parent="TerranBuildingBuild">
-        <On index="4" Send="Create UEDCalldownWithBeaconSounds"/>
+        <On index="4" Terms="ActorCreation" Send="Create UEDCalldownWithBeaconSounds"/>
         <On Terms="ActorCreation" Send="AnimGroupApply Work"/>
     </CActorModel>
     <CActorModel id="UEDLightAnimationOpticalFlare_2" parent="ModelAnimationStyleContinuous">
@@ -1442,7 +1442,7 @@
         <Sound value="Terran_ConstructionEnd2"/>
     </CActorSound>
     <CActorModel id="UEDCalldownLarge" parent="TerranBuildingBuild">
-        <On index="4" Send="Create TerranConstructionAttached2"/>
+        <On index="4" Terms="ActorCreation" Send="Create TerranConstructionAttached2"/>
         <On Terms="ActorCreation" Send="AnimGroupApply Work"/>
         <Model value="CommandCenterBuild2"/>
     </CActorModel>
@@ -1981,6 +1981,7 @@
         <On Terms="Effect.BurrowChargeStructureTargetSearch.Start; At Caster" Send="StatusSet BurrowCharging 0"/>
         <!--        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimPlay {} Burrow"/>-->
         <On Terms="Abil.BurrowChargeRevD2.SourceCastStart" Send="StatusSet BurrowCharging 1"/>
+        <On Terms="ActorCreation" Send="TextureSelectById UEDGarmrDiffuse"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="GarmrDeath" SoundLink="Garmr_Explode"/>
         <DeathCustoms ModelLink="GarmrDeathRagdoll" Name="RagdollBasic">
@@ -2026,7 +2027,6 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-critter-lavacritter.dds"/>
         </Wireframe>
-        <On Terms="ActorCreation" Send="TextureSelectById UEDGarmrDiffuse"/>
     </CActorUnit>
     <CActorUnit id="GarmrDownUED" parent="GenericUnitBase" unitName="GarmrDownUED">
         <Model value="Garmr"/>
@@ -2444,7 +2444,7 @@
         <On Terms="Behavior.StarWind.On" Send="Create"/>
         <Sound value="Medivac_IgniteAfterburners32"/>
     </CActorSound>
-    <CActorUnit id="Medivac2" parent="GenericUnitStandard" unitName="TransportShuttle">
+    <CActorUnit id="TransportShuttle" parent="GenericUnitStandard" unitName="TransportShuttle">
         <Aliases value="_UnitLarge"/>
         <Macros value="MedivacTransportAnim"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -2504,7 +2504,6 @@
             <Image value="Assets\Textures\Wireframe-UED-Dropship.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\BTN-UED-Dropship.dds"/>
-        <HighlightTooltip value="Unit/Name/Medivac2"/>
         <LifeArmorIcon value="Assets\textures\btn-upgrade-ued-armor-level0.dds"/>
         <NameOffset value="50"/>
         <UnitIcon value="Assets\Textures\BTN-UED-Dropship.dds"/>
@@ -2512,7 +2511,7 @@
             <Image value="Assets\Textures\Wireframe-UED-Dropship.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="Medivac3" parent="GenericUnitStandard" unitName="SupportShuttle">
+    <CActorUnit id="SupportShuttle" parent="GenericUnitStandard" unitName="SupportShuttle">
         <Aliases value="_UnitLarge"/>
         <Macros value="MedivacTransportAnim"/>
         <Macros value="TerrainSquibAnimations"/>
@@ -4583,7 +4582,7 @@
         <On index="5" removed="1"/>
         <On index="6" removed="1"/>
         <LaunchSiteOps Ops="SOpAttachHarness UEDSOpMoveSpartanGroundAttack"/>
-        <LaunchAttachQuery Methods="AMFilterTurret" Fallback="Turret"/>
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMFilterWeaponSetA2 AMFilterWeaponSetA3 AMFilterWeaponSetA4"/>
         <LaunchAssets Model="UEDModelSpartanGroundLaunch" Sound="UEDSpartanAttackGroundBegin"/>
         <ImpactMap index="None" Model="DrakkarAPCAttackImpact" Sound="UEDSoundSpartanAttackGroundEnd" ModelReaction=""/>
         <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>

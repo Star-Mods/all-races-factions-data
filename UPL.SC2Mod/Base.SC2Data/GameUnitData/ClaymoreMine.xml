@@ -583,7 +583,7 @@
         <SoundArray index="Birth" value="ClaymoreMine_Place"/>
     </CActorUnit>
     <CModel id="ClaymoreMine" parent="Unit" Race="Terran">
-        <Model value="Assets\Units\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
+        <Model value="Assets\Units\UPL\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraLow02"/>
         <Radius value="0.200000"/>
@@ -595,7 +595,7 @@
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="ClaymoreMinePlacement" parent="Placement" Race="Terran">
-        <Model value="Assets\Units\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
+        <Model value="Assets\Units\UPL\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
         <SelectionRadius value="0.250000"/>
         <ShadowRadius value="0.250000"/>
         <EditorCategories value="Race:UPL"/>
@@ -605,7 +605,7 @@
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="ClaymoreMineDeath" parent="OneShotSpellFX">
-        <Model value="Assets\Units\ClaymoreMine\NanaKey_EF_ClaymoreBOOM.m3"/>
+        <Model value="Assets\Units\UPL\ClaymoreMine\NanaKey_EF_ClaymoreBOOM.m3"/>
 <!--        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>-->
         <Occlusion value="Show"/>
         <EditorCategories value="Race:UPL"/>

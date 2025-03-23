@@ -1809,7 +1809,7 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="RusellPeters_Ready" parent="UPLReady" Unit="RussellPeters">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.100000,-3.100000"/>
     </CSound>
     <CSound id="RusellPeters_What" parent="UPLAck" Unit="RussellPeters">
@@ -1874,27 +1874,27 @@
         <EditorCategories value="Race:UPL"/>
     </CSound>
     <CSound id="UPLEngineer_Death" parent="UPLDeath">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Death00.ogg" FacialAnim="TRaynor01Civilian700056"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Death01.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Death00.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Death01.ogg" FacialAnim="THanson01Civilian600016"/>
         <Pitch value="-2.000000,2.000000"/>
     </CSound>
     <CSound id="UPLEngineer_Help" parent="UPLHelp">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Help00.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Help00.ogg" FacialAnim="THanson01Civilian600016"/>
     </CSound>
     <CSound id="UPLEngineer_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What00.ogg" FacialAnim="TRaynor01Civilian700056"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What01.ogg" FacialAnim="THanson01Civilian600016"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What02.ogg" FacialAnim="TRaynor01Civilian700056"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What03.ogg" FacialAnim="THanson01Civilian600016"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What04.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What00.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What01.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What02.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What03.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_What04.ogg" FacialAnim="TRaynor01Civilian700056"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLEngineer_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes00.ogg" FacialAnim="TRaynor01Civilian700056"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes01.ogg" FacialAnim="THanson01Civilian600016"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes02.ogg" FacialAnim="TRaynor01Civilian700056"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes03.ogg" FacialAnim="THanson01Civilian600016"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes04.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes00.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes01.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes02.ogg" FacialAnim="TRaynor01Civilian700056"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes03.ogg" FacialAnim="THanson01Civilian600016"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLEngineer\UPLEngineer_Yes04.ogg" FacialAnim="TRaynor01Civilian700056"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLPoliceCruiser_Movement" parent="Movement">
@@ -2016,218 +2016,218 @@
         <Volume value="-5.000000,-3.000000"/>
     </CSound>
     <CSound id="APC_Help" parent="UPLUnitHelp" Unit="APC">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Help00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Help00.ogg"/>
     </CSound>
     <CSound id="APC_Pissed" parent="UPLUnitPissed" Unit="APC">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Pissed03.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="APC_What" parent="UPLUnitAck" Unit="APC">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_What03.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="APC_Yes" parent="UPLUnitAck" Unit="APC">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\APC\APC_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\APC\APC_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLAnimalControlOfficer_Attack" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLAnimalControlOfficer_Pissed" parent="UPLPissed">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLAnimalControlOfficer_Ready" parent="UPLReady">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="UPLAnimalControlOfficer_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLAnimalControlOfficer_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveFemale_Attack" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveFemale_Pissed" parent="UPLPissed">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveFemale_Ready" parent="UPLReady">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="UPLDetectiveFemale_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveFemale_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveMale_Attack" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveMale_Pissed" parent="UPLPissed">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveMale_Ready" parent="UPLReady">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="UPLDetectiveMale_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLDetectiveMale_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianFemale_Attack" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianFemale_Pissed" parent="UPLPissed">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianFemale_Ready" parent="UPLReady">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="UPLCivilianFemale_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianFemale_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianMale_Attack" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Attack04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianMale_Pissed" parent="UPLPissed">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed05.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed06.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Pissed07.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianMale_Ready" parent="UPLReady">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="UPLCivilianMale_What" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_What04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLCivilianMale_Yes" parent="UPLAck">
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
-        <AssetArray File="LocalizedData\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes01.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes02.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes03.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLVO\CampaignUnits\UPLRiotOfficer\UPLRiotOfficer_Yes04.ogg"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLPoliceCruiser_Explode" parent="Combat">
@@ -2305,7 +2305,7 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UPLRiotOfficer_Ready" parent="UPLReady" Unit="UPLRiotOfficer">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.100000,-3.100000"/>
     </CSound>
     <CSound id="UPLRiotOfficer_What" parent="UPLAck" Unit="UPLRiotOfficer">
@@ -2388,7 +2388,7 @@
         <Volume value="-2.000000,-2.000000"/>
     </CSound>
     <CSound id="UPLPoliceOfficer_Ready" parent="UPLReady" Unit="UPLPoliceOfficer">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="UPLPoliceOfficer_What" parent="UPLAck" Unit="UPLPoliceOfficer">

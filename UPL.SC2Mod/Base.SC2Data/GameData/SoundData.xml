@@ -4,10 +4,10 @@
         <?token id="Path" value="UPLVO\CampaignUnits"?>
         <?token id="Unit" value="Bogus"?>
         <AssetArrayTemplate>
-            <File value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
+            <File value="Assets\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
             <FacialAnim value="^TemplateParam1^"/>
             <FacialGroup value="^TemplateParam1^"/>
-            <FacialFile value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
+            <FacialFile value="Assets\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
         </AssetArrayTemplate>
         <EditorCategories value="Race:UPL"/>
     </CSound>
@@ -16,10 +16,10 @@
         <?token id="Unit" value="Bogus"?>
         <EditorCategories value="Race:UPL"/>
         <AssetArrayTemplate>
-            <File value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
+            <File value="Assets\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
             <FacialAnim value="^TemplateParam1^"/>
             <FacialGroup value="^TemplateParam1^"/>
-            <FacialFile value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
+            <FacialFile value="Assets\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
         </AssetArrayTemplate>
     </CSound>
     <CSound default="1" id="UPLPissed" parent="UPLAck">
@@ -32,10 +32,10 @@
         <?token id="Unit" value="Bogus"?>
         <EditorCategories value="Race:UPL"/>
         <AssetArrayTemplate>
-            <File value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
+            <File value="Assets\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
             <FacialAnim value="^TemplateParam1^"/>
             <FacialGroup value="^TemplateParam1^"/>
-            <FacialFile value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
+            <FacialFile value="Assets\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
         </AssetArrayTemplate>
         <Mode value="3DWorld"/>
     </CSound>
@@ -44,10 +44,10 @@
         <?token id="Unit" value="Bogus"?>
         <EditorCategories value="Race:UPL"/>
         <AssetArrayTemplate>
-            <File value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
+            <File value="Assets\Sounds\##Path##\##Unit##\^TemplateParam2^.ogg"/>
             <FacialAnim value="^TemplateParam1^"/>
             <FacialGroup value="^TemplateParam1^"/>
-            <FacialFile value="LocalizedData\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
+            <FacialFile value="Assets\Sounds\##Path##\##Unit##\^TemplateParam1^.fxe"/>
         </AssetArrayTemplate>
     </CSound>
     <CSound default="1" id="UPLUnitAck" parent="UPLAck">

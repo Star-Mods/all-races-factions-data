@@ -443,8 +443,8 @@
         <EffectArray Operation="Set" Reference="Actor,PeenemundeMRLS,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Strikefighter,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Valkyrie,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac3,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac2,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TransportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level1.dds"/>
         <EffectArray Reference="Unit,CitadelAAT,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,CrimsonEye,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Typhoon,LifeArmor" Value="1"/>
@@ -513,8 +513,8 @@
         <EffectArray Operation="Set" Reference="Actor,PeenemundeMRLS,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Strikefighter,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Valkyrie,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac3,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac2,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TransportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level2.dds"/>
         <EffectArray Reference="Unit,CitadelAAT,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,CrimsonEye,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Typhoon,LifeArmor" Value="1"/>
@@ -581,8 +581,8 @@
         <EffectArray Operation="Set" Reference="Actor,PeenemundeMRLS,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Strikefighter,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Valkyrie,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac3,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
-        <EffectArray Operation="Set" Reference="Actor,Medivac2,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SupportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TransportShuttle,LifeArmorIcon" Value="Assets\textures\btn-upgrade-ued-armor-level3.dds"/>
         <EffectArray Reference="Unit,CitadelAAT,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,CrimsonEye,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Typhoon,LifeArmor" Value="1"/>

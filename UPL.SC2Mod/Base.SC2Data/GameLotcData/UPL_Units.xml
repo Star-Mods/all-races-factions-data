@@ -2884,7 +2884,7 @@
     </CSound>
     <CSound id="InfantryFlamethrower_DeathFire" parent="UPLUnitDeath" Unit="InfantryRocket">
         <AssetArray TemplateParam="InfantryRocket_DeathAcid00"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRocket\InfantryRocket_DeathAcid00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRocket\InfantryRocket_DeathAcid00.ogg" FacialGroup=""/>
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-5.000000,-4.000000"/>
     </CSound>
@@ -2944,7 +2944,7 @@
     </CSound>
     <CSound id="InfantryFlamethrowerDetonate_Cast" parent="Spell">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryFlamethrower\InfantryFlamethrower_Help00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryFlamethrower\InfantryFlamethrower_Help00.ogg"/>
         <Volume value="-4.500000,-4.500000"/>
         <Pitch value="1.000000,1.000000"/>
     </CSound>

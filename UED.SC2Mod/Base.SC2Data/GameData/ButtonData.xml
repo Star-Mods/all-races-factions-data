@@ -111,6 +111,7 @@
     <CButton id="UEDButtonCitadelAbility">
         <Icon value="Assets\Textures\UEDMagneticWaveAccelerator.dds"/>
         <AlertIcon value="Assets\Textures\UEDMagneticWaveAccelerator.dds"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="UEDButtonCitadelUpgrade">
         <Icon value="Assets\Textures\UEDAuthorizationRequestCitadelMagneticWaveAccelerator.dds"/>
@@ -225,6 +226,7 @@
     <CButton id="ButtonDrakkarFireMode">
         <Icon value="Assets\Textures\UEDMotionStablizer.dds"/>
         <AlertIcon value="Assets\Textures\UEDMotionStablizer.dds"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="ButtonUpgraideHurrakan">
         <Icon value="Assets\Textures\btn-ability-mengsk-medivac-igniteafterburners.dds"/>
@@ -380,6 +382,7 @@
     <CButton id="OnwardComrades">
         <Icon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="StrikeGrenade">
         <Icon value="Assets\Textures\btn-ability-tychus-tychus-shreddergrenade.dds"/>
@@ -509,6 +512,7 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-load.dds"/>
         <TintRacially value="1"/>
         <Universal value="1"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="TransportShuttleUnloadAll">
         <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
@@ -522,6 +526,7 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
         <TintRacially value="1"/>
         <Universal value="1"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="ResourceDoublingFieldBuild">
         <Icon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
@@ -552,6 +557,7 @@
         <AlertIcon value="Assets\Textures\BTN-UED-Shieldwall.dds"/>
         <Tooltip value="Button/Tooltip/HonorguardCruiser"/>
         <AlertTooltip value="Button/Tooltip/HonorguardCruiser"/>
+        <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="MainBattleTank">
         <Icon value="Assets\Textures\btn-unit-object188bronze.dds"/>

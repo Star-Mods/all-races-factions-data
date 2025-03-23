@@ -3,6 +3,7 @@
     <CModel id="ALLRACE2AdditionalPeenemundeMRLSDeathModel">
         <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
         <Flags index="Download" value="0"/>
+        <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="UEDModelFieldOnPsionic" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\Alarak_COOP_LightningStrikes_PowerUp\Alarak_COOP_LightningStrikes_PowerUp.m3"/>
@@ -29,7 +30,7 @@
     </CModel>
     <CModel id="UEDModelSpartanImpactMissle" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\Adept_Collection_Purifier_Missile_Impact\Adept_Collection_Purifier_Missile_Impact.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:UED"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
@@ -72,7 +73,21 @@
         <Image value="Assets\Textures\aresportrait_static.dds"/>
         <Lighting value="WarhoundPortrait"/>
     </CModel>
-    <CModel id="UEDModelSpartan" parent="ThorBase">
+    <CModel id="UEDModelSpartan" parent="Unit">
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <SquibTypeDefault value="Metal"/>
         <Model value="Assets\Models\UED_SpartanAAC_Inquisitor_Tank.m3"/>
         <RequiredAnims index="0" value="Assets\Units\Terran\Hellion_SwarmAnims\Hellion_SwarmAnims.m3a"/>
         <RequiredAnims index="1" removed="1"/>
@@ -102,7 +117,9 @@
         <SelectionRadius value="1.000000"/>
         <ShadowRadius value="1.000000"/>
     </CModel>
-    <CModel id="HighTemplarPsiStormModel"/>
+    <CModel id="HighTemplarPsiStormModel">
+        <EditorCategories value="Race:UED"/>
+    </CModel>
     <CModel id="ModelUEDAnimationDefMatrix" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\ArcadeVikingShield\ArcadeVikingShield.m3"/>
         <EditorCategories value="Race:UED"/>
@@ -661,7 +678,7 @@
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="SupplyDropModel2TomSawyer" parent="SupplyDepotAttachmentBase">
-        <Model value="Assets\Buildings\UED_Sensor_Tower\UED_SensorTower_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Sensor_Tower\UED_SensorTower_V1.m3"/>
         <EditorCategories value="Race:UED"/>
         <ScaleMax value="0.610000,0.610000,0.610000"/>
         <ScaleMin value="0.610000,0.610000,0.610000"/>
@@ -683,7 +700,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StarshipMaintenancePlant" parent="ArmoryBase">
-        <Model value="Assets\Buildings\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
+        <Model value="Assets\Buildings\UED\UEDMaintenancePlane.m3"/>
         <SelectionRadius value="2.600000"/>
         <ShadowRadius value="2.600000"/>
         <EditorCategories value="Race:UED"/>
@@ -714,7 +731,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StarshipMaintenancePlantPlacement" parent="ArmoryPlacementBase" low="StarshipMaintenancePlant">
-        <Model value="Assets\Buildings\Viper\Viper_TempleofViper\Viper_TempleofViper_V3.m3"/>
+        <Model value="Assets\Buildings\UED\UEDMaintenancePlane.m3"/>
         <SelectionLayer value="2"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
@@ -865,7 +882,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="Lazarus" parent="GhostBase">
-        <Model value="Assets\Units\UED_Spectre\UED_Spectre_V1.m3"/>
+        <Model value="Assets\Units\UED\UED_Spectre\UED_Spectre_V1.m3"/>
         <ScaleMax value="0.935000,0.935000,0.935000"/>
         <ScaleMin value="0.935000,0.935000,0.935000"/>
         <EditorCategories value="Race:UED"/>
@@ -922,7 +939,19 @@
         <ScaleMax value="1.250000,1.250000,1.250000"/>
         <ScaleMin value="1.250000,1.250000,1.250000"/>
     </CModel>
-    <CModel id="SuppressionTower" parent="MissileTurretBase">
+    <CModel id="SuppressionTower"  parent="BuildingEx">
+        <SquibTypeDefault value="Metal"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <Radius value="0.75"/>
+        <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
+        <UnitGlossaryCamera value="Star2CameraHigh05"/>
+        <PlanetPanelCamera value="Star2CameraHigh05"/>
+
         <Model value="Assets\Models\NC_LaserTurret.m3"/>
         <SelectionRadius value="1.000000"/>
         <ShadowRadius value="1.000000"/>
@@ -930,7 +959,18 @@
         <ScaleMin value="1.090000,1.090000,1.090000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
-    <CModel id="HeavyTower" parent="MissileTurretBase">
+    <CModel id="HeavyTower"  parent="BuildingEx">
+        <SquibTypeDefault value="Metal"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <Radius value="0.75"/>
+        <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
+        <UnitGlossaryCamera value="Star2CameraHigh05"/>
+        <PlanetPanelCamera value="Star2CameraHigh05"/>
         <Model value="Assets\Models\NC_GuardianCannon.m3"/>
         <SelectionRadius value="1.200000"/>
         <ShadowRadius value="1.200000"/>
@@ -959,7 +999,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="PeenemundeMRLS" parent="Unit">
-        <Model value="Assets\Units\UED_A.R.E.S\UED_A.R.E.S_V1.m3"/>
+        <Model value="Assets\Units\UED\UED_A.R.E.S\UED_A.R.E.S_V1.m3"/>
         <AttachProps Id="Ref_Weapon 01"/>
         <AttachProps Id="Ref_Weapon 02"/>
         <AttachProps Id="Ref_Weapon 03"/>
@@ -1056,7 +1096,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="DrakkarAPC" parent="HellionBase">
-        <Model value="Assets\Units\UED_Militarized_Transport\UED_MilitarizedTransport_V1.m3"/>
+        <Model value="Assets\Units\UED\UED_Militarized_Transport\UED_MilitarizedTransport_V1.m3"/>
         <ScaleMax value="0.680000,0.680000,0.680000"/>
         <ScaleMin value="0.680000,0.680000,0.680000"/>
         <SelectionRadius value="2.000000"/>
@@ -1080,7 +1120,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="HonorguardCruiser" parent="BattlecruiserBase">
-        <Model value="Assets\Units\UED_Honorguard\UED_Shieldwall_V4.m3"/>
+        <Model value="Assets\Units\UED\UED_Honorguard\UED_Shieldwall_V4.m3"/>
         <ScaleMax value="1.100000,1.100000,1.100000"/>
         <ScaleMin value="1.100000,1.100000,1.100000"/>
         <EditorCategories value="Race:UED"/>
@@ -1457,8 +1497,17 @@
         <ScaleMax value="1.600000,1.600000,1.600000"/>
         <ScaleMin value="1.600000,1.600000,1.600000"/>
     </CModel>
-    <CModel id="Strikefighter" parent="BansheeBase">
-        <Model value="Assets\Units\UED\UED_shadow&apos;s_pacifier V2\UED_shadow&apos;s_pacifier_V3.m3"/>
+    <CModel id="Strikefighter" parent="Unit">
+        <Occlusion value="Show"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <Tipability value="0.650000"/>
+        <SquibTypeDefault value="Metal"/>
+        <Radius value="0.750000"/>
+        <TechPurchaseCamera value="TechPurchaseStarship"/>
+        <UnitGlossaryCamera value="Star2CameraLow07"/>
+        <PlanetPanelCamera value="Star2CameraLow07"/>
+        <ShadowRadius value="0.937500"/>
+        <Model value="Assets\Units\UED\UED_Strikefighter\UED_Strikefighter.m3"/>
         <ScaleMax value="0.380000,0.380000,0.380000"/>
         <ScaleMin value="0.380000,0.380000,0.380000"/>
         <SelectionRadius value="2.400000"/>
@@ -1486,7 +1535,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="OperationHeadquarters" parent="CommandCenterBase">
-        <Model value="Assets\Buildings\UED_Biodome_Command_Center\UED_BiodomeCommand_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Biodome_Command_Center\UED_BiodomeCommand_V1.m3"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="OperationHeadquartersDeath" parent="CommandCenterDeathBase">
@@ -1576,13 +1625,13 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TacticsAcademy" parent="EngineeringBayBase">
-        <Model value="Assets\Buildings\UED_Science_Facility\UED_ScienceFacility_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Science_Facility\UED_ScienceFacility_V1.m3"/>
         <SelectionRadius value="2.700000"/>
         <ShadowRadius value="2.700000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="FieldBureau" parent="EngineeringBayBase">
-        <Model value="Assets\Buildings\UED_Merc_Compound\UED_MercCompound_V2.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Merc_Compound\UED_MercCompound_V2.m3"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
         <SelectionRadius value="2.100000"/>
@@ -1622,7 +1671,7 @@
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
     <CModel id="TachyonRelay" parent="FusionCoreBase">
-        <Model value="Assets\Buildings\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UEDOperationscenter.m3"/>
         <SelectionOffset value="0.000000,-0.500000,-0.300000"/>
         <SelectionRadius value="2.700000"/>
         <ShadowRadius value="2.700000"/>
@@ -1633,7 +1682,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TachyonRelayPlacement" parent="FusionCorePlacementBase" low="TachyonRelay">
-        <Model value="Assets\Buildings\Viper\Viper_Operationscenter\Viper_Operationscenter_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UEDOperationscenter.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -1666,7 +1715,7 @@
         <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="Valkyrie" parent="LiberatorBase">
-        <Model value="Assets\Units\UED_Valkyrie\UED_Valkyrie_V1.m3"/>
+        <Model value="Assets\Units\UED\UED_Valkyrie\UED_Valkyrie_V1.m3"/>
         <SelectionRadius value="0.900000"/>
         <ShadowRadius value="1.500000"/>
         <EditorCategories value="Race:UED"/>
@@ -1786,7 +1835,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StrikeTrooper" parent="MarineBase">
-        <Model value="Assets\Units\UED_Trooper\UPL_Trooper.m3"/>
+        <Model value="Assets\Units\UED\UED_Trooper\UPL_Trooper.m3"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="StrikeTrooperAttackLaunch" parent="LaunchFX">
@@ -1830,7 +1879,18 @@
         <Lighting value="MarinePortrait"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
-    <CModel id="MissileTurret2" parent="MissileTurretBase">
+    <CModel id="MissileTurret2"  parent="BuildingEx">
+        <SquibTypeDefault value="Metal"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <Radius value="0.75"/>
+        <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
+        <UnitGlossaryCamera value="Star2CameraHigh05"/>
+        <PlanetPanelCamera value="Star2CameraHigh05"/>
         <Model value="Assets\Models\NC_MissileTurret.m3"/>
         <SelectionRadius value="0.900000"/>
         <ShadowRadius value="0.900000"/>
@@ -1906,7 +1966,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="Refinery2" parent="RefineryBase">
-        <Model value="Assets\Buildings\UED_Refinery_Automated\UED_RefineryAutomated_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Refinery_Automated\UED_RefineryAutomated_V1.m3"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="RefineryDeath2" parent="RefineryDeathBase">
@@ -1939,7 +1999,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TeleportationNode" parent="StarportBase">
-        <Model value="Assets\Buildings\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
+        <Model value="Assets\Buildings\UED\UEDTeleportationNode.m3"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>
         <SelectionRadius value="2.800000"/>
@@ -1951,14 +2011,14 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TeleportationNodePlacement" parent="StarportPlacementBase" low="TeleportationNode">
-        <Model value="Assets\Buildings\Viper\Viper_WarFactory\Viper_WarFactory1.m3"/>
+        <Model value="Assets\Buildings\UED\UEDTeleportationNode.m3"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="InfusionTower" parent="SupplyDepotBase">
-        <Model value="Assets\Buildings\UED_Hive_Mind_Emulator\UED_HiveMindEmulator_V1.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Hive_Mind_Emulator\UED_HiveMindEmulator_V1.m3"/>
         <EditorCategories value="Race:UED"/>
         <ScaleMax value="0.650000,0.650000,0.650000"/>
         <ScaleMin value="0.650000,0.650000,0.650000"/>

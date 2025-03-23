@@ -2,15 +2,15 @@
 <Catalog>
     <CSound id="UPLAnnouncer_BuildErrorCloseToCreep" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BuildErrorTerran.ogg" FacialAnim="Alert_TerranBuildError"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BuildErrorTerran.ogg" FacialAnim="Alert_TerranBuildError"/>
     </CSound>
     <CSound id="UPLAnnouncer_OfficerUnderAttackTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_OfficerUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_OfficerUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_GeyserUnderAttackTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GeyserUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GeyserUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_GGLose" parent="Alert">
         <Chance value="0"/>
@@ -18,13 +18,13 @@
     </CSound>
     <CSound id="UPLAnnouncer_GamePaused" parent="Alert" Portrait="AdjutantPortrait" Subtitle="Genericphrases" Speaker="CharAdjutant" Actor="" Line="00058">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GamePaused.ogg" FacialAnim="Alert_TerranGamePaused"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GamePaused.ogg" FacialAnim="Alert_TerranGamePaused"/>
         <Flags index="Unpausable" value="1"/>
         <Exclusivity value="GamePausedResumed"/>
     </CSound>
     <CSound id="UPLAnnouncer_GameResumed" parent="Alert" Portrait="AdjutantPortrait" Subtitle="Genericphrases" Speaker="CharAdjutant" Actor="" Line="00059">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GameResumed.ogg" FacialAnim="Alert_TerranGameResumed"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GameResumed.ogg" FacialAnim="Alert_TerranGameResumed"/>
         <Flags index="Unpausable" value="1"/>
         <Exclusivity value="GamePausedResumed"/>
     </CSound>
@@ -46,23 +46,23 @@
     </CSound>
     <CSound id="UPLAnnouncer_AllyBaseUnderAttack" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_AllyBaseUnderAttack.ogg" FacialAnim="Alert_TerranAllyBaseUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_AllyBaseUnderAttack.ogg" FacialAnim="Alert_TerranAllyBaseUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_AllyUnderAttack" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_AllyUnderAttack.ogg" FacialAnim="Alert_TerranAllyUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_AllyUnderAttack.ogg" FacialAnim="Alert_TerranAllyUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_BaseUnderAttackTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BaseUnderAttackTerran.ogg" FacialAnim="Alert_TerranBaseUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BaseUnderAttackTerran.ogg" FacialAnim="Alert_TerranBaseUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_BuildErrorTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BuildErrorTerran.ogg" FacialAnim="Alert_TerranBuildError"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_BuildErrorTerran.ogg" FacialAnim="Alert_TerranBuildError"/>
     </CSound>
     <CSound id="UPLAnnouncer_CalldownLaunch" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_CalldownLaunch.ogg" FacialAnim="Alert_TerranCalldownLaunch"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_CalldownLaunch.ogg" FacialAnim="Alert_TerranCalldownLaunch"/>
         <Flags index="Ignorable" value="0"/>
     </CSound>
     <CSound id="UPLAnnouncer_CommandCenterUpgraded" parent="Alert">
@@ -71,15 +71,15 @@
     </CSound>
     <CSound id="UPLAnnouncer_ConstructInterrupt" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ForcesUnderAttackTerran.ogg" FacialAnim="Alert_TerranConstructionInterrupted"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ForcesUnderAttackTerran.ogg" FacialAnim="Alert_TerranConstructionInterrupted"/>
     </CSound>
     <CSound id="UPLAnnouncer_WorkersUnderAttackTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_WorkersUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_WorkersUnderAttackTerran.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_ForcesUnderAttackTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ForcesUnderAttackTerran.ogg" FacialAnim="Alert_TerranForcesUnderAttack"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ForcesUnderAttackTerran.ogg" FacialAnim="Alert_TerranForcesUnderAttack"/>
     </CSound>
     <CSound id="UPLAnnouncer_MineralsDepleted" parent="Alert">
         <EditorCategories value="Race:UPL"/>
@@ -91,11 +91,11 @@
     </CSound>
     <CSound id="UPLAnnouncer_ResearchComplete" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ResearchComplete.ogg" FacialAnim="Alert_TerranResearchComplete"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_ResearchComplete.ogg" FacialAnim="Alert_TerranResearchComplete"/>
     </CSound>
     <CSound id="UPLAnnouncer_SalvageComplete" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_SalvageComplete.ogg" FacialAnim="Alert_TerranSalvageComplete"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_SalvageComplete.ogg" FacialAnim="Alert_TerranSalvageComplete"/>
     </CSound>
     <CSound id="UPLAnnouncer_ThorRepaired" parent="Alert">
         <EditorCategories value="Race:UPL"/>
@@ -107,11 +107,11 @@
     </CSound>
     <CSound id="UPLAnnouncer_UpgradeComplete" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_UpgradeComplete.ogg" FacialAnim="Alert_TerranUpgradeComplete"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_UpgradeComplete.ogg" FacialAnim="Alert_TerranUpgradeComplete"/>
     </CSound>
     <CSound id="UPLAnnouncer_GeyserExhaustedTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GeyserExhaustedTerran.ogg" FacialAnim="Alert_TerranVespeneGeyserExhausted"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_GeyserExhaustedTerran.ogg" FacialAnim="Alert_TerranVespeneGeyserExhausted"/>
     </CSound>
     <CSound id="UPLAnnouncer_WarpInComplete" parent="Alert">
         <EditorCategories value="Race:UPL"/>
@@ -137,7 +137,7 @@
     </CSound>
     <CSound id="UPLAnnouncer_NeedGeyserTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedGeyserTerran.ogg" FacialAnim="Alert_TerranPlaceOnVespeneGeyser"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedGeyserTerran.ogg" FacialAnim="Alert_TerranPlaceOnVespeneGeyser"/>
     </CSound>
     <CSound id="UPLAnnouncer_PlaceInPowerField" parent="Alert">
         <EditorCategories value="Race:UPL"/>
@@ -162,19 +162,19 @@
     </CSound>
     <CSound id="UPLAnnouncer_NotEnoughEnergy" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NotEnoughEnergy.ogg" FacialAnim="Alert_TerranNotEnoughEnergy"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NotEnoughEnergy.ogg" FacialAnim="Alert_TerranNotEnoughEnergy"/>
     </CSound>
     <CSound id="UPLAnnouncer_NeedMoreFoodTerran" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreFoodTerran.ogg" FacialAnim="Alert_TerranNeedMoreFood"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreFoodTerran.ogg" FacialAnim="Alert_TerranNeedMoreFood"/>
     </CSound>
     <CSound id="UPLAnnouncer_NeedMoreMinerals" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreMinerals.ogg" FacialAnim="Alert_TerranNeedMoreMinerals"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreMinerals.ogg" FacialAnim="Alert_TerranNeedMoreMinerals"/>
     </CSound>
     <CSound id="UPLAnnouncer_NeedMoreGas" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreGas.ogg" FacialAnim="Alert_TerranNeedMoreGas"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\UPLAnnouncer\UPLAnnouncer_NeedMoreGas.ogg" FacialAnim="Alert_TerranNeedMoreGas"/>
     </CSound>
     <CDataCollection id="UPLAnnouncer">
         <EditorCategories value="DataGroup:LoadOut,DataFamily:Campaign,Race:UPL,ObjectType:Other"/>

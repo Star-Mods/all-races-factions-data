@@ -414,7 +414,7 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="MilesJenkins_Ready" parent="UPLReady" Unit="DarrenRodgers">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.100000,-3.100000"/>
     </CSound>
     <CSound id="MilesJenkins_What" parent="UPLAck" Unit="DarrenRodgers">
@@ -456,7 +456,7 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="DarrenRodgers_Ready" parent="UPLReady" Unit="DarrenRodgers">
-        <AssetArray File="LocalizedData\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
+        <AssetArray File="Assets\Sounds\UPLUnitVO\InfantryRifle\InfantryRifle_Ready00.ogg"/>
         <Volume value="-3.100000,-3.100000"/>
     </CSound>
     <CSound id="DarrenRodgers_What" parent="UPLAck" Unit="DarrenRodgers">

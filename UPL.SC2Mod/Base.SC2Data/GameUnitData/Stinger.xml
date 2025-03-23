@@ -321,14 +321,14 @@
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="Stinger@Attack" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack00.ogg" FacialAnim="Hellion_Attack00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack01.ogg" FacialAnim="Hellion_Attack01"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack02.ogg" FacialAnim="Hellion_Attack02"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack03.ogg" FacialAnim="Hellion_Attack03"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack04.ogg" FacialAnim="Hellion_Attack04"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack05.ogg" FacialAnim="Hellion_Attack05"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack06.ogg" FacialAnim="Hellion_Attack06"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Attack07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack00.ogg" FacialAnim="Hellion_Attack00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack01.ogg" FacialAnim="Hellion_Attack01"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack02.ogg" FacialAnim="Hellion_Attack02"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack03.ogg" FacialAnim="Hellion_Attack03"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack04.ogg" FacialAnim="Hellion_Attack04"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack05.ogg" FacialAnim="Hellion_Attack05"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack06.ogg" FacialAnim="Hellion_Attack06"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Attack07.ogg" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
         <EditorCategories value="Race:UPL"/>
     </CSound>
@@ -348,9 +348,9 @@
     </CSound>
     <CSound id="Stinger@Help" parent="Alert">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Help00.ogg" FacialAnim="Hellion_Help00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Help01.ogg" FacialGroup=""/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Help02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Help00.ogg" FacialAnim="Hellion_Help00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Help01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Help02.ogg" FacialGroup=""/>
         <Mode value="3DWorld"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
@@ -367,15 +367,15 @@
         <Volume value="-9.000000,-9.000000"/>
     </CSound>
     <CSound id="Stinger@Pissed" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed00.ogg" FacialAnim="Hellion_Pissed00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed01.ogg" FacialAnim="Hellion_Pissed01"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed02.ogg" FacialAnim="Hellion_Pissed02"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed03.ogg" FacialAnim="Hellion_Pissed03"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed04.ogg" FacialAnim="Hellion_Pissed04"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed05.ogg" FacialAnim="Hellion_Pissed05"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed06.ogg" FacialAnim="Hellion_Pissed06"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed07.ogg" FacialAnim="Hellion_Pissed07"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Pissed08.ogg" FacialAnim="Hellion_Pissed08"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed00.ogg" FacialAnim="Hellion_Pissed00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed01.ogg" FacialAnim="Hellion_Pissed01"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed02.ogg" FacialAnim="Hellion_Pissed02"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed03.ogg" FacialAnim="Hellion_Pissed03"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed04.ogg" FacialAnim="Hellion_Pissed04"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed05.ogg" FacialAnim="Hellion_Pissed05"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed06.ogg" FacialAnim="Hellion_Pissed06"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed07.ogg" FacialAnim="Hellion_Pissed07"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Pissed08.ogg" FacialAnim="Hellion_Pissed08"/>
         <Flags index="Download" value="0"/>
         <Select value="Sequential"/>
         <Volume value="-1.000000,-1.000000"/>
@@ -383,30 +383,30 @@
     </CSound>
     <CSound id="Stinger@Ready" parent="Ready">
         <EditorCategories value="Race:UPL"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Ready00.ogg" FacialAnim="Hellion_Ready00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Ready01.ogg" FacialGroup=""/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Ready02.ogg" FacialGroup=""/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Ready03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Ready00.ogg" FacialAnim="Hellion_Ready00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Ready01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Ready02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Ready03.ogg" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Stinger@What" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@What00.ogg" FacialAnim="Hellion_What00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@What01.ogg" FacialAnim="Hellion_What01"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@What02.ogg" FacialAnim="Hellion_What02"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@What03.ogg" FacialAnim="Hellion_What03"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@What04.ogg" FacialAnim="Hellion_What04"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@What00.ogg" FacialAnim="Hellion_What00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@What01.ogg" FacialAnim="Hellion_What01"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@What02.ogg" FacialAnim="Hellion_What02"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@What03.ogg" FacialAnim="Hellion_What03"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@What04.ogg" FacialAnim="Hellion_What04"/>
         <Volume value="-1.000000,-1.000000"/>
         <EditorCategories value="Race:UPL"/>
     </CSound>
     <CSound id="Stinger@Yes" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes00.ogg" FacialAnim="Hellion_Yes00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes01.ogg" FacialAnim="Hellion_Yes01"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes02.ogg" FacialAnim="Hellion_Yes02"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes03.ogg" FacialAnim="Hellion_Yes03"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes04.ogg" FacialAnim="Hellion_Yes04"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes05.ogg" FacialAnim="Hellion_Yes05"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes06.ogg" FacialAnim="Hellion_Yes06"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\StingerSCBW\StingerSCBW@Yes07.ogg" FacialAnim="Hellion_Yes07"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes00.ogg" FacialAnim="Hellion_Yes00"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes01.ogg" FacialAnim="Hellion_Yes01"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes02.ogg" FacialAnim="Hellion_Yes02"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes03.ogg" FacialAnim="Hellion_Yes03"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes04.ogg" FacialAnim="Hellion_Yes04"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes05.ogg" FacialAnim="Hellion_Yes05"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes06.ogg" FacialAnim="Hellion_Yes06"/>
+        <AssetArray File="Assets\Sounds\UPL\Stinger\StingerSCBW@Yes07.ogg" FacialAnim="Hellion_Yes07"/>
         <Volume value="-1.000000,-1.000000"/>
         <EditorCategories value="Race:UPL"/>
     </CSound>
