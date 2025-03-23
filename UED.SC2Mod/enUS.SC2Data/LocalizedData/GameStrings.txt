@@ -455,7 +455,7 @@ Button/Tooltip/VespenePurificationPlant=Calldown onto a Vespene Geyser to allow 
 Commander/Name/UED=UED
 ConsoleSkin/Description/ConsoleUED=The best invention of the best UED minds. Everything is perfect here
 ConsoleSkin/Name/ConsoleUED=ConsoleUED
-DocInfo/DescLong=Includes UED race to All Races Mods <n/>Developers:<n/>UEDCommander,Dagahan,Visceroid,TomSawyer,Romanesko,SpektoR,nazzzar502<n/>https://discord.gg/2RbcjRkddw<n/>
+DocInfo/DescLong=Includes UED race to All Races Mods <n/>Developers:<n/>UEDCommander,Dagahan,Visceroid,TomSawyer,Romanesko,SpektoR,nazzzar502<n/>https://discord.gg/2RbcjRkddw <n/>
 DocInfo/Name=[AR2] UED
 DocInfo/PatchNote001=DrakkarAPC Speed 3.1992 -> 3.5
 DocInfo/PatchNote002=DrakkarAPC Cost 100/50 -> 150/0
@@ -963,4 +963,3 @@ Weapon/Tip/HighPoweredShot=<c val="#ColorAttackInfo">Minimum Range: 5
 Weapon/Tip/TachyonLaserCannons=
 Weapon/Tip/TyphoonWeaponGrond=<c val="#ColorAttackInfo">Deals damage to an area<n/>within a radius 0.8.
 Weapon/Tip/UEDPenemundeGunRange=<c val="#ColorAttackInfo">Deals damage to an area within<n/>a radius of 1.25.
-UI/HelpMenuDialogTechGlossary_Control_Unit/Category/UEDUnits=UED Army
