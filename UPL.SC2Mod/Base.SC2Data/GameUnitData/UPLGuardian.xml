@@ -673,19 +673,19 @@
         <Model value="UPLPoliceOfficerShotgunSmaller"/>
     </CActorModel>
     <CModel id="UPLGuardian" parent="LOTC_OfficerBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficer\UPLRiotOfficer.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficer\UPLRiotOfficer.m3"/>
     </CModel>
     <CModel id="UPLGuardianDeath" parent="LOTC_CaevRigDeathBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
     </CModel>
     <CModel id="UPLGuardianDeathAcid" parent="LOTC_CaevRigDeathAcidBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
     </CModel>
     <CModel id="UPLGuardianDeathFire" parent="LOTC_CaevRigDeathFireBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
     </CModel>
     <CModel id="UPLGuardianDeathRagdoll" parent="LOTC_CaevRigDeathRagdollBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
     </CModel>
     <CModel id="UPLGuardianPortrait" parent="Portrait" Race="UPL">
         <Model value="Assets\Portraits\UPL\DarrenRodgers\DarrenRodgersPortrait.m3"/>

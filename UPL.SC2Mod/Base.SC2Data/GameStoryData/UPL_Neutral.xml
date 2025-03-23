@@ -1286,42 +1286,42 @@
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="MilesJenkins" parent="LOTC_OfficerBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficer\UPLRiotOfficer.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficer\UPLRiotOfficer.m3"/>
         <ScaleMax value="1.150000,1.150000,1.150000"/>
         <ScaleMin value="1.150000,1.150000,1.150000"/>
     </CModel>
     <CModel id="MilesJenkinsDeath" parent="LOTC_CaevRigDeathBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
     </CModel>
     <CModel id="MilesJenkinsDeathAcid" parent="LOTC_CaevRigDeathAcidBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
     </CModel>
     <CModel id="MilesJenkinsDeathFire" parent="LOTC_CaevRigDeathFireBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
     </CModel>
     <CModel id="MilesJenkinsDeathRagdoll" parent="LOTC_CaevRigDeathRagdollBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
     </CModel>
     <CModel id="MilesJenkinsPortrait" parent="Portrait" Race="UPL">
         <Model value="Assets\Portraits\UPL\MilesJenkins\MilesJenkinsPortrait.m3"/>
         <Image value="Assets\Textures\MilesJenkins_Portrait_Static.tga"/>
     </CModel>
     <CModel id="RusellPeters" parent="LOTC_OfficerBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficer\UPLRiotOfficer.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficer\UPLRiotOfficer.m3"/>
         <ScaleMax value="1.150000,1.150000,1.150000"/>
         <ScaleMin value="1.150000,1.150000,1.150000"/>
     </CModel>
     <CModel id="RusellPetersDeath" parent="LOTC_CaevRigDeathBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
     </CModel>
     <CModel id="RusellPetersDeathAcid" parent="LOTC_CaevRigDeathAcidBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
     </CModel>
     <CModel id="RusellPetersDeathFire" parent="LOTC_CaevRigDeathFireBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
     </CModel>
     <CModel id="RusellPetersDeathRagdoll" parent="LOTC_CaevRigDeathRagdollBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
     </CModel>
     <CModel id="RusellPetersPortrait" parent="Portrait" Race="UPL">
         <Model value="Assets\Portraits\UPL\RussellPeters\RussellPetersPortrait.m3"/>

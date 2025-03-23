@@ -191,7 +191,7 @@
         <TechPurchaseCamera value="TechPurchaseInfantry"/>
         <RequiredAnims value="Assets\Units\UPL\InfantryRifle\InfantryRifle_AttackAnims.m3a"/>
         <RequiredAnims value="Assets\Units\UPL\InfantryRifle\InfantryRifle_ReadyAnims.m3a"/>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_TalkAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_TalkAnims.m3a"/>
         <AnimAliases Anim="Stand,C,Talk" Alias="Stand,Talk"/>
         <AnimAliases Anim="Stand,C,Talk,01" Alias="Stand,Talk,01"/>
     </CModel>

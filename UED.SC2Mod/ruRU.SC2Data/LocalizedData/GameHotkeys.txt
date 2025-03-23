@@ -1,7 +1,7 @@
 ﻿Button/Hotkey/=W
-Button/Hotkey/UEDNapoleonMBTPassiveMagneticStablizer=E
 Button/Hotkey/AssaultTank=A
 Button/Hotkey/AtmosphericOperationsLoadout=A
+Button/Hotkey/AttackBarrage2=D
 Button/Hotkey/AuthorizeCloakingDrones=C
 Button/Hotkey/AuthorizeCloakingDrones2=C
 Button/Hotkey/AuthorizeCommandoTraining=C
@@ -136,6 +136,7 @@ Button/Hotkey/UEDButtonStopAttackPenemunde=F
 Button/Hotkey/UEDButtonUpgraideGoliath=R
 Button/Hotkey/UEDButtonUpgraideLazarusbattery=E
 Button/Hotkey/UEDDropArsenal=D
+Button/Hotkey/UEDNapoleonMBTPassiveMagneticStablizer=E
 Button/Hotkey/UEDVehicalsLevel1=V
 Button/Hotkey/UEDVehicalsLevel2=V
 Button/Hotkey/UEDVehicalsLevel3=V

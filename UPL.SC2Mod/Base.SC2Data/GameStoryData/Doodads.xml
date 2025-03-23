@@ -141,38 +141,6 @@
         <VariationCount value="3"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
-    <CModel id="Beacon_UPLSmall" parent="Doodad">
-        <Model value="Assets\UI\Feedback\Beacon_UPL\Beacon_UPL.m3"/>
-        <Events>
-            <Anim value="Death,00"/>
-            <Name value="UIBeaconTerranDeath"/>
-            <Type value="Sound"/>
-            <Time value="0.010000"/>
-            <Payload value="UI_BeaconTerranDeath"/>
-        </Events>
-        <ScaleMax value="0.350000,0.350000,0.350000"/>
-        <ScaleMin value="0.350000,0.350000,0.350000"/>
-        <SelectionLayer value="1"/>
-        <SelectionRadius value="1.999700"/>
-        <ShadowRadius value="1.428400"/>
-        <EditorCategories value="Race:UPL"/>
-    </CModel>
-    <CModel id="Beacon_UPL" parent="Doodad">
-        <Model value="Assets\UI\Feedback\Beacon_UPL\Beacon_UPL.m3"/>
-        <Events>
-            <Anim value="Death,00"/>
-            <Name value="UIBeaconTerranDeath"/>
-            <Type value="Sound"/>
-            <Time value="0.010000"/>
-            <Payload value="UI_BeaconTerranDeath"/>
-        </Events>
-        <ScaleMax value="0.750000,0.750000,0.750000"/>
-        <ScaleMin value="0.750000,0.750000,0.750000"/>
-        <SelectionLayer value="1"/>
-        <SelectionRadius value="1.999700"/>
-        <ShadowRadius value="1.666500"/>
-        <EditorCategories value="Race:UPL"/>
-    </CModel>
     <CModel id="Tarsonis_Collapsing_Building_Doodad" parent="Doodad">
         <Model value="Assets\Doodads\Tarsonis_Collapsing_Building\Tarsonis_Collapsing_Building.m3"/>
     </CModel>

@@ -152,25 +152,25 @@
         <Macros value="QueueAnim"/>
         <AcceptedHostedPropTransfers index="CreepEngulfment" value="0"/>
         <Remove Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
-        <On Terms="ActorCreation" Send="StatusSet WeaponNext 1"/>
-        <On Terms="ActorCreation" Send="Create HH_AssaultGalleon_AscendSound"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster" Send="StatusIncrement WeaponNext"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>
-        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
+<!--        <On Terms="ActorCreation" Send="StatusSet WeaponNext 1"/>-->
+<!--        <On Terms="ActorCreation" Send="Create HH_AssaultGalleon_AscendSound"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster" Send="StatusIncrement WeaponNext"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>-->
+<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>-->
         <!--        <On Terms="UnitBirth.HHMercStarportUpgraded" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>-->
         <!--        <On Terms="AbilMorph.*.Start; MorphTo HHMercStarportUpgraded" Send="Create"/>-->
         <!--        <On Terms="AbilMorph.*.Start; MorphFrom HHMercStarportUpgraded" Send="Destroy"/>-->
-        <On Terms="ActorCreation" Send="SetStatusBarOn 0 Cargo"/>
-        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetStatusBarOn 1 Cargo"/>
-        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="Create HHMercStarportHangerBay"/>
-        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="AnimBracketStart Cover Cover,Start Cover {} DontResetOnUnhide"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit HaveHHMercStarportCargoInstalledBehavior" Send="Create HHMercStarportHangerBayDeath"/>
-        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetWireframe 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>
-        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>
-        <On Terms="UnitHeightUpdate.*.Land" Send="Create HH_AssaultGalleon_Land"/>
+<!--        <On Terms="ActorCreation" Send="SetStatusBarOn 0 Cargo"/>-->
+<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetStatusBarOn 1 Cargo"/>-->
+<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="Create HHMercStarportHangerBay"/>-->
+<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="AnimBracketStart Cover Cover,Start Cover {} DontResetOnUnhide"/>-->
+<!--&lt;!&ndash;        <On Terms="UnitDeathCustomize; ValidateUnit HaveHHMercStarportCargoInstalledBehavior" Send="Create HHMercStarportHangerBayDeath"/>&ndash;&gt;-->
+<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetWireframe 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
+<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
+<!--        <On Terms="UnitHeightUpdate.*.Land" Send="Create HH_AssaultGalleon_Land"/>-->
         <!--        <HostSiteOps Ops="SOpBankerHHMercStarportUpgraded"/>-->
         <ModelFlags index="OutlineOccluder" value="1"/>
         <DeathArray index="Normal" ModelLink="UPLBehemothDeath" SoundLink="Terran_ExplosionLarge"/>

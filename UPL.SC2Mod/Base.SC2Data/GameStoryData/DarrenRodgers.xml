@@ -331,21 +331,21 @@
         </Variations>
     </CCharacter>
     <CModel id="DarrenRodgers" parent="LOTC_OfficerBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficer\UPLRiotOfficer.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficer\UPLRiotOfficer.m3"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="DarrenRodgersDeath" parent="LOTC_CaevRigDeathBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeath\UPLRiotOfficerDeath.m3"/>
     </CModel>
     <CModel id="DarrenRodgersDeathAcid" parent="LOTC_CaevRigDeathAcidBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathAcid\UPLRiotOfficerDeathAcid.m3"/>
     </CModel>
     <CModel id="DarrenRodgersDeathFire" parent="LOTC_CaevRigDeathFireBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathFire\UPLRiotOfficerDeathFire.m3"/>
     </CModel>
     <CModel id="DarrenRodgersDeathRagdoll" parent="LOTC_CaevRigDeathRagdollBase">
-        <Model value="Assets\Units\Neutral\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
+        <Model value="Assets\Units\UPL\UPLRiotOfficerDeathRagdoll\UPLRiotOfficerDeathRagdoll.m3"/>
     </CModel>
     <CModel id="DarrenRodgersPortrait" parent="Portrait" Race="UPL">
         <Image value="Assets\Textures\OfficerRiot_Portrait_Static.tga"/>

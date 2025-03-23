@@ -14,9 +14,9 @@
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel default="1" id="LOTC_CaevRigBase" parent="LOTC_GenericUnitBase">
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig.m3a"/>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_ReadyAnims.m3a"/>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_TalkAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_ReadyAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_TalkAnims.m3a"/>
         <Events>
             <Anim value="Attack,D"/>
             <Name value="UPLShotgunPump"/>
@@ -46,7 +46,7 @@
     </CModel>
     <CModel default="1" id="LOTC_CaevRigDeathBase" parent="UnitDeath">
         <?token id="low" type="CModelLink" value="TerranBloodDeathLow"?>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRigDeath.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRigDeath.m3a"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Flags index="ParticipatesInRagdollOnRagdollCollisions" value="1"/>
         <Occlusion value="Show"/>
@@ -54,7 +54,7 @@
     </CModel>
     <CModel default="1" id="LOTC_CaevRigDeathFireBase" parent="UnitDeath">
         <?token id="low" type="CModelLink" value="TerranBloodDeathLow"?>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_DeathFire.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_DeathFire.m3a"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Flags index="ParticipatesInRagdollOnRagdollCollisions" value="1"/>
         <Occlusion value="Show"/>
@@ -62,14 +62,14 @@
     </CModel>
     <CModel default="1" id="LOTC_CaevRigDeathAcidBase" parent="UnitDeath">
         <?token id="low" type="CModelLink" value="TerranBloodDeathLow"?>
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_DeathAcid.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_DeathAcid.m3a"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Flags index="ParticipatesInRagdollOnRagdollCollisions" value="1"/>
         <Occlusion value="Show"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel default="1" id="LOTC_CaevRigDeathRagdollBase" parent="UnitDeathRagdoll">
-        <RequiredAnims value="Assets\Units\Neutral\LOTC_CaevRig\LOTC_CaevRig_DeathRagdoll.m3a"/>
+        <RequiredAnims value="Assets\Units\UPL\LOTC_CaevRig\LOTC_CaevRig_DeathRagdoll.m3a"/>
         <Flags index="ParticipatesInRagdollOnRagdollCollisions" value="1"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
@@ -356,6 +356,38 @@
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
         <ScaleMax value="1.200000,1.200000,1.200000"/>
         <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <EditorCategories value="Race:UPL"/>
+    </CModel>
+    <CModel id="Beacon_UPLSmall" parent="Doodad">
+        <Model value="Assets\UI\Feedback\Beacon_UPL\Beacon_UPL.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="UIBeaconTerranDeath"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="UI_BeaconTerranDeath"/>
+        </Events>
+        <ScaleMax value="0.350000,0.350000,0.350000"/>
+        <ScaleMin value="0.350000,0.350000,0.350000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="1.999700"/>
+        <ShadowRadius value="1.428400"/>
+        <EditorCategories value="Race:UPL"/>
+    </CModel>
+    <CModel id="Beacon_UPL" parent="Doodad">
+        <Model value="Assets\UI\Feedback\Beacon_UPL\Beacon_UPL.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="UIBeaconTerranDeath"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="UI_BeaconTerranDeath"/>
+        </Events>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="1.999700"/>
+        <ShadowRadius value="1.666500"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
 </Catalog>

@@ -571,19 +571,19 @@
         <BarOffset value="10"/>
         <BarWidth value="36"/>
         <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-spidermine.dds"/>
+            <Image value="Assets\Textures\btn-ability-upl-claymore.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-upgrade-terran-spidermineex3.dds"/>
+        <HeroIcon value="Assets\Textures\btn-ability-upl-claymore.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrades-upl-vehicleplating-lvl0.dds"/>
         <NameOffset value="10"/>
-        <UnitIcon value="Assets\Textures\btn-upgrade-terran-spidermineex3.dds"/>
+        <UnitIcon value="Assets\Textures\btn-ability-upl-claymore.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-spidermine.dds"/>
+            <Image value="Assets\Textures\btn-ability-upl-claymore.dds"/>
         </Wireframe>
         <SoundArray index="Birth" value="ClaymoreMine_Place"/>
     </CActorUnit>
     <CModel id="ClaymoreMine" parent="Unit" Race="Terran">
-        <Model value="Assets\Units\Terran\SpiderMine\SpiderMine.m3"/>
+        <Model value="Assets\Units\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraLow02"/>
         <Radius value="0.200000"/>
@@ -592,12 +592,10 @@
         <ShadowRadius value="0.200000"/>
         <TechPurchaseCamera value="Star2CameraLow02"/>
         <UnitGlossaryCamera value="Star2CameraLow02"/>
-        <ScaleMax value="1.300000,1.300000,1.300000"/>
-        <ScaleMin value="1.300000,1.300000,1.300000"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="ClaymoreMinePlacement" parent="Placement" Race="Terran">
-        <Model value="Assets\Effects\Terran\SpiderMinePlacement\SpiderMinePlacement.m3"/>
+        <Model value="Assets\Units\ClaymoreMine\NanaKey_WP_Claymore.m3"/>
         <SelectionRadius value="0.250000"/>
         <ShadowRadius value="0.250000"/>
         <EditorCategories value="Race:UPL"/>
@@ -607,7 +605,8 @@
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="ClaymoreMineDeath" parent="OneShotSpellFX">
-        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>
+        <Model value="Assets\Units\ClaymoreMine\NanaKey_EF_ClaymoreBOOM.m3"/>
+<!--        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>-->
         <Occlusion value="Show"/>
         <EditorCategories value="Race:UPL"/>
         <ScaleMax value="0.250000,0.250000,0.250000"/>
