@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CButton id="UPLTrainStinger">
-        <Icon value="Assets\Textures\btn-unit-terran-stinger@scbw.dds"/>
-        <EditorCategories value="Race:UPL"/>
-    </CButton>
     <CEffectDamage id="StingerMissileWeapon@Damage">
         <EditorCategories value="Race:UPL"/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -89,6 +85,10 @@
     <CEffectDamage id="WraithSCBWWeaponAir@Damage">
         <EditorCategories value="Race:UPL"/>
     </CEffectDamage>
+    <CButton id="UPLTrainStinger">
+        <Icon value="Assets\Textures\btn-unit-terran-stinger@scbw.dds"/>
+        <EditorCategories value="Race:UPL"/>
+    </CButton>
     <CLight id="Stinger@Portrait" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.176471,0.000000,0.094118">
             <Param index="HDRExposure" value="1.480000"/>
@@ -463,7 +463,7 @@
     </CTurret>
     <CUnit id="UPLStinger">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -524,7 +524,7 @@
         <HotkeyCategory value="Unit/Category/UPLUnits"/>
     </CUnit>
     <CUnit id="StingerMissileWeapon@Missile" parent="MISSILE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
 </Catalog>

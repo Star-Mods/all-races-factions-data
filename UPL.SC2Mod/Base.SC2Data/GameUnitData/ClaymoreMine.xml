@@ -606,7 +606,7 @@
     </CModel>
     <CModel id="ClaymoreMineDeath" parent="OneShotSpellFX">
         <Model value="Assets\Units\UPL\ClaymoreMine\NanaKey_EF_ClaymoreBOOM.m3"/>
-<!--        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>-->
+        <!--        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath.m3"/>-->
         <Occlusion value="Show"/>
         <EditorCategories value="Race:UPL"/>
         <ScaleMax value="0.250000,0.250000,0.250000"/>
@@ -695,12 +695,12 @@
         <Radius value="0"/>
         <SeparationRadius value="0"/>
         <MinimapRadius value="0"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Other,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="ClaymoreMine">
         <DeathRevealRadius value="0.5"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="Cloaked" value="1"/>
         <FlagArray index="Buried" value="1"/>

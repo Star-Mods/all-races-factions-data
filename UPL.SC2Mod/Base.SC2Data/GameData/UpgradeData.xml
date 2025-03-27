@@ -3,7 +3,7 @@
     <CUpgrade default="1" id="UPLShipArmor">
         <WebPriority value="0"/>
         <Icon value="##path####lvl##.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreCount value="ArmorTechnologyCount"/>
         <ScoreValue value="ArmorTechnologyValue"/>
         <ScoreResult value="BuildOrder"/>
@@ -25,7 +25,7 @@
     <CUpgrade default="1" id="UPLShipWeapons">
         <WebPriority value="0"/>
         <Icon value="##path####lvl##.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreCount value="WeaponTechnologyCount"/>
         <ScoreValue value="WeaponTechnologyValue"/>
         <ScoreResult value="BuildOrder"/>
@@ -48,7 +48,7 @@
     <CUpgrade default="1" id="UPLVehicleArmor">
         <WebPriority value="0"/>
         <Icon value="##path####lvl##.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreCount value="ArmorTechnologyCount"/>
         <ScoreValue value="ArmorTechnologyValue"/>
         <ScoreResult value="BuildOrder"/>
@@ -130,7 +130,7 @@
     <CUpgrade default="1" id="UPLVehicleWeapons">
         <WebPriority value="0"/>
         <Icon value="##path####lvl##.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreCount value="WeaponTechnologyCount"/>
         <ScoreValue value="WeaponTechnologyValue"/>
         <ScoreResult value="BuildOrder"/>
@@ -209,7 +209,7 @@
     <CUpgrade default="1" id="UPLInfantryArmor">
         <WebPriority value="0"/>
         <Icon value="##path####lvl##.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="200"/>
         <ScoreCount value="ArmorTechnologyCount"/>
         <ScoreValue value="ArmorTechnologyValue"/>
@@ -339,7 +339,7 @@
         <InfoTooltipPriority value="61"/>
         <Icon value="##path####lvl##.dds"/>
         <WebPriority value="0"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreCount value="WeaponTechnologyCount"/>
         <ScoreValue value="WeaponTechnologyValue"/>
         <ScoreResult value="BuildOrder"/>
@@ -456,7 +456,7 @@
     </CUpgrade>
     <CUpgrade id="HornetRacing">
         <Icon value="Assets\Textures\btn-HornetRacing.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="200"/>
         <EffectArray Operation="Multiply" Reference="Unit,UPLStinger,Speed" Value="1.250000"/>
         <EditorCategories value="Race:UPL,UpgradeType:Talents"/>
@@ -471,7 +471,7 @@
     </CUpgrade>
     <CUpgrade id="RiotOfficerShield">
         <Icon value="Assets\Textures\btn-ability-UPL-ShieldDefense.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="300"/>
         <EffectArray Reference="Unit,UPLInfantryGuardian,LifeStart" Value="15"/>
         <EffectArray Reference="Unit,UPLInfantryGuardian,LifeMax" Value="15"/>
@@ -489,7 +489,7 @@
     </CUpgrade>
     <CUpgrade id="SpaceSandbag">
         <Icon value="Assets\Textures\btn-unit-heavygunner-sieged.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="100"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:UPL,UpgradeType:Talents"/>
@@ -660,9 +660,11 @@
     </CUpgrade>
     <CUpgrade id="UPLInfantryArmorLevel1" parent="UPLInfantryArmor" path="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl" lvl="1">
         <EffectArray Reference="Effect,RiotShieldDamage,Amount" Value="3"/>
-        <EffectArray Operation="Set" Reference="Weapon,RiotShield,Level" Value="1"/>
+        <EffectArray Reference="Weapon,RiotShield,Level" Value="1"/>
         <EffectArray Reference="Unit,InfantryHeavySieged,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,InfantryHeavySieged,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmor" Value="1"/>
     </CUpgrade>
     <CUpgrade id="UPLInfantryArmorLevel2" parent="UPLInfantryArmor" path="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl" lvl="2">
         <ScoreAmount value="350"/>
@@ -758,6 +760,10 @@
         <EffectArray Reference="Unit,Z1,LifeStart" Value="15"/>
         <EffectArray Reference="Unit,UPLZ2,LifeMax" Value="15"/>
         <EffectArray Reference="Unit,UPLZ2,LifeStart" Value="15"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeMax" Value="13"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeStart" Value="13"/>
     </CUpgrade>
     <CUpgrade id="UPLInfantryArmorLevel3" parent="UPLInfantryArmor" path="Assets\Textures\btn-upgrades-upl-infantryarmor-lvl" lvl="3">
         <ScoreAmount value="500"/>
@@ -789,6 +795,10 @@
         <EffectArray Reference="Unit,Z1,LifeStart" Value="15"/>
         <EffectArray Reference="Unit,UPLZ2,LifeMax" Value="15"/>
         <EffectArray Reference="Unit,UPLZ2,LifeStart" Value="15"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeMax" Value="12"/>
+        <EffectArray Reference="Unit,UPLInfantryGuardianSieged,LifeStart" Value="12"/>
     </CUpgrade>
     <CUpgrade id="UPLInfantryWeaponsLevel1" parent="UPLInfantryWeapons" path="Assets\Textures\btn-upgrades-upl-infantryweapons-lvl" lvl="1">
         <InfoTooltipPriority value="0"/>
@@ -934,7 +944,7 @@
     </CUpgrade>
     <CUpgrade id="RiotTrooperBlastShotgun">
         <Icon value="Assets\Textures\btn-RiotBlaster2.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="400"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Effect,UPLRiotOfficerShotgunDamage,Amount" Value="6"/>

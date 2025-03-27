@@ -345,7 +345,6 @@
         </CardLayouts>
         <SubgroupPriority value="12"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <GlossaryCategory value="Unit/Category/0UPLUnits"/>
         <GlossaryPriority value="25"/>
         <AlliedPushPriority value="5"/>
         <Food value="-1"/>

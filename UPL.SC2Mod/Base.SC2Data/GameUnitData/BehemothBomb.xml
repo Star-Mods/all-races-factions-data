@@ -260,7 +260,7 @@
         </MotionPhases>
     </CMoverMissile>
     <CUnit id="BehemothBomb" parent="MISSILE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
 </Catalog>

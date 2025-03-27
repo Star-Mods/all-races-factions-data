@@ -272,7 +272,7 @@
         <EditorCategories value="Race:UPL"/>
     </CSound>
     <CUnit id="UPLBehemothRevenantBombLMWeapon" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CBehaviorBuff id="ALLRACE2VisceroidUPLStarbaseRevenantBombChannel">

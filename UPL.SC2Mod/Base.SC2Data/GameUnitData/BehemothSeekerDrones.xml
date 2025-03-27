@@ -224,7 +224,7 @@
     </CModel>
     <CUnit id="UPLSeekerDrone">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>

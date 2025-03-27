@@ -581,7 +581,7 @@
     </CEffectDamage>
     <CEffectDamage id="RaptorAirDamage" parent="DU_WEAP_MISSILE">
         <ImpactLocation Value="TargetUnit"/>
-        <Amount value="19"/>
+        <Amount value="17"/>
         <EditorCategories value="Race:UPL"/>
         <Visibility value="Visible"/>
     </CEffectDamage>
@@ -5806,7 +5806,7 @@
     <CUnit id="CondorLanded">
         <DeathRevealRadius value="4"/>
         <ReviveType value="Condor"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -5902,7 +5902,7 @@
     </CUnit>
     <CUnit id="OspreyLanded">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -5993,7 +5993,7 @@
         <Name value="Unit/Name/CSV"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6078,40 +6078,40 @@
         <ScoreMake value="325"/>
     </CUnit>
     <CUnit id="TR17StarburstMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="TR17StarburstMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="RaptorAirMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="RaptorAirMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="OspreyAirMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="OspreyAirMissilemover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="RaptorGroundMainMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="RaptorGroundMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
         <AIEvaluateAlias value="VikingFighterWeapon"/>
     </CUnit>
     <CUnit id="RaptorGroundSecondaryMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="RaptorGroundSecondaryMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="Z1FreezeMissile" parent="MISSILE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="Z1FreezeMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
         <FlagArray index="Invulnerable" value="1"/>
     </CUnit>
     <CUnit id="CSV">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6201,7 +6201,7 @@
         <AlliedPushPriority value="15"/>
     </CUnit>
     <CUnit id="Z1BadgerBomb">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="Uncommandable" value="1"/>
         <FlagArray index="Unselectable" value="1"/>
@@ -6250,7 +6250,7 @@
     </CUnit>
     <CUnit id="Condor">
         <DeathRevealRadius value="4"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6346,7 +6346,7 @@
     </CUnit>
     <CUnit id="RoutheTank">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6422,7 +6422,7 @@
     </CUnit>
     <CUnit id="A6">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6495,7 +6495,7 @@
     </CUnit>
     <CUnit id="Osprey">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6583,7 +6583,7 @@
     </CUnit>
     <CUnit id="TR17">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6645,7 +6645,7 @@
     </CUnit>
     <CUnit id="RaptorJet">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6657,9 +6657,9 @@
         <LifeStart value="160"/>
         <LifeMax value="160"/>
         <LifeArmorName value="Unit/LifeArmorName/UPLShipPlating"/>
-        <EnergyStart value="20"/>
-        <EnergyMax value="50"/>
-        <EnergyRegenRate value="0.1406"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="125"/>
+        <EnergyRegenRate value="0.25"/>
         <Mover value="Fly"/>
         <Speed value="3.75"/>
         <Acceleration value="3.25"/>
@@ -6721,7 +6721,7 @@
     </CUnit>
     <CUnit id="Z1">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -6896,7 +6896,7 @@
     <!--        &lt;!&ndash;<BehaviorArray Link="APCChangeownership"/>&ndash;&gt;-->
     <!--    </CUnit>-->
     <CUnit id="APCSmokeGrenadeMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="APCSmokeGrenadeMissilemover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
@@ -7114,7 +7114,6 @@
         <Duration value="10"/>
         <Modification>
             <StateFlags index="Cloak" value="1"/>
-            <StateFlags index="Passive" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="CondorLandDelay">
@@ -7167,7 +7166,7 @@
     </CBehaviorBuff>
     <CUpgrade id="CondorEnhancedCargo" parent="Research">
         <Icon value="Assets\Textures\btn-ability-UPL-EnlargeCargoBay.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Reference="Abil,CondorTransport,TotalCargoSpace" Value="6"/>
@@ -7178,7 +7177,7 @@
     </CUpgrade>
     <CUpgrade id="A6ExplosiveRounds" parent="Research">
         <Icon value="Assets\Textures\btn-ability-UPL-Flak.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="350"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Operation="Set" Reference="Effect,A6WeaponFlakDummy,Chance" Value="1"/>
@@ -7199,13 +7198,13 @@
     <CUpgrade id="RoutheTankArmorPlating">
         <EffectArray Reference="Unit,RoutheTank,LifeStart" Value="75"/>
         <EffectArray Reference="Unit,RoutheTank,LifeMax" Value="75"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <Icon value="Assets\Textures\btn-ability-UPL-UnobtaniumArmorPlating.dds"/>
         <AffectedUnitArray value="RoutheTank"/>
     </CUpgrade>
     <CUpgrade id="RaptorCloakAbilUpgrade">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Icon value="Assets\Textures\btn-ability-UPL-Metamateria-Suit.dds"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <AffectedUnitArray value="RaptorJet"/>
@@ -7213,7 +7212,7 @@
     <CUpgrade id="Z1SpeedUpgrade">
         <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadspeed.dds"/>
         <EffectArray Operation="Set" Reference="Unit,Z1,Speed" Value="3.5"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
     </CUpgrade>
     <CUpgrade id="CSVSupplyLineManagement" parent="Research">
@@ -7227,7 +7226,7 @@
     </CUpgrade>
     <CUpgrade id="CSVPersonnelCarrier" parent="Research">
         <Icon value="Assets\Textures\btn-ability-UPL-PersonnelCarrier.dds"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <ScoreAmount value="250"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="UpgradeType:SpellResearch,Race:UPL"/>

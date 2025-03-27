@@ -236,6 +236,21 @@
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-upl-buildingarmor.dds"/>
         <UnitIcon value="Assets\Textures\btn-building-upl-##unitName##.dds"/>
     </CActorUnit>
+    <CActorSplat id="BehemothAttackGroundGuideSplat" parent="CursorSplat" abil="ALLRACE2LotCBehemothattack">
+        <On index="0" Terms="Abil.ALLRACE2LotCBehemothattack.Guide; AbilCmd attack,Barrage" Send="Create"/>
+        <On Terms="ActorCreation; ValidatePlayer PlayerIsProtoss" Send="ModelSwap ProtossAOECursorSplat"/>
+        <On Terms="ActorCreation; ValidatePlayer PlayerIsZerg" Send="ModelSwap ZergAOECursorSplat"/>
+        <MaxScale value="2.000000"/>
+        <Model value="TerranAOECursorSplat"/>
+        <Scale value="2.000000"/>
+    </CActorSplat>
+    <CActorRange id="SeekerDroneSelectedRangeSplat">
+        <On Terms="SelectionLocalUpdate.UPLSeekerDrone.Start" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.UPLSeekerDrone.StartEditorGround" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.UPLSeekerDrone.Stop" Send="Destroy"/>
+        <Abil Link="UPLSeekerDroneExplode"/>
+        <Range value="2.750000"/>
+    </CActorRange>
     <CActorModel id="UPLExhumerExplosionPurple" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="UnitDeath.UPLExhumer" Send="Create"/>

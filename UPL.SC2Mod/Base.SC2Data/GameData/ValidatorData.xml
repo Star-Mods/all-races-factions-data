@@ -163,7 +163,7 @@
     <CValidatorUnitCompareField id="RequiresUPL">
         <ResultFailed value="MustTargetRace,MustTargetUPL"/>
         <Field value="Race"/>
-        <Value value="UPL"/>
+        <Value value="UPLL"/>
     </CValidatorUnitCompareField>
     <CValidatorUnitCompareVital id="SourceHasShields">
         <WhichUnit Value="Source"/>

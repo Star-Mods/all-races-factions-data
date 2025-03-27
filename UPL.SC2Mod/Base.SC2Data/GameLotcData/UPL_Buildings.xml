@@ -282,7 +282,7 @@
             <Button DefaultButtonFace="UPLShipWeaponsLevel3" Requirements="LearnUPLShipWeapon3"/>
         </InfoArray-->
         <InfoArray index="Research1" Time="150" Upgrade="RaptorCloakAbilUpgrade">
-            <Resource index="Minerals" value="175"/>
+            <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="75"/>
             <Button DefaultButtonFace="RaptorCloakAbilUpgrade" Requirements="LearnRaptorCloakAbilUpgrade">
                 <Flags index="ShowInGlossary" value="1"/>
@@ -532,7 +532,7 @@
             <Button DefaultButtonFace="UPLTrainRaptorJet"/>
             <Unit value="RaptorJet"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="50.8">
+        <InfoArray index="Train2" Time="65">
             <Button DefaultButtonFace="UPLTrainOsprey"/>
             <Unit value="Osprey"/>
         </InfoArray>
@@ -2959,7 +2959,7 @@
     </CTurret>
     <CUnit default="1" id="UPLBuildingBase">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>

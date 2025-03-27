@@ -2,7 +2,7 @@
 <Catalog>
     <CUnit id="UPLDestructibleDebris4x4">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="Movable" value="0"/>
         <FlagArray index="CreateVisible" value="1"/>

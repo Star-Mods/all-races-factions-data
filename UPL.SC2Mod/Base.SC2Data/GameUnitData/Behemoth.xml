@@ -152,25 +152,25 @@
         <Macros value="QueueAnim"/>
         <AcceptedHostedPropTransfers index="CreepEngulfment" value="0"/>
         <Remove Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
-<!--        <On Terms="ActorCreation" Send="StatusSet WeaponNext 1"/>-->
-<!--        <On Terms="ActorCreation" Send="Create HH_AssaultGalleon_AscendSound"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster" Send="StatusIncrement WeaponNext"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>-->
-<!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>-->
+        <!--        <On Terms="ActorCreation" Send="StatusSet WeaponNext 1"/>-->
+        <!--        <On Terms="ActorCreation" Send="Create HH_AssaultGalleon_AscendSound"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster" Send="StatusIncrement WeaponNext"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>-->
+        <!--        <On Terms="Effect.MiraStarportAttackWeaponLaunchMissile.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>-->
         <!--        <On Terms="UnitBirth.HHMercStarportUpgraded" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>-->
         <!--        <On Terms="AbilMorph.*.Start; MorphTo HHMercStarportUpgraded" Send="Create"/>-->
         <!--        <On Terms="AbilMorph.*.Start; MorphFrom HHMercStarportUpgraded" Send="Destroy"/>-->
-<!--        <On Terms="ActorCreation" Send="SetStatusBarOn 0 Cargo"/>-->
-<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetStatusBarOn 1 Cargo"/>-->
-<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="Create HHMercStarportHangerBay"/>-->
-<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="AnimBracketStart Cover Cover,Start Cover {} DontResetOnUnhide"/>-->
-<!--&lt;!&ndash;        <On Terms="UnitDeathCustomize; ValidateUnit HaveHHMercStarportCargoInstalledBehavior" Send="Create HHMercStarportHangerBayDeath"/>&ndash;&gt;-->
-<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetWireframe 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
-<!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
-<!--        <On Terms="UnitHeightUpdate.*.Land" Send="Create HH_AssaultGalleon_Land"/>-->
+        <!--        <On Terms="ActorCreation" Send="SetStatusBarOn 0 Cargo"/>-->
+        <!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetStatusBarOn 1 Cargo"/>-->
+        <!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="Create HHMercStarportHangerBay"/>-->
+        <!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="AnimBracketStart Cover Cover,Start Cover {} DontResetOnUnhide"/>-->
+        <!--&lt;!&ndash;        <On Terms="UnitDeathCustomize; ValidateUnit HaveHHMercStarportCargoInstalledBehavior" Send="Create HHMercStarportHangerBayDeath"/>&ndash;&gt;-->
+        <!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetWireframe 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
+        <!--        <On Terms="Behavior.HHMercStarportCargoInstalled.On" Send="SetGroupIcon 0 Assets\Textures\wireframe-hornerhan-assaultgalleonhangerbay.dds"/>-->
+        <!--        <On Terms="UnitHeightUpdate.*.Land" Send="Create HH_AssaultGalleon_Land"/>-->
         <!--        <HostSiteOps Ops="SOpBankerHHMercStarportUpgraded"/>-->
         <ModelFlags index="OutlineOccluder" value="1"/>
         <DeathArray index="Normal" ModelLink="UPLBehemothDeath" SoundLink="Terran_ExplosionLarge"/>
@@ -766,7 +766,7 @@
     </CTurret>
     <CUnit id="UPLBehemoth">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -801,7 +801,7 @@
         <DamageTakenXP value="1"/>
         <KillXP value="160"/>
         <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
+        <AbilArray Link="ALLRACE2LotCBehemothattack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="UPLBehemothBomb"/>
         <!--        <WeaponArray Link="UPLBehemothBombs"/>-->
@@ -816,7 +816,7 @@
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="ALLRACE2LotCBehemothattack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons>
                 <Face value="LotCUPLStarArmorPassive"/>
@@ -827,7 +827,7 @@
                 <Row value="2"/>
                 <Column value="0"/>
             </LayoutButtons>
-            <LayoutButtons Face="AttackBarrage" Type="AbilCmd" AbilCmd="attack,Barrage" Row="1" Column="4"/>
+            <LayoutButtons Face="AttackBarrage" Type="AbilCmd" AbilCmd="ALLRACE2LotCBehemothattack,Barrage" Row="1" Column="4"/>
         </CardLayouts>
         <Radius value="1"/>
         <SeparationRadius value="1"/>
@@ -846,15 +846,15 @@
         <GlossaryAlias value="UPLBehemoth"/>
     </CUnit>
     <CUnit id="UPLBehemothBombStructureWeapon2" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="UPLBehemothBombWeapon2" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="BehemothDefenseGunMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
 </Catalog>
