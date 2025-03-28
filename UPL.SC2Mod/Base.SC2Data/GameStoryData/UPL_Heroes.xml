@@ -2503,12 +2503,12 @@
         <EditorCategories value="DataGroup:Unit,DataFamily:Campaign,Race:UPL,ObjectType:Hero"/>
     </CDataCollectionUnit>
     <CUnit id="UPLScoutFlameGrenadeMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="UPLScoutFlameGrenadeMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="UPLScoutGrenadeMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="UPLScoutGrenadeMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
@@ -2544,7 +2544,6 @@
         <SubgroupPriority value="43"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <LeaderAlias value="Spectre"/>
-        <GlossaryCategory value="Unit/Category/0UPLUnits"/>
         <GlossaryPriority value="80"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>

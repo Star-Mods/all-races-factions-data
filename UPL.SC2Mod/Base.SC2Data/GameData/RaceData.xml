@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CRace id="UPL">
+    <CRace id="UPLL">
         <AttributeId value="UPL"/>
         <Icon value="Assets\Icons\upl.dds"/>
         <RaceIcon value="Assets\Icons\upl.dds"/>

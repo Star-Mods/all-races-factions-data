@@ -281,7 +281,7 @@
         <Flags index="Notification" value="0"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
-        <Amount value="80"/>
+        <Amount value="200"/>
         <Death value="Fire"/>
         <SearchFlags index="CallForHelp" value="0"/>
         <SearchFlags index="OffsetByUnitRadius" value="0"/>
@@ -297,7 +297,7 @@
         <Flags index="Notification" value="0"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
-        <Amount value="5"/>
+        <Amount value="35"/>
         <Death value="Fire"/>
         <SearchFlags index="CallForHelp" value="0"/>
         <SearchFlags index="OffsetByUnitRadius" value="0"/>

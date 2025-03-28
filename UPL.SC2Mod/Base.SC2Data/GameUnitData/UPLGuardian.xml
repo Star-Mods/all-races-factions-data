@@ -958,12 +958,12 @@
         <Volume value="-6.000000,-5.000000"/>
     </CSound>
     <CUnit id="UPLGuardianFlameGrenadeMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="MyraDavisFlameGrenadeMissileMover2"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="UPLGuardianFlashBangGrenadeMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="MyraDavisFlashBangGrenadeMissileMover2"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>

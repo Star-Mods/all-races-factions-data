@@ -1,4 +1,5 @@
-﻿Abil/Name/APCCloseDoor=APC Close Door
+﻿Abil/Name/ALLRACE2LotCBehemothattack=Behemoth Attack
+Abil/Name/APCCloseDoor=APC Close Door
 Abil/Name/APCOpenDoor=APC Open Door
 Abil/Name/APCSmokeGrenade=APC Smoke Grenade
 Abil/Name/APCTransport=APC Transport
@@ -96,6 +97,7 @@ Abil/Name/Z1ShieldCancel=Z1 Shield Cancel
 Abil/Name/Z2BadgerBomb=Z2 Badger Bomb
 Abil/Name/Z2JumpJet=Jump Jet
 Abil/Name/Z2Lorna=Lorna
+Abil/TargetMessage/ALLRACE2LotCBehemothattack=<IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/>   Ground to Auto-attack<n/><IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/>   Cancel
 Alert/Text/CSVCargoAlert=CSV cargo has been emptied
 Behavior/Name/APCSmokeGrenadeProtection=APC Smoke Grenade Protection
 Behavior/Name/APCSmokeGrenadeProtection2=APC Smoke Grenade Protection
@@ -410,7 +412,7 @@ Button/Name/Z1ShieldDefenseCancel=Deactivate Full Size Smart Metal Shield
 Button/Name/Z1SpeedUpgrade=Z1SpeedUpgrade
 Button/Name/Z2Adrenaline=Weapon Enhancement
 Button/Name/Z2BadgerBomb=Badger Bomb
-Button/Name/Z2Dash=Z2Dash
+Button/Name/Z2Dash=Nova Strike
 Button/Name/Z2JumpJet=Jump Jet
 Button/Name/Z2Lorna=Lorna
 Button/Tooltip/A6ExplosiveRounds=Makes the A-6 deal <c val="80FFFF"><d ref="Effect,A6WeaponDamage,AreaArray[0].Fraction*100"/>%</c> damage as splash to air units near the attack target.
@@ -655,14 +657,14 @@ Button/Tooltip/WilliamGravesCharge=Inspires nearby <c val="#ColorAttackInfo">Inf
 Button/Tooltip/WilliamGravesMedkit=This unit will use a Medkit when they have less than 25% of their life, which will heal <c val="FFFF80"><d ref="Effect,WilliamGravesMedkit@Heal,VitalArray[Life].Change*Effect,WilliamGravesMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,WilliamGravesMedkit@CP,PeriodCount*Effect,WilliamGravesMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,WilliamGravesMedkit@Supressed,Duration' /]"/>.
 Button/Tooltip/WilliamGravesMedkit@Research=Allows some of the infantry to use a Medkit when they have less than 25% of their life, which will heal <c val="FFFF80"><d ref="Effect,WilliamGravesMedkit@Heal,VitalArray[Life].Change*Effect,WilliamGravesMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,WilliamGravesMedkit@CP,PeriodCount*Effect,WilliamGravesMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,WilliamGravesMedkit@Supressed,Duration' /]"/>.
 Button/Tooltip/WillliamGravesArtilleryStrike=Order an artillery barrage against a specific target area.<n/><n/><c val="FFFF80">Deals damage to everything in the area</c>
-Button/Tooltip/Z1BadgerBomb=Launch a bomb which travel through a linear path and decreases movement speed gradually. The bomb explodes when it stop completely  at 7 travel distance. The explosion applies burning status to all non-friendly ground units in a radius of 2 for 4 seconds, and leaves burning flame in the area for 4 seconds. <n/> Add to the 20 per second burning status damage, the area burning deals 20 area damage per second to all enemy ground units in the area.
+Button/Tooltip/Z1BadgerBomb=Launch a bomb which travel through a linear path and decreases movement speed gradually. The bomb explodes when it stop completely  at 7 travel distance. The explosion applies burning status to all non-friendly ground units in a radius of 2 for 4 seconds, and leaves burning flame in the area for 4 seconds. <n/> The burning status cause 20 damage each seconds, and the area burning apply this status continuously.
 Button/Tooltip/Z1EnergyUpgrade=Improved Z1 Energy Capacitors. Increases the starting and maximum energy of <c val="ffff8a">Z1</c> by <c val="80FFFF">25</c> and increase energy regeneration by 1 per second.
 Button/Tooltip/Z1LiquidNitrogen=Slow down all non-friendly ground units in an area of radius 3, slow down 10% of their attack speed and 75% of their movement speed, last 7 seconds.
 Button/Tooltip/Z1ShieldDefence=Temporarily gain <c val="80FFFF">+8 Armor</c> for 5 seconds.
 Button/Tooltip/Z1ShieldDefenseCancel=Cancel the Shield Defense
-Button/Tooltip/Z2Adrenaline=Increase 9 weapon range and gain +3 bonus vs massive for <c val="FFFF80"><d ref="Behavior,Z2Adrenaline,Duration"/></c> seconds
+Button/Tooltip/Z2Adrenaline=Increase 9 weapon range and gain +3 bonus vs armored for <c val="FFFF80"><d ref="Behavior,Z2Adrenaline,Duration"/></c> seconds
 Button/Tooltip/Z2BadgerBomb=Roll incendiary explosive toward enemies.  Explosives then detonate and burn all enemies in the area where it exploded, and any enemies that later run through the fire.
-Button/Tooltip/Z2Dash=Charges in target direction, causing 20 damage to all enemy units on the path.
+Button/Tooltip/Z2Dash=Charges in target direction, causing 40 damage to all enemy units on the path.
 Button/Tooltip/Z2JumpJet=Channel for 3.6 seconds and jump to target location, causing up to 50 damage to enemy units in the area and stun them for 3.6 seconds.
 Button/Tooltip/Z2Lorna=Channel for 0.7 seconds and stun nearby enemies for 2 seconds.
 CSVMustBeDeployed=CSV needs to be deployed
@@ -1299,7 +1301,7 @@ Forward Operation Base=
 LookAtType/CSVTurret=
 MustTargetUPL=Must target UPL units
 Param/Value/lib_UPLR_1F1EC273=No claymore found.
-Race/Name/UPL=UPL
+Race/Name/UPLL=UPL
 RequirementNode/Tooltip/CountBehaviorAPCnotmovingflagCompleteOnlyAtUnit2821413514=APC must be stationary
 RequirementNode/Tooltip/CountBehaviorCSVDeployedCompleteOnlyAtUnit3230205781=<d stringref="Unit,CSV,Name"/> needs to be deployed
 RequirementNode/Tooltip/CountBehaviorCSVInjuredInfantryNearbyCompleteOnlyAtUnit3144596217=Injured infantry nearby

@@ -52,7 +52,7 @@ bool libUPLR_gt_InitializeUPLRace_Func (bool testConds, bool runActions) {
     while (true) {
         auto8A7C6E27_var = PlayerGroupNextPlayer(auto8A7C6E27_g, auto8A7C6E27_var);
         if (auto8A7C6E27_var < 0) { break; }
-        if ((PlayerRace(auto8A7C6E27_var) == "UPL")) {
+        if ((PlayerRace(auto8A7C6E27_var) == "UPLL")) {
             PlayerApplySkin(auto8A7C6E27_var, "UPLAnnouncer", true);
         }
 

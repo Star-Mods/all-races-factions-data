@@ -2564,7 +2564,7 @@
     <CDataCollectionUnit id="HazmatTechnician" parent="LotC_Unit"/>
     <CUnit default="1" id="UPLCivilianBase">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Campaign"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>

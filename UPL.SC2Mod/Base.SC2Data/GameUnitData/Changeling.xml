@@ -17,7 +17,7 @@
     </CAbilMorph>
     <CValidatorUnitCompareField id="DisguiseAsInfantryRifle">
         <Field value="Race"/>
-        <Value value="UPL"/>
+        <Value value="UPLL"/>
     </CValidatorUnitCompareField>
     <CActorUnit id="ChangelingInfantryRifle" parent="InfantryRifle" unitName="ChangelingInfantryRifle">
         <AcceptedHostedPropTransfers index="Scale" value="0"/>

@@ -1099,7 +1099,7 @@
     <!--        <HotkeyCategory value="Unit/Category/UPLStory"/>-->
     <!--    </CUnit>-->
     <CUnit id="Z2JumpJetPH">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <FlagArray index="Unselectable" value="1"/>
         <FlagArray index="Untargetable" value="1"/>
         <FlagArray index="NoDraw" value="1"/>

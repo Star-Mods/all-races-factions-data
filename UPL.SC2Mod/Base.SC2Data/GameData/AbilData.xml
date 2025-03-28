@@ -37,6 +37,7 @@
         <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
         <Effect index="0" value="VolatileBurst2"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="UPLSeekerDronExplode"/>
+        <Range value="2.75"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="LotCUPLCSVSupplyLineManagement">
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
@@ -46,6 +47,7 @@
             <Vital index="Energy" value="150"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="CSVSupplyLineManagement"/>
+        <Flags index="AllowMovement" value="1"/>
         <Flags index="BestUnit" value="1"/>
     </CAbilEffectInstant>
     <CAbilBehavior id="UPLSalvage">
@@ -59,4 +61,9 @@
         <BehaviorArray value="SalvageShared"/>
         <ValidatorArray value="HasNoCargo"/>
     </CAbilBehavior>
+    <CAbilAttack id="ALLRACE2LotCBehemothattack">
+        <TargetMessage value="Abil/TargetMessage/ALLRACE2LotCBehemothattack"/>
+        <MinAttackSpeedMultiplier value="0.25"/>
+        <MaxAttackSpeedMultiplier value="128"/>
+    </CAbilAttack>
 </Catalog>

@@ -916,17 +916,17 @@
         <DataRecord Entry="Effect,CARRGrenadeLauncherBoss@SearchDummy"/>
     </CDataCollectionAbil>
     <CUnit id="CARRGrenadeLauncherMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="GrenadeLauncherMissilemover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="CARRRocketMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="CARRAARocketMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="CARRIlluminationMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="TR17StarburstMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
@@ -989,7 +989,7 @@
         <Speed value="2.8007"/>
     </CUnit>
     <CUnit id="CARRGrenadeLauncherBoss@Missile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="CARRGrenadeLauncherBoss@MissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>

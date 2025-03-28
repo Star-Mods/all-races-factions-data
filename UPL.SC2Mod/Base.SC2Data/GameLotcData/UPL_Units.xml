@@ -682,7 +682,7 @@
         <InfoArray index="Build11" Unit="UPLManufacturingFacility" Time="60">
             <Button DefaultButtonFace="UPLManufacturingFacility" Requirements="HaveUPLBillet"/>
         </InfoArray>
-        <InfoArray index="Build12" Unit="UPLAirstrip" Time="50">
+        <InfoArray index="Build12" Unit="UPLAirstrip" Time="65">
             <Button DefaultButtonFace="UPLAirstrip" Requirements="HaveUPLBillet"/>
         </InfoArray>
         <InfoArray index="Build13" Unit="UPLBattleStation" Time="36">
@@ -812,7 +812,7 @@
         <Flags index="RequireTargetVision" value="0"/>
         <Flags index="Transient" value="1"/>
         <Cost>
-            <Vital index="Energy" value="15"/>
+            <Vital index="Energy" value="50"/>
             <Cooldown TimeUse="15"/>
         </Cost>
         <AutoCastAcquireLevel value="Defensive"/>
@@ -3560,7 +3560,7 @@
     </CDataCollectionUnit>
     <CUnit default="1" id="UPLInfantryBase">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -3622,15 +3622,15 @@
         <AlliedPushPriority value="20"/>
     </CUnit>
     <CUnit id="MiningDroneWeapon" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="UPLSpecOpsAttackMissile" parent="MISSILE_HALFLIFE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="InfantryMortarMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="InfantryMortarMissileMover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
@@ -3735,7 +3735,7 @@
     </CUnit>
     <CUnit id="MiningDrone">
         <DeathRevealRadius value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Worker" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -3923,7 +3923,7 @@
         <Radius value="0.4375"/>
     </CUnit>
     <CUnit id="InfantryRocketMissile" parent="MISSILE_INVULNERABLE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <Mover value="InfantryRocketMissilemover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
@@ -4168,7 +4168,7 @@
         <EffectArray Operation="Set" Reference="Unit,InfantryMortarMissile,Mover" Value="InfantryMortarMissileMoverUpgraded"/>
         <EffectArray Operation="Set" Reference="Effect,InfantryMortarLaunch,Movers[1].Link" Value="InfantryMortarMissileMoverUpgraded"/>
         <EffectArray Operation="Set" Reference="Effect,InfantryMortarLaunchDirected,Movers[1].Link" Value="InfantryMortarMissileMoverUpgraded"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <Icon value="Assets\Textures\btn-ability-UPL-LongRangeMortarShells.dds"/>
         <AffectedUnitArray value="InfantryMortar"/>
@@ -4180,7 +4180,7 @@
         <EffectArray Reference="Weapon,InfantryRocket,Range" Value="1"/>
         <EffectArray Reference="Weapon,UPLRiotOfficerShotgun,Range" Value="0.5"/>
         <EffectArray Reference="Weapon,UPLScout,Range" Value="1"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <AffectedUnitArray value="UPLInfantryGuardian"/>
         <AffectedUnitArray value="InfantryHeavy"/>
@@ -4195,7 +4195,7 @@
     <CUpgrade id="InfantryFlamethrower3xBurning">
         <Icon value="Assets\Textures\btn-ability-UPL-NaniteIgnition.dds"/>
         <EffectArray Operation="Multiply" Reference="Effect,InfantryFlamethrowerBurningDamage,Amount" Value="3"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <ScoreAmount value="500"/>
     </CUpgrade>
@@ -4204,24 +4204,24 @@
         <EffectArray Operation="Set" Reference="Weapon,InfantryHeavy,AllowedMovement" Value="Moving"/>
         <EffectArray Operation="Set" Reference="Weapon,InfantryHeavy,Options[OnlyFireWhileInAttackOrder]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,InfantryHeavy,Options[OnlyFireAtAttackOrderTarget]" Value="0"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
     </CUpgrade>
     <CUpgrade id="InfantryOfficerAuraUpgrade">
         <Icon value="Assets\Textures\btn-ability-UPL-InfantryOfficerCharge.dds"/>
         <EffectArray Operation="Set" Reference="Effect,InfantryOfficerChargeSearch,AreaArray[0].Radius" Value="9.375"/>
         <EffectArray Operation="Set" Reference="Actor,InfantryOfficerAuraRange,Range" Value="7.500000"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
     </CUpgrade>
     <CUpgrade id="InfantryRocket1Range">
         <Icon value="Assets\Textures\btn-ability-UPL-Longshot.dds"/>
         <EffectArray Reference="Weapon,InfantryRocket,Range" Value="1"/>
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
     </CUpgrade>
     <CUpgrade id="InfantryRocketAOE">
-        <Race value="UPL"/>
+        <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <Icon value="Assets\Textures\btn_UPL_Infantryrocket_Explosive_Rocket.dds"/>
         <EffectArray Operation="Set" Reference="Effect,InfantryRocketDamage,Chance" Value="1"/>
