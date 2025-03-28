@@ -1037,6 +1037,7 @@ Effect/Name/LillyRollinsHealSmallAB=LillyRollinsHeal Small AB
 Effect/Name/LillyRollinsHealSmallSet=LillyRollinsHeal Small Set
 Effect/Name/LotCUPLCSVSupplyLineManagementApplytoCSVbehavior=LotC-UPL-CSV-SupplyLineManagement(ApplytoCSVbehavior)
 Effect/Name/LotCUPLSupplyLineManagement=LotC-UPL-SupplyLineManagement
+Effect/Name/LotCUPLZ2NovaStrikeIssueOrderMove=Nova Strike Issue Order Move
 Effect/Name/MULEFate2=Space Trash Calldown Fate
 Effect/Name/MakePrecursor2=Make Precursor
 Effect/Name/MedivacSpeedBoost2=Medivac Speed Boost

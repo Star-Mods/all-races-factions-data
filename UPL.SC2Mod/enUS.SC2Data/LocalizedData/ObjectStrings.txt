@@ -1686,6 +1686,7 @@ Effect/EditorPrefix/InfantryRocketDamage=LotC -
 Effect/EditorPrefix/InfantryRocketImpact=LotC -
 Effect/EditorPrefix/InfantryRocketLaunch=LotC -
 Effect/EditorPrefix/LillyRollinsDamage=LotC -
+Effect/EditorPrefix/LotCUPLZ2NovaStrikeIssueOrderMove=LotC - UPL - Z2
 Effect/EditorPrefix/MakePrecursorJumpJet=LotC -
 Effect/EditorPrefix/MyraDavisFlameGrenadeDamage=LotC -
 Effect/EditorPrefix/MyraDavisFlameGrenadeDoTDamage=LotC -

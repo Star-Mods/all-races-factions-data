@@ -9,11 +9,13 @@
         <Behavior value="UPLZ2DashWalkSpeed"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
-    <CEffectSet id="UPLZ2Dash">
+    <CEffectCreatePersistent id="UPLZ2Dash">
         <EditorCategories value="Race:UPL"/>
-        <EffectArray value="ApplyUPLZ2DashWalkSpeed"/>
-        <TargetLocationType value="Point"/>
-    </CEffectSet>
+        <InitialEffect value="LotCUPLZ2NovaStrikeIssueOrderMove"/>
+        <FinalEffect value="ApplyUPLZ2DashWalkSpeed"/>
+        <PeriodCount value="1"/>
+        <PeriodicPeriodArray value="0.05"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="UPLZ2DashDamage" parent="DU_WEAP">
         <EditorCategories value="Race:UPL"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
@@ -62,6 +64,8 @@
         <Alignment value="Negative"/>
         <EditorCategories value="Race:UPL,AbilityorEffectType:Units"/>
         <Effect index="0" value="UPLZ2Dash"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Flags index="Transient" value="1"/>
         <Flags index="TransientPreferred" value="1"/>
@@ -161,6 +165,8 @@
         <PeriodicEffect value="UPLZ2DashTargetSearch"/>
         <FinalEffect value="UPLZ2DashWalkStopSet"/>
         <Modification MoveSpeedMultiplier="7">
+            <StateFlags index="Passive" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
             <StateFlags index="SuppressCollision" value="1"/>
             <StateFlags index="Uncommandable" value="1"/>
         </Modification>
