@@ -167,7 +167,6 @@
         <DataRecord index="29" Entry="Effect,InfantryHeavy"/>
     </CDataCollectionUnit>
     <CUnit id="GordonTrenchard" parent="UPLHeroBase">
-        <UserTag value="Unit/ShortName/GordonTrenchard"/>
         <Attributes index="Armored" value="1"/>
         <LifeStart value="175"/>
         <LifeMax value="175"/>

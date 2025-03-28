@@ -190,7 +190,6 @@
   <Sight value="8"/>
   <FogVisibility value="Dimmed"/>
   <Response value="Nothing"/>
-  <UserTag value="gt_TargetDummyInitialize_Func"/>
 </CUnit>
 <CUnit id="Assimilator">
   <BuiltOn value="TempleVespeneGeyserSCBW"/>

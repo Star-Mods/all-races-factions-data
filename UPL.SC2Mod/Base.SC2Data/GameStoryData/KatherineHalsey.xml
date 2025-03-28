@@ -647,7 +647,6 @@
         <HotkeyCategory value=""/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
-        <UserTag value="Unit/ShortName/KatherineHalsey"/>
         <GlossaryPriority value="20"/>
         <ReviveInfoBase>
             <Charge Link="CivilianFemale/Revive"/>
@@ -656,7 +655,6 @@
     </CUnit>
     <CUnit id="KatherineHalseyPistol" parent="UPLHeroBase">
         <Name value="Unit/Name/KatherineHalsey"/>
-        <UserTag value="Unit/ShortName/KatherineHalsey"/>
         <Subtitle value="Unit/Subtitle/KatherineHalsey"/>
         <Gender value="Female"/>
         <Collide index="Locust" value="1"/>

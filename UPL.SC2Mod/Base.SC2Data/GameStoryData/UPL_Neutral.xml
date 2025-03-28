@@ -2632,11 +2632,9 @@
     <!--        <GlossaryPriority value="11"/>-->
     <!--        <HotkeyCategory value=""/>-->
     <!--        <AlliedPushPriority value="20"/>-->
-    <!--        <UserTag value="Unit/ShortName/MilesJenkins"/>-->
     <!--        <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>-->
     <!--    </CUnit>-->
     <!--    <CUnit id="RusellPeters" parent="UPLInfantryBase">-->
-    <!--        <UserTag value="Unit/ShortName/RusellPeters"/>-->
     <!--        <Attributes index="Armored" value="1"/>-->
     <!--        <LifeStart value="180"/>-->
     <!--        <LifeMax value="180"/>-->

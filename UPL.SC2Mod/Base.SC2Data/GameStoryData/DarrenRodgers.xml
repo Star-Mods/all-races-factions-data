@@ -481,7 +481,6 @@
         <DataRecord index="3" Entry="Unit,UPLInfantryGuardian"/>
     </CDataCollectionUnit>
     <CUnit id="UPLInfantryGuardian" parent="UPLInfantryBase">
-        <UserTag value="Unit/ShortName/UPLInfantryGuardian"/>
         <FlagArray index="AlwaysThreatens" value="1"/>
         <LifeStart value="50"/>
         <LifeMax value="50"/>

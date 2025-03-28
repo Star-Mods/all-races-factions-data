@@ -1097,7 +1097,6 @@
     <!--        <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>-->
     <!--        <GlossaryPriority value="16"/>-->
     <!--        <HotkeyCategory value="Unit/Category/UPLStory"/>-->
-    <!--        <UserTag value="Unit/ShortName/Z2"/>-->
     <!--    </CUnit>-->
     <CUnit id="Z2JumpJetPH">
         <Race value="UPL"/>
