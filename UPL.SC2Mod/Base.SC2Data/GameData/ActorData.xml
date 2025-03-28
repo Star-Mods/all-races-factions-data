@@ -237,12 +237,12 @@
         <UnitIcon value="Assets\Textures\btn-building-upl-##unitName##.dds"/>
     </CActorUnit>
     <CActorSplat id="BehemothAttackGroundGuideSplat" parent="CursorSplat" abil="ALLRACE2LotCBehemothattack">
-        <On index="0" Terms="Abil.ALLRACE2LotCBehemothattack.Guide; AbilCmd attack,Barrage" Send="Create"/>
+        <On index="0" Terms="Abil.ALLRACE2LotCBehemothattack.Guide; AbilCmd ALLRACE2LotCBehemothattack,Barrage" Send="Create"/>
         <On Terms="ActorCreation; ValidatePlayer PlayerIsProtoss" Send="ModelSwap ProtossAOECursorSplat"/>
         <On Terms="ActorCreation; ValidatePlayer PlayerIsZerg" Send="ModelSwap ZergAOECursorSplat"/>
-        <MaxScale value="2.000000"/>
+        <MaxScale value="2.200000"/>
         <Model value="TerranAOECursorSplat"/>
-        <Scale value="2.000000"/>
+        <Scale value="2.200000"/>
     </CActorSplat>
     <CActorRange id="SeekerDroneSelectedRangeSplat">
         <On Terms="SelectionLocalUpdate.UPLSeekerDrone.Start" Send="Create"/>
