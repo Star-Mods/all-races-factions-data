@@ -452,6 +452,7 @@ Button/Tooltip/UnknownButton3=Irradiate and reveal everyone with a Beatan magnet
 Button/Tooltip/UpgradeCrimsonEyeEnergy=Increases the energy recovery rate of the <c val="FFFF80"> Crimson Eye</c> by 100%.
 Button/Tooltip/Valkyrie=Dedicated AA corvette, capable of eliminating entire squadrons with a single salvo.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/VespenePurificationPlant=Calldown onto a Vespene Geyser to allow harvesting of vespene gas.
+Cloaking Drone Target Cooldown=Cannot target a unit that received cloaking drone less than 30 seconds ago.
 Commander/Name/UED=UED
 ConsoleSkin/Description/ConsoleUED=The best invention of the best UED minds. Everything is perfect here
 ConsoleSkin/Name/ConsoleUED=ConsoleUED
@@ -477,6 +478,8 @@ Effect/Name/90mmCannons23=Arclite Cannon (Damage)
 Effect/Name/90mmCannonsDummy2=90mm Cannons Dummy
 Effect/Name/90mmCannonsDummy22=90mm Cannons Dummy
 Effect/Name/ALLRACE2TomSawyerabEMPApplyDecloakBehavior=EMP
+Effect/Name/ALLRACE2UEDCloakingDroneTimeCheckerSet=ALLRACE2 UED Cloaking Drone Time Checker Set
+Effect/Name/ALLRACE2UEDCloakingDroneTimerTrackerAB=ALLRACE 2 UED Cloaking Drone Timer Tracker AB
 Effect/Name/ATALaserBatteryLM2=ATA Laser Battery
 Effect/Name/ATALaserBatteryU2=ATA Laser Battery
 Effect/Name/ATSLaserBatteryLM2=ATS Laser Battery

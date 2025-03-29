@@ -34,6 +34,16 @@
         <Visibility value="Hidden"/>
         <Flags index="Notification" value="0"/>
     </CEffectDamage>
+    <CEffectSet id="ALLRACE2UEDCloakingDroneTimeCheckerSet">
+        <ValidatorArray value="ALLRACE2UEDCloakingDroneTimerValidateCombine"/>
+        <EditorCategories value=""/>
+        <EffectArray value="ALLRACE2UEDCloakingDroneTimerTrackerAB"/>
+        <EffectArray value="ApplyAlgoritmInvisUED"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ALLRACE2UEDCloakingDroneTimerTrackerAB">
+        <EditorCategories value=""/>
+        <Behavior value="ALLRACE2UEDCloakingDroneTimeTracker"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="UEDLazarusResurrectPoliticalAdvisorSet">
         <EditorCategories value="Race:UED"/>
         <EffectArray value="UEDLazarusResurrectPoliticalAdvisorEnergyCost"/>

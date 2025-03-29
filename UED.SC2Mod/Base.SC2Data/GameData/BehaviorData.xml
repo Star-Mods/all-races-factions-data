@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="ALLRACE2UEDCloakingDroneTimeTracker">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:UED"/>
+        <Duration value="30"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="AlgoritmAttackCitadelAbility">
         <InfoFlags index="AlwaysUseGameText" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-shieldrecharge.dds"/>

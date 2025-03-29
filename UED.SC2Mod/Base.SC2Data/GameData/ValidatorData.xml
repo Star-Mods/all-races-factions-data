@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareBehaviorCount id="ALLRACE2UEDCloakingDroneTimerCheck">
+        <ResultFailed value="Error,Cloaking Drone Target Cooldown"/>
+        <ResultNoUnit value="Error,Cloaking Drone Target Cooldown"/>
+        <Behavior value="ALLRACE2UEDCloakingDroneTimeTracker"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ALLRACE2UEDCloakingDroneTimerValidateCombine">
+        <CombineArray value="ALLRACE2UEDCloakingDroneTimerCheck"/>
+        <CombineArray value="UEDValidateHaveNotDronInvis"/>
+        <ResultFailed value="Error,Cloaking Drone Target Cooldown"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareVital id="UEDLazarusHasEnergyforStrikeTrooper">
         <ResultFailed value="NotEnoughEnergy"/>
         <Compare value="GE"/>

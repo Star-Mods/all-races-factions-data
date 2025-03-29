@@ -156,7 +156,7 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="CloakingDrone">
         <EditorCategories value="AbilityorEffectType:Units,Race:UED"/>
-        <Effect index="0" value="ApplyAlgoritmInvisUEDBegin"/>
+        <Effect index="0" value="ALLRACE2UEDCloakingDroneTimeCheckerSet"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="NoDeceleration" value="1"/>
         <Cost index="0">
