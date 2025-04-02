@@ -84,7 +84,6 @@ Abil/Name/TalDarimWarPrismTransportMode=Transport Mode
 Abil/Name/TalDarimWarPrismTurretMode=Turret Mode
 Abil/Name/TalDarimWarmistressSoulsOvercharge=Tal'Darim - Warmistress - Souls Overcharge
 Abil/Name/ZerDarimDisguiseAsSupplicant=Disguise As Supplicant
-Abil/TargetMessage/DefaultTargetMessage=<IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/>   To Target<n/><IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/>   Cancel
 Behavior/Name/TalDarimAscendantPsiOrb=Tal'Darim - Ascendant - Psi Orb
 Behavior/Name/TalDarimAscendantPsiOrbBeamCaster=Tal'Darim - Ascendant - Psi Orb Beam Caster
 Behavior/Name/TalDarimAscendantPsionicOrbDamage=Psionic Orb
@@ -178,7 +177,6 @@ Button/ChargeText/TalDarimSummon4=<d ref="$AbilChargeCount:TalDarimHavocVoidShar
 Button/ChargeText/TalDarimSummon6=<d ref="$AbilChargeCount:TalDarimHavocVoidShardChampion,0$"/>/6
 Button/ChargeText/TalDarimWarmistressSoulsOvercharge=
 Button/ChargeText/TalDarimWrathwalkerSoulLeech=<d ref="$BehaviorStackCount:TalDarimWrathwalkerSoulsWeapon$"/>/<d ref="$BehaviorRemainingDuration:TalDarimWrathwalkerSoulsWeapon$"/>s
-Button/Name/TadDarimHavocVoidShard=Void Shard
 Button/Name/TalDarimArchway=Warp In Archway
 Button/Name/TalDarimAscendant=Warp In Ascendant
 Button/Name/TalDarimAscendantArchive=Warp In Ascendant Archive
@@ -233,6 +231,7 @@ Button/Name/TalDarimHavoc=Warp In Havoc
 Button/Name/TalDarimHavocCloakingModule=Cloaking Module
 Button/Name/TalDarimHavocSquadSight=Squad Sight
 Button/Name/TalDarimHavocTargetLock=Target Lock
+Button/Name/TalDarimHavocVoidShard=Void Shard
 Button/Name/TalDarimLocust=Warp In Locust
 Button/Name/TalDarimMonitor=Warp In Monitor
 Button/Name/TalDarimMonitorDetonation=Detonation
@@ -324,7 +323,6 @@ Button/Name/TalDarimWarpInTwoSupplicant=Warp In Two Supplicant
 Button/Name/TalDarimWrathwalker=Warp In Wrathwalker
 Button/Name/TalDarimWrathwalkerAirTargeting=Air Targeting
 Button/Name/TalDarimWrathwalkerCliffWalk=Cliff Walk
-Button/Tooltip/TadDarimHavocVoidShard=Creates void shards that cannot use active abilities, deal <d ref="(1 + Behavior,TalDarimHavocVoidShard,Modification.DamageDealtFraction[Melee]) * 100"/>% damage and take <d ref="(Behavior,TalDarimHavocVoidShard,DamageResponse.ModifyFraction - 1) * 100"/>% more damage. Void Shard last <d ref="Behavior,TalDarimVoidShardTimer,Duration"/> seconds.
 Button/Tooltip/TalDarimArchway=Warps in Tal'Darim ground units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Supplicant
 Button/Tooltip/TalDarimAscendant=Potent psionic master. Can use Psionic Orb and be upgraded to use Mind Blast.
 Button/Tooltip/TalDarimAscendantArchives=Contains an upgrade for Ascendant.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ascendant at the Archway
@@ -407,7 +405,7 @@ Button/Tooltip/TalDarimSoulAmplification=Increase the area of effect of the deat
 Button/Tooltip/TalDarimSoulLeechAppend=<n/><n/>Can be clicked on to set Soul Leech priority.
 Button/Tooltip/TalDarimSoulLeechAscendant=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, gain +<d ref="Behavior,TalDarimAscendantSoulPower,Modification.DamageDealtFraction[Spell] * 100"/>% damage and +<d ref="Behavior,TalDarimAscendantSoulPower,Modification.VitalMaxArray[Shields]"/> maximum shield for <d ref="Behavior,TalDarimAscendantSoulPower,Duration" precision="1"/> seconds, stacks up to <d ref="Behavior,TalDarimAscendantSoulPower,MaxStackCount"/> times.<n/><n/>Current bonus:<n/>+<d ref="$BehaviorStackCount:TalDarimAscendantSoulPower$ * Behavior,TalDarimAscendantSoulPower,Modification.DamageDealtFraction[Spell] * 100"/>% damage<n/>+<d ref="$BehaviorStackCount:TalDarimAscendantSoulPower$ * Behavior,TalDarimAscendantSoulPower,Modification.VitalMaxArray[Shields]"/> maximum shield
 Button/Tooltip/TalDarimSoulLeechBloodHunter=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, gain a Soul Shard for <d ref="Behavior,TalDarimBloodHunterSoulShardCharge,Duration" precision="1"/> seconds, stacks up to <d ref="Behavior,TalDarimBloodHunterSoulShardCharge,MaxStackCount"/> times.<n/>If in possession of a Soul Shard, the Blood Hunter become cloaked and his attack can embed on of his Shards inside an enemy he attacks.<n/>Embedded shards last for <d ref="Behavior,TalDarimBloodHunterSoulShard,Duration" precision="1"/> seconds.<n/>When an enemies with Soul Shard embedded is killed, it's killer invigorate nearby Tal'Darim units as if a supplicant died.<n/><n/>Current bonus:<n/><d ref="$BehaviorStackCount:TalDarimBloodHunterSoulShardCharge$"/> Soul Shard.
-Button/Tooltip/TalDarimSoulLeechChampion=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, gain +<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.MoveSpeedBonus" precision="1"/> move speed and +<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtScaled[Melee]"/> damage (+<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtAttributeUnscaled[Armored]"/> against Armored) for <d ref="Behavior,TalDarimChampionBurstofSpeed,Duration" precision="1"/> seconds or until the first attack, stacks up to <d ref="Behavior,TalDarimChampionBurstofSpeed,MaxStackCount"/> times.<n/><n/>Current bonus:<n/>+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.MoveSpeedBonus" precision="1"/> move speed<n/>+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtScaled[Melee]"/> damage (+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtAttributeUnscaled[Armored]"/> against Armored) 
+Button/Tooltip/TalDarimSoulLeechChampion=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, gain +<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.MoveSpeedBonus" precision="1"/> move speed and +<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtScaled[Melee]"/> damage (+<d ref="Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtAttributeUnscaled[Armored]"/> against Armored) for <d ref="Behavior,TalDarimChampionBurstofSpeed,Duration" precision="1"/> seconds, stacks up to <d ref="Behavior,TalDarimChampionBurstofSpeed,MaxStackCount"/> times, consume <d ref="Effect,TalDarimChampionPsiEviceratorBurstOfSpeedRB,Count"/> charge each attack.<n/><n/>Current bonus:<n/>+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.MoveSpeedBonus" precision="1"/> move speed<n/>+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtScaled[Melee]"/> damage (+<d ref="$BehaviorStackCount:TalDarimChampionBurstofSpeed$ * Behavior,TalDarimChampionBurstofSpeed,Modification.DamageDealtAttributeUnscaled[Armored]"/> against Armored) 
 Button/Tooltip/TalDarimSoulLeechCustodes=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, regain <d ref="Effect,TalDarimSoulLeechCustodesRegenerate,VitalArray[Life].Change"/> health.
 Button/Tooltip/TalDarimSoulLeechDeathStar=<c val="FF0000">Can only trigger by directly draining a</c> <c val="ffff8a">Supplicant</c><c val="FF0000">.</c><n/><n/>Enhance the damage of next use of the Vaporize ability by <d ref="Behavior,TalDarimDeathStarDeathCharge,Modification.DamageDealtScaled[Spell]"/> (+<d ref="Behavior,TalDarimDeathStarDeathCharge,Modification.DamageDealtAttributeScaled[Structure]"/> Structure). Last <d ref="Behavior,TalDarimDeathStarDeathCharge,Duration"/> and stack up to <d ref="Behavior,TalDarimDeathStarDeathCharge,MaxStackCount"/> times.<n/><n/>Current bonus:<n/>+<d ref="$BehaviorStackCount:TalDarimDeathStarDeathCharge$ * Behavior,TalDarimDeathStarDeathCharge,Modification.DamageDealtScaled[Spell]"/> damage<n/>+<d ref="$BehaviorStackCount:TalDarimDeathStarDeathCharge$ * Behavior,TalDarimDeathStarDeathCharge,Modification.DamageDealtAttributeScaled[Structure]"/> damage (Structure)
 Button/Tooltip/TalDarimSoulLeechDestroyer=When a <c val="ffff8a">Supplicant</c> die within <d ref="Effect,TalDarimSupplicantDeathSearch,AreaArray[0].Radius"/>, gain 1 charge of Blood Seeker that last <d ref="Behavior,TalDarimDestroyerBloodCharge,Duration"/> seconds, stacks up to <d ref="Behavior,TalDarimDestroyerBloodCharge,MaxStackCount"/> times.<n/><n/>Current bonus:<n/>+<d ref="$BehaviorStackCount:TalDarimDestroyerBloodCharge$"/> charges
@@ -839,7 +837,6 @@ RequirementNode/Tooltip/GT631217625CountBehaviorTalDarimBloodHunterSoulShardChar
 RequirementNode/Tooltip/LT1462268040CountUnitTalDarimDestroyerQueuedOrBetterAtUnit5=Death Star must have fewer than 5 Destroyer escort
 UI/Cloning=Cloning
 UI/ResourceSupplyToolTip_PrTD=All living units cost supply. Build Pylons to increase supply.
-Unit/Category/ProtossTaldarim=Tal'Darim
 Unit/Category/TalDarimUnits=Tal'Darim
 Unit/Name/TalDarimArchway=Archway
 Unit/Name/TalDarimAscendant=Ascendant

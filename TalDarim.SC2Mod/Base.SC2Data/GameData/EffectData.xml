@@ -1716,6 +1716,10 @@
         <AreaArray MaxCount="1" Radius="8" Effect="TalDarimChampionHegemonySetSupplicant"/>
         <MaxCount value="1"/>
         <MinCount value="1"/>
+        <TargetSorts>
+            <SortArray value="TSShields"/>
+            <SortArray value="TSLife"/>
+        </TargetSorts>
     </CEffectEnumArea>
     <CEffectSet id="TalDarimChampionHegemonySetSupplicant">
         <ValidatorArray value="TalDarimTargetisSupplicant"/>
