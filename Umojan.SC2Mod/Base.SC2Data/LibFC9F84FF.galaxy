@@ -1,40 +1,40 @@
 include "TriggerLibs/NativeLib"
 
-include "LibUMOJ_h"
+include "LibFC9F84FF_h"
 
 //--------------------------------------------------------------------------------------------------
-// Library: Factions - Umojan
+// Library: Umojan
 //--------------------------------------------------------------------------------------------------
 // External Library Initialization
-void libUMOJ_InitLibraries () {
+void libFC9F84FF_InitLibraries () {
     libNtve_InitVariables();
 }
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Initialize Umojan Race
+// Trigger: Umojan Ini
 //--------------------------------------------------------------------------------------------------
-bool libUMOJ_gt_InitializeUmojanRace_Func (bool testConds, bool runActions) {
+bool libFC9F84FF_gt_UmojanIni_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    TriggerEnable(libUMOJ_gt_HexaremStuckRaptorFix, true);
+    TriggerEnable(libFC9F84FF_gt_HexaremStuckRaptorFix, true);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUMOJ_gt_InitializeUmojanRace_Init () {
-    libUMOJ_gt_InitializeUmojanRace = TriggerCreate("libUMOJ_gt_InitializeUmojanRace_Func");
-    TriggerAddEventGeneric(libUMOJ_gt_InitializeUmojanRace, "GAME START TerU");
+void libFC9F84FF_gt_UmojanIni_Init () {
+    libFC9F84FF_gt_UmojanIni = TriggerCreate("libFC9F84FF_gt_UmojanIni_Func");
+    TriggerAddEventGeneric(libFC9F84FF_gt_UmojanIni, "GAME START");
 }
 
 //--------------------------------------------------------------------------------------------------
 // Trigger: Hexarem Stuck Raptor Fix
 //--------------------------------------------------------------------------------------------------
-bool libUMOJ_gt_HexaremStuckRaptorFix_Func (bool testConds, bool runActions) {
+bool libFC9F84FF_gt_HexaremStuckRaptorFix_Func (bool testConds, bool runActions) {
     // Variable Declarations
     unit lv_hexarem;
     unit lv_raptor;
@@ -82,30 +82,30 @@ bool libUMOJ_gt_HexaremStuckRaptorFix_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUMOJ_gt_HexaremStuckRaptorFix_Init () {
-    libUMOJ_gt_HexaremStuckRaptorFix = TriggerCreate("libUMOJ_gt_HexaremStuckRaptorFix_Func");
-    TriggerEnable(libUMOJ_gt_HexaremStuckRaptorFix, false);
-    TriggerAddEventPlayerEffectUsed(libUMOJ_gt_HexaremStuckRaptorFix, c_playerAny, "UmojanHexaremRaptorDummyRecallMU");
+void libFC9F84FF_gt_HexaremStuckRaptorFix_Init () {
+    libFC9F84FF_gt_HexaremStuckRaptorFix = TriggerCreate("libFC9F84FF_gt_HexaremStuckRaptorFix_Func");
+    TriggerEnable(libFC9F84FF_gt_HexaremStuckRaptorFix, false);
+    TriggerAddEventPlayerEffectUsed(libFC9F84FF_gt_HexaremStuckRaptorFix, c_playerAny, "UmojanHexaremRaptorDummyRecallMU");
 }
 
-void libUMOJ_InitTriggers () {
-    libUMOJ_gt_InitializeUmojanRace_Init();
-    libUMOJ_gt_HexaremStuckRaptorFix_Init();
+void libFC9F84FF_InitTriggers () {
+    libFC9F84FF_gt_UmojanIni_Init();
+    libFC9F84FF_gt_HexaremStuckRaptorFix_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
 // Library Initialization
 //--------------------------------------------------------------------------------------------------
-bool libUMOJ_InitLib_completed = false;
+bool libFC9F84FF_InitLib_completed = false;
 
-void libUMOJ_InitLib () {
-    if (libUMOJ_InitLib_completed) {
+void libFC9F84FF_InitLib () {
+    if (libFC9F84FF_InitLib_completed) {
         return;
     }
 
-    libUMOJ_InitLib_completed = true;
+    libFC9F84FF_InitLib_completed = true;
 
-    libUMOJ_InitLibraries();
-    libUMOJ_InitTriggers();
+    libFC9F84FF_InitLibraries();
+    libFC9F84FF_InitTriggers();
 }
 

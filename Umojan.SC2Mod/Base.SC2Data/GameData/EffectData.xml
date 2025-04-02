@@ -1807,9 +1807,8 @@
     </CEffectLaunchMissile>
     <CEffectDamage id="UmojanATAPlasmaBatteryU" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:TerU"/>
-        <AttributeBonus index="Armored" value="20"/>
         <Visibility value="Visible"/>
-        <Amount value="10"/>
+        <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="UmojanATSPlasmaBatteryCP">
@@ -1845,9 +1844,8 @@
     </CEffectLaunchMissile>
     <CEffectDamage id="UmojanATSPlasmaBatteryU" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:TerU"/>
-        <AttributeBonus index="Armored" value="20"/>
         <Visibility value="Visible"/>
-        <Amount value="10"/>
+        <Amount value="12"/>
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="UmojanDiraeAirburstCP">
@@ -2663,6 +2661,8 @@
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
         <Amount value="14"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
     </CEffectDamage>
     <CEffectEnumArea id="UmojanStrikefoxMissileSearch">
         <EditorCategories value="Race:TerU"/>

@@ -724,6 +724,7 @@
         <AbilArray index="6" Link="UmojanChargeEnemies"/>
         <AbilArray Link="UmojanStayatRange"/>
         <AbilArray Link="UmojanTrackingTarget"/>
+        <WeaponArray index="0" Link="UmojanBattlecatCuirassier"/>
         <WeaponArray Link="UmojanPlasmabatCuirassier"/>
         <WeaponArray Link="UmojanPlasmabatCuirassierLookAt"/>
         <CardLayouts index="0">
@@ -906,8 +907,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="80"/>
-        <LifeMax value="80"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
         <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
         <ShieldsStart value="40"/>
         <ShieldsMax value="40"/>
@@ -992,6 +993,8 @@
         <Footprint value="UmojanFootprint1x1Underground"/>
         <SubgroupAlias value="UmojanSentryGunUnderground"/>
         <ScoreMake value="0"/>
+        <LifeStart value="80"/>
+        <LifeMax value="80"/>
     </CUnit>
     <CUnit id="UmojanD8ChargeWeapon" parent="MISSILE">
         <Race value="TerU"/>
@@ -1038,6 +1041,7 @@
         <CostResource index="Minerals" value="10"/>
         <RepairTime value="3"/>
         <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="UmojanEnergyBarricadeAutoMorphON"/>
         <BehaviorArray Link="UmojanPowerUpgradeBarricade"/>
         <BehaviorArray Link="UmojanPowerLevel0"/>
         <BehaviorArray Link="UmojanPowerLevel1"/>
@@ -1066,6 +1070,13 @@
         <GlossaryPriority value="75"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="UmojanEnergyBarricadePassthrough" parent="UmojanEnergyBarricade">
+        <Name value="Unit/Name/UmojanEnergyBarricadePassthrough"/>
+        <Description value="Button/Tooltip/UmojanEnergyBarricadePassthrough"/>
+        <AbilArray index="1" Link="UmojanEnergyBarricadeAutoMorphOFF"/>
+        <Footprint value="UmojanEnergyBarricadePassthroughFootprint"/>
+        <GlossaryCategory value=""/>
     </CUnit>
     <CUnit id="UmojanWarpingSignatureBunker">
         <DeathRevealRadius value="1"/>
@@ -1189,7 +1200,6 @@
         <ShieldRegenDelay value="10"/>
         <ShieldRegenRate value="2"/>
         <ShieldArmorName value="Unit/ShieldArmorName/UmojanPlasmaShields"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanRefinery">
         <DeathRevealRadius value="3"/>
@@ -1273,7 +1283,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="35"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanRefineryRich" parent="UmojanRefinery">
         <Name value="Unit/Name/UmojanRefineryRich"/>
@@ -1296,7 +1305,6 @@
             <Charge Link="UmojanRefineryRich/Revive"/>
             <Cooldown Link="UmojanRefineryRich/Revive"/>
         </ReviveInfoBase>
-        <GlossaryCategory value=""/>
         <GlossaryPriority value="0"/>
     </CUnit>
     <CUnit id="UmojanScienceFacilityBase">
@@ -1490,7 +1498,6 @@
         <GlossaryPriority value="110"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <TechTreeUnlockedUnitArray value="UmojanShadowguard"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanScienceFacilityRed" parent="UmojanScienceFacilityBase">
         <Name value="Unit/Name/UmojanScienceFacilityRed2"/>
@@ -1512,7 +1519,6 @@
             <Charge Link="UmojanScienceFacilityRed/Revive"/>
             <Cooldown Link="UmojanScienceFacilityRed/Revive"/>
         </ReviveInfoBase>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
         <GlossaryPriority value="39"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <CardLayouts index="0">
@@ -1566,7 +1572,6 @@
             <Charge Link="UmojanScienceFacilityRed/Revive"/>
             <Cooldown Link="UmojanScienceFacilityRed/Revive"/>
         </ReviveInfoBase>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
         <GlossaryPriority value="37"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <CardLayouts index="0">
@@ -1621,7 +1626,6 @@
             <Charge Link="UmojanScienceFacilityRed/Revive"/>
             <Cooldown Link="UmojanScienceFacilityRed/Revive"/>
         </ReviveInfoBase>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
         <GlossaryPriority value="38"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <CardLayouts index="0">
@@ -1748,7 +1752,6 @@
         <TechTreeProducedUnitArray value="UmojanDira"/>
         <TechTreeProducedUnitArray value="UmojanHexareme"/>
         <TechTreeProducedUnitArray value="UmojanCrow"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanFactory">
         <DeathRevealRadius value="3"/>
@@ -1845,7 +1848,6 @@
         <TechTreeProducedUnitArray value="UmojanBattleTankAA"/>
         <TechTreeProducedUnitArray value="UmojanWhirlwind"/>
         <TechTreeProducedUnitArray value="UmojanPathfinder"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanAATurret">
         <Description value="Button/Tooltip/MissileTurret"/>
@@ -1884,7 +1886,7 @@
         <ShieldArmorName value="Unit/ShieldArmorName/UmojanPlasmaShields"/>
         <Sight value="11"/>
         <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Minerals" value="125"/>
         <RepairTime value="25"/>
         <AttackTargetPriority value="19"/>
         <AbilArray Link="BuildInProgress"/>
@@ -2046,7 +2048,6 @@
         <TechAliasArray value="Alias_Umojan_SupplyCache"/>
         <GlossaryPriority value="25"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanSupplyCache">
         <DeathRevealRadius value="3"/>
@@ -2127,7 +2128,6 @@
         <TechAliasArray value="Alias_Umojan_SupplyCache"/>
         <GlossaryPriority value="20"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanPathfinder">
         <DeathRevealRadius value="3"/>
@@ -2448,7 +2448,6 @@
         <TacticalAI value="EngineeringBay"/>
         <GlossaryPriority value="40"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanCommandCenter">
         <DeathRevealRadius value="3"/>
@@ -2549,7 +2548,6 @@
         <TechTreeProducedUnitArray value="UmojanMCS"/>
         <TechTreeProducedUnitArray value="UmojanFrenrir"/>
         <TechTreeProducedUnitArray value="UmojanBattleship"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanBunker">
         <DeathRevealRadius value="3"/>
@@ -2750,7 +2748,6 @@
         <TechTreeProducedUnitArray value="UmojanDisruptor"/>
         <TechTreeProducedUnitArray value="UmojanCommando"/>
         <TechTreeProducedUnitArray value="UmojanShadowguard"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanArmory">
         <DeathRevealRadius value="3"/>
@@ -2838,7 +2835,6 @@
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <TechTreeUnlockedUnitArray value="UmojanBattleTank"/>
         <TechTreeUnlockedUnitArray value="UmojanWhirlwind"/>
-        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
     </CUnit>
     <CUnit id="UmojanMCS">
         <DeathRevealRadius value="3"/>
@@ -3229,7 +3225,6 @@
         <StationaryTurningRate value="999.8437"/>
         <TurningRate value="999.8437"/>
         <Sight value="11"/>
-        <VisionHeight value="1"/>
         <Food value="-4"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="250"/>
@@ -3580,6 +3575,7 @@
             <Charge Link="UmojanBattleTankAA/Revive"/>
             <Cooldown Link="UmojanBattleTankAA/Revive"/>
         </ReviveInfoBase>
+        <GlossaryCategory value=""/>
     </CUnit>
     <CUnit id="UmojanSupplyCacheLowered" parent="UmojanSupplyCache">
         <Name value="Unit/Name/UmojanSupplyCacheLowered"/>
@@ -3635,7 +3631,6 @@
         </ReviveInfoBase>
         <Collide index="Locust" value="0"/>
         <Collide index="Phased" value="0"/>
-        <GlossaryCategory value=""/>
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
     <CUnit id="UmojanWarpingSignatureWorkshop">
@@ -4198,16 +4193,15 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <BehaviorArray Link="UmojanGroundDetectorBurrowFirst"/>
+        <Radius value="0.125"/>
         <SeparationRadius value="0"/>
         <SubgroupPriority value="6"/>
         <MinimapRadius value="0.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TechAliasArray value="Alias_Umojan_GroundSensor"/>
         <HotkeyCategory value="Unit/Category/UmojanUnits"/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
-        <Radius value="0.125"/>
-        <TechAliasArray value="Alias_Umojan_GroundSensor"/>
-        <Mob value="Multiplayer"/>
     </CUnit>
     <CUnit id="UmojanGroundSensorBurrowed" parent="UmojanGroundSensor">
         <Name value="Unit/Name/UmojanGroundSensorBurrowed"/>

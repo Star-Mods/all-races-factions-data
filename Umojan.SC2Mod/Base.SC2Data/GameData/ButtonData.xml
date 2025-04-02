@@ -4,24 +4,18 @@
         <Icon value="Assets\Textures\btn-command-cancel.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="GatherTerU">
         <Icon value="Assets\Textures\btn-ability-terran-gather.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-gather.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
         <HotkeyAlias value="GatherProt"/>
-        <Universal value="1"/>
         <SimpleDisplayText value="SimpleDisplay/Gather"/>
     </CButton>
     <CButton id="UmojanCancelMissileStrike">
         <Icon value="Assets\Textures\btn-command-cancel.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanShockwaveMissiles">
         <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
@@ -60,14 +54,12 @@
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-Decloak-color.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="Cloak"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanDeepDive">
         <Icon value="Assets\Textures\btn-ability-hornerhan-wraith-permanentcloak.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-hornerhan-wraith-permanentcloak.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="DeepCloak"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanCommandoFlashGrenadeRedirect">
         <Icon value="Assets\Textures\btn-upgrade-nova-flashgrenade.dds"/>
@@ -106,7 +98,6 @@
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-Decloak-color.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="Cloak"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanCloakingField">
         <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
@@ -128,7 +119,6 @@
         <TooltipAppender Text="Button/Tooltip/CommanderPrestigeSwannHerculesDeploySpeedUpgrade"/>
         <Icon value="Assets\Textures\btn-techupgrade-terran-rapiddeployment.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
     </CButton>
     <CButton id="UmojanCommandoAmbush">
         <Icon value="Assets\Textures\btn-unit-terran-tychusreaper-holo.dds"/>
@@ -149,8 +139,6 @@
         <Icon value="Assets\Textures\btn-command-returncargo.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-returncargo.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanSendSpotter">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-detector.dds"/>
@@ -167,7 +155,6 @@
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-Decloak-color.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="Cloak"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanTimeBomb">
         <Icon value="Assets\Textures\btn-ability-protoss-timewarp.dds"/>
@@ -205,17 +192,13 @@
         <Icon value="Assets\Textures\btn-ability-terran-load.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-load.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
         <HotkeyAlias value="BunkerLoad"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanSpecOpsDropshipUnloadAt">
         <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
         <HotkeyAlias value="BunkerUnloadAll"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanEngineeringTower">
         <Icon value="Assets\Textures\btn-building-terran-hivemindemulator.dds"/>
@@ -369,13 +352,11 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-plasmashot.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-plasmashot.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanResearchRangeFinder">
         <Icon value="Assets\Textures\btn-upgrade-nova-equipment-rangefinderoculus.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-nova-equipment-rangefinderoculus.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanShipPlatingLevel1">
         <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
@@ -416,7 +397,6 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-stetmann-mechameleeattacks-level0.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="UmojanStayatRange"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanTitanKillerAmmunition">
         <Icon value="Assets\Textures\btn-upgrade-terran-enhancedmunitions.dds"/>
@@ -471,21 +451,16 @@
         <Icon value="Assets\Textures\btn-upgrade-raynor-phobosclassweaponssystem.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-raynor-phobosclassweaponssystem.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanRepairMCS">
         <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanRepairNorns">
         <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanFrenrir">
         <Icon value="Assets\Textures\btn-unit-terran-thor.dds"/>
@@ -628,14 +603,12 @@
         <AlertIcon value="Assets\Textures\btn-unit-collection-thormorph-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="FrenrirModes"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanTyphonHighExplosiveMode">
         <Icon value="Assets\Textures\btn-unit-terran-thor-umojan.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-thor-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="FrenrirModes"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanPowerLevel1Military">
         <Icon value="Assets\Textures\btn-ability-mengsk-thor-bigboycover.dds"/>
@@ -734,7 +707,6 @@
         <Icon value="Assets\Textures\btn-unit-terran-scv-umojan.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-scv-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanBattleTank">
         <Icon value="Assets\Textures\btn-unit-terran-siegetank-umojan.dds"/>
@@ -892,7 +864,6 @@
         <Icon value="Assets\Textures\btn-status-radar.dds"/>
         <AlertIcon value="Assets\Textures\btn-status-radar.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
     </CButton>
     <CButton id="UmojanJetPack">
         <Icon value="Assets\Textures\BTN-Ability-Terran-JetPack-color.dds"/>
@@ -928,12 +899,10 @@
     <CButton id="UmojanPermanantlyCloakedDirae">
         <Icon value="Assets\Textures\btn-techupgrade-terran-crossspectrumdampeners.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
     </CButton>
     <CButton id="UmojanPermanantlyCloakedMist">
         <Icon value="Assets\Textures\wireframe-terran-wraith-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
     </CButton>
     <CButton id="UmojanPermanentlyCloakedSpySatellite">
         <Icon value="Assets\Textures\wireframe-stetmann-stetellite.dds"/>
@@ -947,14 +916,12 @@
     <CButton id="UmojanPermanentlyCloakedShadowguard">
         <Icon value="Assets\Textures\btn-techupgrade-terran-criussuit.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <TintRacially value="1"/>
     </CButton>
     <CButton id="UmojanDeployAntiAerospace">
         <Icon value="Assets\Textures\btn-unit-terran-siegetanksieged-umojan.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-siegetanksieged-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="TankModes"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanMissileBarrage">
         <Icon value="Assets\Textures\btn-ability-stetmann-corruptormissilebarrage.dds"/>
@@ -976,13 +943,11 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-siegetank-umojan.dds"/>
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="TankModes"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanWeaponPowerAccumulator">
         <Icon value="Assets\Textures\btn-upgrade-raynor-phobosclassweaponssystem.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-raynor-phobosclassweaponssystem.dds"/>
         <EditorCategories value="Race:TerU"/>
-        <Universal value="1"/>
     </CButton>
     <CButton id="UmojanMist">
         <Icon value="Assets\Textures\btn-unit-terran-wraith-umojan.dds"/>

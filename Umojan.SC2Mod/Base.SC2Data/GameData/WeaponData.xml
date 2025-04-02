@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="UmojanBattlecatCuirassier">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\BTN-Upgrade-Terran-VehicleWeaponsLevel0.dds"/>
+        <DisplayEffect value="UmojanBattlecat"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="1.7"/>
+        <DamagePoint value="0.15"/>
+        <Effect value="UmojanRetributionFieldSet"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="UmojanRaptors">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-unit-terran-valkyrie.dds"/>
@@ -484,7 +496,7 @@
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-ui-spidermineex3.dds"/>
         <DisplayEffect value="UmojanStrikeMinesDamage"/>
-        <TargetFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Hover,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="0.1"/>
         <Period value="0.833"/>
         <Effect value="UmojanStrikeMinesSet"/>
