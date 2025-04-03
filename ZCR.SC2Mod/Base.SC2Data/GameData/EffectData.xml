@@ -1242,7 +1242,7 @@
         <EditorCategories value="Race:ZHBR"/>
         <LaunchLocation Value="TargetUnitOrPoint"/>
         <ImpactLocation Value="CasterUnit"/>
-        <LaunchEffect value="ZHBRConsumeDNA@Damage"/>
+        <LaunchEffect value="ZHBRConsumeDNA@LaunchSet"/>
         <ImpactEffect value="ZHBRConsumeDNA@HealSet"/>
         <AmmoUnit value="ZHBRConsumeDNA@Missile"/>
         <Movers Link="ZHBRConsumeDNA@Mover"/>
