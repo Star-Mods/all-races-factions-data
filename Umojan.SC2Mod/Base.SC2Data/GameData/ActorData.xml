@@ -2558,8 +2558,6 @@
         <Model value="UmojanRailweaponBeamVeryThick"/>
     </CActorBeamSimple>
     <CActorModel id="UmojanEnergyGeneratorModel" parent="ModelAddition">
-        <On Terms="UnitBirth.UmojanEnergyGenerator.EditorPlaced" Send="Create"/>
-        <On Terms="UnitDeath.UmojanEnergyGenerator" Send="Destroy"/>
         <Host Subject="UmojanEnergyGenerator"/>
         <HostSiteOps Ops="SOpAttachCenter SOp180 SOpMoveDownByDot35"/>
         <Model value="UmojanEnergyGenerator"/>
@@ -2654,8 +2652,8 @@
         <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
         <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
         <On index="75" Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanEnergyGenerator" Send="Create"/>
-        <On index="76" removed="1"/>
-        <On index="77" removed="1"/>
+        <On index="76" Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanEnergyGenerator" Send="Create UmojanEnergyGeneratorModel"/>
+        <On index="77" Terms="UnitBirth.UmojanEnergyGenerator" Target="" Send="Create UmojanEnergyGeneratorModel"/>
         <On index="78" removed="1"/>
         <On index="79" removed="1"/>
         <CreepHeightClass value="Small"/>
