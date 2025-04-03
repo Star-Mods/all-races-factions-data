@@ -262,6 +262,7 @@
             <ValueGameType Type="Race"/>
         </Element>
         <Element Type="FunctionCall" Id="C95E8B43">
+            <Disabled/>
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000116"/>
             <Parameter Type="Param" Library="UEDC" Id="DB17B7C9"/>
             <Parameter Type="Param" Library="UEDC" Id="DC27F082"/>
@@ -3993,6 +3994,7 @@
             <Item Type="Variable" Library="UEDC" Id="1FB7F81A"/>
         </Element>
         <Element Type="Variable" Id="0FB228CE">
+            <Disabled/>
             <Internal/>
             <VariableType>
                 <Type Value="unitgroup"/>
@@ -4007,6 +4009,7 @@
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000104"/>
         </Element>
         <Element Type="Trigger" Id="84E846D3">
+            <Disabled/>
             <InitOff/>
             <Internal/>
             <Event Type="FunctionCall" Library="UEDC" Id="B8726392"/>
@@ -4261,6 +4264,7 @@
             <ValueType Type="int"/>
         </Element>
         <Element Type="Trigger" Id="2537686C">
+            <Disabled/>
             <Internal/>
             <Variable Type="Variable" Library="UEDC" Id="E7EBE490"/>
             <Action Type="FunctionCall" Library="UEDC" Id="ABF9BCCD"/>
@@ -4437,6 +4441,7 @@
             <Variable Type="Variable" Library="UEDC" Id="BD6B5872"/>
         </Element>
         <Element Type="FunctionCall" Id="C673A3CF">
+            <Disabled/>
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000111"/>
             <Parameter Type="Param" Library="UEDC" Id="FBC8862D"/>
             <Parameter Type="Param" Library="UEDC" Id="4BB32C45"/>
@@ -4465,6 +4470,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="00000538"/>
         </Element>
         <Element Type="Trigger" Id="226D6BE1">
+            <Disabled/>
             <InitOff/>
             <Internal/>
             <Event Type="FunctionCall" Library="UEDC" Id="B6CE62EB"/>
@@ -4591,6 +4597,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="00000108"/>
         </Element>
         <Element Type="Variable" Id="5A8CCAEE">
+            <Disabled/>
             <Internal/>
             <VariableType>
                 <Type Value="int"/>
@@ -4602,6 +4609,7 @@
             <ValueType Type="int"/>
         </Element>
         <Element Type="Variable" Id="CB867B03">
+            <Disabled/>
             <Internal/>
             <VariableType>
                 <Type Value="control"/>
@@ -4612,6 +4620,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="FAC49C47"/>
         </Element>
         <Element Type="Variable" Id="1FB7F81A">
+            <Disabled/>
             <Internal/>
             <VariableType>
                 <Type Value="control"/>
