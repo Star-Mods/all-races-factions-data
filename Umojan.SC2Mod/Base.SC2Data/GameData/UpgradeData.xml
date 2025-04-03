@@ -288,8 +288,8 @@
         <Race value="TerU"/>
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Unit,UmojanMist,Speed" Value="1.400"/>
-        <EffectArray Reference="Unit,UmojanDira,Speed" Value="1.400"/>
+        <EffectArray Reference="Unit,UmojanMist,Speed" Value="1.000000"/>
+        <EffectArray Reference="Unit,UmojanDira,Speed" Value="1.000000"/>
         <EditorCategories value="Race:TerU,UpgradeType:Talents"/>
         <AffectedUnitArray value="UmojanMist"/>
         <AffectedUnitArray value="UmojanDira"/>
@@ -330,7 +330,7 @@
         <Icon value="Assets\Textures\btn-upgrade-swann-targetingoptics.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="TerU"/>
-        <ScoreAmount value="200"/>
+        <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Operation="Set" Reference="Weapon,UmojanGladiusMissileMove,Options[Disabled]" Value="0"/>
         <EditorCategories value="Race:TerU,UpgradeType:Talents"/>
@@ -426,7 +426,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-internalizedtechmodule.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="TerU"/>
-        <ScoreAmount value="200"/>
+        <ScoreAmount value="400"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:TerU,UpgradeType:Talents"/>
         <AffectedUnitArray value="UmojanBattlecat"/>

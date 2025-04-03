@@ -66,13 +66,12 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="RoboticsFacility"/>
         <GlossaryPriority value="211"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeProducedUnitArray value="Observer"/>
         <TechTreeProducedUnitArray value="WarpPrism"/>
         <TechTreeProducedUnitArray value="Immortal"/>
         <TechTreeProducedUnitArray value="Colossus"/>
         <TechTreeProducedUnitArray value="Disruptor"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimPhotonicBarrageWeapon" parent="MISSILE">
         <Race value="PrTD"/>
@@ -145,11 +144,10 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Stargate"/>
         <GlossaryPriority value="207"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeProducedUnitArray value="Phoenix"/>
         <TechTreeProducedUnitArray value="VoidRay"/>
         <TechTreeProducedUnitArray value="Carrier"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimFracturerRich">
         <DeathRevealRadius value="3"/>
@@ -212,8 +210,7 @@
         <SubgroupAlias value="TalDarimFracturer"/>
         <GlossaryPriority value="10"/>
         <GlossaryAlias value="TalDarimFracturer"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimCyberneticsKernel">
         <DeathRevealRadius value="3"/>
@@ -279,12 +276,11 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="29"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeUnlockedUnitArray value="Stalker"/>
         <TechTreeUnlockedUnitArray value="Sentry"/>
         <TechTreeUnlockedUnitArray value="MothershipCore"/>
         <TechTreeUnlockedUnitArray value="Adept"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimBloodShrine">
         <DeathRevealRadius value="3"/>
@@ -342,11 +338,10 @@
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="221"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <KillDisplay value="Never"/>
         <TechTreeUnlockedUnitArray value="DarkTemplar"/>
         <TechTreeUnlockedUnitArray value="Archon"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimFleetLodestar">
         <DeathRevealRadius value="3"/>
@@ -409,11 +404,10 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="217"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeUnlockedUnitArray value="Mothership"/>
         <TechTreeUnlockedUnitArray value="Carrier"/>
         <TechTreeUnlockedUnitArray value="Tempest"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimDuplicator">
         <DeathRevealRadius value="3"/>
@@ -481,8 +475,7 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="26"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimAutomationBay">
         <DeathRevealRadius value="3"/>
@@ -544,10 +537,9 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="219"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeUnlockedUnitArray value="Colossus"/>
         <TechTreeUnlockedUnitArray value="Disruptor"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimFracturer">
         <DeathRevealRadius value="3"/>
@@ -612,8 +604,7 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="14"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimPeristyle">
         <DeathRevealRadius value="3"/>
@@ -675,8 +666,7 @@
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="18"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimArchway">
         <DeathRevealRadius value="3"/>
@@ -747,7 +737,7 @@
         <TacticalAIThink value="AIThinkGateway"/>
         <TechAliasArray value="Alias_Gateway"/>
         <GlossaryPriority value="22"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeProducedUnitArray value="WarpGate"/>
         <TechTreeProducedUnitArray value="Zealot"/>
         <TechTreeProducedUnitArray value="Sentry"/>
@@ -755,7 +745,6 @@
         <TechTreeProducedUnitArray value="Adept"/>
         <TechTreeProducedUnitArray value="HighTemplar"/>
         <TechTreeProducedUnitArray value="DarkTemplar"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimWarmistress">
         <DeathRevealRadius value="3"/>
@@ -840,7 +829,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="VoidRay"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimCustodes">
         <DeathRevealRadius value="3"/>
@@ -924,7 +913,7 @@
         <GlossaryWeakArray value="Thor"/>
         <GlossaryWeakArray value="Ultralisk"/>
         <GlossaryWeakArray value="Immortal"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <LifeRegenRate value="1"/>
         <BehaviorArray Link="TalDarimSoulDrinkerSP"/>
     </CUnit>
@@ -1009,7 +998,7 @@
         <GlossaryWeakArray value="MissileTurret"/>
         <GlossaryWeakArray value="SporeCrawler"/>
         <GlossaryWeakArray value="PhotonCannon"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimDreadnought">
         <DeathRevealRadius value="3"/>
@@ -1108,7 +1097,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="VoidRay"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <BehaviorArray Link="TalDarimSoulDrinker"/>
     </CUnit>
     <CUnit id="TalDarimLocust">
@@ -1236,7 +1225,7 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <GlossaryPriority value="10"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimRiddlerPlasmaBomb">
         <Race value="PrTD"/>
@@ -1376,7 +1365,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Mutalisk"/>
         <GlossaryWeakArray value="Phoenix"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
         <BehaviorArray Link="TalDarimSoulDrinker"/>
@@ -1455,7 +1444,7 @@
         <GlossaryWeakArray value="MissileTurret"/>
         <GlossaryWeakArray value="Mutalisk"/>
         <LifeArmor value="1"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <BehaviorArray Link="TalDarimSoulDrinker"/>
         <GlossaryPriority value="140"/>
     </CUnit>
@@ -1554,7 +1543,7 @@
         <GlossaryWeakArray value="Marauder"/>
         <GlossaryWeakArray value="Zergling"/>
         <GlossaryWeakArray value="Immortal"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <Fidget>
             <ChanceArray index="Anim" value="5"/>
             <ChanceArray index="Idle" value="90"/>
@@ -1650,7 +1639,7 @@
         <GlossaryWeakArray value="Roach"/>
         <GlossaryWeakArray value="Zealot"/>
         <GlossaryWeakArray value="Marauder"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
     <CUnit id="TalDarimSupplicant">
@@ -1720,7 +1709,7 @@
         <GlossaryWeakArray value="Roach"/>
         <GlossaryWeakArray value="Zealot"/>
         <GlossaryWeakArray value="Marauder"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <AIEvaluateAlias value="Adept"/>
     </CUnit>
     <CUnit id="TalDarimLitany" parent="TalDarimSupplicant">
@@ -1850,7 +1839,7 @@
         <TechAliasArray value="TalDarim_Alias_WarPrism"/>
         <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <GlossaryPriority value="100"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimWarPrismTurret" parent="TalDarimWarPrism">
         <Name value="Unit/Name/TalDarimWarPrismTurret"/>
@@ -1956,10 +1945,9 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="214"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeUnlockedUnitArray value="HighTemplar"/>
         <TechTreeUnlockedUnitArray value="Archon"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimDeathCouncil">
         <DeathRevealRadius value="3"/>
@@ -2023,8 +2011,7 @@
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="203"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="ZerDarimChangelingSupplicant" parent="TalDarimSupplicant">
         <Name value="Unit/Name/Changeling"/>
@@ -2172,10 +2159,9 @@
         <TacticalAI value="Nexus"/>
         <TacticalAIThink value="AIThinkNexus"/>
         <GlossaryPriority value="10"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <TechTreeProducedUnitArray value="Probe"/>
         <TechTreeProducedUnitArray value="MothershipCore"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimReliquaryofSouls">
         <!--BehaviorArray Link="SOACheatDeathSupply4"/-->
@@ -2256,7 +2242,7 @@
         <EquipmentArray Weapon="TalDarimReliquaryLitany"/>
         <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <GlossaryPriority value="130"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimDreadnoughtBeetleWeapon" parent="MISSILE_INVULNERABLE">
         <Race value="PrTD"/>
@@ -2353,7 +2339,7 @@
         <GlossaryWeakArray value="Raven"/>
         <GlossaryWeakArray value="Overseer"/>
         <GlossaryWeakArray value="Observer"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <AIEvaluateAlias value="DarkTemplar"/>
         <ReviveInfoBase>
             <Charge Link="DarkTemplar/Revive"/>
@@ -2521,7 +2507,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="Immortal"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <AIEvaluateAlias value="Colossus"/>
         <ReviveInfoBase>
             <Charge Link="Colossus/Revive"/>
@@ -2612,7 +2598,7 @@
             <LayoutButtons Face="TalDarimSoulLeechHavoc" Type="Submenu" SubmenuCardId="Prio" Row="1" Column="0"/>
             <LayoutButtons Face="TalDarimDrainSupplicantGeneric2" Type="AbilCmd" AbilCmd="TalDarimDrainSupplicant,Execute" Row="1" Column="4"/>
             <LayoutButtons>
-                <Face value="TadDarimHavocVoidShard"/>
+                <Face value="TalDarimHavocVoidShard"/>
                 <Type value="Submenu"/>
                 <AbilCmd value="255,255"/>
                 <SubmenuCardId value="VS"/>
@@ -2653,7 +2639,7 @@
         <AIEvalFactor value="0"/>
         <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <GlossaryPriority value="40"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
     </CUnit>
     <CUnit id="TalDarimPariah">
         <DeathRevealRadius value="3"/>
@@ -2729,7 +2715,7 @@
         <GlossaryWeakArray value="Hellion"/>
         <GlossaryWeakArray value="Roach"/>
         <GlossaryWeakArray value="Colossus"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <Fidget>
             <ChanceArray index="Anim" value="20"/>
             <ChanceArray index="Idle" value="70"/>
@@ -2824,7 +2810,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Mutalisk"/>
         <GlossaryWeakArray value="Phoenix"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <BehaviorArray Link="TalDarimSoulDrinker"/>
     </CUnit>
     <CUnit id="TalDarimDeathStar">
@@ -2901,7 +2887,7 @@
         <GlossaryWeakArray value="VikingFighter"/>
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="VoidRay"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <BehaviorArray Link="TalDarimDeathStarRelease"/>
         <BehaviorArray Link="TalDarimSoulDrinkerSP"/>
         <WeaponArray Link="TalDarimReliquarySendDestroyers"/>
@@ -2995,7 +2981,7 @@
         <GlossaryWeakArray value="Marine"/>
         <GlossaryWeakArray value="Zergling"/>
         <GlossaryWeakArray value="Zealot"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <AIEvaluateAlias value="Immortal"/>
         <Fidget>
             <ChanceArray index="Anim" value="5"/>
@@ -3074,13 +3060,13 @@
         <CostResource index="Minerals" value="250"/>
         <ScoreMake value="250"/>
         <ScoreKill value="250"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <Fidget DelayMax="1" DelayMin="0.2">
             <ChanceArray index="Idle" value="50"/>
             <ChanceArray index="Turn" value="50"/>
         </Fidget>
         <CostCategory value="Technology"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <TurretArray value="TalDarimParticleCannonTurret"/>
     </CUnit>
     <CUnit id="TalDarimPrismaticTower">
@@ -3145,9 +3131,9 @@
         <CostResource index="Minerals" value="200"/>
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <CostCategory value="Technology"/>
-        <GlossaryCategory value="Unit/Category/TaldarimUnits"/>
+        <GlossaryCategory value="Unit/Category/TalDarimUnits"/>
         <GlossaryPriority value="201"/>
     </CUnit>
     <CUnit id="TalDarimAscendant">
@@ -3250,7 +3236,7 @@
         <AIEvaluateAlias value="HighTemplar"/>
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
-        <HotkeyCategory value="Unit/Category/ProtossTaldarim"/>
+        <HotkeyCategory value="Unit/Category/TalDarimUnits"/>
         <BehaviorArray Link="TalDarimSoulDrinker"/>
         <LifeRegenRateCreep value="60"/>
     </CUnit>

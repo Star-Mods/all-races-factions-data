@@ -1781,6 +1781,9 @@
         <Macros index="1" removed="1"/>
         <On Terms="ActorCreation" Send="AnimBaselineStop"/>
         <On Terms="ActorCreation" Send="AnimBracketStart BirthB {} GLstand"/>
+        <On Terms="UnitBirth.UmojanEnergyBarricadePassthrough" Send="Create"/>
+        <On Terms="AbilMorph; MorphFrom UmojanEnergyBarricade; MorphTo UmojanEnergyBarricadePassthrough" Send="SetOpacity 0.500000 0.100000"/>
+        <On Terms="AbilMorph; MorphFrom UmojanEnergyBarricadePassthrough; MorphTo UmojanEnergyBarricade" Send="SetOpacity 1.000000 0.100000"/>
         <ModelFlags index="AutomateGlobalLoops" value="0"/>
         <CreepHeightClass value="Small"/>
         <DeathArray index="Normal" SoundLink="SupplyDepot_Explode"/>
@@ -2555,11 +2558,11 @@
         <Model value="UmojanRailweaponBeamVeryThick"/>
     </CActorBeamSimple>
     <CActorModel id="UmojanEnergyGeneratorModel" parent="ModelAddition">
-        <On Terms="UnitBirth.UmojanEnergyGenerator.EditorPlaced" Send="Create"/>
-        <On Terms="UnitDeath.UmojanEnergyGenerator" Send="Destroy"/>
         <Host Subject="UmojanEnergyGenerator"/>
-        <HostSiteOps Ops="SOpAttachOrigin SOp180 SOpMoveUpByDot1"/>
+        <HostSiteOps Ops="SOpAttachCenter SOp180 SOpMoveDownByDot35"/>
         <Model value="UmojanEnergyGenerator"/>
+        <AddToProximitySystem value="0"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorModel id="UmojanSupplyCacheBuild" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create UmojanConstructionAttached"/>
@@ -2649,8 +2652,8 @@
         <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
         <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
         <On index="75" Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanEnergyGenerator" Send="Create"/>
-        <On index="76" Terms="ActorCreation" Send="Create UmojanEnergyGeneratorModel"/>
-        <On index="77" removed="1"/>
+        <On index="76" Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanEnergyGenerator" Send="Create UmojanEnergyGeneratorModel"/>
+        <On index="77" Terms="UnitBirth.UmojanEnergyGenerator" Target="" Send="Create UmojanEnergyGeneratorModel"/>
         <On index="78" removed="1"/>
         <On index="79" removed="1"/>
         <CreepHeightClass value="Small"/>
@@ -2686,9 +2689,6 @@
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanSupplyCacheLowered" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanSupplyCacheLowered" Send="AnimGroupRemove Unburrow"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
-        <On Terms="Abil.UmojanSupplyCacheDrop.TargetApproachStart" Send="$Spell"/>
-        <On Terms="Signal.*.Incoming" Send="RefSetFromMsg ::actor.UmojanSupplyCacheDropModel ::Sender"/>
-        <On Terms="Signal.*.Incoming" Target="::actor.UmojanSupplyCacheDropModel" Send="Signal Lowered"/>
         <CreepHeightClass value="Tiny"/>
         <DeathArray index="Normal" SoundLink="SupplyDepot_Explode"/>
         <PlacementModel value="UmojanSupplyCachePlacement"/>
@@ -2723,11 +2723,6 @@
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheLowered" Send="Create"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheLowered" Send="AnimGroupRemove Burrow"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheLowered" Send="AnimGroupApply Unburrow Stand,Unburrow Stand,Unburrow Instant"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheDrop" Send="Create"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheDrop" Send="Create BuildingTerrainFlatten"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCacheDrop" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On Terms="Signal.*.Incoming" Send="RefSetFromMsg ::actor.UmojanSupplyCacheDropModel ::Sender"/>
-        <On Terms="Signal.*.Incoming" Target="::actor.UmojanSupplyCacheDropModel" Send="Signal Raised"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom UmojanSupplyCache; MorphTo UmojanEnergyGenerator" Send="Destroy"/>
         <CreepHeightClass value="Small"/>
         <DeathArray index="Normal" SoundLink="SupplyDepot_Explode"/>
@@ -3480,7 +3475,7 @@
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <SoundArray index="Birth" value="SCV_Birth"/>
         <SoundArray index="Ready" value="SCV_Ready"/>
-        <SoundArray index="Help" value="Alert_TerranEconomyUnderAttack"/>
+        <SoundArray index="Help" value="StoneAnnouncer_WorkersUnderAttackTerran"/>
         <SoundArray index="What" value="SCV_What"/>
         <SoundArray index="Yes" value="SCV_Yes"/>
         <SoundArray index="Attack" value="SCV_Attack"/>
@@ -3615,9 +3610,6 @@
         <HostSiteOps Ops="SOpAttachOrigin"/>
         <Sound value="Stalker_Blink"/>
     </CActorSound>
-    <CActorUnit id="UmojanFrenrirFortress">
-        <UnitIcon value="Assets\Textures\btn-unit-terran-thor-umojan.dds"/>
-    </CActorUnit>
     <CActorUnit id="UmojanFrenrir" parent="GenericUnitBase" unitName="UmojanFrenrir">
         <Aliases value="_UnitHuge"/>
         <Macros value="TerrainSquibAnimations"/>

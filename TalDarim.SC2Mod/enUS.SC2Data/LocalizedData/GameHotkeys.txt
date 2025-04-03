@@ -1,5 +1,4 @@
-﻿Button/Hotkey/TadDarimHavocVoidShard=C
-Button/Hotkey/TalDarimArchway=G
+﻿Button/Hotkey/TalDarimArchway=G
 Button/Hotkey/TalDarimAscendant=T
 Button/Hotkey/TalDarimAscendantArchive=T
 Button/Hotkey/TalDarimAscendantArchivesAscendantResearchMindBlast=M
@@ -49,6 +48,7 @@ Button/Hotkey/TalDarimFracturer=A
 Button/Hotkey/TalDarimGatherPrTD=G
 Button/Hotkey/TalDarimHavoc=E
 Button/Hotkey/TalDarimHavocTargetLock=T
+Button/Hotkey/TalDarimHavocVoidShard=C
 Button/Hotkey/TalDarimLocust=E
 Button/Hotkey/TalDarimMonitor=B
 Button/Hotkey/TalDarimMonitorDetonation=F

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilMorph id="UmojanEnergyBarricadeAutoMorphON">
+        <EditorCategories value="Race:TerU,AbilityorEffectType:Units"/>
+        <Flags index="Automatic" value="1"/>
+        <InfoArray Unit="UmojanEnergyBarricadePassthrough" CollideRange="0"/>
+        <ValidatorArray value="UmojanNoGroundEnemiesVERYNearby"/>
+    </CAbilMorph>
+    <CAbilMorph id="UmojanEnergyBarricadeAutoMorphOFF">
+        <EditorCategories value="Race:TerU,AbilityorEffectType:Units"/>
+        <Flags index="Automatic" value="1"/>
+        <InfoArray Unit="UmojanEnergyBarricade" CollideRange="0"/>
+        <ValidatorArray value="UmojanGroundEnemiesVERYNearby"/>
+    </CAbilMorph>
     <CAbilAugment id="UmojanStrikefoxShockwaveMissile">
         <EditorCategories value="Race:TerU,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="UmojanShockwaveMissiles"/>
@@ -763,8 +775,8 @@
             </Button>
         </InfoArray>
         <InfoArray index="Research3" Time="60" Upgrade="UmojanBattlelinkSystem">
-            <Resource index="Minerals" value="100"/>
-            <Resource index="Vespene" value="50"/>
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
             <Button DefaultButtonFace="UmojanResearchBattlelinkSystem" Requirements="LearnUmojanBattlelinkSystem">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
@@ -777,8 +789,8 @@
             </Button>
         </InfoArray>
         <InfoArray index="Research5" Time="60" Upgrade="UmojanMobileTargeting">
-            <Resource index="Minerals" value="100"/>
-            <Resource index="Vespene" value="50"/>
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="UmojanResearchMobileTargeting" Requirements="LearnUmojanMobileTargeting">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
