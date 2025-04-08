@@ -276,7 +276,7 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <InnerRadius value="0.5"/>
-        <CargoSize value="8"/>
+        <CargoSize value="4"/>
         <ScoreMake value="150"/>
         <ScoreKill value="150"/>
         <ScoreResult value="BuildOrder"/>
@@ -1347,6 +1347,8 @@
             <LayoutButtons Face="BlimpLoad" Type="AbilCmd" AbilCmd="BlimpTransport,Load" Row="2" Column="3"/>
             <LayoutButtons Face="BlimpUnloadAll" Type="AbilCmd" AbilCmd="BlimpTransport,UnloadAt" Row="2" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UmpireShield,Cancel" Row="1" Column="4"/>
+            <LayoutButtons Face="ALLRACE2SynoidLockdownCancel" Type="AbilCmd" AbilCmd="UmpireLockdown,Cancel" Row="1" Column="4"/>
+            <LayoutButtons Face="ALLRACE2SynoidSearchlightCancel" Type="AbilCmd" AbilCmd="BlimpSearchlights,Cancel" Row="1" Column="4"/>
         </CardLayouts>
         <Radius value="1.125"/>
         <SeparationRadius value="1"/>

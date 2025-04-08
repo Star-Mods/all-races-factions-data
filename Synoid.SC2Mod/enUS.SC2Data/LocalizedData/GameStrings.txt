@@ -126,6 +126,7 @@ Behavior/Tooltip/PhalanxReveal=This unit is being revealed while attacking!
 Behavior/Tooltip/PsionicFrenzy=This unit is being over-exerted, it moves and attacks 50% faster, at the cost of 12.5% max health reduction while under the effects of the Psionic Indoctrinator.
 Behavior/Tooltip/PsionicInhibition=This unit moves and attacks 25% slower while under the effects of the Psionic Indoctrinator.
 Behavior/Tooltip/RepairBots=This unit is stunned while under repair.
+Behavior/Tooltip/Spotted=This unit is under the spell of Wardan Airship. Its armor is reduced by 5.
 Behavior/Tooltip/SpyBotRevelation=This unit or structure is providing vision for the caster.
 Behavior/Tooltip/SuperBuildingBoost=This structure produce unit at 50% faster rate.
 Behavior/Tooltip/SynoidGriffonInterferenceMatrixFriendlyBuffEffect=Incoming damage reduced by 1.
@@ -139,6 +140,8 @@ Behavior/Tooltip/midastouch=This units is hit by Midas Igniter and its health, d
 Button/ChargeText/Requisition=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/RequisitionSource=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/SuperPowerRequirement=<d ref="$BehaviorStackCount:RequisitionRes$"/>
+Button/Name/ALLRACE2SynoidLockdownCancel=Cancel
+Button/Name/ALLRACE2SynoidSearchlightCancel=Cancel
 Button/Name/ALLRACE2SynoidUmpireRush=Umpire Rush
 Button/Name/AnathemaLightningStorm=EMP-PSI Scrambler
 Button/Name/AnathemaMyoko=Myoko Cannons
@@ -252,6 +255,8 @@ Button/Name/UpgradeMechanicalPlatingLevel3=Upgrade Mechanical Plating Level 3
 Button/Name/WalkerBeacon=Assemble Walker Beacon
 Button/Name/WarhoundSawblade=Sawblade
 Button/Name/ZerglingProjection=Zergling Projection
+Button/Tooltip/ALLRACE2SynoidLockdownCancel=Cancels the current Lockdown channeling, and allows you to issue other actions.
+Button/Tooltip/ALLRACE2SynoidSearchlightCancel=Cancels the current Searchlight channeling, and allows you to issue other actions.
 Button/Tooltip/ALLRACE2SynoidUmpireRush=Increases the Umpire Craft's movement speed for <d time="3"/> seconds.
 Button/Tooltip/ARESSynoid=Armored weapons platform. Can be outfitted with various specialized weapons.
 Button/Tooltip/ActuationCenter=Primary structure. Can receive gathered resources.<n/><n/><c val="ffff8a">Enables:</c><n/>- Catalysts <n/>- Power Supply
@@ -343,7 +348,7 @@ Button/Tooltip/SatComTower=Casting Structure. Can deploy spybots, and repair dro
 Button/Tooltip/SateliteUplink=Contains upgrades for Synoid infantry and structures. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellstorm Turret from Prospectors<n/>- SatCom Tower from Prospectors<n/>- Midas Igniters from Assembly<n/>- Buoys from Hangar
 Button/Tooltip/ServitorUpgrade=General-purpose infantry. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Snipe2=A careful shot, dealing <d ref="Effect,SnipeDamage,Amount"/> (<d ref="Effect,SnipeDamage,Amount + Effect,SnipeDamage,AttributeBonus[5]"/> vs. Psionic) damage. Ignores armor.<n/><n/><c val="#ColorAttackInfo">Can only target biological units.</c>
-Button/Tooltip/Spotlight=Cover target area with searchlight. Any enemy units passing through the searchlight area will temporarily lose 3 armor. The effect last 3 seconds after the target leave the area. <n/> <n/> Keep channeling for 10 seconds.
+Button/Tooltip/Spotlight=Cover target area with searchlight. Any enemy units passing through the searchlight area will temporarily lose 5 armor. The effect last 3 seconds after the target leave the area. <n/> <n/> Keep channeling for 10 seconds.
 Button/Tooltip/Stim2=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
 Button/Tooltip/SuperAssembly=Upgraded mech-production facility with 50% faster production.<n/><n/><c val="ffff8a">Enables:</c><n/>- Enthralled<n/>- Rancor
 Button/Tooltip/SuperGarrison=Upgraded Infantry-production facility with 50% faster production.<n/><n/><c val="ffff8a">Enables:</c><n/>- Atrocity<n/>- Cremator

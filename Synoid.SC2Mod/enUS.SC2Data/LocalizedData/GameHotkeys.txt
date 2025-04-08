@@ -1,4 +1,6 @@
 ﻿Button/Hotkey/=H
+Button/Hotkey/ALLRACE2SynoidLockdownCancel=Escape
+Button/Hotkey/ALLRACE2SynoidSearchlightCancel=Escape
 Button/Hotkey/ALLRACE2SynoidUmpireRush=B
 Button/Hotkey/AnathemaLightningStorm=R
 Button/Hotkey/AnathemaMyoko=W
