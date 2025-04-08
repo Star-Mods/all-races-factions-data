@@ -389,7 +389,7 @@
             <Cooldown TimeUse="28"/>
         </Cost>
         <AINotifyEffect value="ALLRACE2UmpireRushSpeedBoost"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MedivacSpeedBoost2">
+        <CmdButtonArray index="Execute" DefaultButtonFace="ALLRACE2SynoidUmpireRush">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
@@ -514,7 +514,7 @@
             <Vital index="Energy" value="50"/>
             <Charge CountMax="1" CountUse="1" TimeUse="15"/>
         </Cost>
-        <Range value="5"/>
+        <Range value="8"/>
         <ProducedUnitArray value="ZerglingHolo"/>
         <PlaceUnit value="ZerglingHolo"/>
         <Effect index="0" value="HoloZerglingCE"/>

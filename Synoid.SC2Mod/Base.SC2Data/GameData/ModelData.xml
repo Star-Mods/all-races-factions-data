@@ -7,8 +7,8 @@
     </CModel>
     <CModel id="SynoidPsionicPulsePrecursor">
         <Model value="Assets\Models\WPSR_PsionicAuraB.m3"/>
-        <ScaleMax value="0.100000,0.100000,1.000000"/>
-        <ScaleMin value="0.100000,0.100000,1.000000"/>
+        <ScaleMax value="0.140000,0.140000,1.000000"/>
+        <ScaleMin value="0.140000,0.140000,1.000000"/>
         <EditorCategories value="Race:Synoid"/>
     </CModel>
     <CModel id="SynoidUmpireMPAttackImpact" parent="ImpactFX">

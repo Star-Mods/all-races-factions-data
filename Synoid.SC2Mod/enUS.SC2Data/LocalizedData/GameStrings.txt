@@ -127,7 +127,7 @@ Behavior/Tooltip/PsionicFrenzy=This unit is being over-exerted, it moves and att
 Behavior/Tooltip/PsionicInhibition=This unit moves and attacks 25% slower while under the effects of the Psionic Indoctrinator.
 Behavior/Tooltip/RepairBots=This unit is stunned while under repair.
 Behavior/Tooltip/SpyBotRevelation=This unit or structure is providing vision for the caster.
-Behavior/Tooltip/SuperBuildingBoost=This structure is in an accelerated state.
+Behavior/Tooltip/SuperBuildingBoost=This structure produce unit at 50% faster rate.
 Behavior/Tooltip/SynoidGriffonInterferenceMatrixFriendlyBuffEffect=Incoming damage reduced by 1.
 Behavior/Tooltip/SynoidGriffonInterferenceMatrixUnfriendlyNegativeeffect=This unit has decreased movement speed.
 Behavior/Tooltip/SynoidUmpireRushActive=This unit's movement speed is increased.
@@ -135,11 +135,11 @@ Behavior/Tooltip/SynoidUnPowered=This structure is unpowered.
 Behavior/Tooltip/SynoidUnPoweredSuper=This structure is unpowered.
 Behavior/Tooltip/UmpireLockdown=This unit is being supressed.
 Behavior/Tooltip/UmpireShielding=This unit is being shielded.
-Behavior/Tooltip/midastouch=THE PHARAOH'S CURSE
+Behavior/Tooltip/midastouch=This units is hit by Midas Igniter and its health, damage, energy regeneration and movement speed are reduced.
 Button/ChargeText/Requisition=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/RequisitionSource=<d ref="$BehaviorStackCount:RequisitionRes$"/>
 Button/ChargeText/SuperPowerRequirement=<d ref="$BehaviorStackCount:RequisitionRes$"/>
-Button/Name/SynoidBuoyActivateSiegeMode=Activate Siege Mode
+Button/Name/ALLRACE2SynoidUmpireRush=Umpire Rush
 Button/Name/AnathemaLightningStorm=EMP-PSI Scrambler
 Button/Name/AnathemaMyoko=Myoko Cannons
 Button/Name/Assembly=Deploy Assembly
@@ -181,7 +181,6 @@ Button/Name/LinkEMPShockwave=Lightning Field
 Button/Name/LinkWarDroneFabricationOverdrive=Link War Drone Fabrication Overdrive
 Button/Name/MagMine=Deploy Mag Mine
 Button/Name/MediTruck=Assemble Censer
-Button/Name/MedivacSpeedBoost2=Umpire Rush
 Button/Name/MidasIgniter=Assemble Midas Igniter
 Button/Name/MissileStrikeArm=Arm Silo with Missile
 Button/Name/MunitionsDepot=Deploy Munitions Depot
@@ -222,6 +221,7 @@ Button/Name/SuperPowerRequirement=Low Power
 Button/Name/SynExtras=Extras
 Button/Name/SynoidBloodLetterCloak=Cloak
 Button/Name/SynoidBloodLetterDecloak=Decloak
+Button/Name/SynoidBuoyActivateSiegeMode=Activate Siege Mode
 Button/Name/SynoidBuoyDeactivateSiegeMode=Deactivate Siege Mode
 Button/Name/SynoidBuoyJump=WarpJump
 Button/Name/SynoidCapitalShip=Assemble Anathema
@@ -252,7 +252,7 @@ Button/Name/UpgradeMechanicalPlatingLevel3=Upgrade Mechanical Plating Level 3
 Button/Name/WalkerBeacon=Assemble Walker Beacon
 Button/Name/WarhoundSawblade=Sawblade
 Button/Name/ZerglingProjection=Zergling Projection
-Button/Tooltip/SynoidBuoyActivateSiegeMode=Elevate Buoy and increase their line of sight from 14 to 20, disable movement and suspend ability cooldown timer.
+Button/Tooltip/ALLRACE2SynoidUmpireRush=Increases the Umpire Craft's movement speed for <d time="3"/> seconds.
 Button/Tooltip/ARESSynoid=Armored weapons platform. Can be outfitted with various specialized weapons.
 Button/Tooltip/ActuationCenter=Primary structure. Can receive gathered resources.<n/><n/><c val="ffff8a">Enables:</c><n/>- Catalysts <n/>- Power Supply
 Button/Tooltip/AnathemaLightningStorm=Disables all enemy mechanical units within <d ref="Effect,SJPirateLightningStorm,PeriodCount * 0.5 + 0.5"/> range for a short time.<n/>
@@ -306,7 +306,6 @@ Button/Tooltip/LinkWarDroneFabricationOverdrive=Deploy War Drone will now deploy
 Button/Tooltip/MagMine=Launch an air mine which travels in a straight line and deals area damage to nearby air units on impact.<n/><n/><c val="ffff8a">Can attack air units.</c>
 Button/Tooltip/MagMineSynoid=Travels in a straight line and deals area damage to nearby units on impact.<n/><n/><c val="ffff8a">Can attack air units.</c>
 Button/Tooltip/MediTruck=Healing support unit.
-Button/Tooltip/MedivacSpeedBoost2=Increases the Umpire Craft's movement speed for <d time="3"/> seconds.
 Button/Tooltip/MidasIgniter=Suicide unit. Explodes on contact and douses both your and the enemy's units in an electromagnetic paste that decreases attack speed by 10%, movement speed by 20%, disables energy regeneration, and decreases max health by 30%.<n/><n/><c val="FFFF80">Effect lasts 15 seconds.</c>
 Button/Tooltip/MissileStrikeArm=Arms the Silo with a Tactical Missile.<n/><n/>Nukes take <d time="20"/> to land, but they deal up to 300 (+200 vs. structures) damage in a large radius.<n/><n/>Use a Ghost to designate the target.
 Button/Tooltip/MunitionsDepot=Contains upgrades for Synoid <c val="FFFF80">Mechanical </c>and <c val="FFFF80">Air </c>units.<n/><n/><c val="FFFF80">Enables</c>:<n/>- A.R.E.S. from Prospectors<n/>- Psi-Indoctrinator from Myco-Synaptic Choir<n/>- Anathema from Super Hangar
@@ -346,13 +345,14 @@ Button/Tooltip/ServitorUpgrade=General-purpose infantry. <n/><n/><c val="#ColorA
 Button/Tooltip/Snipe2=A careful shot, dealing <d ref="Effect,SnipeDamage,Amount"/> (<d ref="Effect,SnipeDamage,Amount + Effect,SnipeDamage,AttributeBonus[5]"/> vs. Psionic) damage. Ignores armor.<n/><n/><c val="#ColorAttackInfo">Can only target biological units.</c>
 Button/Tooltip/Spotlight=Cover target area with searchlight. Any enemy units passing through the searchlight area will temporarily lose 3 armor. The effect last 3 seconds after the target leave the area. <n/> <n/> Keep channeling for 10 seconds.
 Button/Tooltip/Stim2=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
-Button/Tooltip/SuperAssembly=Upgraded mech-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Enthralled<n/>- Rancor
-Button/Tooltip/SuperGarrison=Upgraded Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Atrocity<n/>- Cremator
-Button/Tooltip/SuperHangar=Upgraded air-unit production facility</c>. <n/><n/><c val="FFFF80">Enables:</c><n/>- Warden Airship
+Button/Tooltip/SuperAssembly=Upgraded mech-production facility with 50% faster production.<n/><n/><c val="ffff8a">Enables:</c><n/>- Enthralled<n/>- Rancor
+Button/Tooltip/SuperGarrison=Upgraded Infantry-production facility with 50% faster production.<n/><n/><c val="ffff8a">Enables:</c><n/>- Atrocity<n/>- Cremator
+Button/Tooltip/SuperHangar=Upgraded air-unit production facility with 50% faster production. </c>. <n/><n/><c val="FFFF80">Enables:</c><n/>- Warden Airship
 Button/Tooltip/SuperPowerRequirement=This structure requires to be within the radius of a <c val="FFFF80">Greater Processor</c> or a <c val="FFFF80">Myco-Synaptic Choir</c> to function.
 Button/Tooltip/SynExtras=Scrapped features that are laying around that have been scrapped or unfinished, not meant for balanced gameplay (EXPERIMENTAL, BUGGY)
 Button/Tooltip/SynoidBloodLetterCloak=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,GhostCloak,Modification.VitalRegenArray[2] + Unit,Ghost,EnergyRegenRate)" precision="1"/> energy per second.</c>
 Button/Tooltip/SynoidBloodLetterDecloak=Decloaks the selected unit, making it visible to enemies.
+Button/Tooltip/SynoidBuoyActivateSiegeMode=Elevate Buoy and increase their line of sight from 14 to 20, disable movement and suspend ability cooldown timer.
 Button/Tooltip/SynoidBuoyDeactivateSiegeMode=Drop the altitude of Buoy, allowing it to move and continue ability cooldown.
 Button/Tooltip/SynoidBuoyJump=After <d time="6"/>, warps to the target location. Battlecruiser is invulnerable while warping.<n/><n/><c val="#ColorAttackInfo">Does not require vision.</c>
 Button/Tooltip/SynoidCapitalShip=A fast, powerful warship with long range weapon, an electric field ability that can disable enemy units and other area damage abilities..<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
@@ -366,10 +366,10 @@ Button/Tooltip/SynoidInfantryArmorLevel3=Maximizes the armor of infantry units.
 Button/Tooltip/SynoidInfantryWeaponsLevel1=Upgrades the damage dealt by infantry units.
 Button/Tooltip/SynoidInfantryWeaponsLevel2=Further upgrades the damage dealt by infantry units.
 Button/Tooltip/SynoidInfantryWeaponsLevel3=Maximizes the damage dealt by infantry units.
-Button/Tooltip/SynoidMidasIngiterExplode=The Midas Igniter detonates where it is standing after a short delay, damaging nearby shields and reduce the hit point of enemy units by 40%.
+Button/Tooltip/SynoidMidasIngiterExplode=The Midas Igniter detonates where it is standing after a short delay, causes 25 damage of shield and energy to nearby enemy units, and applies a debuff that last 13 seconds, decreasing their damage by 50%, movement speed by 20% and energy regeneration rate by 1 per second. 
 Button/Tooltip/SynoidMissileStrike=Calls down a Missile Strike at a target location. Nukes take <d ref="Effect,NukePersistent,InitialDelay+(Effect,NukePersistent,PeriodCount*Effect,NukePersistent,PeriodicPeriodArray[0])+Effect,NukeDetonate,InitialDelay"/> seconds to land, but they deal up to <d ref="Effect,NukeDamage,Amount"/> (+<d ref="Effect,NukeDamage,AttributeBonus[Structure]"/> vs. structures) damage to enemies in a large radius.
 Button/Tooltip/SynoidNukePack=Deploys a nuclear warhead at a target location. Nukes take <d ref="Effect,NukePersistent,InitialDelay+(Effect,NukePersistent,PeriodCount*Effect,NukePersistent,PeriodicPeriodArray[0])+Effect,NukeDetonate,InitialDelay"/> seconds to land, but they deal up to <d ref="Effect,NukeDamage,Amount"/> (+<d ref="Effect,NukeDamage,AttributeBonus[Structure]"/> vs. structures) damage to enemies in a large radius.
-Button/Tooltip/SynoidPsionicPulse=Stun the Bloodletter for 0.71 seconds and mark the target point. After 1.43 seconds delay, deal 100 damage to enemy units or 40 damage to enemy structures within 0.3 distance to the target point.
+Button/Tooltip/SynoidPsionicPulse=Stun the Bloodletter for 0.71 seconds and mark the target point. After 1.43 seconds delay, deal 140 damage to enemy units or 50 damage to enemy structures within 0.4 distance to the target point.
 Button/Tooltip/SynoidSalvage=Salvages the structure, removing it and returning 100% of its mineral and gas value immediately.
 Button/Tooltip/SynoidSyphon=Built over a Vespene Geyser to allow harvesting of vespene gas.
 Button/Tooltip/SynoidSyphonRich=Built over a Vespene Geyser to allow harvesting of vespene gas.

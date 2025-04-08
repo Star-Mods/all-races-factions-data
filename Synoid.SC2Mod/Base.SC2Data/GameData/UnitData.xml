@@ -54,7 +54,7 @@
         <CargoSize value="2"/>
         <ScoreMake value="200"/>
         <ScoreKill value="400"/>
-        <SubgroupPriority value="1"/>
+        <SubgroupPriority value="6"/>
         <MinimapRadius value="0.65"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryPriority value="10"/>
@@ -136,7 +136,7 @@
         <ScoreMake value="500"/>
         <ScoreKill value="500"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="11"/>
+        <SubgroupPriority value="14"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Banshee"/>
@@ -280,7 +280,7 @@
         <ScoreMake value="150"/>
         <ScoreKill value="150"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="71"/>
+        <SubgroupPriority value="14"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="SiegeTank"/>
@@ -794,7 +794,7 @@
         <ScoreMake value="500"/>
         <ScoreKill value="500"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="10"/>
+        <SubgroupPriority value="5"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkThor"/>
@@ -875,7 +875,7 @@
         <ScoreMake value="50"/>
         <ScoreKill value="50"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="60"/>
+        <SubgroupPriority value="8"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Marine"/>
@@ -1006,7 +1006,7 @@
         <SeparationRadius value="0.16"/>
         <ScoreMake value="400"/>
         <ScoreKill value="400"/>
-        <SubgroupPriority value="14"/>
+        <SubgroupPriority value="5"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TechAliasArray value="Alias_SynUni"/>
@@ -1354,7 +1354,7 @@
         <ScoreMake value="350"/>
         <ScoreKill value="700"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="85"/>
+        <SubgroupPriority value="18"/>
         <MinimapRadius value="0.875"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <LeaderAlias value=""/>
@@ -1719,7 +1719,7 @@
         <ScoreMake value="150"/>
         <ScoreKill value="150"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="82"/>
+        <SubgroupPriority value="9"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Baneling"/>
         <TacticalAIThink value="AIThinkBaneling"/>
@@ -1899,7 +1899,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="25"/>
+        <SubgroupPriority value="10"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkHellion"/>
@@ -2209,7 +2209,7 @@
         <SeparationRadius value="0.1875"/>
         <ScoreMake value="25"/>
         <ScoreKill value="25"/>
-        <SubgroupPriority value="14"/>
+        <SubgroupPriority value="5"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TechAliasArray value="Alias_SynUni"/>
@@ -2272,7 +2272,7 @@
         <ScoreMake value="225"/>
         <ScoreKill value="225"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="8"/>
+        <SubgroupPriority value="7"/>
         <MinimapRadius value="0.6875"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value=""/>
@@ -2415,7 +2415,7 @@
         <CargoSize value="2"/>
         <ScoreMake value="500"/>
         <ScoreKill value="1000"/>
-        <SubgroupPriority value="82"/>
+        <SubgroupPriority value="16"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="SpecterUnit"/>
@@ -2571,7 +2571,7 @@
         <ScoreMake value="225"/>
         <ScoreKill value="225"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="80"/>
+        <SubgroupPriority value="13"/>
         <MinimapRadius value="0.8"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
@@ -2711,7 +2711,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="54"/>
+        <SubgroupPriority value="4"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkWidowMine"/>
         <TechAliasArray value="Alias_SynUni"/>
@@ -2764,7 +2764,7 @@
         </CardLayouts>
         <ScoreMake value="750"/>
         <ScoreKill value="750"/>
-        <SubgroupPriority value="82"/>
+        <SubgroupPriority value="17"/>
         <TacticalAI value="TeastCapitalShip"/>
         <LeaderAlias value="SynoidCapitalShip"/>
         <HotkeyAlias value="SynoidCapitalShip"/>
@@ -3314,7 +3314,7 @@
         <ScoreMake value="50"/>
         <ScoreKill value="50"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="60"/>
+        <SubgroupPriority value="3"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Drone"/>
@@ -3436,7 +3436,7 @@
         <ScoreMake value="45"/>
         <ScoreKill value="45"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="60"/>
+        <SubgroupPriority value="7"/>
         <MinimapRadius value="0.3125"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Marine"/>
@@ -3571,14 +3571,14 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
             <LayoutButtons Face="TankBuster" Type="AbilCmd" AbilCmd="UmpireBuild,Build1" Row="2" Column="0"/>
-            <LayoutButtons Face="MedivacSpeedBoost2" Type="AbilCmd" AbilCmd="ALLRACE2UmpireCraftRush,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ALLRACE2SynoidUmpireRush" Type="AbilCmd" AbilCmd="ALLRACE2UmpireCraftRush,Execute" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
         <ScoreMake value="375"/>
         <ScoreKill value="375"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="84"/>
+        <SubgroupPriority value="12"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkRaven"/>
@@ -3687,8 +3687,8 @@
         <Sight value="11"/>
         <Food value="-3"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="250"/>
-        <CostResource index="Vespene" value="125"/>
+        <CostResource index="Minerals" value="275"/>
+        <CostResource index="Vespene" value="175"/>
         <RepairTime value="45"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -3711,9 +3711,9 @@
         <SeparationRadius value="0.625"/>
         <InnerRadius value="0.5"/>
         <CargoSize value="4"/>
-        <ScoreMake value="225"/>
-        <ScoreKill value="225"/>
-        <SubgroupPriority value="78"/>
+        <ScoreMake value="450"/>
+        <ScoreKill value="450"/>
+        <SubgroupPriority value="15"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
         <TechAliasArray value="Alias_SynUni"/>
@@ -3960,7 +3960,7 @@
         <ScoreMake value="5"/>
         <ScoreKill value="5"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="52"/>
+        <SubgroupPriority value="5"/>
         <MinimapRadius value="0.3"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Zergling"/>

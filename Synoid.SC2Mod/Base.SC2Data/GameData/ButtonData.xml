@@ -58,7 +58,7 @@
         <AlertIcon value="Assets\Textures\btn_MidasIgnitor_Explode_Ability.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
-    <CButton id="MedivacSpeedBoost2">
+    <CButton id="ALLRACE2SynoidUmpireRush">
         <Icon value="Assets\Textures\UmpireRush.dds"/>
         <AlertIcon value="Assets\Textures\UmpireRush.dds"/>
         <EditorCategories value="Race:Synoid"/>
