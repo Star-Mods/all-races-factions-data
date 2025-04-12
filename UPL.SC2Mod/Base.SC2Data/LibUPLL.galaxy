@@ -1,24 +1,24 @@
 include "TriggerLibs/NativeLib"
 
-include "LibUPLR_h"
+include "LibUPLL_h"
 
 //--------------------------------------------------------------------------------------------------
 // Library: Factions - UPL
 //--------------------------------------------------------------------------------------------------
 // External Library Initialization
-void libUPLR_InitLibraries () {
+void libUPLL_InitLibraries () {
     libNtve_InitVariables();
 }
 
 // Variable Initialization
-bool libUPLR_InitVariables_completed = false;
+bool libUPLL_InitVariables_completed = false;
 
-void libUPLR_InitVariables () {
-    if (libUPLR_InitVariables_completed) {
+void libUPLL_InitVariables () {
+    if (libUPLL_InitVariables_completed) {
         return;
     }
 
-    libUPLR_InitVariables_completed = true;
+    libUPLL_InitVariables_completed = true;
 
 }
 
@@ -30,14 +30,14 @@ fixed data_RangeValueToRange (fixed value, fixed newMin, fixed newMax, fixed old
     return ((((value - oldMin) * (newMax - newMin)) / (oldMax - oldMin)) + newMin);
 }
 
-void libUPLR_InitCustomScript () {
+void libUPLL_InitCustomScript () {
 }
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Initialize UPL Race
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_gt_InitializeUPLRace_Func (bool testConds, bool runActions) {
+bool libUPLL_gt_InitializeUPLRace_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     playergroup auto8A7C6E27_g;
     int auto8A7C6E27_var;
@@ -57,20 +57,20 @@ bool libUPLR_gt_InitializeUPLRace_Func (bool testConds, bool runActions) {
         }
 
     }
-    TriggerEnable(libUPLR_gt_CM_NovaPsiStrike, true);
+    TriggerEnable(libUPLL_gt_CM_NovaPsiStrike, true);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUPLR_gt_InitializeUPLRace_Init () {
-    libUPLR_gt_InitializeUPLRace = TriggerCreate("libUPLR_gt_InitializeUPLRace_Func");
-    TriggerAddEventGeneric(libUPLR_gt_InitializeUPLRace, "GAME START UPL");
+void libUPLL_gt_InitializeUPLRace_Init () {
+    libUPLL_gt_InitializeUPLRace = TriggerCreate("libUPLL_gt_InitializeUPLRace_Func");
+    TriggerAddEventGeneric(libUPLL_gt_InitializeUPLRace, "GAME START UPLL");
 }
 
 //--------------------------------------------------------------------------------------------------
 // Trigger: CM_Nova Psi Strike
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_gt_CM_NovaPsiStrike_Func (bool testConds, bool runActions) {
+bool libUPLL_gt_CM_NovaPsiStrike_Func (bool testConds, bool runActions) {
     // Variable Declarations
     point lv_k;
     point lv_t;
@@ -118,9 +118,9 @@ bool libUPLR_gt_CM_NovaPsiStrike_Func (bool testConds, bool runActions) {
     Wait(0.1875, c_timeGame);
     lv_i = 1;
     for ( ; ( (auto79412B90_ai >= 0 && lv_i <= auto79412B90_ae) || (auto79412B90_ai < 0 && lv_i >= auto79412B90_ae) ) ; lv_i += auto79412B90_ai ) {
-        libUPLR_gv_UPLZ2DashFacing[lv_player] = UnitGetFacing(EventUnit());
+        libUPLL_gv_UPLZ2DashFacing[lv_player] = UnitGetFacing(EventUnit());
         if ((lv_facing > 90.0)) {
-            if (((libUPLR_gv_UPLZ2DashFacing[lv_player] < (lv_facing - 90.0)) && (libUPLR_gv_UPLZ2DashFacing[lv_player] > (lv_facing - 270.0)))) {
+            if (((libUPLL_gv_UPLZ2DashFacing[lv_player] < (lv_facing - 90.0)) && (libUPLL_gv_UPLZ2DashFacing[lv_player] > (lv_facing - 270.0)))) {
                 UnitBehaviorRemove(EventUnit(), "UPLZ2DashWalkSpeed", 1);
                 break;
             }
@@ -128,14 +128,14 @@ bool libUPLR_gt_CM_NovaPsiStrike_Func (bool testConds, bool runActions) {
         }
         else {
             if ((lv_facing < -90.0)) {
-                if (((libUPLR_gv_UPLZ2DashFacing[lv_player] > (lv_facing + 90.0)) && (libUPLR_gv_UPLZ2DashFacing[lv_player] < (lv_facing + 270.0)))) {
+                if (((libUPLL_gv_UPLZ2DashFacing[lv_player] > (lv_facing + 90.0)) && (libUPLL_gv_UPLZ2DashFacing[lv_player] < (lv_facing + 270.0)))) {
                     UnitBehaviorRemove(EventUnit(), "UPLZ2DashWalkSpeed", 1);
                     break;
                 }
 
             }
             else {
-                if (((libUPLR_gv_UPLZ2DashFacing[lv_player] > (lv_facing + 90.0)) || (libUPLR_gv_UPLZ2DashFacing[lv_player] < (lv_facing - 90.0)))) {
+                if (((libUPLL_gv_UPLZ2DashFacing[lv_player] > (lv_facing + 90.0)) || (libUPLL_gv_UPLZ2DashFacing[lv_player] < (lv_facing - 90.0)))) {
                     UnitBehaviorRemove(EventUnit(), "UPLZ2DashWalkSpeed", 1);
                     break;
                 }
@@ -148,16 +148,16 @@ bool libUPLR_gt_CM_NovaPsiStrike_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUPLR_gt_CM_NovaPsiStrike_Init () {
-    libUPLR_gt_CM_NovaPsiStrike = TriggerCreate("libUPLR_gt_CM_NovaPsiStrike_Func");
-    TriggerEnable(libUPLR_gt_CM_NovaPsiStrike, false);
-    TriggerAddEventUnitAbility(libUPLR_gt_CM_NovaPsiStrike, null, AbilityCommand("UPLDash", 0), c_abilEffectStageCast, false);
+void libUPLL_gt_CM_NovaPsiStrike_Init () {
+    libUPLL_gt_CM_NovaPsiStrike = TriggerCreate("libUPLL_gt_CM_NovaPsiStrike_Func");
+    TriggerEnable(libUPLL_gt_CM_NovaPsiStrike, false);
+    TriggerAddEventUnitAbility(libUPLL_gt_CM_NovaPsiStrike, null, AbilityCommand("UPLDash", 0), c_abilEffectStageCast, false);
 }
 
 //--------------------------------------------------------------------------------------------------
 // Trigger: ClaymoreMinePlaceDummy
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_gt_ClaymoreMinePlaceDummy_Func (bool testConds, bool runActions) {
+bool libUPLL_gt_ClaymoreMinePlaceDummy_Func (bool testConds, bool runActions) {
     // Variable Declarations
     bool lv_queued;
     unitgroup lv_ug;
@@ -209,7 +209,7 @@ bool libUPLR_gt_ClaymoreMinePlaceDummy_Func (bool testConds, bool runActions) {
 
         }
         else {
-            TriggerDebugOutput(1, StringExternal("Param/Value/lib_UPLR_1F1EC273"), false);
+            TriggerDebugOutput(1, StringExternal("Param/Value/lib_UPLL_1F1EC273"), false);
         }
     }
 
@@ -217,16 +217,16 @@ bool libUPLR_gt_ClaymoreMinePlaceDummy_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUPLR_gt_ClaymoreMinePlaceDummy_Init () {
-    libUPLR_gt_ClaymoreMinePlaceDummy = TriggerCreate("libUPLR_gt_ClaymoreMinePlaceDummy_Func");
-    TriggerEnable(libUPLR_gt_ClaymoreMinePlaceDummy, false);
-    TriggerAddEventUnitOrder(libUPLR_gt_ClaymoreMinePlaceDummy, null, AbilityCommand("ClaymoreMineDummy", 0));
+void libUPLL_gt_ClaymoreMinePlaceDummy_Init () {
+    libUPLL_gt_ClaymoreMinePlaceDummy = TriggerCreate("libUPLL_gt_ClaymoreMinePlaceDummy_Func");
+    TriggerEnable(libUPLL_gt_ClaymoreMinePlaceDummy, false);
+    TriggerAddEventUnitOrder(libUPLL_gt_ClaymoreMinePlaceDummy, null, AbilityCommand("ClaymoreMineDummy", 0));
 }
 
 //--------------------------------------------------------------------------------------------------
 // Trigger: ClaymoreMineSetDirection
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_gt_ClaymoreMineSetDirection_Func (bool testConds, bool runActions) {
+bool libUPLL_gt_ClaymoreMineSetDirection_Func (bool testConds, bool runActions) {
     // Variable Declarations
     unit lv_caster;
     unitgroup lv_ug;
@@ -270,16 +270,16 @@ bool libUPLR_gt_ClaymoreMineSetDirection_Func (bool testConds, bool runActions) 
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUPLR_gt_ClaymoreMineSetDirection_Init () {
-    libUPLR_gt_ClaymoreMineSetDirection = TriggerCreate("libUPLR_gt_ClaymoreMineSetDirection_Func");
-    TriggerEnable(libUPLR_gt_ClaymoreMineSetDirection, false);
-    TriggerAddEventUnitOrder(libUPLR_gt_ClaymoreMineSetDirection, null, AbilityCommand("ClaymoreMineSetDirection", 0));
+void libUPLL_gt_ClaymoreMineSetDirection_Init () {
+    libUPLL_gt_ClaymoreMineSetDirection = TriggerCreate("libUPLL_gt_ClaymoreMineSetDirection_Func");
+    TriggerEnable(libUPLL_gt_ClaymoreMineSetDirection, false);
+    TriggerAddEventUnitOrder(libUPLL_gt_ClaymoreMineSetDirection, null, AbilityCommand("ClaymoreMineSetDirection", 0));
 }
 
 //--------------------------------------------------------------------------------------------------
 // Trigger: ClaymoreMineSetDirectionCancel
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_gt_ClaymoreMineSetDirectionCancel_Func (bool testConds, bool runActions) {
+bool libUPLL_gt_ClaymoreMineSetDirectionCancel_Func (bool testConds, bool runActions) {
     // Variable Declarations
     int lv_player;
 
@@ -307,35 +307,35 @@ bool libUPLR_gt_ClaymoreMineSetDirectionCancel_Func (bool testConds, bool runAct
 }
 
 //--------------------------------------------------------------------------------------------------
-void libUPLR_gt_ClaymoreMineSetDirectionCancel_Init () {
-    libUPLR_gt_ClaymoreMineSetDirectionCancel = TriggerCreate("libUPLR_gt_ClaymoreMineSetDirectionCancel_Func");
-    TriggerEnable(libUPLR_gt_ClaymoreMineSetDirectionCancel, false);
-    TriggerAddEventTargetModeUpdate(libUPLR_gt_ClaymoreMineSetDirectionCancel, c_playerAny, AbilityCommand("ClaymoreMineSetDirection", 0), c_targetModeStateOff);
+void libUPLL_gt_ClaymoreMineSetDirectionCancel_Init () {
+    libUPLL_gt_ClaymoreMineSetDirectionCancel = TriggerCreate("libUPLL_gt_ClaymoreMineSetDirectionCancel_Func");
+    TriggerEnable(libUPLL_gt_ClaymoreMineSetDirectionCancel, false);
+    TriggerAddEventTargetModeUpdate(libUPLL_gt_ClaymoreMineSetDirectionCancel, c_playerAny, AbilityCommand("ClaymoreMineSetDirection", 0), c_targetModeStateOff);
 }
 
-void libUPLR_InitTriggers () {
-    libUPLR_gt_InitializeUPLRace_Init();
-    libUPLR_gt_CM_NovaPsiStrike_Init();
-    libUPLR_gt_ClaymoreMinePlaceDummy_Init();
-    libUPLR_gt_ClaymoreMineSetDirection_Init();
-    libUPLR_gt_ClaymoreMineSetDirectionCancel_Init();
+void libUPLL_InitTriggers () {
+    libUPLL_gt_InitializeUPLRace_Init();
+    libUPLL_gt_CM_NovaPsiStrike_Init();
+    libUPLL_gt_ClaymoreMinePlaceDummy_Init();
+    libUPLL_gt_ClaymoreMineSetDirection_Init();
+    libUPLL_gt_ClaymoreMineSetDirectionCancel_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
 // Library Initialization
 //--------------------------------------------------------------------------------------------------
-bool libUPLR_InitLib_completed = false;
+bool libUPLL_InitLib_completed = false;
 
-void libUPLR_InitLib () {
-    if (libUPLR_InitLib_completed) {
+void libUPLL_InitLib () {
+    if (libUPLL_InitLib_completed) {
         return;
     }
 
-    libUPLR_InitLib_completed = true;
+    libUPLL_InitLib_completed = true;
 
-    libUPLR_InitLibraries();
-    libUPLR_InitVariables();
-    libUPLR_InitCustomScript();
-    libUPLR_InitTriggers();
+    libUPLL_InitLibraries();
+    libUPLL_InitVariables();
+    libUPLL_InitCustomScript();
+    libUPLL_InitTriggers();
 }
 

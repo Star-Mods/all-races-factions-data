@@ -1301,7 +1301,7 @@ FlameGrenadeMax=Max Flame Grenades
 Forward Operation Base=
 LookAtType/CSVTurret=
 MustTargetUPL=Must target UPL units
-Param/Value/lib_UPLR_1F1EC273=No claymore found.
+Param/Value/lib_UPLL_1F1EC273=No claymore found.
 Race/Name/UPLL=UPL
 RequirementNode/Tooltip/CountBehaviorAPCnotmovingflagCompleteOnlyAtUnit2821413514=APC must be stationary
 RequirementNode/Tooltip/CountBehaviorCSVDeployedCompleteOnlyAtUnit3230205781=<d stringref="Unit,CSV,Name"/> needs to be deployed

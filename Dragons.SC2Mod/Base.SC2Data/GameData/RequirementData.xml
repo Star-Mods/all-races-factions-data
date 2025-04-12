@@ -121,7 +121,7 @@
         <EditorCategories value="Race:Dragon,TechType:Ability"/>
     </CRequirement>
     <CRequirement id="AugmentationPit">
-        <NodeArray index="Use" Link="CountBehaviorAugmentationPitCompleteOnlyAtUnit763288653"/>
+        <NodeArray index="Use" Link="CountBehaviorAugmentationPitCompleteOnlyAtUnit2977094741"/>
         <EditorCategories value="Race:Dragon,TechType:Ability"/>
     </CRequirement>
     <CRequirement id="AuroraConduitConduction">

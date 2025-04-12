@@ -41,6 +41,11 @@
         <CombineArray value="IsBiological"/>
         <CombineArray value="hasShields"/>
     </CValidatorCombine>
+    <CValidatorLocationCompareRange id="DragonHunterTongueLash">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="GE"/>
+        <Range value="0.25"/>
+    </CValidatorLocationCompareRange>
     <CValidatorCombine id="GrimGliderShadeProtected">
         <Type value="And"/>
         <CombineArray value="IsGrimGlider"/>
@@ -53,6 +58,12 @@
     <CValidatorUnitCompareBehaviorCount id="HornedMagusNoFireShieldInitial">
         <Behavior value="HornedMagusFireShieldInitial"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="IsLight">
+        <Filters value="Light;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="NotLight">
+        <Filters value="-;Light"/>
+    </CValidatorUnitFilters>
     <CValidatorCombine id="SkyrazerEmberCore">
         <Type value="And"/>
         <CombineArray value="SkyrazerEmberCorePlayerRequirement"/>
