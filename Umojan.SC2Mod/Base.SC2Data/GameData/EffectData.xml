@@ -33,22 +33,11 @@
     <CEffectApplyBehavior id="UmojanCommandHubGeneratorAB">
         <EditorCategories value="Race:TerU"/>
         <WhichUnit Value="Caster"/>
-        <Behavior value="UmojanPowerSourceCH"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="UmojanCommandHubGeneratorAB2">
-        <ValidatorArray index="0" value="UmojanCommandHubGeneratorABTargetFilters"/>
-        <EditorCategories value="Race:TerU"/>
-        <WhichUnit Value="Caster"/>
         <Behavior value="UmojanOverchargeGenerator"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="UmojanCommandHubGeneratorABBis">
-        <EditorCategories value="Race:TerU"/>
-        <WhichUnit Value="Caster"/>
-        <Behavior value="UmojanPowerSourceCHBis"/>
     </CEffectApplyBehavior>
     <CEffectSet id="UmojanCommandHubGeneratorSet">
         <EditorCategories value="Race:TerU"/>
-        <EffectArray value="UmojanCommandHubGeneratorAB2"/>
+        <EffectArray value="UmojanCommandHubGeneratorAB"/>
         <EffectArray value="UmojanSuicideRemoveTarget"/>
     </CEffectSet>
     <CEffectSet id="UmojanConstructionFinishedSet">
@@ -928,7 +917,7 @@
         <SpawnRange value="10"/>
     </CEffectCreateUnit>
     <CEffectModifyUnit id="UmojanHyperJumpBattleshipTargetTriggerCD">
-        <ValidatorArray value="UmojanTargetNotTacticalJumping"/>
+        <ValidatorArray value="TargetNotTacticalJumping"/>
         <EditorCategories value="Race:TerU"/>
         <Cost Abil="UmojanHyperjump,Execute" CooldownTimeUse="120"/>
     </CEffectModifyUnit>
@@ -2652,9 +2641,6 @@
         <Weapon Weapon="UmojanHeliosMissilePod" CooldownOperation="Add" CooldownAmount="1.9"/>
         <ImpactUnit Value="Source"/>
     </CEffectModifyUnit>
-    <CEffectSet id="YoinkSet">
-        <ValidatorArray value="UmojanTargetNotTacticalJumping"/>
-    </CEffectSet>
     <CEffectDamage id="UmojanStrikefoxMissileDamage">
         <ValidatorArray value="noMarkers"/>
         <EditorCategories value="Race:TerU"/>

@@ -610,22 +610,22 @@
         <EditorCategories value="Race:TerU"/>
         <HotkeySet value="FrenrirModes"/>
     </CButton>
-    <CButton id="UmojanPowerLevel1Military">
+    <CButton id="UmojanPowerLevel1CH">
         <Icon value="Assets\Textures\btn-ability-mengsk-thor-bigboycover.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-mengsk-thor-bigboycover.dds"/>
         <EditorCategories value="Race:TerU"/>
     </CButton>
-    <CButton id="UmojanPowerLevel2Military">
+    <CButton id="UmojanPowerLevel2CH">
         <Icon value="Assets\Textures\btn-upgrade-stetmann-hatcherystetellitebonus.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-stetmann-hatcherystetellitebonus.dds"/>
         <EditorCategories value="Race:TerU"/>
     </CButton>
-    <CButton id="UmojanPowerLevel3Military">
+    <CButton id="UmojanPowerLevel3CH">
         <Icon value="Assets\Textures\btn-upgrade-stetmann-lairstetellitebonus.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-stetmann-lairstetellitebonus.dds"/>
         <EditorCategories value="Race:TerU"/>
     </CButton>
-    <CButton id="UmojanPowerLevel4Military">
+    <CButton id="UmojanPowerLevel4CH">
         <Icon value="Assets\Textures\btn-upgrade-stetmann-hivestetellitebonus.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-stetmann-hivestetellitebonus.dds"/>
         <EditorCategories value="Race:TerU"/>

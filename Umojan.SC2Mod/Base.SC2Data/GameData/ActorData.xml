@@ -26,6 +26,36 @@
         <On index="12" Terms="StateChange; !StateValid HeavySmoke" Target="UmojanFlameSetHeavySmokeTransition" Send="Destroy"/>
         <On Terms="StateChange; !StateValid Fire" Target="UmojanFlameSetFireTransition" Send="Destroy"/>
     </CActorStateMonitor>
+    <CActorPower id="UmojanPowerCH">
+        <On Terms="Behavior.UmojanOverchargeGenerator.On; !Option Model Low" Send="Create"/>
+        <On Terms="Behavior.UmojanOverchargeGenerator.Off; !Option Model Low" Send="Destroy"/>
+        <PowerSource value="UmojanPowerSource"/>
+        <VisualArray value="UmojanUnpoweredVisualLowCH"/>
+        <VisualArray value="UmojanPowerVisualCH"/>
+    </CActorPower>
+    <CActorPower id="UmojanPowerLowCH">
+        <On Terms="Behavior.UmojanPowerSourceCH.Create; Option Model Low" Send="Create"/>
+        <On Terms="Behavior.UmojanPowerSourceCH.Destroy; Option Model Low" Send="Destroy"/>
+        <PowerSource value="UmojanPowerSource"/>
+        <VisualArray value="UmojanUnpoweredVisualLowCH"/>
+        <VisualArray value="UmojanPowerVisualLowCH"/>
+    </CActorPower>
+    <CActorSplat id="UmojanPowerVisualCH">
+        <FogVisibility value="Visible"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <FadeIn value="0.000000"/>
+        <FadeOut value="0.000000"/>
+        <HoldTime value="-1.000000"/>
+        <Layer value="PowerLayer"/>
+        <Model value="PowerVisual"/>
+        <Scale value="1.550000"/>
+    </CActorSplat>
+    <CActorRange id="UmojanPowerVisualLowCH">
+        <Behavior value="UmojanPowerSourceCH"/>
+        <Icon value="Assets\Textures\PylonLowRingSplat.dds"/>
+        <CliffLevelFlags index="Higher" value="0"/>
+    </CActorRange>
     <CActorMissile id="UmojanStasisMineAttackMissile" parent="GenericAttackMissile" unitName="UmojanWeaponStasisMine">
         <Model value="UmojanStrikeMine"/>
     </CActorMissile>
@@ -184,6 +214,11 @@
         <On Terms="ActorOrphan" Send="Destroy"/>
         <Model value="UmojanRailweaponBeamVeryThick"/>
     </CActorBeamSimple>
+    <CActorRange id="UmojanUnpoweredVisualLowCH">
+        <Behavior value="UmojanPowerSourceCH"/>
+        <Icon value="Assets\Textures\ui_screens_zeratul_prologue_floorline_emis.dds"/>
+        <IconScale value="0.012000,0.012000"/>
+    </CActorRange>
     <CActorUnit id="UmojanWeaponUnitWhirlwindSpot" parent="GenericUnitStandardNoAutoSoundLinks" unitName="UmojanWeaponUnitWhirlwindSpot">
         <Model value="Invisible"/>
         <EditorModel value="Sphere"/>
@@ -2211,7 +2246,6 @@
         <HoldTime value="-1.000000"/>
         <Layer value="PowerLayer"/>
         <Model value="PowerVisual"/>
-        <Scale value="1.550000"/>
     </CActorSplat>
     <CActorModel id="UmojanArmoryBuild" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create UmojanConstructionAttached"/>
@@ -2627,16 +2661,12 @@
     <CActorPower id="UmojanPower">
         <On Terms="Behavior.UmojanPowerSource.Create; !Option Model Low" Send="Create"/>
         <On Terms="Behavior.UmojanPowerSource.Destroy; !Option Model Low" Send="Destroy"/>
-        <On Terms="Behavior.UmojanOverchargeGenerator.On; !Option Model Low" Send="Create"/>
-        <On Terms="Behavior.UmojanOverchargeGenerator.Off; !Option Model Low" Send="Destroy"/>
         <VisualArray value="UmojanUnpoweredVisualLow"/>
         <VisualArray value="UmojanPowerVisual"/>
     </CActorPower>
     <CActorPower id="UmojanPowerLow">
         <On Terms="Behavior.UmojanPowerSource.Create; Option Model Low" Send="Create"/>
         <On Terms="Behavior.UmojanPowerSource.Destroy; Option Model Low" Send="Destroy"/>
-        <On Terms="Behavior.UmojanPowerSourceCH.Create; Option Model Low" Send="Create"/>
-        <On Terms="Behavior.UmojanPowerSourceCH.Destroy; Option Model Low" Send="Destroy"/>
         <On Terms="Behavior.UmojanPowerSourceDummy.Create; Option Model Low" Send="Create"/>
         <On Terms="Behavior.UmojanPowerSourceDummy.Destroy; Option Model Low" Send="Destroy"/>
         <PowerSource value="UmojanPowerSource"/>

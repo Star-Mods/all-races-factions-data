@@ -8,6 +8,14 @@
         <PeriodicEffect value="UmojanAloeHealSoloAutocastSecondarySearch"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
+    <CBehaviorPowerSource id="UmojanPowerSourceCHBis">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\wireframe-terran-umojanlabgenerator.dds"/>
+        <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
+        <Requirements value="UmojanHaveAuxiliaryGenerator"/>
+        <Radius value="10"/>
+        <PowerLink value="PowerSource"/>
+    </CBehaviorPowerSource>
     <CBehaviorBuff id="UmojanRaptorIdle">
         <EditorCategories value="Race:TerU,AbilityorEffectType:Units"/>
         <DisableValidatorArray value="UmojanCasterIsNotMoving"/>
@@ -499,14 +507,6 @@
         <Radius value="10"/>
         <PowerLink value="PowerSource"/>
     </CBehaviorPowerSource>
-    <CBehaviorPowerSource id="UmojanPowerSourceCHBis">
-        <InfoFlags index="Hidden" value="1"/>
-        <InfoIcon value="Assets\Textures\wireframe-terran-umojanlabgenerator.dds"/>
-        <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
-        <Requirements value="UmojanHaveAuxiliaryGenerator"/>
-        <Radius value="0.1"/>
-        <PowerLink value="PowerSource"/>
-    </CBehaviorPowerSource>
     <CBehaviorBuff id="UmojanShadowPermaCloak">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-hornerhan-wraith-permanentcloak.dds"/>
@@ -703,7 +703,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-building-terran-commandcenter.dds"/>
         <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
-        <Radius value="10.2"/>
+        <Radius value="6.5"/>
         <PowerLink value="PowerSource"/>
     </CBehaviorPowerSource>
     <CBehaviorBuff id="UmojanGroundSensor">
@@ -887,27 +887,21 @@
             <Modification QueueSize="0" TimeScale="1.15"/>
         </PowerStageArray>
     </CBehaviorPowerUser>
-    <CBehaviorPowerUser id="UmojanPowerUpgradeMilitaryUnits" parent="UmojanPowerUpgrade">
-        <Name value="Behavior/Name/UmojanPowerUpgradeMilitaryUnits"/>
-        <PowerStageArray index="0">
-            <Modification>
-                <StateFlags index="SuppressShields" value="0"/>
-                <VitalMaxAdditiveMultiplierArray index="Shields" value="0"/>
-            </Modification>
-        </PowerStageArray>
+    <CBehaviorPowerUser id="UmojanPowerUpgradeCH" parent="UmojanPowerUpgrade">
+        <Name value="Behavior/Name/UmojanPowerUpgradeCH"/>
         <PowerStageArray index="1" MinPowerLevel="1">
-            <Modification TimeScale="1.05">
-                <VitalMaxAdditiveMultiplierArray index="Shields" value="0"/>
+            <Modification TimeScale="1">
+                <VitalMaxAdditiveMultiplierArray index="Shields" value="-0.75"/>
             </Modification>
         </PowerStageArray>
         <PowerStageArray index="2" MinPowerLevel="2">
-            <Modification QueueSize="0" TimeScale="1.1">
-                <VitalMaxDecreaseAffectsCurrentArray index="Shields" value="0"/>
-                <VitalMaxAdditiveMultiplierArray index="Shields" value="0"/>
+            <Modification QueueSize="0" TimeScale="1">
+                <VitalMaxDecreaseAffectsCurrentArray index="Shields" value="1"/>
+                <VitalMaxAdditiveMultiplierArray index="Shields" value="-0.5"/>
             </Modification>
         </PowerStageArray>
         <PowerStageArray index="3" MinPowerLevel="3">
-            <Modification QueueSize="0" TimeScale="1.15"/>
+            <Modification QueueSize="0" TimeScale="1"/>
         </PowerStageArray>
     </CBehaviorPowerUser>
     <CBehaviorBuff id="UmojanStrikeMineBurrowFirst">

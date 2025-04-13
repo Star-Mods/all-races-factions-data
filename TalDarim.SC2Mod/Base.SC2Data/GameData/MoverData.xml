@@ -91,5 +91,7 @@
             <ThrowBandPitch value="-360,-360,-360,-360"/>
             <YawPitchRoll value="719.2968"/>
         </MotionPhases>
+        <Flags index="RestoreHeight" value="1"/>
+        <HeightMap value="Air"/>
     </CMoverMissile>
 </Catalog>

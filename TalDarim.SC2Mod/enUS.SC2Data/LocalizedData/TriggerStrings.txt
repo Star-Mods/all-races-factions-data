@@ -3,7 +3,6 @@ Category/Name/lib_EA49549C_1D9ABD7A=Death Star
 Library/Name/EA49549C=Factions - Tal'Darim
 Trigger/Name/lib_EA49549C_30C70AC5=Tal'Darim - Death Star Add Group
 Trigger/Name/lib_EA49549C_37604150=Tal'Darim - Death Star Level
-Trigger/Name/lib_EA49549C_49B53FD5=Tal'Darim - Monitor Height Reset
 Trigger/Name/lib_EA49549C_4F5B8C67=Tal'Darim - Priority High
 Trigger/Name/lib_EA49549C_64AE2BD5=Tal'Darim - Locust Energy
 Trigger/Name/lib_EA49549C_704FA365=Tal'Darim - Priority Low
