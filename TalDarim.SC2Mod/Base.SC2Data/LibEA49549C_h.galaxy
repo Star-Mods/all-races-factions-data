@@ -19,7 +19,6 @@ trigger libEA49549C_gt_TalDarimNewunit;
 trigger libEA49549C_gt_TalDarimPriorityLow;
 trigger libEA49549C_gt_TalDarimPriorityMedium;
 trigger libEA49549C_gt_TalDarimPriorityHigh;
-trigger libEA49549C_gt_TalDarimMonitorHeightReset;
 
 // Library Initialization
 void libEA49549C_InitVariables ();

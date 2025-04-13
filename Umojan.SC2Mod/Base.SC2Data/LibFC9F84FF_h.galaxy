@@ -5,5 +5,5 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Trigger Declarations
 trigger libFC9F84FF_gt_UmojanIni;
-trigger libFC9F84FF_gt_HexaremStuckRaptorFix;
+trigger libFC9F84FF_gt_UmojanHexaremStuckRaptorFix;
 

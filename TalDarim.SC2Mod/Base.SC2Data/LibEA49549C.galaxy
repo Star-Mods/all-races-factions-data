@@ -117,7 +117,6 @@ bool libEA49549C_gt_TalDarimIni_Func (bool testConds, bool runActions) {
     TriggerEnable(libEA49549C_gt_TalDarimDeathStarAddGroup, true);
     TriggerEnable(libEA49549C_gt_TalDarimDeathStarRemGroup, true);
     TriggerEnable(libEA49549C_gt_TalDarimLocustEnergy, true);
-    TriggerEnable(libEA49549C_gt_TalDarimMonitorHeightReset, true);
     TriggerEnable(libEA49549C_gt_TalDarimNewunit, true);
     TriggerEnable(libEA49549C_gt_TalDarimPriorityHigh, true);
     TriggerEnable(libEA49549C_gt_TalDarimPriorityLow, true);
@@ -484,31 +483,6 @@ void libEA49549C_gt_TalDarimPriorityHigh_Init () {
     TriggerAddEventPlayerEffectUsed(libEA49549C_gt_TalDarimPriorityHigh, c_playerAny, "TalDarimSoulLeechPriorityHigh");
 }
 
-//--------------------------------------------------------------------------------------------------
-// Trigger: Tal'Darim - Monitor Height Reset
-//--------------------------------------------------------------------------------------------------
-bool libEA49549C_gt_TalDarimMonitorHeightReset_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    Wait(1.0, c_timeGame);
-    if ((UnitIsAlive(EventPlayerEffectUsedUnitLaunch()) == true) && (UnitGetHeight(EventPlayerEffectUsedUnitLaunch()) < 3.0)) {
-        UnitSetHeight(EventPlayerEffectUsedUnitLaunch(), libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogUnit, "TalDarimMonitor", "Height", c_playerAny), 0.5);
-    }
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libEA49549C_gt_TalDarimMonitorHeightReset_Init () {
-    libEA49549C_gt_TalDarimMonitorHeightReset = TriggerCreate("libEA49549C_gt_TalDarimMonitorHeightReset_Func");
-    TriggerEnable(libEA49549C_gt_TalDarimMonitorHeightReset, false);
-    TriggerAddEventPlayerEffectUsed(libEA49549C_gt_TalDarimMonitorHeightReset, c_playerAny, "TalDarimMonitorDetonationLM");
-}
-
 void libEA49549C_InitTriggers () {
     libEA49549C_gt_TalDarimIni_Init();
     libEA49549C_gt_TalDarimDeathStarLevel_Init();
@@ -520,7 +494,6 @@ void libEA49549C_InitTriggers () {
     libEA49549C_gt_TalDarimPriorityLow_Init();
     libEA49549C_gt_TalDarimPriorityMedium_Init();
     libEA49549C_gt_TalDarimPriorityHigh_Init();
-    libEA49549C_gt_TalDarimMonitorHeightReset_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -301,8 +301,7 @@
         <Enabled value="1"/>
         <State value="Detector"/>
     </CValidatorUnitState>
-    <CValidatorCombine id="UmojanTargetNotTacticalJumping">
-        <ResultFailed value="Error,Error/CantTargetBattlecruiserHyperjump"/>
+    <CValidatorCombine id="TargetNotTacticalJumping">
         <CombineArray value="UmojanTargetTacticalJumping"/>
         <Negate value="1"/>
     </CValidatorCombine>

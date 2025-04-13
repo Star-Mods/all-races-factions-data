@@ -928,7 +928,7 @@
         <SpawnRange value="10"/>
     </CEffectCreateUnit>
     <CEffectModifyUnit id="UmojanHyperJumpBattleshipTargetTriggerCD">
-        <ValidatorArray value="UmojanTargetNotTacticalJumping"/>
+        <ValidatorArray value="TargetNotTacticalJumping"/>
         <EditorCategories value="Race:TerU"/>
         <Cost Abil="UmojanHyperjump,Execute" CooldownTimeUse="120"/>
     </CEffectModifyUnit>
@@ -2652,9 +2652,6 @@
         <Weapon Weapon="UmojanHeliosMissilePod" CooldownOperation="Add" CooldownAmount="1.9"/>
         <ImpactUnit Value="Source"/>
     </CEffectModifyUnit>
-    <CEffectSet id="YoinkSet">
-        <ValidatorArray value="UmojanTargetNotTacticalJumping"/>
-    </CEffectSet>
     <CEffectDamage id="UmojanStrikefoxMissileDamage">
         <ValidatorArray value="noMarkers"/>
         <EditorCategories value="Race:TerU"/>

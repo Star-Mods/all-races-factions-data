@@ -1,6 +1,6 @@
 ﻿Library/Name/FC9F84FF=Umojan
-Trigger/Name/lib_FC9F84FF_2ED89DE6=Umojan Ini
-Trigger/Name/lib_FC9F84FF_C122F4C5=Hexarem Stuck Raptor Fix
+Trigger/Name/lib_FC9F84FF_2ED89DE6=Umojan - Ini
+Trigger/Name/lib_FC9F84FF_C122F4C5=Umojan - Hexarem Stuck Raptor Fix
 Variable/Name/lib_FC9F84FF_1C815B59=Raptor
 Variable/Name/lib_FC9F84FF_304454B5=OrderCount
 Variable/Name/lib_FC9F84FF_83C113C0=Int

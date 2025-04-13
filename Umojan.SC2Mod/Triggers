@@ -15,7 +15,7 @@
         </Element>
         <Element Type="Param" Id="2BEE4AD0">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="177B3837"/>
-            <Value>GAME START</Value>
+            <Value>GAME START TerU</Value>
             <ValueType Type="string"/>
         </Element>
         <Element Type="FunctionCall" Id="2BA6AFC5">

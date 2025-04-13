@@ -12,7 +12,7 @@ void libFC9F84FF_InitLibraries () {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Umojan Ini
+// Trigger: Umojan - Ini
 //--------------------------------------------------------------------------------------------------
 bool libFC9F84FF_gt_UmojanIni_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
@@ -21,20 +21,20 @@ bool libFC9F84FF_gt_UmojanIni_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    TriggerEnable(libFC9F84FF_gt_HexaremStuckRaptorFix, true);
+    TriggerEnable(libFC9F84FF_gt_UmojanHexaremStuckRaptorFix, true);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
 void libFC9F84FF_gt_UmojanIni_Init () {
     libFC9F84FF_gt_UmojanIni = TriggerCreate("libFC9F84FF_gt_UmojanIni_Func");
-    TriggerAddEventGeneric(libFC9F84FF_gt_UmojanIni, "GAME START");
+    TriggerAddEventGeneric(libFC9F84FF_gt_UmojanIni, "GAME START TerU");
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Hexarem Stuck Raptor Fix
+// Trigger: Umojan - Hexarem Stuck Raptor Fix
 //--------------------------------------------------------------------------------------------------
-bool libFC9F84FF_gt_HexaremStuckRaptorFix_Func (bool testConds, bool runActions) {
+bool libFC9F84FF_gt_UmojanHexaremStuckRaptorFix_Func (bool testConds, bool runActions) {
     // Variable Declarations
     unit lv_hexarem;
     unit lv_raptor;
@@ -82,15 +82,15 @@ bool libFC9F84FF_gt_HexaremStuckRaptorFix_Func (bool testConds, bool runActions)
 }
 
 //--------------------------------------------------------------------------------------------------
-void libFC9F84FF_gt_HexaremStuckRaptorFix_Init () {
-    libFC9F84FF_gt_HexaremStuckRaptorFix = TriggerCreate("libFC9F84FF_gt_HexaremStuckRaptorFix_Func");
-    TriggerEnable(libFC9F84FF_gt_HexaremStuckRaptorFix, false);
-    TriggerAddEventPlayerEffectUsed(libFC9F84FF_gt_HexaremStuckRaptorFix, c_playerAny, "UmojanHexaremRaptorDummyRecallMU");
+void libFC9F84FF_gt_UmojanHexaremStuckRaptorFix_Init () {
+    libFC9F84FF_gt_UmojanHexaremStuckRaptorFix = TriggerCreate("libFC9F84FF_gt_UmojanHexaremStuckRaptorFix_Func");
+    TriggerEnable(libFC9F84FF_gt_UmojanHexaremStuckRaptorFix, false);
+    TriggerAddEventPlayerEffectUsed(libFC9F84FF_gt_UmojanHexaremStuckRaptorFix, c_playerAny, "UmojanHexaremRaptorDummyRecallMU");
 }
 
 void libFC9F84FF_InitTriggers () {
     libFC9F84FF_gt_UmojanIni_Init();
-    libFC9F84FF_gt_HexaremStuckRaptorFix_Init();
+    libFC9F84FF_gt_UmojanHexaremStuckRaptorFix_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

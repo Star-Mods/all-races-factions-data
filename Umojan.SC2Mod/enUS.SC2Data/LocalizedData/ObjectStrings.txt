@@ -2440,7 +2440,6 @@ Validator/Name/UmojanTargetAreaIsPowered=Umojan - Target Area Is Powered
 Validator/Name/UmojanTargetIsAllyorPlayerorNeutral=Umojan - Target Is Ally or Player or Neutral
 Validator/Name/UmojanTargetIsAttacking=Umojan - Target Is Attacking
 Validator/Name/UmojanTargetIsDetector=Umojan - Target Is Detector
-Validator/Name/UmojanTargetNotTacticalJumping=Umojan - Target Not Tactical Jumping
 Validator/Name/UmojanTargetShieldsGE25=Umojan - Target Shields GE25
 Validator/Name/UmojanTargetTacticalJumping=Umojan - Target Tactical Jumping
 Validator/Name/UmojanThreatensAir=Umojan - Threatens Air
