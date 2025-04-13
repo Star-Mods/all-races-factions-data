@@ -134,10 +134,6 @@
         <Model value="Assets\Doodads\ActorForceField\ActorForceField.m3"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
-    <CModel id="ProtossSmallUnitDeathLow">
-        <Radius value="1.000000"/>
-        <SelectionRadius value="1.000000"/>
-    </CModel>
     <CModel id="UPLBattleStationBuild" parent="BarracksBuildBase" Race="UPL" name="TerranBuilding_Silver_Build">
         <Lighting value="Barracks_Silver_Build"/>
         <ScaleMax value="1.000000,1.000000,0.350000"/>

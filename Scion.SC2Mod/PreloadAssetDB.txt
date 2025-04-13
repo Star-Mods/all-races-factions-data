@@ -3568,7 +3568,7 @@ Model=KeironStructureDeathExplosion
 Sound=Keiron_BuildingPlacement
 id=ShellDome
 path=Assets\Textures\.dds
-asset=btn-unit-keiron-##id##,wireframe-keiron-##id##,wireframe-keiron-##id##-shield1,wireframe-keiron-##id##-shield2,wireframe-keiron-##id##-shield3
+asset=btn-ability-keiron-shelldome,wireframe-keiron-##id##,wireframe-keiron-##id##-shield1,wireframe-keiron-##id##-shield2,wireframe-keiron-##id##-shield3
 Actor=##id##Addition
 Model
 Sound=##id##_Ambience,WardShellBirth

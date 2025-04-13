@@ -4205,10 +4205,6 @@
         <HostSiteOps Ops="SOpAttachOrigin SOpShadow"/>
         <Model value="ZHBRDeepTunnel@Unburrow"/>
     </CActorModel>
-    <CActorModel id="SwarmHostDeepBurrow" parent="ModelAnimationStyleOneShot">
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachOriginStationary SOpShadow"/>
-    </CActorModel>
     <CActorSound id="ZHBRDeepTunnel@BurrowSound" parent="SoundOneShot">
         <Sound value="ZHBRDeepTunnel@Burrow"/>
     </CActorSound>

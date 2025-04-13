@@ -62,7 +62,7 @@
     </CModel>
     <CModel id="ZHBRStructureTeleport@Splat" parent="UI">
         <Model value="assets\Effects\ZHybrid\PowerField\PowerField.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <SelectionRadius value="1.000000"/>
         <ShadowRadius value="1.000000"/>
     </CModel>
@@ -165,7 +165,7 @@
     </CModel>
     <CModel id="ZHBRStructureTeleport@SplatConductor" parent="UI">
         <Model value="assets\Effects\ZHybrid\PowerField\PowerField.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <ScaleMax value="0.725000,0.725000,0.725000"/>
         <ScaleMin value="0.725000,0.725000,0.725000"/>
         <SelectionRadius value="1.000000"/>
@@ -267,7 +267,7 @@
     </CModel>
     <CModel id="ZHBRPsyonWeapon@Beam" parent="MissileFX">
         <Model value="Assets\Effects\Protoss\DetonateBeam\DetonateBeam.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <RadiusLoose value="4.000000"/>
         <SelectionRadius value="0.714000"/>
         <ShadowRadius value="0.714000"/>
@@ -356,7 +356,7 @@
     </CModel>
     <CModel id="ZHBRRestorationShield@HealTick" parent="RacePersistentSpellFX">
         <Model value="Assets\Effects\Zerg\Dehaka_Coop_PrimalRegeneration_Impact\Dehaka_Coop_PrimalRegeneration_Impact.m3"/>
-        <EditorCategories value="Race:Zerg"/>
+        <EditorCategories value="Race:ZHBR"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
@@ -389,7 +389,7 @@
     </CModel>
     <CModel id="ZHBRRaceControl@Model" Race="Neutral">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
-        <EditorCategories value="Race:Neutral"/>
+        <EditorCategories value="Race:ZHBR"/>
         <Flags index="TeenSafe" value="1"/>
         <Radius value="-1.000000"/>
         <SelectionLayer value="2"/>
@@ -1236,10 +1236,12 @@
         <SquibTypeDefault value="Flesh"/>
         <TechPurchaseCamera value="Star2CameraLow15"/>
         <UnitGlossaryCamera value="Star2CameraLow15"/>
+        <EditorCategories value="Race:ZHBR"/>
     </CModel>
     <CModel id="ZHBRVoidThrasher@Death" parent="UnitDeath" Race="Zerg">
         <Model value="assets\Units\ZHybrid\VoidThrasher\VoidThrasher_Walker.m3"/>
         <AttachProps Id="Ref_Center" RadiusShield="4.000000"/>
+        <EditorCategories value="Race:ZHBR"/>
         <Events>
             <Anim value="Death,00"/>
             <Name value="Void_Thrasher_ChestGlow"/>
@@ -1265,6 +1267,7 @@
     </CModel>
     <CModel id="ZHBRVoidThrasher@Portrait">
         <Model value="Assets\Portraits\Protoss\VoidThrasherEx2_Portrait\VoidThrasherEx2_Portrait.m3"/>
+        <EditorCategories value="Race:ZHBR"/>
     </CModel>
     <CModel id="ZHBRConstruct@Death">
         <Model value="Assets\Units\Protoss\XelNaga_Construct_Sentinel_Death\XelNaga_Construct_Sentinel_Death.m3"/>
@@ -2521,10 +2524,6 @@
         <EditorCategories value="Race:ZHBR"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
-    </CModel>
-    <CModel id="SwarmHostDeepBurrow" parent="OneShotSpellFX">
-        <Model value="Assets\Effects\Zerg\ZagaraDeepBurrow\ZagaraDeepBurrow.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="ZHBRStructureTeleport@TPModelLow">
         <Model value="Assets\COOP\Zeratul\Effects\Stalker_Zeratul_COOP_AfterImage\Stalker_Zeratul_COOP_AfterImage.m3"/>

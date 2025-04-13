@@ -1641,6 +1641,11 @@
         <StatusBarOn index="Shields" value="1"/>
         <On Terms="ActorCreation" Send="Create ShellDomeAddition"/>
         <ModelFlags index="AllowHitTest" value="0"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\btn-ability-keiron-shelldome.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-ability-keiron-shelldome.dds"/>
+        <UnitIcon value="Assets\Textures\btn-ability-keiron-shelldome.dds"/>
     </CActorUnit>
     <CActorUnit id="Spitter" parent="GenericUnitXayid" unitName="Spitter">
         <DeathArray index="Normal" ModelLink="DefilerMPDeath"/>

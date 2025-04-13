@@ -1291,6 +1291,7 @@
     </CUnit>
     <CUnit id="ZHBRVoidThrasher">
         <DeathRevealRadius value="3"/>
+        <Race value="ZHBR"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="AISplash" value="1"/>

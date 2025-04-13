@@ -2,6 +2,7 @@
 <Catalog>
     <CEffectModifyUnit id="ZCRCasterAssignRally">
         <RallyUnit Value="Caster"/>
+        <EditorCategories value="Race:ZHBR"/>
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="ZHBRAcceleration@ApplyBehavior">
         <EditorCategories value="Race:ZHBR"/>
@@ -682,7 +683,7 @@
         <EditorCategories value="Race:ZHBR"/>
     </CEffectSet>
     <CEffectEnumArea id="RadiusTestSearchArea">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:ZHBR"/>
         <DebugTrace value="1"/>
         <AreaArray/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
@@ -1013,16 +1014,16 @@
         <FacingType value="LookAt"/>
     </CEffectModifyUnit>
     <CEffectSet id="ZHBRStasisCell@BirthSet">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:ZHBR"/>
     </CEffectSet>
     <CEffectSet id="ZHBRStasisCell@DeathSet">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:ZHBR"/>
     </CEffectSet>
     <CEffectSet id="ZHBRTemple@BirthSet">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:ZHBR"/>
     </CEffectSet>
     <CEffectSet id="ZHBRTemple@DeathSet">
-        <EditorCategories value=""/>
+        <EditorCategories value="Race:ZHBR"/>
     </CEffectSet>
     <CEffectApplyBehavior id="ZHBRVoidImmunity@ApplyBuff">
         <EditorCategories value="Race:ZHBR"/>

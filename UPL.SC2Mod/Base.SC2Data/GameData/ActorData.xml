@@ -236,8 +236,8 @@
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-upl-buildingarmor.dds"/>
         <UnitIcon value="Assets\Textures\btn-building-upl-##unitName##.dds"/>
     </CActorUnit>
-    <CActorSplat id="BehemothAttackGroundGuideSplat" parent="CursorSplat" abil="ALLRACE2LotCBehemothattack">
-        <On index="0" Terms="Abil.ALLRACE2LotCBehemothattack.Guide; AbilCmd ALLRACE2LotCBehemothattack,Barrage" Send="Create"/>
+    <CActorSplat id="BehemothAttackGroundGuideSplat" parent="CursorSplat" abil="UPLBehemothattack">
+        <On index="0" Terms="Abil.UPLBehemothattack.Guide; AbilCmd ALLRACE2LotCBehemothattack,Barrage" Send="Create"/>
         <On Terms="ActorCreation; ValidatePlayer PlayerIsProtoss" Send="ModelSwap ProtossAOECursorSplat"/>
         <On Terms="ActorCreation; ValidatePlayer PlayerIsZerg" Send="ModelSwap ZergAOECursorSplat"/>
         <MaxScale value="2.200000"/>

@@ -11,7 +11,7 @@
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="UPLZ2Dash">
         <EditorCategories value="Race:UPL"/>
-        <InitialEffect value="LotCUPLZ2NovaStrikeIssueOrderMove"/>
+        <InitialEffect value="UPLZ2StrikeIssueOrderMove"/>
         <FinalEffect value="ApplyUPLZ2DashWalkSpeed"/>
         <PeriodCount value="1"/>
         <PeriodicPeriodArray value="0.05"/>

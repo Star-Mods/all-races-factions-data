@@ -9,11 +9,11 @@
         <Volume value="-2.000000,-2.000000"/>
     </CSound>
     <CSound id="ZHBRPermanentPower@Impact" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <AssetArray File="Assets\Sounds\Protoss\Obelisk\Obelisk_ArgusLinkImpact0.wav"/>
     </CSound>
     <CSound id="ZHBRPermanentPower@Launch" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <AssetArray File="Assets\Sounds\Protoss\Obelisk\Obelisk_ArgusLinkLaunch0.wav"/>
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
@@ -263,7 +263,7 @@
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="ZHBRPowerField@Cast" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <AssetArray File="Assets\Sounds\Def_Matrix_Birth_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Def_Matrix_Birth_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Def_Matrix_Birth_03.wav" FacialGroup=""/>
@@ -281,7 +281,7 @@
         <Volume value="-7.000000,-7.000000"/>
     </CSound>
     <CSound id="ZHBRPowerField@End" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <AssetArray File="Assets\Sounds\Def_MatrixDrone_Death_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Def_MatrixDrone_Death_02.wav" FacialGroup=""/>
         <Volume value="-7.000000,-7.000000"/>
@@ -1079,12 +1079,14 @@
         <SpeakerMix index="SideLeft" value="0.000000"/>
         <SpeakerMix index="SideRight" value="0.000000"/>
         <SustainFade index="1" Time="1000"/>
+        <EditorCategories value="Race:ZHBR"/>
     </CSound>
     <CSound id="ZHBRVoidThrasher@Birth" parent="Spell">
         <AssetArray File="Assets\Sounds\HybridThrasher_2DBirth_Full.wav"/>
         <Pitch value="-1.000000,0.000000"/>
         <Spread value="30.000000"/>
         <Volume value="3.000000,3.000000"/>
+        <EditorCategories value="Race:ZHBR"/>
     </CSound>
     <CSound id="ZHBRConstructWeaponAntiGround@BeamAttackLaunch" parent="Combat">
         <EditorCategories value="Race:ZHBR"/>
@@ -2607,7 +2609,7 @@
         <Volume value="-2.000000,-2.000000"/>
     </CSound>
     <CSound id="ZHBRAmplifier@What" parent="Voice">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:ZHBR"/>
         <AssetArray File="Assets\Sounds\Protoss\PhotonCannon\PhotonCannon_What.ogg"/>
         <Volume value="-2.000000,-2.000000"/>
     </CSound>

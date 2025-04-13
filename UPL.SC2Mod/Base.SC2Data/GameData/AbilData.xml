@@ -61,8 +61,9 @@
         <BehaviorArray value="SalvageShared"/>
         <ValidatorArray value="HasNoCargo"/>
     </CAbilBehavior>
-    <CAbilAttack id="ALLRACE2LotCBehemothattack">
-        <TargetMessage value="Abil/TargetMessage/ALLRACE2LotCBehemothattack"/>
+    <CAbilAttack id="UPLBehemothattack">
+        <EditorCategories value="Race:UPL,AbilityorEffectType:Units"/>
+        <TargetMessage value="Abil/TargetMessage/UPLBehemothattack"/>
         <MinAttackSpeedMultiplier value="0.25"/>
         <MaxAttackSpeedMultiplier value="128"/>
     </CAbilAttack>

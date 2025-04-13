@@ -516,7 +516,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="UEDPlacementDummyBig" parent="CommandCenterPlacementBase" low="OperationHeadquarters">
-        <Model value="Assets\Doodads\UED_Beacon\UED_Beacon_UED.m3"/>
+        <Model value="Assets\Models\UED_Beacon_UED.m3"/>
         <ScaleMax value="1.600000,1.600000,1.600000"/>
         <ScaleMin value="1.600000,1.600000,1.600000"/>
         <SelectionRadius value="3.000000"/>
@@ -605,7 +605,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="UEDPlacementDummyMed" parent="CommandCenterPlacementBase" low="OperationHeadquarters">
-        <Model value="Assets\Doodads\UED_Beacon\UED_Beacon_UED.m3"/>
+        <Model value="Assets\Models\UED_Beacon_UED.m3"/>
         <ScaleMax value="1.300000,1.300000,1.300000"/>
         <ScaleMin value="1.300000,1.300000,1.300000"/>
         <SelectionRadius value="2.000000"/>
@@ -614,7 +614,7 @@
         <LowQualityModel value=""/>
     </CModel>
     <CModel id="UEDPlacementDummySmall" parent="CommandCenterPlacementBase" low="OperationHeadquarters">
-        <Model value="Assets\Doodads\UED_Beacon\UED_Beacon_UED.m3"/>
+        <Model value="Assets\Models\UED_Beacon_UED.m3"/>
         <ScaleMax value="1.000000,1.000000,1.000000"/>
         <ScaleMin value="1.000000,1.000000,1.000000"/>
         <SelectionRadius value="1.000000"/>
@@ -1573,7 +1573,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="OperationHeadquartersPlacement" parent="CommandCenterPlacementBase" low="OperationHeadquarters">
-        <Model value="Assets\Placement\UED\UED_Biodome_Placement\UED_Biodome_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_Biodome_Placement\UED_Biodome_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -1647,12 +1647,12 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="TacticsAcademyPlacement" parent="EngineeringBayPlacementBase" low="TacticsAcademy">
-        <Model value="Assets\Placement\UED\UED_ScienceFacility_Placement\UED_ScienceFacility_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_ScienceFacility_Placement\UED_ScienceFacility_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="FieldBureauPlacement" parent="EngineeringBayPlacementBase" low="FieldBureau">
-        <Model value="Assets\Placement\UED\UED_MercCompound_Placement\UED_MercCompound_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_MercCompound_Placement\UED_MercCompound_Placement.m3"/>
         <SelectionLayer value="2"/>
         <ScaleMax value="1.000000,1.000000,1.000000"/>
         <ScaleMin value="1.000000,1.000000,1.000000"/>
@@ -1758,12 +1758,12 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="EnrichmentTowerPlacement" parent="SupplyDepotPlacementBase" low="EnrichmentTower">
-        <Model value="Assets\Placement\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="ArsenalPlacement" parent="SupplyDepotPlacementBase" low="Arsenal">
-        <Model value="Assets\Placement\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -1978,7 +1978,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="RefineryPlacement2" parent="RefineryPlacementBase" low="Refinery2">
-        <Model value="Assets\Placement\UED\UED_RefineryAutomated_Placement\UED_RefineryAutomated_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_RefineryAutomated_Placement\UED_RefineryAutomated_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
@@ -2030,7 +2030,7 @@
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="InfusionTowerPlacement" parent="SupplyDepotPlacementBase" low="InfusionTower">
-        <Model value="Assets\Placement\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
+        <Model value="Assets\Buildings\UED\UED_SupplyDepot_Placement\UED_SupplyDepot_Placement.m3"/>
         <SelectionLayer value="2"/>
         <EditorCategories value="Race:UED"/>
     </CModel>

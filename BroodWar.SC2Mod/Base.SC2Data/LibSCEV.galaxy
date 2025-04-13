@@ -249,9 +249,9 @@ void libSCEV_gf_MergeStatusEffectsMiscDataSet (string lp_buff, unit lp_unit, str
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: BroodWar Init
+// Trigger: BWProtoss Init
 //--------------------------------------------------------------------------------------------------
-bool libSCEV_gt_BroodWarInit_Func (bool testConds, bool runActions) {
+bool libSCEV_gt_BWProtossInit_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     playergroup autoE06D65A4_g;
     int autoE06D65A4_var;
@@ -261,14 +261,12 @@ bool libSCEV_gt_BroodWarInit_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    TriggerEnable(TriggerGetCurrent(), false);
-    NydusCanalSCBW_Init();
     autoE06D65A4_g = PlayerGroupAll();
     autoE06D65A4_var = -1;
     while (true) {
         autoE06D65A4_var = PlayerGroupNextPlayer(autoE06D65A4_g, autoE06D65A4_var);
         if (autoE06D65A4_var < 0) { break; }
-        if (((PlayerRace(autoE06D65A4_var) == "BWPr") || (PlayerRace(autoE06D65A4_var) == "BWTe") || (PlayerRace(autoE06D65A4_var) == "BWZe"))) {
+        if ((PlayerRace(autoE06D65A4_var) == "BWPr")) {
             libSCEV_gf_LegacyIconsActivate(true, PlayerGroupSingle(autoE06D65A4_var));
         }
 
@@ -277,11 +275,74 @@ bool libSCEV_gt_BroodWarInit_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libSCEV_gt_BroodWarInit_Init () {
-    libSCEV_gt_BroodWarInit = TriggerCreate("libSCEV_gt_BroodWarInit_Func");
-    TriggerAddEventGeneric(libSCEV_gt_BroodWarInit, "START GAME BWTe");
-    TriggerAddEventGeneric(libSCEV_gt_BroodWarInit, "START GAME BWZe");
-    TriggerAddEventGeneric(libSCEV_gt_BroodWarInit, "START GAME BWPr");
+void libSCEV_gt_BWProtossInit_Init () {
+    libSCEV_gt_BWProtossInit = TriggerCreate("libSCEV_gt_BWProtossInit_Func");
+    TriggerAddEventGeneric(libSCEV_gt_BWProtossInit, "START GAME BWPr");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: BWTerran Init
+//--------------------------------------------------------------------------------------------------
+bool libSCEV_gt_BWTerranInit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoE1F5B6E6_g;
+    int autoE1F5B6E6_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoE1F5B6E6_g = PlayerGroupAll();
+    autoE1F5B6E6_var = -1;
+    while (true) {
+        autoE1F5B6E6_var = PlayerGroupNextPlayer(autoE1F5B6E6_g, autoE1F5B6E6_var);
+        if (autoE1F5B6E6_var < 0) { break; }
+        if ((PlayerRace(autoE1F5B6E6_var) == "BWTe")) {
+            libSCEV_gf_LegacyIconsActivate(true, PlayerGroupSingle(autoE1F5B6E6_var));
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libSCEV_gt_BWTerranInit_Init () {
+    libSCEV_gt_BWTerranInit = TriggerCreate("libSCEV_gt_BWTerranInit_Func");
+    TriggerAddEventGeneric(libSCEV_gt_BWTerranInit, "START GAME BWTe");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: BWZerg Init
+//--------------------------------------------------------------------------------------------------
+bool libSCEV_gt_BWZergInit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoE1B374A0_g;
+    int autoE1B374A0_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    NydusCanalSCBW_Init();
+    autoE1B374A0_g = PlayerGroupAll();
+    autoE1B374A0_var = -1;
+    while (true) {
+        autoE1B374A0_var = PlayerGroupNextPlayer(autoE1B374A0_g, autoE1B374A0_var);
+        if (autoE1B374A0_var < 0) { break; }
+        if ((PlayerRace(autoE1B374A0_var) == "BWZe")) {
+            libSCEV_gf_LegacyIconsActivate(true, PlayerGroupSingle(autoE1B374A0_var));
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libSCEV_gt_BWZergInit_Init () {
+    libSCEV_gt_BWZergInit = TriggerCreate("libSCEV_gt_BWZergInit_Func");
+    TriggerAddEventGeneric(libSCEV_gt_BWZergInit, "START GAME BWZe");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -643,7 +704,9 @@ void libSCEV_gt_MergeStatusEffectsBegin_Init () {
 }
 
 void libSCEV_InitTriggers () {
-    libSCEV_gt_BroodWarInit_Init();
+    libSCEV_gt_BWProtossInit_Init();
+    libSCEV_gt_BWTerranInit_Init();
+    libSCEV_gt_BWZergInit_Init();
     libSCEV_gt_MimicCheckStorePlayerIndex_Init();
     libSCEV_gt_MimicCheckSpiderMine_Init();
     libSCEV_gt_ReaverPathingCheck_Init();

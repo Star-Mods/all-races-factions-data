@@ -23,8 +23,8 @@
         <Radius value="1"/>
         <RestrictToCircumference value="1"/>
     </CEffectRandomPointInCircle>
-    <CEffectIssueOrder id="LotCUPLZ2NovaStrikeIssueOrderMove">
-        <EditorCategories value=""/>
+    <CEffectIssueOrder id="UPLZ2StrikeIssueOrderMove">
+        <EditorCategories value="Race:UPL"/>
         <WhichUnit Value="Source"/>
         <Abil value="move"/>
         <Player Value="Source"/>

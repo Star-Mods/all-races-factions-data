@@ -6,6 +6,10 @@ include "TriggerLibs/natives"
 // Variable Declarations
 unitgroup libUEDC_gv_beaconConstructionunitgroup;
 playergroup libUEDC_gv_uEDPlayers;
+unitgroup[16] libUEDC_gv_beacons;
+int libUEDC_gv_count;
+int libUEDC_gv_beaconsButtonCountLabel;
+int libUEDC_gv_beaconsButton;
 bool libUEDC_gv_debugmodeonoroff;
 
 // Function Declarations
@@ -19,6 +23,9 @@ trigger libUEDC_gt_EffectSpawnunit;
 trigger libUEDC_gt_Beaconanimcreate;
 trigger libUEDC_gt_Owardseffectfortargettingunits;
 trigger libUEDC_gt_OwardseffectforPoliticalAdvisor;
+trigger libUEDC_gt_CalculateBeacons;
+trigger libUEDC_gt_InitBeaconsButton;
+trigger libUEDC_gt_BeaconsButtonUsed;
 trigger libUEDC_gt_BeaconBuild;
 trigger libUEDC_gt_ResoursesInfusionTower;
 trigger libUEDC_gt_SalvagerHarvest;

@@ -1125,7 +1125,6 @@ Texture/Name/glow_orange3=glow_orange3
 Texture/Name/lightning_orange=lightning_orange
 Texture/Name/plasmaburn2_orange=plasmaburn2_orange
 Turret/Name/SunkenGuardian=Sunken Guardian
-UI/HelpMenuDialogTechGlossary_Control_Unit/Category/DragonUnits=Dragon Units
 Unit/EditorPrefix/VolcanicHarbingerOverload=Volcanic Harbinger -
 Unit/EditorSuffix/AscendedRazorback2=(No Footprint)
 Unit/EditorSuffix/AugmentationPitFrontier=(Frontier)

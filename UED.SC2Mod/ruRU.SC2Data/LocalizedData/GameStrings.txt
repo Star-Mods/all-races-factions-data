@@ -897,4 +897,4 @@ Weapon/Tip/UEDPenemundeGunRange=<c val="#ColorAttackInfo">Наносит уро�
 Weapon/Tip/UEDPenemundeGunRangeHidden=<c val="#ColorAttackInfo">Наносит урон по области<n/>в радиесе 1.25, игнорирует броню.
 Weapon/Tip/UEDSpartanGunAir=
 Weapon/Tip/UEDSpartanGunGround=
-UI/HelpMenuDialogTechGlossary_Control_Unit/Category/UEDUnits=UED Army
+UI/HelpMenuDialogTechGlossary_Control_Unit/Category/UEDUnits=UED Units
