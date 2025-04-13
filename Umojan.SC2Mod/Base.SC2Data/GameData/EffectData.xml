@@ -33,22 +33,11 @@
     <CEffectApplyBehavior id="UmojanCommandHubGeneratorAB">
         <EditorCategories value="Race:TerU"/>
         <WhichUnit Value="Caster"/>
-        <Behavior value="UmojanPowerSourceCH"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="UmojanCommandHubGeneratorAB2">
-        <ValidatorArray index="0" value="UmojanCommandHubGeneratorABTargetFilters"/>
-        <EditorCategories value="Race:TerU"/>
-        <WhichUnit Value="Caster"/>
         <Behavior value="UmojanOverchargeGenerator"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="UmojanCommandHubGeneratorABBis">
-        <EditorCategories value="Race:TerU"/>
-        <WhichUnit Value="Caster"/>
-        <Behavior value="UmojanPowerSourceCHBis"/>
     </CEffectApplyBehavior>
     <CEffectSet id="UmojanCommandHubGeneratorSet">
         <EditorCategories value="Race:TerU"/>
-        <EffectArray value="UmojanCommandHubGeneratorAB2"/>
+        <EffectArray value="UmojanCommandHubGeneratorAB"/>
         <EffectArray value="UmojanSuicideRemoveTarget"/>
     </CEffectSet>
     <CEffectSet id="UmojanConstructionFinishedSet">

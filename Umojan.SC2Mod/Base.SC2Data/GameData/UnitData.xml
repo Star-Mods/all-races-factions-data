@@ -77,7 +77,7 @@
         <ScoreMake value="275"/>
         <ScoreKill value="275"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="25"/>
+        <SubgroupPriority value="35"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkMedivac"/>
@@ -168,7 +168,7 @@
         <CargoSize value="2"/>
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
-        <SubgroupPriority value="30"/>
+        <SubgroupPriority value="45"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
@@ -423,7 +423,7 @@
         <ScoreMake value="700"/>
         <ScoreKill value="700"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="65"/>
+        <SubgroupPriority value="55"/>
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="UmojanAIAloe"/>
@@ -572,7 +572,6 @@
         <GlossaryWeakArray index="1" removed="1"/>
         <GlossaryWeakArray index="2" removed="1"/>
         <HotkeyCategory value=""/>
-        <SubgroupPriority value="15"/>
         <LifeStart value="400"/>
         <LifeMax value="400"/>
     </CUnit>
@@ -649,7 +648,7 @@
         <ScoreMake value="175"/>
         <ScoreKill value="175"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="75"/>
+        <SubgroupPriority value="85"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
@@ -702,7 +701,7 @@
         <BehaviorArray Link="UmojanWeaponPowerAccumulator"/>
         <BehaviorArray Link="UmojanTransientAttackTracker"/>
         <ShieldRegenRate value="4"/>
-        <SubgroupPriority value="80"/>
+        <SubgroupPriority value="90"/>
         <GlossaryStrongArray index="0" removed="1"/>
         <GlossaryStrongArray index="1" removed="1"/>
         <GlossaryStrongArray index="2" removed="1"/>
@@ -747,7 +746,7 @@
         <Speed value="3"/>
         <ShieldRegenRate value="4"/>
         <BehaviorArray Link="UmojanTransientAttackTracker"/>
-        <SubgroupPriority value="85"/>
+        <SubgroupPriority value="95"/>
         <GlossaryStrongArray index="0" removed="1"/>
         <GlossaryStrongArray index="1" removed="1"/>
         <GlossaryStrongArray index="2" removed="1"/>
@@ -1026,8 +1025,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="10"/>
-        <LifeMax value="10"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
         <ShieldsStart value="75"/>
@@ -2189,7 +2188,7 @@
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="45"/>
+        <SubgroupPriority value="80"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryStrongArray value="Ultralisk"/>
@@ -2274,7 +2273,7 @@
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="40"/>
+        <SubgroupPriority value="75"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Reaper"/>
@@ -2344,7 +2343,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="15"/>
+        <SubgroupPriority value="25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <AIEvalFactor value="0"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
@@ -2503,7 +2502,7 @@
         <AbilArray Link="RallyCommand"/>
         <AbilArray Link="CommandCenterTransport"/>
         <AbilArray Link="UmojanWarpCommandHub"/>
-        <BehaviorArray Link="UmojanPowerUpgrade"/>
+        <BehaviorArray Link="UmojanPowerUpgradeCH"/>
         <BehaviorArray Link="UmojanPowerLevel0"/>
         <BehaviorArray Link="UmojanPowerLevel1"/>
         <BehaviorArray Link="UmojanPowerLevel2"/>
@@ -2523,10 +2522,10 @@
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5CancelToSelection,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="UmojanPowerLevel4" Type="Passive" Requirements="UmojanPowerLevel3" Row="1" Column="3"/>
-            <LayoutButtons Face="UmojanPowerLevel3" Type="Passive" Requirements="UmojanPowerLevel2" Row="1" Column="3"/>
-            <LayoutButtons Face="UmojanPowerLevel2" Type="Passive" Requirements="UmojanPowerLevel1" Row="1" Column="3"/>
-            <LayoutButtons Face="UmojanPowerLevel1" Type="Passive" Requirements="UmojanPowerLevel0" Row="1" Column="3"/>
+            <LayoutButtons Face="UmojanPowerLevel4CH" Type="Passive" Requirements="UmojanPowerLevel3" Row="1" Column="3"/>
+            <LayoutButtons Face="UmojanPowerLevel3CH" Type="Passive" Requirements="UmojanPowerLevel2" Row="1" Column="3"/>
+            <LayoutButtons Face="UmojanPowerLevel2CH" Type="Passive" Requirements="UmojanPowerLevel1" Row="1" Column="3"/>
+            <LayoutButtons Face="UmojanPowerLevel1CH" Type="Passive" Requirements="UmojanPowerLevel0" Row="1" Column="3"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="2" Column="2"/>
             <LayoutButtons Face="UmojanBattleship" Type="AbilCmd" AbilCmd="UmojanCommandCenterTrain,Train4" Row="0" Column="1"/>
             <LayoutButtons Face="UmojanBuildAuxiliaryGenerator" Type="AbilCmd" AbilCmd="UmojanCommandCenterTrain,Train2" Row="1" Column="0"/>
@@ -3080,7 +3079,7 @@
         <InnerRadius value="0.8125"/>
         <ScoreMake value="1800"/>
         <ScoreKill value="1800"/>
-        <SubgroupPriority value="49"/>
+        <SubgroupPriority value="60"/>
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <AIEvalFactor value="1.5"/>
@@ -3227,8 +3226,8 @@
         <Sight value="11"/>
         <Food value="-4"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="250"/>
-        <CostResource index="Vespene" value="225"/>
+        <CostResource index="Minerals" value="275"/>
+        <CostResource index="Vespene" value="250"/>
         <RepairTime value="40"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -3262,8 +3261,8 @@
         <SeparationRadius value="0.375"/>
         <InnerRadius value="0.375"/>
         <CargoSize value="2"/>
-        <ScoreMake value="475"/>
-        <ScoreKill value="475"/>
+        <ScoreMake value="525"/>
+        <ScoreKill value="525"/>
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="105"/>
         <MinimapRadius value="0.375"/>
@@ -3346,7 +3345,7 @@
         <CargoSize value="2"/>
         <ScoreMake value="190"/>
         <ScoreKill value="190"/>
-        <SubgroupPriority value="55"/>
+        <SubgroupPriority value="70"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
         <GlossaryPriority value="30"/>
@@ -3513,7 +3512,7 @@
         <ScoreMake value="500"/>
         <ScoreKill value="500"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="90"/>
+        <SubgroupPriority value="65"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <AIEvalFactor value="1.5"/>
@@ -3838,13 +3837,13 @@
         <LifeArmor value="10"/>
         <LifeRegenRate value="10"/>
         <Mover value="UmojanDummy"/>
-        <CostResource index="Minerals" value="25"/>
-        <CostResource index="Vespene" value="25"/>
+        <CostResource index="Minerals" value="50"/>
+        <CostResource index="Vespene" value="50"/>
         <Radius value="0"/>
         <MinimapRadius value="0"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
-        <ScoreMake value="70"/>
-        <ScoreKill value="70"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
     </CUnit>
     <CUnit id="UmojanWhirlwind">
@@ -3993,7 +3992,7 @@
         <ScoreMake value="1800"/>
         <ScoreKill value="1800"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="70"/>
+        <SubgroupPriority value="60"/>
         <MinimapRadius value="1.8"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <AIEvalFactor value="1.1"/>
@@ -4068,7 +4067,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="60"/>
+        <SubgroupPriority value="40"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>
@@ -4275,7 +4274,7 @@
         <SeparationRadius value="0.625"/>
         <ScoreMake value="450"/>
         <ScoreKill value="450"/>
-        <SubgroupPriority value="20"/>
+        <SubgroupPriority value="30"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/UmojanUnits"/>

@@ -1113,7 +1113,7 @@
     </CAbilResearch>
     <CAbilTrain id="UmojanBarracksTrain">
         <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
-        <InfoArray index="Train1" Time="38">
+        <InfoArray index="Train1" Time="44">
             <Button DefaultButtonFace="UmojanMarine"/>
             <Unit value="UmojanMarine"/>
         </InfoArray>
@@ -1121,15 +1121,15 @@
             <Button DefaultButtonFace="UmojanReaper" Requirements="UmojanScienceRedBuild"/>
             <Unit value="UmojanCommando"/>
         </InfoArray>
-        <InfoArray index="Train3" Time="45">
+        <InfoArray index="Train3" Time="52">
             <Button DefaultButtonFace="UmojanGhost" Requirements="UmojanScienceRedBuildShadowOps"/>
             <Unit value="UmojanShadowguard"/>
         </InfoArray>
-        <InfoArray index="Train4" Time="35">
+        <InfoArray index="Train4" Time="40">
             <Button DefaultButtonFace="UmojanPlasmabat" Requirements="UmojanScienceRedBuild"/>
             <Unit value="UmojanPlasmabat"/>
         </InfoArray>
-        <InfoArray index="Train5" Time="35">
+        <InfoArray index="Train5" Time="40">
             <Button DefaultButtonFace="UmojanMedic" Requirements="UmojanScienceRedBuild"/>
             <Unit value="UmojanMedic"/>
         </InfoArray>
@@ -1157,31 +1157,31 @@
     <CAbilTrain id="UmojanFactoryTrain">
         <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
-        <InfoArray index="Train1" Time="30">
+        <InfoArray index="Train1" Time="35">
             <Button DefaultButtonFace="UmojanPathfinder"/>
             <Unit value="UmojanPathfinder"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="60">
+        <InfoArray index="Train2" Time="69">
             <Button DefaultButtonFace="UmojanMoira"/>
             <Unit value="UmojanMoira"/>
         </InfoArray>
-        <InfoArray index="Train3" Time="45">
+        <InfoArray index="Train3" Time="52">
             <Button DefaultButtonFace="UmojanBattlecat"/>
             <Unit value="UmojanBattlecat"/>
         </InfoArray>
-        <InfoArray index="Train4" Time="60">
+        <InfoArray index="Train4" Time="69">
             <Button DefaultButtonFace="UmojanBattleTank" Requirements="UmojanScienceBlueBuildFoundry"/>
             <Unit value="UmojanBattleTank"/>
         </InfoArray>
-        <InfoArray index="Train5" Time="40">
+        <InfoArray index="Train5" Time="46">
             <Button DefaultButtonFace="UmojanSpySatellite"/>
             <Unit value="UmojanSpySatellite"/>
         </InfoArray>
-        <InfoArray index="Train6" Time="45">
+        <InfoArray index="Train6" Time="52">
             <Button DefaultButtonFace="UmojanWhirlwind" Requirements="UmojanScienceBlueBuildFoundry"/>
             <Unit value="UmojanWhirlwind"/>
         </InfoArray>
-        <InfoArray index="Train7" Time="45">
+        <InfoArray index="Train7" Time="52">
             <Button DefaultButtonFace="UmojanStrikefox" Requirements="UmojanScienceBlueBuild"/>
             <Unit value="UmojanStrikefox"/>
         </InfoArray>
@@ -1220,23 +1220,23 @@
     <CAbilTrain id="UmojanStarportTrain">
         <EditorCategories value="Race:TerU,AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
-        <InfoArray index="Train1" Time="42">
+        <InfoArray index="Train1" Time="48">
             <Button DefaultButtonFace="UmojanSpecOpsDropship"/>
             <Unit value="UmojanSpecOpsDropship"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="55">
+        <InfoArray index="Train2" Time="63">
             <Button DefaultButtonFace="UmojanDira" Requirements="UmojanScienceGreenBuild"/>
             <Unit value="UmojanDira"/>
         </InfoArray>
-        <InfoArray index="Train3" Time="70">
+        <InfoArray index="Train3" Time="80">
             <Button DefaultButtonFace="UmojanCrow" Requirements="UmojanScienceGreenBuildFleetCore"/>
             <Unit value="UmojanCrow"/>
         </InfoArray>
-        <InfoArray index="Train5" Time="42">
+        <InfoArray index="Train5" Time="48">
             <Button DefaultButtonFace="UmojanMist"/>
             <Unit value="UmojanMist"/>
         </InfoArray>
-        <InfoArray index="Train6" Time="80">
+        <InfoArray index="Train6" Time="92">
             <Button DefaultButtonFace="UmojanHexareme" Requirements="UmojanScienceGreenBuildFleetCore"/>
             <Unit value="UmojanHexareme"/>
         </InfoArray>
@@ -1532,7 +1532,7 @@
         <Flags index="BestUnit" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
         <Cost>
-            <Cooldown Link="Blink" TimeUse="10"/>
+            <Cooldown Link="Blink" TimeUse="15"/>
         </Cost>
         <Range value="500"/>
         <Arc value="360"/>
