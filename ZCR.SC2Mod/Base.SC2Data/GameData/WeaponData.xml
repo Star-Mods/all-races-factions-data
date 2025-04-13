@@ -155,6 +155,7 @@
         <Effect value="ZHBRFlayerWeapon@InitialSwitch"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
+        <RangeSlop value="4"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ZHBRMinionWeapon">
         <EditorCategories value="Race:ZHBR"/>

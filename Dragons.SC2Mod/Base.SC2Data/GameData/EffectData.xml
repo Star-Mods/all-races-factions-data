@@ -26,6 +26,22 @@
     <CEffectEnumArea default="1" id="DragonRetargetGroundSearchArea" parent="DragonRetargetSearchArea">
         <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable,Benign,Passive"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="HunterTongueLashApplyBehaviorNotLight">
+        <ValidatorArray index="0" value="NotLight"/>
+        <ValidatorArray value="NotMassive"/>
+        <ValidatorArray value="IsNotBuried"/>
+        <ValidatorArray value="DragonHunterTongueLash"/>
+        <EditorCategories value="Race:Dragon"/>
+        <Behavior value="HunterTongueLashNotLight"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyForce id="HunterTongueLashForceNotLight">
+        <EditorCategories value="Race:Dragon"/>
+        <WhichLocation Value="CasterUnit"/>
+        <Amount value="-0.25"/>
+    </CEffectApplyForce>
+    <CEffectSet id="InstantUnburrow">
+        <EffectArray value="HunterRegenesisRemoveBehavior"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="ArkwyrmTerritorialDiveApplyBehavior">
         <EditorCategories value="Race:Dragon"/>
         <WhichUnit Value="Caster"/>
@@ -277,72 +293,52 @@
         <OffsetVectorEndLocation Value="SourceUnit"/>
         <Flags index="Channeled" value="1"/>
         <PeriodicEffectArray value="BrimstoneDemolisherBrutalThrashSearchArea"/>
-        <PeriodicOffsetArray value="-1,0,0"/>
-        <PeriodicOffsetArray value="-1.5,0,0"/>
-        <PeriodicOffsetArray value="-2,0,0"/>
-        <PeriodicOffsetArray value="-0.866,-0.5,0"/>
-        <PeriodicOffsetArray value="-1.299,-0.75,0"/>
-        <PeriodicOffsetArray value="-1.732,-1,0"/>
-        <PeriodicOffsetArray value="-0.5,-0.866,0"/>
-        <PeriodicOffsetArray value="-0.75,-1.299,0"/>
-        <PeriodicOffsetArray value="-1,-1.732,0"/>
-        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="-1.4711,-0.2927,0"/>
+        <PeriodicOffsetArray value="-1.0605,-1.0605,0"/>
         <PeriodicOffsetArray value="0,-1.5,0"/>
-        <PeriodicOffsetArray value="0,-2,0"/>
-        <PeriodicOffsetArray value="0.25,-1,0"/>
-        <PeriodicOffsetArray value="0.25,-1.5,0"/>
-        <PeriodicOffsetArray value="0.25,-2,0"/>
         <PeriodicPeriodArray value="0.0625"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0"/>
         <Marker>
             <MatchFlags index="Id" value="1"/>
         </Marker>
         <TimeScaleSource Value="Caster"/>
-        <PeriodCount value="15"/>
+        <PeriodCount value="3"/>
         <EditorCategories value="Race:Dragon"/>
     </CEffectCreatePersistent>
-    <CEffectCreatePersistent id="BrimstoneDemolisherBrutalThrashCreatePersistent2">
-        <Marker>
-            <MatchFlags index="Id" value="1"/>
-        </Marker>
-        <WhichLocation Value="SourceUnit"/>
-        <TimeScaleSource Value="Caster"/>
-        <OffsetVectorEndLocation Value="SourceUnit"/>
-        <Flags index="Channeled" value="1"/>
+    <CEffectCreatePersistent id="BrimstoneDemolisherAscendedBrutalThrashCreatePersistent1" parent="BrimstoneDemolisherBrutalThrashCreatePersistent1">
+        <Name value="Effect/Name/BrimstoneDemolisherAscendedBrutalThrashCreatePersistent1"/>
+        <PeriodicEffectArray index="0" value="BrimstoneDemolisherAscendedBrutalThrashSearchArea"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="BrimstoneDemolisherBrutalThrashCreatePersistent2" parent="BrimstoneDemolisherBrutalThrashCreatePersistent1">
+        <Name value="Effect/Name/BrimstoneDemolisherBrutalThrashCreatePersistent2"/>
+        <Marker Link="Effect/BrimstoneDemolisherBrutalThrashCreatePersistent2"/>
         <InitialDelay value="0.5"/>
-        <PeriodCount value="15"/>
-        <PeriodicEffectArray value="BrimstoneDemolisherBrutalThrashSearchArea"/>
-        <PeriodicOffsetArray value="1,0,0"/>
-        <PeriodicOffsetArray value="1.5,0,0"/>
-        <PeriodicOffsetArray value="2,0,0"/>
-        <PeriodicOffsetArray value="0.866,-0.5,0"/>
-        <PeriodicOffsetArray value="1.299,-0.75,0"/>
-        <PeriodicOffsetArray value="1.732,-1,0"/>
-        <PeriodicOffsetArray value="0.5,-0.866,0"/>
-        <PeriodicOffsetArray value="0.75,-1.299,0"/>
-        <PeriodicOffsetArray value="1,-1.732,0"/>
-        <PeriodicOffsetArray value="0,-1,0"/>
-        <PeriodicOffsetArray value="0,-1.5,0"/>
-        <PeriodicOffsetArray value="0,-2,0"/>
-        <PeriodicOffsetArray value="-0.25,-1,0"/>
-        <PeriodicOffsetArray value="-0.25,-1.5,0"/>
-        <PeriodicOffsetArray value="-0.25,-2,0"/>
-        <PeriodicPeriodArray value="0.0625"/>
-        <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0"/>
-        <EditorCategories value="Race:Dragon"/>
+        <PeriodicOffsetArray index="0" value="1.4711,-0.2927,0"/>
+        <PeriodicOffsetArray index="1" value="1.0605,-1.0605,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="BrimstoneDemolisherAscendedBrutalThrashCreatePersistent2" parent="BrimstoneDemolisherBrutalThrashCreatePersistent2">
+        <Name value="Effect/Name/BrimstoneDemolisherAscendedBrutalThrashCreatePersistent2"/>
+        <PeriodicEffectArray index="0" value="BrimstoneDemolisherAscendedBrutalThrashSearchArea"/>
     </CEffectCreatePersistent>
     <CEffectSet id="BrimstoneDemolisherBrutalThrashSet">
         <EffectArray value="BrimstoneDemolisherBrutalThrashCreatePersistent1"/>
         <EffectArray value="BrimstoneDemolisherBrutalThrashCreatePersistent2"/>
         <EditorCategories value="Race:Dragon"/>
     </CEffectSet>
+    <CEffectSet id="BrimstoneDemolisherAscendedBrutalThrashSet">
+        <EditorCategories value="Race:Dragon"/>
+        <EffectArray value="BrimstoneDemolisherAscendedBrutalThrashCreatePersistent1"/>
+        <EffectArray value="BrimstoneDemolisherAscendedBrutalThrashCreatePersistent2"/>
+    </CEffectSet>
     <CEffectEnumArea id="BrimstoneDemolisherBrutalThrashSearchArea">
+        <EditorCategories value="Race:Dragon"/>
         <IncludeArray Effect="BrimstoneDemolisherBrutalThrashSet" Value="Target"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="0.25" Effect="BrimstoneDemolisherBrutalThrashDamage"/>
-        <EditorCategories value="Race:Dragon"/>
+        <AreaArray Arc="22.5" Radius="3" Effect="BrimstoneDemolisherBrutalThrashDamage"/>
+        <SearchFlags index="CenterAtLaunch" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="BrimstoneDemolisherAscendedBrutalThrashSearchArea" parent="BrimstoneDemolisherBrutalThrashSearchArea">
+        <Name value="Effect/Name/BrimstoneDemolisherAscendedBrutalThrashSearchArea"/>
+        <AreaArray index="0" Arc="22.5" Radius="3.75" Effect="BrimstoneDemolisherBrutalThrashDamage"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="BrimstoneDemolisherInfernalBreathApplyBehavior2">
         <EditorCategories value="Race:Dragon"/>
@@ -398,7 +394,7 @@
         <KindSplash value="Splash"/>
         <Amount value="5"/>
         <Death value="Fire"/>
-        <AreaArray Radius="0.5" Fraction="1" Validator="noMarkers"/>
+        <AreaArray Radius="0.75" Fraction="1" Validator="noMarkers"/>
         <IncludeArray Effect="BrimstoneDemolisherInfernalBreathCreatePersistent1" Value="Target"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AttributeFactor index="Structure" value="1"/>
@@ -881,14 +877,10 @@
         <CaseArray Validator="HornedMagusFrenzy1" Effect="HornedMagusFrenzyIssueOrder22"/>
         <CaseDefault value="HornedMagusFrenzyIssueOrder3"/>
     </CEffectSwitch>
-    <CEffectSet id="InstantUnburrow">
-        <EffectArray value="HunterRegenesisRemoveBehavior"/>
-    </CEffectSet>
     <CEffectSet id="HornedMagusFrenzyUnburrow" parent="InstantUnburrow">
         <Name value="Effect/Name/HornedMagusFrenzyUnburrow"/>
         <ValidatorArray value="DragonHornedMagusFrenzyUnburrow"/>
         <EditorCategories value="Race:Dragon"/>
-        <EffectArray value="HunterRegenesisRemoveBehavior"/>
     </CEffectSet>
     <CEffectApplyBehavior id="HornedMagusInvigorateApplyBehavior">
         <ValidatorArray index="0" value="CasterHasEnergy"/>
@@ -1686,11 +1678,13 @@
         <EffectArray value="DragonHunterMeleeModifyUnit"/>
         <EffectArray value="DragonHunterMeleeDamage"/>
     </CEffectSet>
-    <CEffectApplyBehavior id="HunterTongueLashApplyBehavior">
-        <Behavior value="HunterTongueLash"/>
-        <ValidatorArray index="0" value="NotMassive"/>
+    <CEffectApplyBehavior id="HunterTongueLashApplyBehaviorLight">
+        <ValidatorArray index="0" value="IsLight"/>
+        <ValidatorArray value="NotMassive"/>
         <ValidatorArray value="IsNotBuried"/>
+        <ValidatorArray value="DragonHunterTongueLash"/>
         <EditorCategories value="Race:Dragon"/>
+        <Behavior value="HunterTongueLashLight"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="HunterTongueLashDamage" parent="DU_WEAP">
         <EditorCategories value="Race:Dragon"/>
@@ -1700,10 +1694,10 @@
         <Amount value="8"/>
         <Name value="Effect/Name/HunterMeleeDamage"/>
     </CEffectDamage>
-    <CEffectApplyForce id="HunterTongueLashForce">
-        <WhichLocation Value="CasterUnit"/>
-        <Amount value="-0.5"/>
+    <CEffectApplyForce id="HunterTongueLashForceLight">
         <EditorCategories value="Race:Dragon"/>
+        <WhichLocation Value="CasterUnit"/>
+        <Amount value="-1"/>
     </CEffectApplyForce>
     <CEffectLaunchMissile id="HunterTongueLashLaunchMissile">
         <ImpactEffect value="HunterTongueLashSet"/>
@@ -1730,7 +1724,9 @@
     </CEffectModifyUnit>
     <CEffectSet id="HunterTongueLashSet">
         <EffectArray value="HunterTongueLashDamage"/>
-        <EffectArray value="HunterTongueLashApplyBehavior"/>
+        <EffectArray value="YoinkIssueStopBuildOrder"/>
+        <EffectArray value="HunterTongueLashApplyBehaviorLight"/>
+        <EffectArray value="HunterTongueLashApplyBehaviorNotLight"/>
         <EditorCategories value="Race:Dragon"/>
     </CEffectSet>
     <CEffectDamage id="PlodderPincerDamage" parent="DU_WEAP">

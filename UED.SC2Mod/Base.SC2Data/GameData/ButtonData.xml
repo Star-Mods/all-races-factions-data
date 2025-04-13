@@ -14,6 +14,14 @@
         <AlertIcon value="Assets\Textures\UEDSpeedProjectile.dds"/>
         <EditorCategories value="Race:UED"/>
         <ChargeText value="Napoleon"/>
+        <TooltipFlags index="ShowHotkey" value="0"/>
+        <TooltipFlags index="ShowLevel" value="0"/>
+        <TooltipFlags index="ShowResources" value="0"/>
+        <TooltipFlags index="ShowSupply" value="0"/>
+        <TooltipFlags index="ShowUsage" value="0"/>
+        <TooltipFlags index="ShowTime" value="0"/>
+        <TooltipFlags index="ShowCooldown" value="0"/>
+        <TooltipFlags index="ShowAutocast" value="0"/>
     </CButton>
     <CButton id="UEDAuthorizeMagneticStablizer">
         <Icon value="Assets\Textures\MagneticStablizer2.dds"/>

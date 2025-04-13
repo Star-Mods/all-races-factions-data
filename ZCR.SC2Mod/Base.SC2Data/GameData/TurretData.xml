@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CTurret id="ZHBRConstructTurret">
+        <Fidget DelayMax="30" DelayMin="10"/>
+    </CTurret>
     <CTurret id="ZHBRIonicCrystal@RingRotate">
         <Idle value="Spin"/>
         <YawArc value="360"/>

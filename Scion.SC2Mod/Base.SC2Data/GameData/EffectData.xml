@@ -4864,10 +4864,11 @@
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectDamage id="StratumMissilePodDMG" parent="ScionDamageRange" Race="Genetron">
-        <Amount value="14">
+        <Amount value="25">
             <AccumulatorArray value="EqualizerTargetDamageBonusSwitch"/>
         </Amount>
         <Death value="Blast"/>
+        <AttributeBonus index="Armored" value="35"/>
     </CEffectDamage>
     <CEffectDamage id="BlitzerChargeCannonSuperChargeDamage" parent="ScionDamageRange" Race="Genetron">
         <ArmorReduction value="0"/>

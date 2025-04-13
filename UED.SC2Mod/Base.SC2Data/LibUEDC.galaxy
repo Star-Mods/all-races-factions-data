@@ -14,8 +14,6 @@ void libUEDC_InitLibraries () {
 bool libUEDC_InitVariables_completed = false;
 
 void libUEDC_InitVariables () {
-    int init_i;
-
     if (libUEDC_InitVariables_completed) {
         return;
     }
@@ -24,11 +22,6 @@ void libUEDC_InitVariables () {
 
     libUEDC_gv_beaconConstructionunitgroup = UnitGroupEmpty();
     libUEDC_gv_uEDPlayers = PlayerGroupEmpty();
-    for (init_i = 0; init_i <= 15; init_i += 1) {
-        libUEDC_gv_beacons[init_i] = UnitGroupEmpty();
-    }
-    libUEDC_gv_beaconsButtonCountLabel = c_invalidDialogControlId;
-    libUEDC_gv_beaconsButton = c_invalidDialogControlId;
 }
 
 // Functions
@@ -132,7 +125,6 @@ bool libUEDC_gt_InitializeUEDRace_Func (bool testConds, bool runActions) {
         }
 
     }
-    TriggerExecute(libUEDC_gt_InitBeaconsButton, true, false);
     TriggerEnable(libUEDC_gt_EffectSpawnunit, true);
     return true;
 }
@@ -366,108 +358,6 @@ void libUEDC_gt_OwardseffectforPoliticalAdvisor_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Calculate Beacons
-//--------------------------------------------------------------------------------------------------
-bool libUEDC_gt_CalculateBeacons_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    playergroup auto254691C0_g;
-    int auto254691C0_var;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto254691C0_g = libUEDC_gv_uEDPlayers;
-    auto254691C0_var = -1;
-    while (true) {
-        auto254691C0_var = PlayerGroupNextPlayer(auto254691C0_g, auto254691C0_var);
-        if (auto254691C0_var < 0) { break; }
-        libUEDC_gv_beacons[auto254691C0_var] = UnitGroup("TeleportationNode", auto254691C0_var, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-        libNtve_gf_SetDialogItemText(libUEDC_gv_beaconsButtonCountLabel, IntToText(UnitGroupCount(libUEDC_gv_beacons[auto254691C0_var], c_unitCountAlive)), PlayerGroupSingle(auto254691C0_var));
-        if ((UnitGroupCount(libUEDC_gv_beacons[auto254691C0_var], c_unitCountAlive) == 0)) {
-            DialogControlSetEnabled(libUEDC_gv_beaconsButton, PlayerGroupSingle(auto254691C0_var), false);
-        }
-        else {
-            DialogControlSetEnabled(libUEDC_gv_beaconsButton, PlayerGroupSingle(auto254691C0_var), true);
-        }
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libUEDC_gt_CalculateBeacons_Init () {
-    libUEDC_gt_CalculateBeacons = TriggerCreate("libUEDC_gt_CalculateBeacons_Func");
-    TriggerEnable(libUEDC_gt_CalculateBeacons, false);
-    TriggerAddEventTimePeriodic(libUEDC_gt_CalculateBeacons, 1.0, c_timeGame);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Init Beacons Button
-//--------------------------------------------------------------------------------------------------
-bool libUEDC_gt_InitBeaconsButton_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    int lv_icon;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_icon = c_invalidDialogControlId;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    DialogControlHookupStandard(c_triggerControlTypeButton, "UIContainer/ConsoleUIContainer/ArmyButton2");
-    libUEDC_gv_beaconsButton = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeImage, "UIContainer/ConsoleUIContainer/ArmyButton2/Icon");
-    lv_icon = DialogControlLastCreated();
-    libNtve_gf_SetDialogItemTooltip(libUEDC_gv_beaconsButton, StringExternal("Param/Value/lib_UEDC_71F49E44"), PlayerGroupAll());
-    DialogControlHookupStandard(c_triggerControlTypeLabel, "UIContainer/ConsoleUIContainer/ArmyButton2/CountLabel");
-    libNtve_gf_SetDialogItemImage(lv_icon, "Assets\\Textures\\BTN-UED-Teleportation-Node.dds", PlayerGroupAll());
-    libUEDC_gv_beaconsButtonCountLabel = DialogControlLastCreated();
-    DialogControlSetVisible(libUEDC_gv_beaconsButton, libUEDC_gv_uEDPlayers, true);
-    TriggerEnable(libUEDC_gt_CalculateBeacons, true);
-    TriggerEnable(libUEDC_gt_BeaconsButtonUsed, true);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libUEDC_gt_InitBeaconsButton_Init () {
-    libUEDC_gt_InitBeaconsButton = TriggerCreate("libUEDC_gt_InitBeaconsButton_Func");
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Beacons Button Used
-//--------------------------------------------------------------------------------------------------
-bool libUEDC_gt_BeaconsButtonUsed_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Conditions
-    if (testConds) {
-        if (!((EventDialogControl() == libUEDC_gv_beaconsButton))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UnitGroupSelect(UnitGroupSelected(EventPlayer()), EventPlayer(), false);
-    UnitGroupSelect(libUEDC_gv_beacons[EventPlayer()], EventPlayer(), true);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libUEDC_gt_BeaconsButtonUsed_Init () {
-    libUEDC_gt_BeaconsButtonUsed = TriggerCreate("libUEDC_gt_BeaconsButtonUsed_Func");
-    TriggerEnable(libUEDC_gt_BeaconsButtonUsed, false);
-    TriggerAddEventDialogControl(libUEDC_gt_BeaconsButtonUsed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeHotkeyPressed);
-    TriggerAddEventDialogControl(libUEDC_gt_BeaconsButtonUsed, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Beacon Build
 //--------------------------------------------------------------------------------------------------
 bool libUEDC_gt_BeaconBuild_Func (bool testConds, bool runActions) {
@@ -582,9 +472,6 @@ void libUEDC_InitTriggers () {
     libUEDC_gt_Beaconanimcreate_Init();
     libUEDC_gt_Owardseffectfortargettingunits_Init();
     libUEDC_gt_OwardseffectforPoliticalAdvisor_Init();
-    libUEDC_gt_CalculateBeacons_Init();
-    libUEDC_gt_InitBeaconsButton_Init();
-    libUEDC_gt_BeaconsButtonUsed_Init();
     libUEDC_gt_BeaconBuild_Init();
     libUEDC_gt_ResoursesInfusionTower_Init();
     libUEDC_gt_SalvagerHarvest_Init();

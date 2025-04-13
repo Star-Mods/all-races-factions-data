@@ -104,6 +104,7 @@
         <EffectArray Reference="Weapon,BerserkerCrushingBlow,Level" Value="1"/>
         <EffectArray Reference="Weapon,BerserkerAscendedCrushingBlow,Level" Value="1"/>
         <EffectArray Reference="Weapon,BrimstoneDemolisherBrutalThrash,Level" Value="1"/>
+        <EffectArray Reference="Weapon,BrimstoneDemolisherAscendedBrutalThrash,Level" Value="1"/>
         <EffectArray Reference="Weapon,FlamespitterClaws,Level" Value="1"/>
         <EffectArray Reference="Weapon,FlamespitterAscendedClaws,Level" Value="1"/>
         <EffectArray Reference="Weapon,FleshrenderShred,Level" Value="1"/>
@@ -112,9 +113,6 @@
         <EffectArray Reference="Weapon,DragonHunterTongueLash,Level" Value="1"/>
         <EffectArray Reference="Weapon,PlodderPincer,Level" Value="1"/>
         <EffectArray Reference="Weapon,SkyrazerSavageClaws,Level" Value="1"/>
-        <EffectArray Reference="Weapon,SkyrazerSavageClaws1,Level" Value="1"/>
-        <EffectArray Reference="Weapon,SkyrazerSavageClaws2,Level" Value="1"/>
-        <EffectArray Reference="Weapon,SkyrazerSavageClaws3,Level" Value="1"/>
         <EffectArray Reference="Weapon,SunkenGuardianImpale,Level" Value="1"/>
         <EffectArray Reference="Weapon,UnseenBeastSpiritSmash,Level" Value="1"/>
         <LeaderAlias value="DragonMeleeAttacks"/>
@@ -418,6 +416,7 @@
         <EffectArray Operation="Set" Reference="Weapon,BerserkerCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BerserkerAscendedCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherAscendedBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterAscendedClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FleshrenderShred,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
@@ -426,9 +425,6 @@
         <EffectArray Operation="Set" Reference="Weapon,DragonHunterTongueLash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,PlodderPincer,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws1,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SunkenGuardianImpale,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,UnseenBeastSpiritSmash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
         <ScoreAmount value="100"/>
@@ -438,17 +434,15 @@
         <EffectArray Operation="Set" Reference="Weapon,BerserkerCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BerserkerAscendedCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherAscendedBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterAscendedClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FleshrenderShred,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,HornedMagusHeadbutt,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,DragonHunterClaws,-" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DragonHunterClaws," Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,DragonHunterTongueLash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,PlodderPincer,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws1,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SunkenGuardianImpale,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,UnseenBeastSpiritSmash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
         <Icon value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
@@ -459,6 +453,7 @@
         <EffectArray Operation="Set" Reference="Weapon,BerserkerCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BerserkerAscendedCrushingBlow,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,BrimstoneDemolisherAscendedBrutalThrash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FlamespitterAscendedClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,FleshrenderShred,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
@@ -467,9 +462,6 @@
         <EffectArray Operation="Set" Reference="Weapon,DragonHunterTongueLash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,PlodderPincer,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws1,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
-        <EffectArray Operation="Set" Reference="Weapon,SkyrazerSavageClaws3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,SunkenGuardianImpale,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <EffectArray Operation="Set" Reference="Weapon,UnseenBeastSpiritSmash,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
         <Icon value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>

@@ -207,27 +207,7 @@
         <Model value="UEDModelSpartan"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="UEDModelSpartan"/>
-        <DeathArray index="Normal" ModelLink="UEDModelSpartanDie" SoundLink="UEDSoundSpartanExplode"/>
-        <DeathCustoms ModelLink="DrakkarAPCDeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathArray index="Normal" ModelLink="UEDModelSpartanDie"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PlacementModel value="UEDModelSpartan"/>
         <PortraitModel value="UEDPortraitSpartan"/>
@@ -3000,33 +2980,7 @@
         <On Terms="WeaponStart.CitadelCannon.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <CreepHeightClass value="Tiny"/>
-        <DeathArray index="Normal" ModelLink="CitadelAATDeath" SoundLink="CitadelAAT_Explode"/>
-        <DeathCustoms index="0" ModelLink="ZergSmallUnitDeathLow52"/>
-        <DeathCustoms index="1" ModelLink="ProtossSmallUnitDeathLow52"/>
-        <DeathCustoms index="2" ModelLink="TerranSmallUnitDeathLow52"/>
-        <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow52"/>
-        <DeathCustoms index="4" ModelLink="Invisible52"/>
-        <DeathCustoms ModelLink="TerranLargeUnitDeathLow22" Name="AntiGravTerran"/>
-        <DeathCustoms ActorModel="SiegeTankDeathRagdoll" ModelLink="CitadelAATDeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms ActorModel="SiegeTankDeathRagdoll" Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathArray index="Normal" ModelLink="CitadelAATDeath"/>
         <DeathCustomData Name="RagdollBasic"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PortraitModel value="CitadelAATPortrait"/>

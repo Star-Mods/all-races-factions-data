@@ -1360,7 +1360,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="ZHBRStructureTeleport@ConstructAntiAir"/>
         <AbilArray Link="ZHBRConstruct@TransformToAntiGround"/>
-        <WeaponArray Link="ZHBRConstructWeaponAntiAir"/>
+        <WeaponArray Link="ZHBRConstructWeaponAntiAir" Turret="ZHBRConstructTurret"/>
         <CardLayouts index="0">
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="ZHBRMinionBuild@ConstructAntiAir" Type="Passive" Row="2" Column="0"/>
@@ -1397,7 +1397,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="ZHBRConstruct@TransformToAntiAir"/>
         <AbilArray Link="ZHBRStructureTeleport@ConstructAntiGround"/>
-        <WeaponArray Link="ZHBRConstructWeaponAntiGround"/>
+        <WeaponArray Link="ZHBRConstructWeaponAntiGround" Turret="ZHBRConstructTurret"/>
         <CardLayouts index="0">
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>

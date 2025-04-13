@@ -339,9 +339,9 @@
     <CUpgrade id="SalvoFiringPattern" parent="Research">
         <Icon value="Assets\Textures\btn-ability-hornerhan-viking-missileupgrade.dds"/>
         <Race value="UED"/>
-        <ScoreAmount value="200"/>
+        <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Effect,TyphoonDamageSplashGround2,AreaArray[0].Fraction" Value="0.5"/>
+        <EffectArray Reference="Effect,TyphoonDamageSplashGround2,AreaArray[0].Fraction" Value="0.1"/>
         <EditorCategories value="Race:UED,UpgradeType:SpellResearch"/>
         <AffectedUnitArray value="Typhoon"/>
         <Alert value="ResearchComplete_ued"/>

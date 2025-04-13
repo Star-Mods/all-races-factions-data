@@ -366,7 +366,7 @@
         <UninterruptibleArray index="Channel" value="1"/>
         <CursorEffect value="BlimpSpotlightSearchArea"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Spotlight"/>
-        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="ALLRACE2SynoidSearchlightCancel"/>
     </CAbilEffectTarget>
     <CAbilBehavior id="MeditruckHeal">
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
@@ -389,7 +389,7 @@
             <Cooldown TimeUse="28"/>
         </Cost>
         <AINotifyEffect value="ALLRACE2UmpireRushSpeedBoost"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MedivacSpeedBoost2">
+        <CmdButtonArray index="Execute" DefaultButtonFace="ALLRACE2SynoidUmpireRush">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
@@ -514,7 +514,7 @@
             <Vital index="Energy" value="50"/>
             <Charge CountMax="1" CountUse="1" TimeUse="15"/>
         </Cost>
-        <Range value="5"/>
+        <Range value="8"/>
         <ProducedUnitArray value="ZerglingHolo"/>
         <PlaceUnit value="ZerglingHolo"/>
         <Effect index="0" value="HoloZerglingCE"/>
@@ -1000,7 +1000,7 @@
         <UninterruptibleArray index="Channel" value="1"/>
         <AINotifyEffect value="DominationApplySet"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BlimpLockdown"/>
-        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="ALLRACE2SynoidLockdownCancel"/>
         <Cost>
             <Vital index="Energy" value="15"/>
             <Cooldown TimeUse="10"/>

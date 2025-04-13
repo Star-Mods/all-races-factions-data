@@ -171,16 +171,16 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="PsionicPulseDamage">
         <EditorCategories value="Race:Synoid"/>
-        <Amount value="100"/>
+        <Amount value="140"/>
     </CEffectDamage>
     <CEffectDamage id="SynoidBloodletterPsionicPulseDamageStructure">
         <EditorCategories value="Race:Synoid"/>
-        <Amount value="40"/>
+        <Amount value="50"/>
     </CEffectDamage>
     <CEffectEnumArea id="PsionicPulseSearchArea">
         <EditorCategories value="Race:Synoid"/>
         <SearchFilters value="-;Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="0.3" Effect="SynoidBloodletterPsionicPulseTargetSwitch"/>
+        <AreaArray Radius="0.4" Effect="SynoidBloodletterPsionicPulseTargetSwitch"/>
         <RevealerParams Duration="6"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>

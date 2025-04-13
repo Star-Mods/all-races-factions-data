@@ -403,7 +403,7 @@
         <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionweaponslevel0.dds"/>
         <DisplayEffect value="BloodletterU"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="6"/>
+        <Range value="7"/>
         <Period value="2"/>
         <DamagePoint value="0.083"/>
         <Backswing value="1.167"/>

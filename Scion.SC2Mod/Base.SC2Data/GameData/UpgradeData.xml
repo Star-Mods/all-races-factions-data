@@ -807,14 +807,20 @@
     <CUpgrade id="GenetronLightWeaponsLevel1" parent="GenetronLightWeapons" Icon="Assets\Textures\btn-upgrade-genetron-lightmechweapons-level1.dds">
         <ScoreAmount value="200"/>
         <LeaderLevel value="1"/>
+        <EffectArray index="8" Reference="Effect,StratumMissilePodDMG,Amount" Value="2"/>
+        <EffectArray index="9" Reference="Effect,StratumMissilePodDMG,AttributeBonus[Armored]" Value="2"/>
     </CUpgrade>
     <CUpgrade id="GenetronLightWeaponsLevel2" parent="GenetronLightWeapons" Icon="Assets\Textures\btn-upgrade-genetron-lightmechweapons-level2.dds">
         <ScoreAmount value="300"/>
         <LeaderLevel value="2"/>
+        <EffectArray index="8" Reference="Effect,StratumMissilePodDMG,Amount" Value="2"/>
+        <EffectArray index="9" Reference="Effect,StratumMissilePodDMG,AttributeBonus[Armored]" Value="2"/>
     </CUpgrade>
     <CUpgrade id="GenetronLightWeaponsLevel3" parent="GenetronLightWeapons" Icon="Assets\Textures\btn-upgrade-genetron-lightmechweapons-level3.dds">
         <ScoreAmount value="400"/>
         <LeaderLevel value="3"/>
+        <EffectArray index="8" Reference="Effect,StratumMissilePodDMG,Amount" Value="2"/>
+        <EffectArray index="9" Reference="Effect,StratumMissilePodDMG,Amount" Value="2"/>
     </CUpgrade>
     <CUpgrade id="KeironBioArmorLevel1" parent="KeironBioArmor" Level="1" Icon="Assets\Textures\btn-upgrade-keiron-biologicalarmorlevel1.dds">
         <ScoreAmount value="200"/>

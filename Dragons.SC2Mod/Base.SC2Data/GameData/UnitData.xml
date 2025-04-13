@@ -534,8 +534,8 @@
         <LifeStart value="525"/>
         <LifeMax value="525"/>
         <LifeArmor value="2"/>
-        <Speed value="2.25"/>
-        <TurningRate value="405"/>
+        <Speed value="2.5"/>
+        <TurningRate value="450"/>
         <Sight value="11"/>
         <Food value="-6"/>
         <CostResource index="Minerals" value="400"/>
@@ -581,7 +581,7 @@
         <SeparationRadius value="1"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <PushPriority value="11"/>
-        <StationaryTurningRate value="405"/>
+        <StationaryTurningRate value="450"/>
     </CUnit>
     <CUnit id="AscendedBrimstoneDemolisher" parent="BrimstoneDemolisher">
         <Name value="Unit/Name/AscendedBrimstoneDemolisher"/>
@@ -597,6 +597,7 @@
         <EnergyRegenRate value="1.125"/>
         <BehaviorArray Link="DragonAscended"/>
         <CostResource index="Custom" value="140"/>
+        <WeaponArray index="1" Link="BrimstoneDemolisherAscendedBrutalThrash"/>
     </CUnit>
     <CUnit id="GenesisPitGreater" parent="GenesisPit">
         <CardLayouts index="0">

@@ -307,7 +307,7 @@ Button/Tooltip/AuthorizeLazarusRegenHealf=Allows <c val="FFFF80">Lazarus</c> to 
 Button/Tooltip/AuthorizeOpticalFlare=Increases the radius of the optical flare at <c val="FFFF80">Political Advisors </c> by 0.5.
 Button/Tooltip/AuthorizeProjectedGravityShield=Allows <c val="FFFF80">Support shuttles</c> to create a psionics suppression field, blocking all psionic abilities.
 Button/Tooltip/AuthorizePrototypePositronicWeaponry=Allows Honorguards to launch prototype missiles with positronic warheads, dealing heavy damage to all ground units in the target area.
-Button/Tooltip/AuthorizeSalvoFiringPatterns=New firing protocols for <c val="FFFF80">Typhoon LMT</c> allow to increase area damage to enemy units increased to 100%.
+Button/Tooltip/AuthorizeSalvoFiringPatterns=New firing protocols for <c val="FFFF80">Typhoon LMT</c> allow to increase area damage to enemy units increased to 60%.
 Button/Tooltip/AuthorizeStrikeGrenades=Enhance the effect of strike grenade ability for <c val="FFFF80">Political Advisor </c> to decrease attack speed of damaged units by 9%.
 Button/Tooltip/AuthorizeTandemReactiveArmor=The second layer of dynamic protection stabilizes the turret of  <c val="FFFF80">Napoleon MBT</c> and allows it to attack while moving.
 Button/Tooltip/AuthorizeTowerMining=Increases the number of irradiated druzes <c val="FFFF80">Enrichment tower</c> up to 8.
@@ -436,7 +436,7 @@ Button/Tooltip/UEDButtonUpgraideGoliath=Increases the range of Hallo Rockets wea
 Button/Tooltip/UEDButtonUpgraideLazarusbattery=Gives <c val="FFFF80">Lazarus</c> +25 to the initial and +50 to the maximum energy. In addition, decrease cooldown of <c val="FFFF80">Lazarus Device</c> ability from 6 seconds to 4 seconds.
 Button/Tooltip/UEDNapoleonMBTPassiveMagneticStablizer=Increase Napoleon MBT movement speed by 10% and allow Napoleon MBT to shot while moving at the same time.
 Button/Tooltip/UEDRadiationofBeatania=It was noticed that beatanium can be embedded in the crystal lattice of mineral druse and thereby increase the amount of extracted resources by 1 unit.
-Button/Tooltip/UEDSalvoFiringPatterns=Area damage to enemy troops increased to 100%.
+Button/Tooltip/UEDSalvoFiringPatterns=Area damage to enemy troops increased to 60%.
 Button/Tooltip/UEDUnitGoliath=Universal combat robot, effective against aerial targets.<n/><n/><c val="FFFF8A">Can attack ground and air targets.</c>
 Button/Tooltip/UEDUnitSpartan=Universal combat robot, effective against aerial targets.<n/><n/><c val="FFFF8A">Can attack ground and air targets.</c>
 Button/Tooltip/UEDVehicalsLevel1=Increases <c val="ffff8a">damage</c> from weapons of all equipment and all starships of the Directorate.

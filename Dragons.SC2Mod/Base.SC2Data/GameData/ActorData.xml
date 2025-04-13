@@ -1279,6 +1279,7 @@
     <CActorModel id="BrimstoneDemolisherInfernalBreathModel" parent="ModelAnimationStyleContinuousUNIT">
         <On Terms="Effect.BrimstoneDemolisherInfernalBreathCreatePersistent1.Start; At Caster" Send="Create"/>
         <On Terms="Effect.BrimstoneDemolisherInfernalBreathCreatePersistent1.Stop; At Caster" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.250000"/>
         <HostSiteOps Ops="SOpAttachWeapon BrimstoneDemolisherInfernalBreathSite"/>
     </CActorModel>
     <CActorSound id="BrimstoneDemolisherInfernalBreathStart" parent="SoundOneShot"/>
@@ -1484,6 +1485,7 @@
     </CActorModel>
     <CActorUnit id="BrimstoneDemolisher" parent="DragonUnitGroundArmored" unitName="BrimstoneDemolisher">
         <On Terms="WeaponStart.BrimstoneDemolisherBrutalThrash.AttackStart" Send="AnimPlay Attack Attack,04"/>
+        <On Terms="WeaponStart.BrimstoneDemolisherAscendedBrutalThrash.AttackStart" Send="AnimPlay Attack Attack,04"/>
         <On Terms="WeaponStart.BrimstoneDemolisherInfernalBreath.AttackStart" Send="TimerSet 0.000000 Attack"/>
         <On Terms="TimerExpired; TimerName Attack" Send="TimerSet 0.500000 Attack"/>
         <On Terms="TimerExpired; TimerName Attack" Send="AnimClear Attack"/>
@@ -1574,6 +1576,8 @@
     <CActorSound id="BrimstoneDemolisherAttackStart" parent="SoundOneShot">
         <On Terms="Effect.BrimstoneDemolisherBrutalThrashCreatePersistent1.Start" Send="Create"/>
         <On Terms="Effect.BrimstoneDemolisherBrutalThrashCreatePersistent2.Initial" Send="Create"/>
+        <On Terms="Effect.BrimstoneDemolisherAscendedBrutalThrashCreatePersistent1.Start" Send="Create"/>
+        <On Terms="Effect.BrimstoneDemolisherAscendedBrutalThrashCreatePersistent2.Initial" Send="Create"/>
     </CActorSound>
     <CActorAction id="SkyrazerMelee" parent="GenericAttack" effectAttack="SkyrazerSavageClawsDamage">
         <ShieldFlashType value="Header"/>
@@ -2233,7 +2237,11 @@
         <AcquisitionYawHalfArc value="5.000000"/>
         <AcquisitionPitchHalfArc value="5.000000"/>
         <AccuracyHalfArc value="5.000000"/>
+        <ActionFlags index="AlignedImpactsAndDamages" value="1"/>
+        <ActionFlags index="ImpactForceSite" value="1"/>
         <ActionFlags index="VictimRevealsAttacker" value="1"/>
+        <ImpactSite value="MutaliskAttackSegment1ImpactSite"/>
+        <Lifetime value="1.000000"/>
     </CActorAction>
     <CActorMissile id="DragonHunterAttackMissile" parent="GenericTentacleMissile" unitName="DragonHunterAttackMissile">
         <Inherits index="CastShadows" value="1"/>

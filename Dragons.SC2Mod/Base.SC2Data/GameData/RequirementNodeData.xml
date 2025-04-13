@@ -22,11 +22,11 @@
         <Tooltip value=""/>
         <Count Link="ArkwyrmUnloadCaster" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorAugmentationPitCompleteOnlyAtUnit4009903090">
+    <CRequirementCountBehavior id="CountBehaviorAugmentationPitCompleteOnlyAtUnit2977094741">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AugmentationPit" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorAugmentationPitCompleteOnlyAtUnit763288653">
+    <CRequirementCountBehavior id="CountBehaviorAugmentationPitCompleteOnlyAtUnit4009903090">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AugmentationPit" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
@@ -65,7 +65,6 @@
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitVolcanicHarbingerOverloadQueuedOrBetterAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="VolcanicHarbingerOverload" State="QueuedOrBetterAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeAuroraConduitConductionCompleteOnly596238187">
@@ -290,7 +289,6 @@
         <OperandArray index="1" value="0"/>
     </CRequirementEq>
     <CRequirementEq id="EqCountUnitVolcanicHarbingerOverloadCompleteOnlyAtUnit0">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUnitVolcanicHarbingerOverloadCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="0"/>
     </CRequirementEq>
@@ -310,7 +308,6 @@
         <OperandArray index="1" value="3"/>
     </CRequirementEq>
     <CRequirementGT id="GTCountUnitVolcanicHarbingerOverloadCompleteOnlyAtUnit0">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUnitVolcanicHarbingerOverloadCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="0"/>
     </CRequirementGT>

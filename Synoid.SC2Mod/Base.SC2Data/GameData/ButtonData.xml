@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="ALLRACE2SynoidSearchlightCancel">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="Cancel"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="ALLRACE2SynoidLockdownCancel">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="Cancel"/>
+        <Universal value="1"/>
+    </CButton>
     <CButton id="SynoidGriffinActivateDefenseFieldPassive">
         <TooltipFlags index="ShowHotkey" value="0"/>
         <TooltipFlags index="ShowLevel" value="0"/>
@@ -58,7 +74,7 @@
         <AlertIcon value="Assets\Textures\btn_MidasIgnitor_Explode_Ability.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
-    <CButton id="MedivacSpeedBoost2">
+    <CButton id="ALLRACE2SynoidUmpireRush">
         <Icon value="Assets\Textures\UmpireRush.dds"/>
         <AlertIcon value="Assets\Textures\UmpireRush.dds"/>
         <EditorCategories value="Race:Synoid"/>

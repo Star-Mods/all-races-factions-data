@@ -407,15 +407,14 @@
         <PeriodicEffect value="BurndownDamage"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Spotted">
-        <Alignment value="Negative"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <RemoveValidatorArray value="NotStructure"/>
         <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
         <Duration value="5"/>
-        <Modification AttackTargetPriority="255" ShieldArmorBonus="-3">
+        <Modification AttackTargetPriority="255" ShieldArmorBonus="-5">
             <StateFlags index="GenerateThreat" value="1"/>
             <StateFlags index="SuppressCloak" value="1"/>
-            <LifeArmorBonus value="-3"/>
+            <LifeArmorBonus value="-5"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SpyBotRevelation">
@@ -520,7 +519,7 @@
         <BehaviorCategories index="Fast" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <TimeScaleSource Value="Global"/>
-        <Modification TimeScale="1.25"/>
+        <Modification TimeScale="1.5"/>
         <DisableValidatorArray value="BREitherOrUpgrade"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RequiresGreaterProcessor">
@@ -707,12 +706,13 @@
         <Duration value="18"/>
         <InitialEffect value="RetributionFieldDamage2"/>
         <RefreshEffect value="RetributionFieldDamage2"/>
-        <Modification>
-            <MoveSpeedMultiplier value="0.8"/>
-            <AttackSpeedMultiplier value="0.9"/>
-            <LifeArmorMultiplier value="0"/>
-            <ShieldArmorMultiplier value="0"/>
+        <Modification MoveSpeedMultiplier="0.8">
             <StateFlags index="SuppressEnergyRegen" value="1"/>
+            <DamageDealtFraction index="Spell" value="-0.5"/>
+            <DamageDealtFraction index="Melee" value="-0.5"/>
+            <DamageDealtFraction index="Ranged" value="-0.5"/>
+            <DamageDealtFraction index="Splash" value="-0.5"/>
+            <DamageDealtFraction index="NoProc" value="-0.5"/>
             <VitalMaxFractionArray index="Life" value="-0.3"/>
             <VitalRegenMultiplier index="Energy" value="-1"/>
         </Modification>

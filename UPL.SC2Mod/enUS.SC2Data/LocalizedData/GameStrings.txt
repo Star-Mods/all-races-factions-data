@@ -481,8 +481,8 @@ Button/Tooltip/InfantryFlamethrowerNanoweaveBodyArmor2=Provides the <c val="#Col
 Button/Tooltip/InfantryHeavy=Heavy Assault infantry specialized to deal with armored units. <n/><n/><c val="#ColorAttackInfo">Can attack ground units</c>
 Button/Tooltip/InfantryHeavyAttackmove=Can Attack while moving
 Button/Tooltip/InfantryHeavyNanoweaveBodyArmor=Provides the <c val="#ColorAttackInfo"><d stringRef="Unit,InfantryHeavy,Name"/></c> with <c val="80FFFF">+1 Armor</c>
-Button/Tooltip/InfantryMedkit=This unit will use a Medkit when they have less than 25% of their life, which will heal <c val="FFFF80"><d ref="Effect,InfantryMedkit@Heal,VitalArray[Life].Change*Effect,InfantryMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,InfantryMedkit@CP,PeriodCount*Effect,InfantryMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,InfantryMedkit@Supressed,Duration' /]"/>.
-Button/Tooltip/InfantryMedkit@Research=Allows some of the infantry to use a Medkit when they have less than 25% of their life, which will heal <c val="FFFF80"><d ref="Effect,InfantryMedkit@Heal,VitalArray[Life].Change*Effect,InfantryMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,InfantryMedkit@CP,PeriodCount*Effect,InfantryMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,InfantryMedkit@Supressed,Duration' /]"/>.
+Button/Tooltip/InfantryMedkit=This unit will use a Medkit when they have less than 40% of their life, which will heal <c val="FFFF80"><d ref="Effect,InfantryMedkit@Heal,VitalArray[Life].Change*Effect,InfantryMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,InfantryMedkit@CP,PeriodCount*Effect,InfantryMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,InfantryMedkit@Supressed,Duration' /]"/>.
+Button/Tooltip/InfantryMedkit@Research=Allows some of the infantry to use a Medkit when they have less than 40% of their life, which will heal <c val="FFFF80"><d ref="Effect,InfantryMedkit@Heal,VitalArray[Life].Change*Effect,InfantryMedkit@CP,PeriodCount"/></c> life over <c val="FFFF80"><d time="[d ref='Effect,InfantryMedkit@CP,PeriodCount*Effect,InfantryMedkit@CP,PeriodicPeriodArray[0]' /]"/></c>. Once activated it will be on cooldown for <d time="[d ref='Behavior,InfantryMedkit@Supressed,Duration' /]"/>.
 Button/Tooltip/InfantryMortar=Artillery Support unit, can attack at long range in siege mode. Extremely fragile in close range combat. <n/><n/><c val="#ColorAttackInfo">Can attack ground units</c>
 Button/Tooltip/InfantryMortarModeChangeAtoM=Switch to normal mode, which Mortar Trooper can move, but cannot attack.
 Button/Tooltip/InfantryMortarModeChangeMtoA=Switch to siege mode which Mortar Trooper cannot move, but become ready to fire beyond a minimum range.
@@ -491,7 +491,7 @@ Button/Tooltip/InfantryMortarTurn=Orders selected units to turn toward the targe
 Button/Tooltip/InfantryOfficer=Infantry Commander with descent combat strength, able to detect nearby cloaked units, also have the Inspiration aura ability which increase the attack speed and move speed for friendly biological units, and decrease the damage they take. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c> <n/>, <n/><c val="FFE303">Detector</c>
 Button/Tooltip/InfantryOfficerAuraUpgrade=Doubles the effectiveness of <c val="#ColorAttackInfo"><d stringref="Unit,InfantryOfficer,Name"/>'s <d stringref="Button,InfantryOfficerCharge,Name"/></c> ability and increases it's range by <c val="80FFFF">25%</c>
 Button/Tooltip/InfantryOfficerCharge=Inspires nearby <c val="#ColorAttackInfo">Infantry</c> troops increasing their damage for <c val="80FFFF">10 seconds</c><n/><n/><c val="FFFF80">Does not stack with other <d stringref="Unit,InfantryOfficer,Name"/>s</c>
-Button/Tooltip/InfantryOfficerInspiration=Inspires nearby <c val="#ColorAttackInfo">Infantry</c> troops increasing their attack speed ,  movement speed and decrease received damage  by <c val="80FFFF">5%</c>. Stacks with other <d stringref="Unit,InfantryOfficer,Name"/>s</c> until a maximum of 5 stacks.
+Button/Tooltip/InfantryOfficerInspiration=Inspires nearby <c val="#ColorAttackInfo">Infantry</c> troops, increases their attack speed ,  movement speed by <c val="80FFFF">5%</c>. Decrease received damage by <c val="80FFFF">3%</c>. Stacks with other <d stringref="Unit,InfantryOfficer,Name"/>s</c> until a maximum of 5 stacks.
 Button/Tooltip/InfantryOfficerNanoweaveBodyArmor=Provides the <c val="#ColorAttackInfo"><d stringRef="Unit,InfantryFlamethrower,Name"/></c> with <c val="80FFFF">+1 Armor</c>
 Button/Tooltip/InfantryRifleRangeUpgrade=<c val="ffff8a">Guardian</c> Increases weapon range by <c val="80FFFF">0.5</c>, <c val="ffff8a">Rocket Launcher</c>, <c val="ffff8a">Heavy Gunner</c> and <c val="ffff8a">SCOUT</c> Increases weapon range by <c val="80FFFF">1</c>
 Button/Tooltip/InfantryRocket=Long range shelling infantry with high damage output. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
@@ -1301,7 +1301,7 @@ FlameGrenadeMax=Max Flame Grenades
 Forward Operation Base=
 LookAtType/CSVTurret=
 MustTargetUPL=Must target UPL units
-Param/Value/lib_UPLR_1F1EC273=No claymore found.
+Param/Value/lib_UPLL_1F1EC273=No claymore found.
 Race/Name/UPLL=UPL
 RequirementNode/Tooltip/CountBehaviorAPCnotmovingflagCompleteOnlyAtUnit2821413514=APC must be stationary
 RequirementNode/Tooltip/CountBehaviorCSVDeployedCompleteOnlyAtUnit3230205781=<d stringref="Unit,CSV,Name"/> needs to be deployed

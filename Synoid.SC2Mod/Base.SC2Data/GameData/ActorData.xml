@@ -3626,8 +3626,6 @@
         <Macros index="1" removed="1"/>
         <Macros index="2" removed="1"/>
         <Macros index="3" removed="1"/>
-        <Remove index="0" removed="1"/>
-        <Remove index="1" removed="1"/>
         <On index="0" Terms="UnitBirth.SynoidCapitalShip" Send="Create SoundEmitter SynoidCapitalShip_Ambience"/>
         <On index="1" Terms="UnitBirth.SynoidCapitalShip"/>
         <On index="2" Terms="UnitRevive.SynoidCapitalShip"/>
@@ -3663,11 +3661,6 @@
         <On index="95" removed="1"/>
         <On index="96" removed="1"/>
         <On index="97" removed="1"/>
-        <On index="98" removed="1"/>
-        <On index="99" removed="1"/>
-        <On index="100" removed="1"/>
-        <On index="101" removed="1"/>
-        <On index="102" removed="1"/>
         <Model value="SynoidPirateCapitalShip"/>
         <Scale value="0.600000"/>
         <ModelFlags index="OutlineEmitter" value="0"/>
@@ -4620,6 +4613,8 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
         <MaxScale value="1.400000"/>
+        <AutoScaleFactor value="0.700000"/>
+        <AutoScaleFromSelectionFactor value="0.700000"/>
     </CActorModel>
     <CActorAction id="WarhoundStingerAttack" parent="GenericAttack" effectImpact="WarhoundStingerU" effectLaunch="WarhoundStingerLM">
         <LaunchAssets Model="MagrailMunition_Launch" Sound="Loki_CannonLaunch"/>
@@ -4979,7 +4974,7 @@
     </CActorUnit>
     <CActorMissile id="SynoidWarbotBMissile" parent="GenericAttackMissile" unitName="SynoidWarbotBMissile"/>
     <CActorAction id="SynoidWarbotB" parent="GenericAttack" effectImpact="SynoidWarbotBDamage" effectLaunch="SynoidWarbotBLM">
-        <LaunchAttachQuery Methods="SynoidWarbotBFilter WarbotBPattern"/>
+        <LaunchAttachQuery Methods="SynoidWarbotBFilter "/>
         <LaunchAssets Sound="SynoidWarbot_MissileAttackLaunch"/>
         <ImpactMap index="None" Sound="SynoidWarbot_MissileAttackImpact"/>
     </CActorAction>
