@@ -260,7 +260,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="MeditruckHeal"/>
         <AbilArray Link="NukePackArmCharge"/>
-        <AbilArray Link="MeditruckEMP"/>
+<!--        <AbilArray Link="MeditruckEMP"/>-->
         <BehaviorArray Link="RegenBioSteel"/>
         <WeaponArray Turret="CycloneWeaponTurret"/>
         <WeaponArray Turret="Cyclone"/>
@@ -446,7 +446,6 @@
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
         <TacticalAI value="Drone"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="20"/>
         <KillDisplay value="Always"/>
@@ -524,7 +523,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <TacticalAI value="Nexus"/>
         <TacticalAIThink value="AIThinkNexus"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="10"/>
         <KillDisplay value="Never"/>
@@ -879,7 +877,6 @@
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Marine"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="3"/>
         <GlossaryStrongArray value="Marauder"/>
@@ -1009,7 +1006,6 @@
         <SubgroupPriority value="5"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="18"/>
         <GlossaryStrongArray value="SJViking"/>
@@ -1034,6 +1030,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="SuperHangar">
+        <TechAliasArray value="Hangar"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
         <Race value="Synd"/>
@@ -1102,7 +1099,6 @@
         <MinimapRadius value="1.625"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Starport"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SyndHangar"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="24"/>
@@ -1118,6 +1114,7 @@
         <LifeRegenRate value="2.8007"/>
     </CUnit>
     <CUnit id="SuperAssembly">
+        <TechAliasArray value="Assembly"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
         <Race value="Synd"/>
@@ -1197,6 +1194,7 @@
         <LifeRegenRate value="2.8007"/>
     </CUnit>
     <CUnit id="SuperGarrison">
+        <TechAliasArray value="Garrison"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
         <Race value="Synd"/>
@@ -1266,7 +1264,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Barracks"/>
         <SelectAlias value="Garrison"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SyndGarrison"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="22"/>
@@ -1441,7 +1438,6 @@
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
         <BehaviorArray Link="BombDisruption"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <LifeRegenRate value="-6"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
     </CUnit>
@@ -1487,13 +1483,13 @@
         <MinimapRadius value="0.6"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <LeaderAlias value=""/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryPriority value="315"/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
     </CUnit>
     <CUnit id="GreaterProcessor">
+        <TechAliasArray value="MycoProcessor"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
         <Race value="Synd"/>
@@ -1552,7 +1548,6 @@
         <SubgroupPriority value="22"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SynProcessor"/>
         <GlossaryPriority value="13"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -1601,7 +1596,6 @@
         <GlossaryPriority value="315"/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
     </CUnit>
     <CUnit id="PowerMatrixAmplifier">
@@ -1658,7 +1652,6 @@
         <SubgroupPriority value="7"/>
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="333"/>
         <TechTreeUnlockedUnitArray value="Battlecruiser"/>
@@ -1737,7 +1730,6 @@
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
-        <TechAliasArray value="Alias_SynUni"/>
     </CUnit>
     <CUnit id="DummyUnit">
         <DeathRevealRadius value="0"/>
@@ -1828,7 +1820,6 @@
         <MinimapRadius value="1.625"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Factory"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SyndAssembly"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="16"/>
@@ -1905,7 +1896,6 @@
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkHellion"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="5"/>
         <GlossaryStrongArray value="SCV"/>
@@ -1974,7 +1964,6 @@
         <SubgroupPriority value="3"/>
         <MinimapRadius value="0.8"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
     </CUnit>
     <CUnit id="MortarArtilleryWeaponMissile" parent="MISSILE">
@@ -2047,7 +2036,6 @@
         <SubgroupPriority value="21"/>
         <MinimapRadius value="1.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="21"/>
@@ -2089,7 +2077,6 @@
         <MinimapRadius value="0.6"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <LeaderAlias value=""/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryPriority value="315"/>
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
@@ -2157,7 +2144,6 @@
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="SupplyDepot"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SynProcessor"/>
         <GlossaryPriority value="11"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
@@ -2214,7 +2200,6 @@
         <SubgroupPriority value="5"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryPriority value="18"/>
         <GlossaryStrongArray value="SJViking"/>
         <GlossaryWeakArray value="SJFighter1"/>
@@ -2279,7 +2264,6 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value=""/>
         <LeaderAlias value=""/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="12"/>
         <GlossaryStrongArray value="Zergling"/>
@@ -2348,7 +2332,6 @@
         <SubgroupPriority value="3"/>
         <MinimapRadius value="2"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <Fidget DelayMax="0" DelayMin="0"/>
@@ -2394,7 +2377,7 @@
         <AbilArray Link="GhostWeaponsFree"/>
         <AbilArray Link="GhostHoldFire"/>
         <AbilArray Link="SynoidBloodletterCloaking"/>
-        <AbilArray Link="UltrasonicPulse"/>
+<!--        <AbilArray Link="UltrasonicPulse"/>-->
         <AbilArray Link="HoloZergling"/>
         <AbilArray Link="BloodLetterPsionicPulse"/>
         <WeaponArray Link="Bloodletter"/>
@@ -2422,7 +2405,6 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="SpecterUnit"/>
         <TacticalAIThink value="AIThinkGhost"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryPriority value="16"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <Fidget>
@@ -2504,7 +2486,6 @@
         <MinimapRadius value="1.625"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Starport"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SyndHangar"/>
         <GlossaryPriority value="20"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -2578,7 +2559,6 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <LifeArmor value="1"/>
         <BehaviorArray Link="RegenBioSteel"/>
         <GlossaryPriority value="8"/>
@@ -2655,7 +2635,6 @@
         <GlossaryWeakArray value="HighTemplar"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
-        <TechAliasArray value="Alias_SynUni"/>
     </CUnit>
     <CUnit id="Buoy">
         <DeathRevealRadius value="7"/>
@@ -2716,7 +2695,6 @@
         <SubgroupPriority value="4"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkWidowMine"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="4"/>
         <GlossaryStrongArray value="Marine"/>
@@ -2828,7 +2806,6 @@
         <SubgroupPriority value="2"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
     </CUnit>
     <CUnit id="SatComTower">
         <DeathRevealRadius value="3"/>
@@ -2869,7 +2846,7 @@
         <AbilArray Link="SatComRepairBots"/>
         <AbilArray Link="SynoidSalvageRefundSatCom"/>
         <AbilArray Link="SatComSpybots"/>
-        <AbilArray Link="RequisitionResource"/>
+<!--        <AbilArray Link="RequisitionResource"/>-->
         <AbilArray Link="SatComDeployWarDrones"/>
         <AbilArray Link="NukePackArmCharge"/>
         <AbilArray Link="SynoidSatComDeployWarDrones2"/>
@@ -2898,7 +2875,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value=""/>
         <LeaderAlias value=""/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="19"/>
         <GlossaryStrongArray value="Ultralisk"/>
@@ -2978,7 +2954,6 @@
         <SubgroupPriority value="18"/>
         <MinimapRadius value="1.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="15"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -3054,7 +3029,6 @@
         <MinimapRadius value="1.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Barracks"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <TechAliasArray value="Alias_SyndGarrison"/>
         <GlossaryPriority value="14"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -3149,7 +3123,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Nexus"/>
         <TacticalAIThink value="AIThinkNexus"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryPriority value="10"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <KillDisplay value="Never"/>
@@ -3226,7 +3199,6 @@
         <SubgroupPriority value="14"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="18"/>
         <GlossaryStrongArray value="Banshee"/>
@@ -3324,7 +3296,6 @@
         <GlossaryPriority value="1"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
     </CUnit>
     <CUnit id="PowerSupply">
@@ -3383,7 +3354,6 @@
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
         <TacticalAI value="SupplyDepot"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="248"/>
     </CUnit>
@@ -3442,7 +3412,6 @@
         <MinimapRadius value="0.3125"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAI value="Marine"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="2"/>
         <GlossaryStrongArray value="Marauder"/>
@@ -3517,7 +3486,6 @@
         <MinimapRadius value="2.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value=""/>
-        <TechAliasArray value="Alias_SynStr"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="17"/>
@@ -3591,7 +3559,6 @@
         <GlossaryStrongArray value="DarkTemplar"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <WeaponArray Link="SynoidUmpireSwarm"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <AIKiteRange value="4"/>
@@ -3610,7 +3577,6 @@
         <HotkeyAlias value="SynoidSyphon"/>
         <SelectAlias value="SynoidSyphon"/>
         <SubgroupAlias value="SynoidSyphon"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <AIEvaluateAlias value="SynoidSyphon"/>
         <ReviveInfoBase>
@@ -3638,7 +3604,6 @@
         <TacticalAI value="RefineryRich2"/>
         <LeaderAlias value="SynoidSyphonRich"/>
         <HotkeyAlias value="SynoidSyphonRich"/>
-        <TechAliasArray value="Alias_SynStr"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <AIEvaluateAlias value="SynoidSyphonRich"/>
         <ReviveInfoBase>
@@ -3718,7 +3683,6 @@
         <SubgroupPriority value="15"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="11"/>
         <GlossaryStrongArray value="Stalker"/>
@@ -3790,7 +3754,6 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
-        <TechAliasArray value="Alias_SynUni"/>
     </CUnit>
     <CUnit id="WalkerBeacon">
         <DeathRevealRadius value="7"/>
@@ -3841,7 +3804,6 @@
         <SubgroupPriority value="54"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkWidowMine"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="129"/>
         <GlossaryStrongArray value="Marine"/>
@@ -3898,7 +3860,6 @@
         <LeaderAlias value="WidowMine"/>
         <SelectAlias value="WidowMine"/>
         <SubgroupAlias value="WidowMine"/>
-        <TechAliasArray value="Alias_SynUni"/>
         <EquipmentArray Weapon="WidowMineDummy"/>
         <GlossaryStrongArray value="Marauder"/>
         <GlossaryStrongArray value="Roach"/>

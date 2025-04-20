@@ -2568,8 +2568,8 @@
         <On Terms="Abil.Obliterate.SourcePrepStart" Send="AnimPlay Charge Spell"/>
         <On Terms="Abil.Obliterate.SourcePrepStart" Send="AnimSetTimeScale Charge 0.150000"/>
         <On Terms="Abil.Obliterate.SourcePrepStop" Send="AnimClear Charge"/>
-        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimPlay Attack Attack 0 0.000000"/>
-        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimSetTimeScale Attack 2.500000"/>
+<!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimPlay Attack Attack 0 0.000000"/>-->
+<!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimSetTimeScale Attack 2.500000"/>-->
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimGroupApply Cover"/>
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimPlay MorphStart Cover,Start"/>
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimClear MorphEnd"/>
@@ -2583,8 +2583,8 @@
         <On Terms="Behavior.SpectreCloakingFree.On" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
         <On Terms="Behavior.SpectreCloakingFree.Off" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Ghost_Land"/>
-        <On Terms="Abil.UltrasonicPulseEnhanced.SourcePrepStart" Send="AnimPlay Prep Stand,Work"/>
-        <On Terms="Abil.UltrasonicPulseEnhanced.SourceCastStart" Send="AnimPlay Spell Attack 0 0.000000 -1.000000 2.500000 AsTimeScale"/>
+<!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourcePrepStart" Send="AnimPlay Prep Stand,Work"/>-->
+<!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourceCastStart" Send="AnimPlay Spell Attack 0 0.000000 -1.000000 2.500000 AsTimeScale"/>-->
         <Model value="Ghost_Eidolon"/>
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>

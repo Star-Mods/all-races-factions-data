@@ -190,7 +190,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="BrimstoneDemolisherInfernalBreath" Requirements="BrimstoneDemolisherInfernalBreath"/>
         <TargetFilters value="Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
-    <CAbilMorph id="DenizenoftheDeep" parent="DragonBuilding"/>
+<!--    <CAbilMorph id="DenizenoftheDeep" parent="DragonBuilding"/>-->
     <CAbilEffectInstant id="DragonBuildApplyBehavior">
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>

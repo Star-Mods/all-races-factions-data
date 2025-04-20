@@ -414,16 +414,16 @@
     <CValidatorCombine id="NotDenizenoftheDeep">
         <Type value="And"/>
         <CombineArray value="NotDenizenoftheDeep1"/>
-        <CombineArray value="NotDenizenoftheDeep2"/>
+<!--        <CombineArray value="NotDenizenoftheDeep2"/>-->
     </CValidatorCombine>
     <CValidatorUnitType id="NotDenizenoftheDeep1">
         <Value value="DenizenoftheDeep"/>
         <Find value="0"/>
     </CValidatorUnitType>
-    <CValidatorUnitType id="NotDenizenoftheDeep2">
-        <Value value="DenizenoftheDeepNoFootprint"/>
-        <Find value="0"/>
-    </CValidatorUnitType>
+<!--    <CValidatorUnitType id="NotDenizenoftheDeep2">-->
+<!--        <Value value="DenizenoftheDeepNoFootprint"/>-->
+<!--        <Find value="0"/>-->
+<!--    </CValidatorUnitType>-->
     <CValidatorUnitType id="NotGrimGlider">
         <Value value="GrimGlider"/>
         <Find value="0"/>

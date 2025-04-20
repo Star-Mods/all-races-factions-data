@@ -343,8 +343,8 @@
         <AbilArray Link="attackUED"/>
         <AbilArray Link="AttackRedirectUED"/>
         <AbilArray Link="GoAttackRedirect"/>
-        <AbilArray Link="AbilityFireModeDrakkar"/>
-        <AbilArray Link="AbilityFastMoveModeDrakkar"/>
+<!--        <AbilArray Link="AbilityFireModeDrakkar"/>-->
+<!--        <AbilArray Link="AbilityFastMoveModeDrakkar"/>-->
         <WeaponArray Link="DrakkarMachineGun" Turret="DrakkarAPC"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="moveUED,Move" Row="0" Column="0"/>
@@ -1325,7 +1325,6 @@
         <AbilArray Link="CloakingDrone"/>
         <AbilArray Link="PsionicSuppressionField"/>
         <AbilArray Link="ProjectedGravityShield"/>
-        <BehaviorArray Link="Detector11"/>
         <BehaviorArray Link="Detector11"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="moveUED,Move" Row="0" Column="0"/>
@@ -2520,8 +2519,8 @@
         <AbilArray Link="RallyOperationHeadquarters"/>
         <AbilArray Link="CalldownEnrichmentTower"/>
         <AbilArray Link="WarpUEDBeacon"/>
-        <AbilArray Link="UEDCalldownStructure"/>
-        <AbilArray Link="ArmSiloWithNuke2"/>
+<!--        <AbilArray Link="UEDCalldownStructure"/>-->
+<!--        <AbilArray Link="ArmSiloWithNuke2"/>-->
         <BehaviorArray Link="CommandCenterKnockbackBehavior"/>
         <BehaviorArray Link="UEDConstructionVisionDebuff"/>
         <EffectArray index="Create" value="CCCreateSet"/>
@@ -2530,7 +2529,7 @@
             <LayoutButtons Face="Salvager" Type="AbilCmd" AbilCmd="OperationHeadquartersTrain,Train1" Row="0" Column="0"/>
             <LayoutButtons Face="RallyUED" Type="AbilCmd" AbilCmd="RallyOperationHeadquarters,Rally1" Row="1" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5CancelToSelection,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Halt" Row="2" Column="4"/>
+<!--            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Halt" Row="2" Column="4"/>-->
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="CalldownEnrichmentTower" Type="AbilCmd" AbilCmd="CalldownEnrichmentTower,Execute" Row="1" Column="0"/>
             <LayoutButtons>
@@ -2551,22 +2550,22 @@
             </LayoutButtons>
             <LayoutButtons Face="BuildBeacon" Type="AbilCmd" AbilCmd="WarpUEDBeacon,Execute" Row="0" Column="1"/>
         </CardLayouts>
-        <CardLayouts CardId="0002">
-            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>
-            <LayoutButtons Face="BuildArsenal" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build2" Row="0" Column="1"/>
-            <LayoutButtons Face="VespenePurificationPlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build3" Row="0" Column="2"/>
-            <LayoutButtons Face="TeleportationNode" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build4" Row="1" Column="0"/>
-            <LayoutButtons Face="TacticsAcademy" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build10" Row="1" Column="1"/>
-            <LayoutButtons Face="OperationHeadquarters" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build1" Row="0" Column="0"/>
-        </CardLayouts>
-        <CardLayouts CardId="0003">
-            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>
-            <LayoutButtons Face="FieldBureau" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build6" Row="0" Column="0"/>
-            <LayoutButtons Face="MunitionsFactory" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build8" Row="0" Column="1"/>
-            <LayoutButtons Face="StarshipMaintenancePlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build9" Row="0" Column="2"/>
-            <LayoutButtons Face="MilitaryResearchStation" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build7" Row="1" Column="1"/>
-            <LayoutButtons Face="TachyonRelay" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build5" Row="1" Column="2"/>
-        </CardLayouts>
+<!--        <CardLayouts CardId="0002">-->
+<!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
+<!--            <LayoutButtons Face="BuildArsenal" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build2" Row="0" Column="1"/>-->
+<!--            <LayoutButtons Face="VespenePurificationPlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build3" Row="0" Column="2"/>-->
+<!--            <LayoutButtons Face="TeleportationNode" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build4" Row="1" Column="0"/>-->
+<!--            <LayoutButtons Face="TacticsAcademy" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build10" Row="1" Column="1"/>-->
+<!--            <LayoutButtons Face="OperationHeadquarters" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build1" Row="0" Column="0"/>-->
+<!--        </CardLayouts>-->
+<!--        <CardLayouts CardId="0003">-->
+<!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
+<!--            <LayoutButtons Face="FieldBureau" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build6" Row="0" Column="0"/>-->
+<!--            <LayoutButtons Face="MunitionsFactory" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build8" Row="0" Column="1"/>-->
+<!--            <LayoutButtons Face="StarshipMaintenancePlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build9" Row="0" Column="2"/>-->
+<!--            <LayoutButtons Face="MilitaryResearchStation" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build7" Row="1" Column="1"/>-->
+<!--            <LayoutButtons Face="TachyonRelay" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build5" Row="1" Column="2"/>-->
+<!--        </CardLayouts>-->
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
         <Footprint value="Footprint5x5Contour"/>

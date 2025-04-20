@@ -175,6 +175,7 @@
         <CostResource index="Vespene" value="75"/>
     </CUnit>
     <CUnit id="DragonHunter" parent="DragonArmyGroundArmored">
+        <TechAliasArray value="DragonHunter"/>
         <LifeStart value="105"/>
         <LifeMax value="105"/>
         <LifeArmor value="1"/>
@@ -349,6 +350,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="UnseenBeast" parent="DragonArmyGroundLight">
+        <TechAliasArray value="UnseenBeast"/>
         <Attributes index="Psionic" value="1"/>
         <LifeStart value="105"/>
         <LifeMax value="105"/>
@@ -418,6 +420,7 @@
         <InnerRadius value="0.5"/>
     </CUnit>
     <CUnit id="Fleshrender" parent="DragonArmyAirLight">
+        <TechAliasArray value="Fleshrender"/>
         <LifeStart value="45"/>
         <LifeMax value="45"/>
         <Speed value="5"/>
@@ -477,6 +480,7 @@
         <SeparationRadius value="0.5"/>
     </CUnit>
     <CUnit id="AuroraConduit" parent="DragonArmyAirArmored">
+        <TechAliasArray value="AuroraConduit"/>
         <LifeStart value="180"/>
         <LifeMax value="180"/>
         <Speed value="2.5"/>
@@ -529,6 +533,7 @@
         <WeaponArray index="1" Link="AscendedAuroraConduitNetherShockGround"/>
     </CUnit>
     <CUnit id="BrimstoneDemolisher" parent="DragonArmyGroundArmored">
+        <TechAliasArray value="BrimstoneDemolisher"/>
         <Collide index="ForceField" value="0"/>
         <Attributes index="Psionic" value="1"/>
         <Attributes index="Massive" value="1"/>
@@ -638,6 +643,7 @@
         <SubgroupPriority value="32"/>
     </CUnit>
     <CUnit id="Skyrazer" parent="DragonArmyGroundArmored">
+        <TechAliasArray value="Skyrazer"/>
         <LifeStart value="150"/>
         <LifeMax value="150"/>
         <Speed value="2.5"/>
@@ -759,6 +765,7 @@
         <Collide index="ForceField" value="1"/>
     </CUnit>
     <CUnit id="DenizenoftheDeep" parent="DragonDeepOne">
+        <TechAliasArray value="Alias_DenizenoftheDeep"/>
         <BehaviorArray Link="DenizenoftheDeepRage"/>
         <Facing value="90"/>
         <FlagArray index="PreventReveal" value="1"/>
@@ -785,7 +792,9 @@
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
-        <Footprint value="Footprint5x5Contour"/>
+<!--        <Footprint value="Footprint5x5Contour"/>-->
+        <Footprint value=""/>
+        <BehaviorArray Link="DeepOne5x5"/>
         <PlacementFootprint value="Footprint5x5DropOff"/>
         <ScoreMake value="400"/>
         <ScoreKill value="400"/>
@@ -833,6 +842,7 @@
         <LifeArmorName value="Unit/LifeArmorName/DragonBaseArmoredArmor"/>
     </CUnit>
     <CUnit id="Coagulator" parent="DragonStructure">
+        <TechAliasArray value="Coagulator"/>
         <Facing value="315"/>
         <FlagArray index="Turnable" value="0"/>
         <ResourceState value="Harvestable"/>
@@ -863,6 +873,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="GrimGlider" parent="DragonArmyAirLight">
+        <TechAliasArray value="GrimGlider"/>
         <FlagArray index="Cloaked" value="1"/>
         <Attributes index="Psionic" value="1"/>
         <Attributes index="Massive" value="1"/>
@@ -931,6 +942,7 @@
         <TurningRate value="67.5"/>
     </CUnit>
     <CUnit id="HandofPower" parent="DragonArmyGroundArmored">
+        <TechAliasArray value="HandofPower"/>
         <LifeStart value="135"/>
         <LifeMax value="135"/>
         <EnergyStart value="50"/>
@@ -1036,6 +1048,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="LesserDeepOne" parent="DragonDeepOne">
+        <TechAliasArray value="LesserDeepOne"/>
         <LifeStart value="1500"/>
         <LifeMax value="1500"/>
         <Sight value="9"/>
@@ -1091,17 +1104,17 @@
         <SeparationRadius value="1"/>
         <SubgroupPriority value="31"/>
     </CUnit>
-    <CUnit id="DenizenoftheDeepNoFootprint" parent="DenizenoftheDeep">
-        <Footprint value=""/>
-        <EditorFlags index="NoPlacement" value="1"/>
-        <BehaviorArray Link="DeepOne5x5"/>
-        <Collide index="Burrow" value="0"/>
-        <Collide index="Ground" value="0"/>
-        <Collide index="RoachBurrow" value="0"/>
-        <Collide index="ForceField" value="0"/>
-        <Collide index="Locust" value="0"/>
-        <Collide index="Phased" value="0"/>
-    </CUnit>
+<!--    <CUnit id="DenizenoftheDeepNoFootprint" parent="DenizenoftheDeep">-->
+<!--        <Footprint value=""/>-->
+<!--        <EditorFlags index="NoPlacement" value="1"/>-->
+<!--        <BehaviorArray Link="DeepOne5x5"/>-->
+<!--        <Collide index="Burrow" value="0"/>-->
+<!--        <Collide index="Ground" value="0"/>-->
+<!--        <Collide index="RoachBurrow" value="0"/>-->
+<!--        <Collide index="ForceField" value="0"/>-->
+<!--        <Collide index="Locust" value="0"/>-->
+<!--        <Collide index="Phased" value="0"/>-->
+<!--    </CUnit>-->
     <CUnit id="DragonTrainMissile" parent="MISSILE_INVULNERABLE">
         <Race value="Dragon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
@@ -1123,6 +1136,7 @@
         <EditorCategories value="ObjectType:Other,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="GreaterDeepOne" parent="DragonDeepOne">
+        <TechAliasArray value="GreaterDeepOne"/>
         <LifeStart value="1500"/>
         <LifeMax value="1500"/>
         <Sight value="9"/>
@@ -1150,6 +1164,7 @@
         <TechTreeProducedUnitArray value="Razorback"/>
     </CUnit>
     <CUnit id="ToweringDeepOne" parent="DragonDeepOne">
+        <TechAliasArray value="ToweringDeepOne"/>
         <LifeStart value="1500"/>
         <LifeMax value="1500"/>
         <Sight value="9"/>
@@ -1191,6 +1206,7 @@
         <EditorCategories value="ObjectType:Other,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="Arkwyrm" parent="DragonArmyAirArmored">
+        <TechAliasArray value="Arkwyrm"/>
         <LifeStart value="225"/>
         <LifeMax value="225"/>
         <LifeArmor value="2"/>
@@ -1274,6 +1290,7 @@
         <Collide index="Phased" value="0"/>
     </CUnit>
     <CUnit id="Plodder" parent="DragonUnit">
+        <TechAliasArray value="Plodder"/>
         <FlagArray index="Worker" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <DefaultAcquireLevel value="Defensive"/>
@@ -1354,6 +1371,7 @@
         <LifeArmor value="2"/>
     </CUnit>
     <CUnit id="Razorback" parent="DragonStructure">
+        <TechAliasArray value="Razorback"/>
         <FlagArray index="Movable" value="1"/>
         <FlagArray index="NoPortraitTalk" value="0"/>
         <FlagArray index="AIDefense" value="1"/>
@@ -1479,6 +1497,7 @@
         <Collide index="Phased" value="0"/>
     </CUnit>
     <CUnit id="Flamespitter" parent="DragonArmyGroundLight">
+        <TechAliasArray value="Flamespitter"/>
         <LifeStart value="90"/>
         <LifeMax value="90"/>
         <Speed value="3"/>
@@ -1534,6 +1553,7 @@
         <InnerRadius value="0.5"/>
     </CUnit>
     <CUnit id="HornedMagus" parent="DragonArmyGroundLight">
+        <TechAliasArray value="HornedMagus"/>
         <LifeStart value="105"/>
         <LifeMax value="105"/>
         <EnergyStart value="50"/>
@@ -1594,6 +1614,7 @@
         <InnerRadius value="0.5"/>
     </CUnit>
     <CUnit id="Berserker" parent="DragonArmyGroundLight">
+        <TechAliasArray value="Berserker"/>
         <LifeStart value="375"/>
         <LifeMax value="375"/>
         <LifeArmor value="2"/>
@@ -1660,6 +1681,7 @@
         <GlossaryPriority value="0"/>
     </CUnit>
     <CUnit id="VolcanicHarbinger" parent="DragonArmyAirArmored">
+        <TechAliasArray value="VolcanicHarbinger"/>
         <Attributes index="Massive" value="1"/>
         <LifeStart value="225"/>
         <LifeMax value="225"/>

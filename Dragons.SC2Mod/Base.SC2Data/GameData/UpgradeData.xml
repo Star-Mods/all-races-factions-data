@@ -186,7 +186,7 @@
         <AffectedUnitArray value="BrimstoneDemolisher"/>
         <AffectedUnitArray value="Coagulator"/>
         <AffectedUnitArray value="DenizenoftheDeep"/>
-        <AffectedUnitArray value="DenizenoftheDeepNoFootprint"/>
+<!--        <AffectedUnitArray value="DenizenoftheDeepNoFootprint"/>-->
         <AffectedUnitArray value="FrontierDeepOne"/>
         <AffectedUnitArray value="GenesisPitGreater"/>
         <AffectedUnitArray value="GenesisPitLesser"/>
@@ -237,8 +237,8 @@
         <EffectArray Reference="Unit,Coagulator,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,DenizenoftheDeep,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DenizenoftheDeep,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DenizenoftheDeepNoFootprint,LifeArmor" Value="1"/>
-        <EffectArray Reference="Unit,DenizenoftheDeepNoFootprint,LifeArmorLevel" Value="1"/>
+<!--        <EffectArray Reference="Unit,DenizenoftheDeepNoFootprint,LifeArmor" Value="1"/>-->
+<!--        <EffectArray Reference="Unit,DenizenoftheDeepNoFootprint,LifeArmorLevel" Value="1"/>-->
         <EffectArray Reference="Unit,FrontierDeepOne,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,FrontierDeepOne,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,GenesisPitGreater,LifeArmor" Value="1"/>
