@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="ALLRACE2SynoidUltrasonicPulse">
+        <EditorCategories value="Race:Human,AbilityorEffectType:Units"/>
+        <Effect index="0" value="UltrasonicPulsePersistent"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+            <Charge Link="Abil/UltrasonicPulse"/>
+            <Cooldown Link="Abil/UltrasonicPulse" TimeUse="1"/>
+        </Cost>
+        <Range value="10"/>
+        <CastOutroTime value="0.5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidUltrasonicPulse"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="SynoidSalvageRefundAssembly" parent="Refund">
         <Name value="Abil/Name/SynoidSalvageRefundAssembly"/>
         <Cost>
@@ -358,7 +371,7 @@
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <Effect index="0" value="BlimpSpotlightPersistent"/>
         <Cost>
-            <Vital index="Energy" value="125"/>
+            <Vital index="Energy" value="75"/>
             <Cooldown TimeUse="45"/>
         </Cost>
         <Range value="12"/>
@@ -578,6 +591,7 @@
             <Resource index="Vespene" value="150"/>
             <Charge>
                 <CountMax value="1"/>
+                <CountStart value="1"/>
                 <CountUse value="1"/>
                 <TimeStart value="140"/>
                 <TimeUse value="280"/>

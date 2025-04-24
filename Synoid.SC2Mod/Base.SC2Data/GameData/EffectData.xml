@@ -37,6 +37,11 @@
         <WhichUnit Value="Caster"/>
         <Behavior value="SynoidBloodLetterCasterStunned"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidUltrasonicPulseApplyBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Human"/>
+        <Behavior value="SynoidUltrasonicPulseStun"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="SynoidUmpireMPDamage">
         <EditorCategories value="Race:Synoid"/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -711,6 +716,17 @@
         <Death value="Timeout"/>
         <EditorCategories value="Race:Synoid"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="UltrasonicPulsePersistent">
+        <EditorCategories value="Race:Human"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="UltrasonicPulseSearchArea"/>
+        <PeriodicPeriodArray value="0.2"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="UltrasonicPulseSearchArea">
+        <EditorCategories value="Race:Human"/>
+        <SearchFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="SynoidUltrasonicPulseApplyBehavior"/>
+    </CEffectEnumArea>
     <CEffectDamage id="VarangianU" parent="DU_WEAP">
         <EditorCategories value="Race:Synoid"/>
         <AttributeBonus index="Armored" value="7"/>
@@ -808,7 +824,7 @@
     </CEffectSet>
     <CEffectDamage id="HellRoundsU" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Synoid"/>
-        <AttributeBonus index="Armored" value="4"/>
+        <AttributeBonus index="Armored" value="5"/>
         <Visibility value="Visible"/>
         <Amount value="6"/>
         <Death value="Fire"/>

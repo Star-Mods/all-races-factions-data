@@ -1,4 +1,5 @@
-﻿Abil/Name/ALLRACE2UmpireCraftRush=SynoidUmpireCraftRush
+﻿Abil/Name/ALLRACE2SynoidUltrasonicPulse=Ultrasonic Pulse
+Abil/Name/ALLRACE2UmpireCraftRush=SynoidUmpireCraftRush
 Abil/Name/ActuationTrain=Assemble (Catalyst)
 Abil/Name/AnathemaLightningStorm=Anathema Lightning Storm
 Abil/Name/AnathemaWeaponSwap=Ashigara Weapons
@@ -105,6 +106,7 @@ Behavior/Name/SynoidGreaterWarDronesPsiLink2=Greater War Drones Psi-Link
 Behavior/Name/SynoidGriffonInterferenceMatrixFriendlyBuffEffect=SynoidGriffonInterceptorModeFriendlyBuffEffect
 Behavior/Name/SynoidGriffonInterferenceMatrixUnfriendlyNegativeeffect=SynoidGriffonInteceptorModeUnfriendlyNegativeeffect
 Behavior/Name/SynoidMineWeaponSearch=Synoid Mine Weapon Search
+Behavior/Name/SynoidUltrasonicPulseStun=Ultrasonic Pulse Stun
 Behavior/Name/SynoidUmpireRushActive=SynoidUmpireRushActive
 Behavior/Name/SynoidUnPowered=UnPowered
 Behavior/Name/SynoidUnPoweredSuper=UnPowered
@@ -131,6 +133,7 @@ Behavior/Tooltip/SpyBotRevelation=This unit or structure is providing vision for
 Behavior/Tooltip/SuperBuildingBoost=This structure produce unit at 50% faster rate.
 Behavior/Tooltip/SynoidGriffonInterferenceMatrixFriendlyBuffEffect=Incoming damage reduced by 1.
 Behavior/Tooltip/SynoidGriffonInterferenceMatrixUnfriendlyNegativeeffect=This unit has decreased movement speed.
+Behavior/Tooltip/SynoidUltrasonicPulseStun=This unit is stunned.
 Behavior/Tooltip/SynoidUmpireRushActive=This unit's movement speed is increased.
 Behavior/Tooltip/SynoidUnPowered=This structure is unpowered.
 Behavior/Tooltip/SynoidUnPoweredSuper=This structure is unpowered.
@@ -242,6 +245,7 @@ Button/Name/SynoidMidasIngiterExplode=Explode
 Button/Name/SynoidMissileStrike=Missile Strike
 Button/Name/SynoidPsionicPulse=Psionic Pulse
 Button/Name/SynoidSalvage=Salvage
+Button/Name/SynoidUltrasonicPulse=Ultrasonic Pulse
 Button/Name/SynoidUpgradeMechanicalWeaponsLevel1=Upgrade Mechanical Weapons Level 1
 Button/Name/SynoidUpgradeMechanicalWeaponsLevel2=Upgrade Mechanical Weapons Level 2
 Button/Name/SynoidUpgradeMechanicalWeaponsLevel3=Upgrade Mechanical Weapons Level 3
@@ -286,7 +290,7 @@ Button/Tooltip/Cremator=General-purpose infantry.<n/><n/><c val="#ColorAttackInf
 Button/Tooltip/CrematorUpgradeTooltip=Cremators enable a second weapon which shot at a unit between 3-4 distance. The weapon attack causes 6 basic damage with +1 each biological weapon upgrade, each attack has 1.5 second interval.
 Button/Tooltip/DeployHangar=Air-unit production facility</c>. <n/><n/><c val="FFFF80">Enables:</c><n/>- Griffins<n/>- Cossacks
 Button/Tooltip/DeployPsiIndoctrinator=Contains upgrades for <c val="FFFF80">Bloodletters</c>.<n/>Can use <c val="FFFF80">Indoctrinate</c> anywhere inside a Requisition Field.<n/><n/><c val="FFFF80">Enables:</c><n/>- Bloodletters at the Garrisons
-Button/Tooltip/DeployRepairBots=Heals 200 health and protects the target building or unit over 10 seconds.<n/>Target is stunned through the duration of the effect.<n/><n/><c val="80FFFF">TIP: The autocast is set to trigger when there is a unit in range with less than 1/3 HP.</c>
+Button/Tooltip/DeployRepairBots=Heals 500 health and protects the target building or unit over 10 seconds.<n/>Target is stunned through the duration of the effect.<n/><n/><c val="80FFFF">TIP: The autocast is set to trigger when there is a unit in range with less than 1/3 HP.</c>
 Button/Tooltip/DeployStructure=Deploy a list of essential structures anywhere near a source of Requisition.
 Button/Tooltip/DeployWarDrones=Deploys a War Drone in the Target location.
 Button/Tooltip/DisableAshigaraBatteries=Disables Ashigara Battery weapons.
@@ -378,6 +382,7 @@ Button/Tooltip/SynoidPsionicPulse=Stun the Bloodletter for 0.71 seconds and mark
 Button/Tooltip/SynoidSalvage=Salvages the structure, removing it and returning 100% of its mineral and gas value immediately.
 Button/Tooltip/SynoidSyphon=Built over a Vespene Geyser to allow harvesting of vespene gas.
 Button/Tooltip/SynoidSyphonRich=Built over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/SynoidUltrasonicPulse=Immediately stun all non-ally units in target area for 2 seconds.
 Button/Tooltip/SynoidUpgradeMechanicalWeaponsLevel1=Upgrades the damage dealt by units built at an Assembly or Hangar.
 Button/Tooltip/SynoidUpgradeMechanicalWeaponsLevel2=Further upgrades the damage dealt by units built at an Assembly or Hangar.
 Button/Tooltip/SynoidUpgradeMechanicalWeaponsLevel3=Maximizes the damage dealt by units built at an Assembly or Hangar.
@@ -642,9 +647,12 @@ Effect/Name/SynoidPsionicPulseStunCasterAB=Psionic Pulse Stun Caster AB
 Effect/Name/SynoidSatComGreaterWarDronesCU2=Greater War Drones
 Effect/Name/SynoidSatComGreaterWarDronesRP2=Greater War Drones
 Effect/Name/SynoidSatComGreaterWarDronesSet2=Greater War Drones
+Effect/Name/SynoidUltrasonicPulseApplyBehavior=Ultrasonic Pulse AB
 Effect/Name/SynoidUmpireMPDamage=SynoidUmpireCraftMP Damage
 Effect/Name/SynoidUmpireMPLM=SynoidUmpireCraftMP LM
 Effect/Name/SynoidYamatoBAOE=Persistent Damage
+Effect/Name/UltrasonicPulsePersistent=Ultrasonic Pulse Persistent
+Effect/Name/UltrasonicPulseSearchArea=Ultrasonic Pulse
 Effect/Name/UmpireBombotDisruptionAB=Disruption Behavior
 Effect/Name/UmpireLockdownAB=Lockdown AB
 Effect/Name/UmpireLockdownCaster=Lockdown AB Caster

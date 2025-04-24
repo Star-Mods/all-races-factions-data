@@ -11,6 +11,17 @@
         <ScaleMin value="0.140000,0.140000,1.000000"/>
         <EditorCategories value="Race:Synoid"/>
     </CModel>
+    <CModel id="SynoidUltrasonicPulse" parent="TempestBase">
+        <Model value="Assets\Effects\Protoss\Disruptor_PurificationNova\Disruptor_PurificationNova.m3"/>
+        <ScaleMax value="0.500000,0.500000,2.000000"/>
+        <ScaleMin value="0.500000,0.500000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidUltrasonicPulseStun" parent="TempestBase">
+        <Model value="Assets\Effects\Neutral\Stun_Void\Stun_Void.m3"/>
+        <Lighting value="SynoidUltrasonicPulse"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
     <CModel id="SynoidUmpireMPAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\SwarmHostSpawnMissileImpact\SwarmHostSpawnMissileImpact.m3"/>
         <EditorCategories value="Race:Synoid"/>
@@ -1453,9 +1464,10 @@
         <ShadowRadius value="2.000000"/>
         <UnitGlossaryCamera value="Star2CameraHigh07"/>
     </CModel>
-    <CModel id="WarHoundDeath2" parent="UnitDeath" Race="Terran">
+    <CModel id="RancorSynoidDeath" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Zerg\InfestorSpawnMarineDeath\InfestorSpawnMarineDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
+        <EditorCategories value="Race:Synoid"/>
         <Events>
             <Variation value="0"/>
             <Anim value="Death,00"/>
@@ -1508,7 +1520,6 @@
         <SelectionRadius value="1.400000"/>
         <ShadowRadius value="2.000000"/>
         <VariationCount value="3"/>
-        <EditorCategories value="Race:Synoid"/>
     </CModel>
     <CModel id="SynoidWarbot2" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\ARES\ARES.m3"/>

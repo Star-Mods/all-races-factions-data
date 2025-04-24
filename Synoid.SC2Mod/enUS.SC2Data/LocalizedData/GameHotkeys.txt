@@ -111,6 +111,7 @@ Button/Hotkey/SynoidMidasIngiterExplode=X
 Button/Hotkey/SynoidMissileStrike=W
 Button/Hotkey/SynoidPsionicPulse=T
 Button/Hotkey/SynoidSalvage=V
+Button/Hotkey/SynoidUltrasonicPulse=F
 Button/Hotkey/SynoidUpgradeMechanicalWeaponsLevel1=E
 Button/Hotkey/T=R
 Button/Hotkey/TankBuster=E

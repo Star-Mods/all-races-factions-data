@@ -10,6 +10,16 @@
             <StateFlags index="Stun" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidUltrasonicPulseStun">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn_UltrasonicPulse.dds"/>
+        <EditorCategories value="Race:Human,AbilityorEffectType:Units"/>
+        <Duration value="2.8"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SynoidUmpireRushActive">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-terran-jotunboosters.dds"/>
@@ -456,8 +466,7 @@
         <Duration value="10"/>
         <Modification>
             <StateFlags index="Stun" value="1"/>
-            <LifeArmorBonus value="2"/>
-            <VitalRegenArray index="Life" value="20"/>
+            <VitalRegenArray index="Life" value="50"/>
         </Modification>
         <InfoIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
     </CBehaviorBuff>

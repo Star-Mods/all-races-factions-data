@@ -265,6 +265,9 @@
         <Icon value="Assets\Textures\ui_tipicon_campaign_korhal02-psidestroyer.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
+    <CButton id="SynoidUltrasonicPulse">
+        <Icon value="Assets\Textures\btn_UltrasonicPulse.dds"/>
+    </CButton>
     <CButton id="TankBuster">
         <Icon value="Assets\Textures\wireframe-critter-utilitybot.dds"/>
         <AlertIcon value="Assets\Textures\wireframe-critter-utilitybot.dds"/>

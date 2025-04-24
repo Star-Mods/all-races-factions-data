@@ -95,6 +95,88 @@
         <On Terms="Effect.AnathemaHomingWeaponRightLM.Start" Send="Create"/>
         <Sound value="SensorTower_MorphToTower"/>
     </CActorSound>
+    <CActorModel id="RancorSynoidDeath" parent="ModelAnimationStyleOneShot"/>
+    <CActorModel id="SynoidBloodletterUltrasonicPulseAreaImpact" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.UltrasonicPulsePersistent.Start" Send="Create"/>
+        <On Terms="Effect.UltrasonicPulsePersistent.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <Model value="SynoidUltrasonicPulse"/>
+    </CActorModel>
+    <CActorSound id="SynoidUltrasonicPulseSound" parent="SoundOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Abil.ALLRACE2SynoidUltrasonicPulse.SourceCastStop" Send="Create"/>
+        <Sound value="Korhal_Explosion_Mn"/>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="46.000000,48.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="12.000000,14.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="16.000000,20.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="24.000000,30.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="34.000000,40.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="20.000000,24.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+        <Layers Sound="Korhal_Explosion_Deep_Meaty_Cu">
+            <Chance value="100"/>
+            <Pitch value="30.000000,34.000000"/>
+            <PlayDelay value="23,700"/>
+            <Volume value="6.000000,6.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="SynoidUltrasonicPulseStun" parent="ModelAddition">
+        <Aliases index="0" removed="1"/>
+        <Macros value="GlobalLoopMacro"/>
+        <Macros value="GlobalLoopMacroMore"/>
+        <Flags index="RespondsToUnitPlayerChange" value="1"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="CastShadows" value="0"/>
+        <Inherits index="CloakEffect" value="0"/>
+        <Inherits index="CreepEngulfment" value="0"/>
+        <Inherits index="Decal" value="0"/>
+        <Inherits index="ModelMaterials" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <Inherits index="TeamColor" value="0"/>
+        <Inherits index="TimeScale" value="0"/>
+        <Inherits index="TintColor" value="0"/>
+        <Inherits index="Visibility" value="0"/>
+        <Inherits index="WarpGroup" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On index="1" Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On index="2" Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.SynoidUltrasonicPulseStun.On" Send="Create"/>
+        <On Terms="Behavior.SynoidUltrasonicPulseStun.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject=""/>
+        <HostSiteOps Ops="AttachHeadTop"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="UseSyncSeed" value="0"/>
+    </CActorModel>
     <CActorSound id="SynoidWarDroneDeathExplosionSound" parent="SoundOneShot">
         <Flags index="VisionTestCenterOnly" value="1"/>
         <FogVisibility value="Dimmed"/>
@@ -2568,8 +2650,8 @@
         <On Terms="Abil.Obliterate.SourcePrepStart" Send="AnimPlay Charge Spell"/>
         <On Terms="Abil.Obliterate.SourcePrepStart" Send="AnimSetTimeScale Charge 0.150000"/>
         <On Terms="Abil.Obliterate.SourcePrepStop" Send="AnimClear Charge"/>
-<!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimPlay Attack Attack 0 0.000000"/>-->
-<!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimSetTimeScale Attack 2.500000"/>-->
+        <!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimPlay Attack Attack 0 0.000000"/>-->
+        <!--        <On Terms="Abil.UltrasonicPulse.SourceCastStart" Send="AnimSetTimeScale Attack 2.500000"/>-->
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimGroupApply Cover"/>
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimPlay MorphStart Cover,Start"/>
         <On Terms="Behavior.SpectreHoldFireB.On" Send="AnimClear MorphEnd"/>
@@ -2583,8 +2665,8 @@
         <On Terms="Behavior.SpectreCloakingFree.On" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End"/>
         <On Terms="Behavior.SpectreCloakingFree.Off" Target="::PortraitGameSelf" Send="AnimBracketStop Visor"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Ghost_Land"/>
-<!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourcePrepStart" Send="AnimPlay Prep Stand,Work"/>-->
-<!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourceCastStart" Send="AnimPlay Spell Attack 0 0.000000 -1.000000 2.500000 AsTimeScale"/>-->
+        <!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourcePrepStart" Send="AnimPlay Prep Stand,Work"/>-->
+        <!--        <On Terms="Abil.UltrasonicPulseEnhanced.SourceCastStart" Send="AnimPlay Spell Attack 0 0.000000 -1.000000 2.500000 AsTimeScale"/>-->
         <Model value="Ghost_Eidolon"/>
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
@@ -3616,7 +3698,10 @@
         <ImpactMap index="None" Model="LiberatorAGAttackImpact" Sound="VultureSpiderMineAttackImpact"/>
         <ImpactPhysics Name="JavelinImpact" MatchKeys="Basic" Physics="ThorAAAttackForce"/>
     </CActorAction>
-    <CActorMissile id="HellstormTurretAirAttackMissile" parent="GenericAttackMissile" unitName="HellstormTurretAirWeapon"/>
+    <CActorMissile id="HellstormTurretAirAttackMissile" parent="GenericAttackMissile" unitName="HellstormTurretAirWeapon">
+        <DeathActorModel value="SynoidHailstormMissileVolleyDeath"/>
+        <DeathActorModelLow value="SynoidHailstormMissileVolleyDeath"/>
+    </CActorMissile>
     <CActorModel id="NukePackTeamGlow" parent="ModelAddition">
         <Model value="SynoidGlow"/>
         <Scale value="1.200000"/>
@@ -4096,6 +4181,8 @@
     </CActorAction>
     <CActorMissile id="HellstormMissileVolleyMissile" parent="GenericAttackMissile" unitName="SynoidHailstormMissilesWeapon2">
         <On Terms="ActorDestruction" Send="Create HailstormMissileVolleyDeath"/>
+        <DeathActorModel value="SynoidHailstormMissileVolleyDeath"/>
+        <DeathActorModelLow value="SynoidHailstormMissileVolleyDeath"/>
     </CActorMissile>
     <CActorUnit id="HellstormTurret" parent="TerranBuildingEx" unitName="HellstormTurret">
         <Aliases value="_UnitHuge"/>
@@ -4646,7 +4733,7 @@
         <Scale value="0.900000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="Rancor"/>
-        <DeathArray index="Normal" ModelLink="WarHoundDeath2" SoundLink="SiegeTank_Explode"/>
+        <DeathArray index="Normal" ModelLink="RancorSynoidDeath" SoundLink="SiegeTank_Explode"/>
         <DeathCustoms ModelLink="WarhoundDeathRagdoll" Name="RagdollBasic">
             <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
         </DeathCustoms>
@@ -4974,7 +5061,7 @@
     </CActorUnit>
     <CActorMissile id="SynoidWarbotBMissile" parent="GenericAttackMissile" unitName="SynoidWarbotBMissile"/>
     <CActorAction id="SynoidWarbotB" parent="GenericAttack" effectImpact="SynoidWarbotBDamage" effectLaunch="SynoidWarbotBLM">
-        <LaunchAttachQuery Methods="SynoidWarbotBFilter "/>
+        <LaunchAttachQuery Methods="SynoidWarbotBFilter"/>
         <LaunchAssets Sound="SynoidWarbot_MissileAttackLaunch"/>
         <ImpactMap index="None" Sound="SynoidWarbot_MissileAttackImpact"/>
     </CActorAction>

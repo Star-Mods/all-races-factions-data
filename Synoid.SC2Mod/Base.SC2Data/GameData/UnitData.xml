@@ -260,7 +260,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="MeditruckHeal"/>
         <AbilArray Link="NukePackArmCharge"/>
-<!--        <AbilArray Link="MeditruckEMP"/>-->
+        <!--        <AbilArray Link="MeditruckEMP"/>-->
         <BehaviorArray Link="RegenBioSteel"/>
         <WeaponArray Turret="CycloneWeaponTurret"/>
         <WeaponArray Turret="Cyclone"/>
@@ -1031,6 +1031,7 @@
     </CUnit>
     <CUnit id="SuperHangar">
         <TechAliasArray value="Hangar"/>
+        <TechAliasArray value="Alias_SyndHangar"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
         <Race value="Synd"/>
@@ -1099,7 +1100,6 @@
         <MinimapRadius value="1.625"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Starport"/>
-        <TechAliasArray value="Alias_SyndHangar"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="24"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -1115,6 +1115,7 @@
     </CUnit>
     <CUnit id="SuperAssembly">
         <TechAliasArray value="Assembly"/>
+        <TechAliasArray value="Alias_SyndAssembly"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
         <Race value="Synd"/>
@@ -1186,7 +1187,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Factory"/>
         <SelectAlias value="Assembly"/>
-        <TechAliasArray value="Alias_SyndAssembly"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="23"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -1195,6 +1195,7 @@
     </CUnit>
     <CUnit id="SuperGarrison">
         <TechAliasArray value="Garrison"/>
+        <TechAliasArray value="Alias_SyndGarrison"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
         <Race value="Synd"/>
@@ -1264,7 +1265,6 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <TacticalAI value="Barracks"/>
         <SelectAlias value="Garrison"/>
-        <TechAliasArray value="Alias_SyndGarrison"/>
         <GlossaryCategory value="Unit/Category/SynoidUnits"/>
         <GlossaryPriority value="22"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
@@ -1301,8 +1301,8 @@
         <Collide index="Flying" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <LifeStart value="175"/>
-        <LifeMax value="175"/>
+        <LifeStart value="240"/>
+        <LifeMax value="240"/>
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/SynoidMechPlating"/>
         <EnergyStart value="50"/>
@@ -1319,7 +1319,7 @@
         <VisionHeight value="4"/>
         <Food value="-2"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Minerals" value="175"/>
         <CostResource index="Vespene" value="125"/>
         <RepairTime value="50"/>
         <AttackTargetPriority value="20"/>
@@ -1490,6 +1490,7 @@
     </CUnit>
     <CUnit id="GreaterProcessor">
         <TechAliasArray value="MycoProcessor"/>
+        <TechAliasArray value="Alias_SynProcessor"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
         <Race value="Synd"/>
@@ -1548,7 +1549,6 @@
         <SubgroupPriority value="22"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <TechAliasArray value="Alias_SynProcessor"/>
         <GlossaryPriority value="13"/>
         <HotkeyCategory value="Unit/Category/SynoidUnits"/>
         <LifeRegenRate value="2.8007"/>
@@ -2377,23 +2377,25 @@
         <AbilArray Link="GhostWeaponsFree"/>
         <AbilArray Link="GhostHoldFire"/>
         <AbilArray Link="SynoidBloodletterCloaking"/>
-<!--        <AbilArray Link="UltrasonicPulse"/>-->
+        <!--        <AbilArray Link="UltrasonicPulse"/>-->
         <AbilArray Link="HoloZergling"/>
         <AbilArray Link="BloodLetterPsionicPulse"/>
+        <AbilArray Link="ALLRACE2SynoidUltrasonicPulse"/>
         <WeaponArray Link="Bloodletter"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="CloakOnGhost" Type="AbilCmd" AbilCmd="SynoidBloodletterCloaking,On" Row="2" Column="2"/>
-            <LayoutButtons Face="SynoidBloodLetterDecloak" Type="AbilCmd" AbilCmd="SynoidBloodletterCloaking,Off" Row="2" Column="2"/>
+            <LayoutButtons Face="SynoidUltrasonicPulse" Type="AbilCmd" AbilCmd="ALLRACE2SynoidUltrasonicPulse,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="SpectreNuke,255" Row="2" Column="4"/>
             <LayoutButtons Face="SpectreWeaponsFree" Type="AbilCmd" AbilCmd="GhostWeaponsFree,Execute" Row="1" Column="3"/>
             <LayoutButtons Face="BloodletterBleed" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="ZerglingProjection" Type="AbilCmd" AbilCmd="HoloZergling,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="SynoidPsionicPulse" Type="AbilCmd" AbilCmd="BloodLetterPsionicPulse,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="CloakOnGhost" Type="AbilCmd" AbilCmd="SynoidBloodletterCloaking,On" Row="2" Column="3"/>
+            <LayoutButtons Face="SynoidBloodLetterDecloak" Type="AbilCmd" AbilCmd="SynoidBloodletterCloaking,Off" Row="2" Column="3"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -2846,7 +2848,7 @@
         <AbilArray Link="SatComRepairBots"/>
         <AbilArray Link="SynoidSalvageRefundSatCom"/>
         <AbilArray Link="SatComSpybots"/>
-<!--        <AbilArray Link="RequisitionResource"/>-->
+        <!--        <AbilArray Link="RequisitionResource"/>-->
         <AbilArray Link="SatComDeployWarDrones"/>
         <AbilArray Link="NukePackArmCharge"/>
         <AbilArray Link="SynoidSatComDeployWarDrones2"/>
