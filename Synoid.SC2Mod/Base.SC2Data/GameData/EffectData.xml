@@ -12,6 +12,58 @@
         <AreaArray Radius="5" Effect="ALLRACE2GriffonInterferenceMatrixAreaSwitch"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectEnumArea id="SynoidEnthralledAttackSearch">
+        <EditorCategories value="Race:Synoid"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <ExcludeArray Effect="RetributionFieldSet2" Value="Target"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="180" Radius="1.25" Effect="Predator2"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectLaunchMissile id="SynoidMindControlLinkLaunch">
+        <ValidatorArray index="0" value="SynoidRangeCheckLE13"/>
+        <ValidatorArray value="NotHidden"/>
+        <ValidatorArray value="NotOracleStasisTrapped"/>
+        <EditorCategories value="Race:Synoid"/>
+        <LaunchOffset value="0,0,5"/>
+        <ImpactEffect value="SynoidMindControlTowerLinkedBehavior"/>
+        <AmmoUnit value="SynoidMindControlLinkMissile"/>
+        <Movers Link="Frenzy" IfRangeLTE="500"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="SynoidMindControlLinkPersistent">
+        <EditorCategories value=""/>
+        <InitialEffect value="SynoidMindControlLinkLaunch"/>
+        <FinalEffect value="SynoidMindControlLinkFinalSwitch"/>
+        <PeriodCount value="30"/>
+        <PeriodicEffectArray value="SynoidMindControlLinkLaunch"/>
+        <PeriodicPeriodArray value="0.28"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodicValidator value="SynoidRangeCheckLE13"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="SynoidMindControlLinkSet">
+        <EditorCategories value="Race:Synoid"/>
+        <EffectArray value="SynoidMindControlLinkPersistent"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+    </CEffectSet>
+    <CEffectDamage id="MindControlStormAntiStructureDamage">
+        <EditorCategories value="Race:Synoid"/>
+        <Amount value="40"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="MindControlStormApplyBehavior">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <Behavior value="SynoidMindControlPermanentBehavior"/>
+        <ValidatorArray index="0" removed="1"/>
+    </CEffectApplyBehavior>
     <CEffectSwitch id="SynoidBloodletterPsionicPulseTargetSwitch">
         <EditorCategories value="Race:Synoid"/>
         <CaseArray Validator="IsStructure" Effect="SynoidBloodletterPsionicPulseDamageStructure"/>
@@ -32,6 +84,51 @@
         <CaseDefault value="PhalanxU"/>
         <EditorCategories value="Race:Synoid"/>
     </CEffectSwitch>
+    <CEffectSwitch id="SynoidMindControlLinkFinalSwitch">
+        <EditorCategories value="Race:Synoid"/>
+        <CaseArray Validator="SynoidMindControlLinkCombine" Effect="MindControlStormApplyBehavior"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="SynoidMindControlStormPersistent">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <FinalEffect value="SynoidMindControlStormSearchAreaStructure"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SynoidMindControlStormSearchArea"/>
+        <PeriodicPeriodArray value="9"/>
+        <RevealRadius value="2"/>
+        <AINotifyEffect value="Nuke"/>
+        <RevealFacing value="360"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="SynoidMindControlStormSearchArea">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <SearchFilters value="-;Player,Ally,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="MindControlStormApplyBehavior"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SynoidMindControlStormSearchAreaStructure">
+        <EditorCategories value="Race:Synoid"/>
+        <SearchFilters value="Structure;Player,Ally,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="12" Effect="MindControlStormAntiStructureDamage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="SynoidMindControlStormSet">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <EffectArray value="SynoidMindControlStormPersistent"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="SynoidMindControlTowerLinkedBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Behavior value="SynoidMindControlTowerLinked"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SynoidPsionicPulseStunCasterAB">
         <EditorCategories value="Race:Synoid"/>
         <WhichUnit Value="Caster"/>
@@ -508,8 +605,7 @@
     <CEffectDamage id="BloodletterBleedU">
         <EditorCategories value="Race:Synoid"/>
         <ResponseFlags index="Flee" value="1"/>
-        <AttributeBonus index="Armored" value="0.6"/>
-        <Amount value="1.4"/>
+        <Amount value="2"/>
         <Death value="Silentkill"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="BloodletterBleedAB">
@@ -1260,15 +1356,9 @@
         <ArmorReduction value="1"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Melee"/>
-        <Amount value="11"/>
+        <Amount value="22"/>
         <Death value="Eviscerate"/>
-        <AreaArray>
-            <Arc value="180"/>
-            <Radius value="1.25"/>
-            <Fraction value="1"/>
-            <Validator value="IsNotFriendly"/>
-        </AreaArray>
-        <AttributeBonus index="Armored" value="5"/>
+        <AttributeBonus index="Armored" value="10"/>
         <ExcludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="PsiIndoctrinatorAOEAbilAB">
@@ -1317,6 +1407,7 @@
     </CEffectEnumArea>
     <CEffectSet id="RetributionFieldSet2">
         <EditorCategories value="Race:Synoid"/>
+        <EffectArray value="SynoidEnthralledAttackSearch"/>
         <EffectArray value="Predator2"/>
     </CEffectSet>
     <CEffectDestroyPersistent id="SpybotsDestroy">

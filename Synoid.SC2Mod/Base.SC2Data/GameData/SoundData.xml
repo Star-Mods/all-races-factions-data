@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="SynoidEnthralledReady" parent="ZergAck">
+        <EditorCategories value="Race:Synoid"/>
+        <AssetArray File="Assets\Sounds\Ravager_Vox_Attack02.ogg" FacialGroup=""/>
+        <Pitch value="5.480000,18.510000"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="SynoidEnthralledHittingImpact" parent="Ambience_Object">
+        <AssetArray File="Assets\Sounds\SpacePlatform_MissileTurret_Mv_05b.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,0.000000"/>
+        <Volume value="-4.470000,-3.470000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="23.674911" Volume="-96.000000"/>
+    </CSound>
     <CSound id="PiercerAttackLaunch" parent="Combat">
         <EditorCategories value="Race:Synoid"/>
         <AssetArray File="Assets\Sounds\Terran\Raven\Raven_PointDefenseDroneAttackLaunch0.wav"/>
@@ -211,6 +224,19 @@
         <Volume value="-6.000000,-2.000000"/>
         <VolumeRolloffPoints Distance="8.000000"/>
         <VolumeRolloffPoints Distance="16.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="SynoidMindControlLinkConversionSound" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Reaper_CombatDrugs1a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_CombatDrugs1b.wav" Pitch="-2.700000,-2.700000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_CombatDrugs1c.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_CombatDrugs1d.wav" FacialGroup=""/>
+        <DupeDestroyCount value="6"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-2.000000,-1.000000"/>
+        <Volume value="-1.560000,-0.560000"/>
+        <VolumeRolloffPoints Distance="8.000000"/>
+        <VolumeRolloffPoints Distance="24.000000" Volume="-96.000000"/>
     </CSound>
     <CSound id="SynoidNukePack_StandWorkStart" parent="Spell">
         <EditorCategories value="Race:Synoid"/>

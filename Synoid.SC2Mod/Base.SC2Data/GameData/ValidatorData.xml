@@ -8,6 +8,23 @@
         <CombineArray value="ALLRACE2NotSynoidGriffon"/>
         <CombineArray value="TargetIsEnemy"/>
     </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="MindControlLinkCompareBehaviorCount">
+        <Value value="1"/>
+        <Behavior value="SynoidMindControlTowerLinked"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SynoidMindControlLinkCombine">
+        <CombineArray value="SynoidRangeCheckLE13"/>
+        <CombineArray value="MindControlLinkCompareBehaviorCount"/>
+        <CombineArray value="NotOracleStasisTrapped"/>
+        <CombineArray value="NotHidden"/>
+        <CombineArray value="CasterIsNotHidden"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="SynoidRangeCheckLE13">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="13"/>
+    </CValidatorLocationCompareRange>
     <CValidatorUnitType id="SynoidRancorSawBladeValidatorTargetisColossus">
         <OtherUnit Value="Target"/>
         <Value value="Colossus"/>

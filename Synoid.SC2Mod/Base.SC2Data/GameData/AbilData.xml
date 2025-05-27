@@ -12,6 +12,38 @@
         <Range value="10"/>
         <CastOutroTime value="0.5"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SynoidUltrasonicPulse"/>
+        <CursorEffect value="UltrasonicPulseSearchArea"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SynoidMindControlLink">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SynoidMindControlLinkSet"/>
+        <TargetFilters value="-;Self,Player,Ally,Neutral,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="13"/>
+        <Arc value="360"/>
+        <AutoCastRange value="13"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidMindControlLink"/>
+        <Cost>
+            <Vital index="Energy" value="150"/>
+            <Cooldown TimeUse="10"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SynoidMindControlStorm">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SynoidMindControlStormSet"/>
+        <Range value="1000"/>
+        <Arc value="360"/>
+        <CursorEffect value="SynoidMindControlStormSearchArea"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidMindControlStorm"/>
+        <Cost>
+            <Vital index="Energy" value="400"/>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeUse value="240"/>
+            </Charge>
+            <Cooldown TimeUse="240"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="SynoidSalvageRefundAssembly" parent="Refund">
         <Name value="Abil/Name/SynoidSalvageRefundAssembly"/>
@@ -105,6 +137,7 @@
             <Display index="Minerals" value="1"/>
             <Display index="Vespene" value="1"/>
             <Vital index="Life" value="960"/>
+            <Vital index="Energy" value="320"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="SynoidSalvage">
             <Flags index="ToSelection" value="1"/>
@@ -129,7 +162,7 @@
         <Name value="Abil/Name/SynoidSalvageRefundHangar"/>
         <Cost>
             <Resource index="Minerals" value="-150"/>
-            <Resource index="Vespene" value="-100"/>
+            <Resource index="Vespene" value="-150"/>
             <Display index="Minerals" value="1"/>
             <Display index="Vespene" value="1"/>
             <Vital index="Life" value="1000"/>
@@ -1119,6 +1152,9 @@
         </InfoArray>
         <InfoArray index="Build9" Unit="UmpireCraft">
             <Button DefaultButtonFace="UmpireCraft"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="SynoidMindControlTower" Time="100">
+            <Button DefaultButtonFace="SynoidMindControlTower"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilEffectTarget id="UmpireShield">

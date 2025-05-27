@@ -27,6 +27,148 @@
         <Host Subject=""/>
         <Model value="SynoidPsionicPulsePrecursor"/>
     </CActorModel>
+    <CActorModel id="AR2SynoidTriggeredExplosion" parent="ModelAnimationStyleOneShotNoOrphan">
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary SOp2DRotation"/>
+    </CActorModel>
+    <CActorSound id="SynoidEnthralledHittingImpactSound" parent="SoundOneShot">
+        <VisibleTo index="All" value="1"/>
+        <On Terms="Effect.Predator2.Start" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="SynoidEnthralledHittingImpact"/>
+    </CActorSound>
+    <CActorModel id="SynoidEnthralledHittingImpact" parent="ModelAnimationStyleOneShot">
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Visible"/>
+        <On index="0" Terms="Effect.Predator2.Start" Send="Create"/>
+        <On index="1" Terms="Effect.Predator2.Start" Send="TimerSet 0.000000,1.400000 {Enthralled Hitting Impact}"/>
+        <On index="2" Terms="TimerExpired.SynoidEnthralledHittingImpact" Send="Destroy"/>
+        <On Terms="Effect.Predator2.Start" Send="SetFacing 330.000000"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorSound id="SynoidMindControlLinkPeriodicWarning" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Dimmed"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidMindControlLinkLaunch.Start" Send="Create"/>
+        <On Terms="Effect.SynoidMindControlLinkLaunch.Stop" Send="AnimBracketStop BSD"/>
+        <Sound value="SlaynElementalGrabTentacleAttackEndRelease"/>
+    </CActorSound>
+    <CActorRange id="SynoidMindControlLinkRange" parent="RangeAbil">
+        <On index="1" Terms="Abil.SynoidMindControlLink.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.SynoidMindControlLink.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.SynoidMindControlLink.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.SynoidMindControlLink.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="SynoidMindControlLink"/>
+    </CActorRange>
+    <CActorRange id="SynoidMindControlLinkRangeVisibletoall" parent="RangeAbil">
+        <VisibleTo index="All" value="1"/>
+        <On index="1" Terms="Effect.SynoidMindControlLinkPersistent.Start" Send="Create"/>
+        <On index="2" Terms="Effect.SynoidMindControlLinkPersistent.Stop" Send="Destroy"/>
+        <On index="3" removed="1"/>
+        <On index="4" removed="1"/>
+        <Abil Link="SynoidMindControlLink"/>
+    </CActorRange>
+    <CActorAction id="SynoidMindControlLinkSop" parent="GenericAttack" effectAttack="" effectImpact="SynoidMindControlTowerLinkedBehavior" effectLaunch="SynoidMindControlLinkLaunch">
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <Missile value="SynoidMindControlLinkMissile"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorMissile id="SynoidMindControlLinkMissile" parent="GenericAttackMissile" unitName="SynoidMindControlLinkMissile"/>
+    <CActorSiteOpLocalOffset id="SOpSynoidMindControlTower">
+        <LocalOffset value="-1.000000,-1.000000,-5.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorModel id="SynoidMindControlLinkConversionImpact" parent="ModelAnimationStyleOneShot">
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SynoidMindControlLinkFinalSwitch.Start" Send="Create"/>
+        <Model value="MindControlLinkConversionFirstImpact"/>
+    </CActorModel>
+    <CActorSound id="MindControlLinkConversionSound" parent="SoundOneShot">
+        <VisibleTo index="All" value="1"/>
+        <On Terms="Effect.SynoidMindControlLinkFinalSwitch.Start" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="SynoidMindControlLinkConversionSound"/>
+    </CActorSound>
+    <CActorModel id="SynoidMindControlTowerBase" parent="ModelAddition">
+        <On Terms="UnitBirth.SynoidMindControlTower" Send="Create"/>
+        <On Terms="UnitDeath.SynoidMindControlTower" Send="Destroy"/>
+        <Host Subject="SynoidMindControlTower"/>
+        <HostSiteOps Ops="SOpAttachTarget SOpSynoidMindControlTower"/>
+    </CActorModel>
+    <CActorUnit id="SynoidMindControlTower" parent="TerranBuildingEx" unitName="SynoidMindControlTower">
+        <Aliases value="_UnitMedium"/>
+        <DeathArray index="Normal" ModelLink="SensorTowerDeath" SoundLink="SensorTower_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="SensorTower_Explode"/>
+        <EditorModel value="SynoidMindControlTower"/>
+        <PlacementModel value="SynoidMindControlTower"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PlacementActorModel value="SensorTowerPlacement"/>
+        <PortraitModel value="SensorTowerPortrait"/>
+        <BarOffset value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-swann-hellarmor.dds"/>
+        <SoundArray index="Ready" value="SensorTower_Ready"/>
+        <SoundArray index="What" value="SensorTower_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+        </Wireframe>
+        <HostSiteOps Ops="SOpMoveUpBy5"/>
+        <BuildModel value="SynoidMindControlTowerBuild"/>
+    </CActorUnit>
+    <CActorSound id="SynoidMindControlStormExplosionSound" parent="SoundOneShot">
+        <VisibleTo index="All" value="1"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="SlaynElementalGrabTentacleAttackEndRelease"/>
+    </CActorSound>
+    <CActorModel id="SynoidMindControlStormImpactExplosion" parent="ModelAnimationStyleOneShot">
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="MindControlStormWarningPersistent" parent="ModelAddition">
+        <Aliases index="0" value="MindControlStormWarningPersistent"/>
+        <VisibleTo index="All" value="1"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="CastShadows" value="0"/>
+        <Inherits index="CloakEffect" value="0"/>
+        <Inherits index="CreepEngulfment" value="0"/>
+        <Inherits index="Decal" value="0"/>
+        <Inherits index="ModelMaterials" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <Inherits index="TeamColor" value="0"/>
+        <Inherits index="TimeScale" value="0"/>
+        <Inherits index="TintColor" value="0"/>
+        <Inherits index="Visibility" value="0"/>
+        <Inherits index="WarpGroup" value="0"/>
+        <AcceptedTransfers index="Position" value="0"/>
+        <AcceptedTransfers index="Rotation" value="0"/>
+        <FogVisibility value="Visible"/>
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On index="1" Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On index="2" Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Start" Send="Create"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="AnimBracketStop BSD"/>
+        <AddToProximitySystem value="0"/>
+        <Host Subject=""/>
+        <Scale value="1.300000"/>
+    </CActorModel>
     <CActorModel id="ALLRACE2PsionicPulseAreaIndicatorWarningActor2" parent="ModelAddition">
         <Aliases index="0" value="ALLRACE2PsionicPulseAreaIndicatorWarningActor1"/>
         <Inherits index="BaseModelScale" value="0"/>
@@ -62,6 +204,78 @@
         <Model value="GhostEMPAttackImpactEffect"/>
         <Scale value="0.300000,0.300000,2.000000"/>
     </CActorModel>
+    <CActorSound id="MindControlStormLaunchSound" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Dimmed"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Start" Send="Create"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="Destroy"/>
+        <Sound value="SlaynElementalGrabTentacleAttack_CageLoop"/>
+    </CActorSound>
+    <CActorModel id="MindControlStormWarningImpactArea" parent="ModelAddition">
+        <Aliases index="0" value="MindControlStormWarningPersistent"/>
+        <VisibleTo index="All" value="1"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="CastShadows" value="0"/>
+        <Inherits index="CloakEffect" value="0"/>
+        <Inherits index="CreepEngulfment" value="0"/>
+        <Inherits index="Decal" value="0"/>
+        <Inherits index="ModelMaterials" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <Inherits index="TeamColor" value="0"/>
+        <Inherits index="TimeScale" value="0"/>
+        <Inherits index="TintColor" value="0"/>
+        <Inherits index="Visibility" value="0"/>
+        <Inherits index="WarpGroup" value="0"/>
+        <AcceptedTransfers index="Position" value="0"/>
+        <AcceptedTransfers index="Rotation" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On index="1" Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On index="2" Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Start" Send="Create"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="AnimBracketStop BSD"/>
+        <AddToProximitySystem value="0"/>
+        <Host Subject=""/>
+        <Model value="MindControlStormImpactAreaIndicator"/>
+    </CActorModel>
+    <CActorRange id="SynoidRancorSawbladeRange" parent="RangeAbil">
+        <On index="1" Terms="Abil.SynoidSawbladeThrow.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.SynoidSawbladeThrow.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.SynoidSawbladeThrow.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.SynoidSawbladeThrow.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="SynoidSawbladeThrow"/>
+    </CActorRange>
+    <CActorRange id="SynoidPsionicPulseRange" parent="RangeAbil">
+        <On index="1" Terms="Abil.BloodLetterPsionicPulse.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.BloodLetterPsionicPulse.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.BloodLetterPsionicPulse.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.BloodLetterPsionicPulse.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="BloodLetterPsionicPulse"/>
+    </CActorRange>
+    <CActorRange id="SynoidHoloZerglingProjectionRange" parent="RangeAbil">
+        <On index="1" Terms="Abil.HoloZergling.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.HoloZergling.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.HoloZergling.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.HoloZergling.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="HoloZergling"/>
+    </CActorRange>
+    <CActorSplat id="UltrasonicPulseCursorSplat" parent="ProtossCursorSplat" abil="PsiStorm">
+        <On index="0" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.Cursor" Send="Create"/>
+        <Model value="TerranAOECursorSplat"/>
+    </CActorSplat>
+    <CActorRange id="SynoidBloodletterUltrasonicPulseRange" parent="RangeAbil" abil="AnathemaLightningStorm">
+        <FogVisibility value="Visible"/>
+        <On index="1" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.ButtonHoverOff" Send="Destroy"/>
+        <Abil Link="ALLRACE2SynoidUltrasonicPulse"/>
+    </CActorRange>
     <CActorSound id="SynoidAnathemaHomingMissileImpactSound2" parent="SoundOneShot">
         <Flags index="VisionTestCenterOnly" value="1"/>
         <FogVisibility value="Dimmed"/>
@@ -1281,6 +1495,7 @@
         <On Terms="UnitBirth.MagMineSynoid.Normal" Send="Create SoundEmitter CorsairMP_AttackImpact"/>
         <HostSiteOps Ops="SOpMoveByDot25"/>
         <Scale value="0.850000"/>
+        <Model value="MindControlLinkConversionFirstImpact"/>
     </CActorModel>
     <CActorUnit id="Cremator" parent="GenericUnitBase" unitName="Cremator">
         <Aliases value="_UnitSmall"/>
@@ -1400,6 +1615,9 @@
     <CActorSound id="SatCom_AirRaid" parent="SoundOneShot">
         <EditorCategories value=""/>
     </CActorSound>
+    <CActorSplat id="MindControlStormCursorSplat" parent="ProtossCursorSplat" abil="SynoidMindControlStorm">
+        <Model value="SynoidMindControlStormPrecusor"/>
+    </CActorSplat>
     <CActorUnit id="Varangian" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Varangian">
         <On Terms="ActorCreation" Send="AnimGroupApply B"/>
         <DeathArray index="Normal" ModelLink="UmojanLabWarbotDeath" SoundLink="UmojanLab_SentryBot_DeathExplosion_Init"/>
@@ -2415,8 +2633,8 @@
         <NameOffset value="30"/>
         <ShieldArmorIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel0.dds"/>
         <SnapshotActor value="Snapshot"/>
-        <SoundArray index="Birth" value="Ravasaur_Birth"/>
-        <SoundArray index="Ready" value="Ravasaur_Ready"/>
+        <SoundArray index="Birth" value="SynoidEnthralledReady"/>
+        <SoundArray index="Ready" value="SynoidEnthralledReady"/>
         <SoundArray index="Help" value="Ravasaur_Help"/>
         <SoundArray index="What" value="Ravasaur_What"/>
         <SoundArray index="Yes" value="Ravasaur_Yes"/>
@@ -2597,8 +2815,8 @@
         <CreepRateGrow value=""/>
         <CreepRateShrink value=""/>
         <BuildModel value=""/>
-        <DeathArray index="Normal" ModelLink="PsiIndoctrinatorDeath" SoundLink="Barracks_Explode"/>
-        <DeathActorModel value="UnitDeathModelBug"/>
+        <DeathArray index="Normal" ModelLink="AR2SynoidTriggeredExplosion" SoundLink="Barracks_Explode"/>
+        <DeathActorModel value="AR2SynoidTriggeredExplosion"/>
         <PlacementModel value="PsiIndoctrinator2"/>
         <PlacementActorModel value="BiosynthPlacement"/>
         <PlaceholderActorModel value="BiosynthPlaceholder"/>
@@ -3888,8 +4106,24 @@
         <CreepRateGrow value=""/>
         <CreepRateShrink value=""/>
         <BuildModel value="HitTestSphere"/>
-        <DeathArray index="Normal" ModelLink="SynoidScienceFacilityDeath" VoiceLink=""/>
-        <DeathActorModel value="UnitDeathModelBug"/>
+        <DeathArray index="Normal" ActorModel="AR2SynoidTriggeredExplosion" ModelLink="AR2SynoidTriggeredExplosion" VoiceLink=""/>
+        <DeathArray index="Remove" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Blast" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Disintegrate" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Eat" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Electrocute" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Eviscerate" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Fire" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Freeze" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Impact" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Morph" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Reincarnation" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Silentkill" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Squish" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="Timeout" ActorModel="AR2SynoidTriggeredExplosion"/>
+        <DeathArray index="UnderConstruction" ActorModel="AR2SynoidTriggeredExplosion" AnimProps=""/>
+        <DeathArray index="Salvage" ActorModel="AR2SynoidTriggeredExplosion" AnimProps="Death" ModelLink="AR2SynoidTriggeredExplosion"/>
+        <DeathActorModel value="AR2SynoidTriggeredExplosion"/>
         <DeathActorModelLow value="UnitDeathModelBug"/>
         <PlacementModel value="BioSynth"/>
         <PlacementActorModel value="BiosynthPlacement"/>

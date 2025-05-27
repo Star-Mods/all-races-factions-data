@@ -38,6 +38,18 @@
         <TintRacially value="1"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
+    <CButton id="SynoidMindControlLink">
+        <Icon value="Assets\Textures\btn-ability-zeratul-topbar-stasisbeam.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
+    <CButton id="SynoidMindControlStorm">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-fenix-disruptorpurificationecho.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
+    <CButton id="SynoidMindControlTower">
+        <Icon value="Assets\Textures\btn-building-terran-sensortower-covertops.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
     <CButton id="SynoidSalvage">
         <Icon value="Assets\Textures\btn-ability-terran-salvage.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-salvage.dds"/>

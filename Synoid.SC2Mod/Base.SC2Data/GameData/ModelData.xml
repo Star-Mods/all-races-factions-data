@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AR2SynoidTriggeredExplosion" parent="CommandCenterMorphDeathBase">
+        <Model value="Assets\Buildings\Terran\TerranLargeBuildingDeathEx1\TerranLargeBuildingDeathEx1.m3"/>
+        <LowQualityModel value="TerranLargeUnitDeathLow"/>
+    </CModel>
+    <CModel id="SynoidEnthralledHittingImpact" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="2.000000,11.000000,2.000000"/>
+        <ScaleMin value="2.000000,11.000000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidMindControlLinkConversionImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Other\HighYieldActiveCrystals\HighYieldActiveCrystals.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="SynoidMindControlLinkMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\Void_Kerrigan_QuantumRay_Hand_Charge\Void_Kerrigan_QuantumRay_Hand_Charge.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.100000,1.000000,0.100000"/>
+        <ScaleMin value="0.100000,1.000000,0.100000"/>
+    </CModel>
+    <CModel id="MindControlStormWarningPersistent" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Fenix_Whirlwind\Fenix_Whirlwind.m3"/>
+        <AnimSpeed value="0.100000"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Lighting value=""/>
+        <Occlusion value="Hide"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
+    <CModel id="MindControlStormImpactAreaIndicator" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Disruptor_PhaseMode_Cursor\Disruptor_PhaseMode_Cursor.m3"/>
+        <AnimSpeed value="0.250000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <Radius value="2.000000"/>
+        <RadiusLoose value="2.000000"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+    </CModel>
+    <CModel id="SynoidMindControlTowerBuild" parent="BarracksBuildBase">
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.700000,0.700000,2.000000"/>
+        <ScaleMin value="0.700000,0.700000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidMindControlTower" parent="Unit">
+        <Model value="Assets\Buildings\Terran\SpaceOrdnanceTower\SpaceOrdnanceTower.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.500000,0.500000,1.000000"/>
+        <ScaleMin value="0.500000,0.500000,1.000000"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="SynoidMindControlStormPrecusor" parent="PersistentSpellFX" Race="Mind Control Storm">
+        <Model value="Assets\Effects\Zerg\DecalTagSplat_Zerg\DecalTagSplat_Zerg.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="2.000000,2.000000,1.000000"/>
+        <ScaleMin value="2.000000,2.000000,1.000000"/>
+    </CModel>
+    <CModel id="SynoidMindControlTowerBase" parent="SensorTowerBase" Prefix="Units\" Race="Neutral">
+        <Model value="Assets\Buildings\Terran\Korhal_ArtifactContainmentField\Korhal_ArtifactContainmentField.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <Radius value="0.500000"/>
+        <ScaleMax value="1.200000,1.200000,1.700000"/>
+        <ScaleMin value="1.200000,1.200000,1.700000"/>
+        <SelectionRadius value="0.500000"/>
+        <ShadowRadius value="0.500000"/>
+        <SquibTypeDefault value="None"/>
+    </CModel>
     <CModel id="SynoidPsionicPulseExplosionVisual" parent="OneShotSpellFX">
         <Model value="Assets\Models\TG_Beam_Blue_B.m3"/>
         <EditorCategories value="Race:Synoid"/>
@@ -15,6 +86,13 @@
         <Model value="Assets\Effects\Protoss\Disruptor_PurificationNova\Disruptor_PurificationNova.m3"/>
         <ScaleMax value="0.500000,0.500000,2.000000"/>
         <ScaleMin value="0.500000,0.500000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidMindControlStormImpactExplosion" parent="TempestBase" Prefix="SynoidMindControlStormImpactExplosion">
+        <Model value="Assets\Effects\Protoss\Disruptor_PurificationNova\Disruptor_PurificationNova.m3"/>
+        <Lighting value=""/>
+        <ScaleMax value="0.600000,0.600000,6.000000"/>
+        <ScaleMin value="0.600000,0.600000,6.000000"/>
+        <AnimSpeed value="0.700000"/>
     </CModel>
     <CModel id="SynoidUltrasonicPulseStun" parent="TempestBase">
         <Model value="Assets\Effects\Neutral\Stun_Void\Stun_Void.m3"/>
@@ -429,9 +507,11 @@
         <Occlusion value="Show"/>
         <EditorCategories value="Race:Synoid"/>
     </CModel>
-    <CModel id="MagmineBirthImpact" parent="OneShotSpellFX">
+    <CModel id="MindControlLinkConversionFirstImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\UltraSonicMissileImpact\UltraSonicMissileImpact.m3"/>
         <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="1.000000,1.000000,2.000000"/>
+        <ScaleMin value="1.000000,1.000000,2.000000"/>
     </CModel>
     <CModel id="ChopperSharpshooterDetonateImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\Hybrid_ProtossAdvanced_Experimented_MoebiusSeeker_Impact\Hybrid_ProtossAdvanced_Experimented_MoebiusSeeker_Impact.m3"/>
@@ -498,8 +578,8 @@
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraLow07"/>
         <Radius value="1.000000"/>
-        <ScaleMax value="0.600000,0.600000,0.600000"/>
-        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <ScaleMax value="0.450000,1.100000,0.450000"/>
+        <ScaleMin value="0.450000,1.100000,0.450000"/>
         <SelectionOffset value="0.000000,0.000000,-0.100000"/>
         <SquibTypeDefault value="Metal"/>
         <UnitGlossaryCamera value="Star2CameraLow07"/>
@@ -510,8 +590,8 @@
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraLow07"/>
         <Radius value="1.000000"/>
-        <ScaleMax value="0.600000,0.600000,0.600000"/>
-        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <ScaleMax value="0.450000,1.100000,0.450000"/>
+        <ScaleMin value="0.450000,1.100000,0.450000"/>
         <SelectionOffset value="0.000000,0.000000,-0.100000"/>
         <SquibTypeDefault value="Metal"/>
         <UnitGlossaryCamera value="Star2CameraLow07"/>
@@ -523,8 +603,8 @@
         <PlanetPanelCamera value="Star2CameraLow07"/>
         <Priority value="32"/>
         <Radius value="1.000000"/>
-        <ScaleMax value="0.600000,0.600000,0.600000"/>
-        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <ScaleMax value="0.450000,1.100000,0.450000"/>
+        <ScaleMin value="0.450000,1.100000,0.450000"/>
         <SelectionOffset value="0.000000,0.000000,-0.100000"/>
         <SquibTypeDefault value="Metal"/>
         <UnitGlossaryCamera value="Star2CameraLow07"/>

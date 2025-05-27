@@ -268,7 +268,7 @@
         <Race value="Synd"/>
         <EffectArray index="0" Reference="Effect,AnathemaClusterWeaponDamage,Amount" Value="1"/>
         <EffectArray index="1" Reference="Effect,IronFletcher,Amount" Value="1"/>
-        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="3"/>
+        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="1"/>
         <EffectArray index="3" Reference="Effect,MengskWraithADamage,Amount" Value="1"/>
         <EffectArray index="4" Reference="Weapon,IronFletcherWep,Level" Value="1"/>
         <EffectArray index="5" Reference="Weapon,SynoidCapitalShip,Level" Value="1"/>
@@ -324,7 +324,7 @@
         <Race value="Synd"/>
         <EffectArray index="0" Reference="Effect,AnathemaClusterWeaponDamage,Amount" Value="1"/>
         <EffectArray index="1" Reference="Effect,IronFletcher,Amount" Value="1"/>
-        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="3"/>
+        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="1"/>
         <EffectArray index="3" Reference="Effect,MengskWraithADamage,Amount" Value="1"/>
         <EffectArray index="4" Reference="Weapon,IronFletcherWep,Level" Value="1"/>
         <EffectArray index="5" Reference="Weapon,SynoidCapitalShip,Level" Value="1"/>
@@ -378,7 +378,7 @@
         <Race value="Synd"/>
         <EffectArray index="0" Reference="Effect,AnathemaClusterWeaponDamage,Amount" Value="1"/>
         <EffectArray index="1" Reference="Effect,IronFletcher,Amount" Value="1"/>
-        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="3"/>
+        <EffectArray index="2" Reference="Effect,Predator2,Amount" Value="1"/>
         <EffectArray index="3" Reference="Effect,MengskWraithADamage,Amount" Value="1"/>
         <EffectArray index="4" Reference="Weapon,IronFletcherWep,Level" Value="1"/>
         <EffectArray index="5" Reference="Weapon,SynoidCapitalShip,Level" Value="1"/>
