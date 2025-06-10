@@ -16,6 +16,18 @@
         <HotkeyAlias value="Cancel"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="SynoidBuoyChargePower">
+        <Icon value="Assets\Textures\btn_Synoid_Buoy_Charged.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
+    <CButton id="SynoidIronFletcherChargePower">
+        <Icon value="Assets\Textures\btn_Synoid_Iron_Fletcher_Charged.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
+    <CButton id="SynoidCenserWithdrawBrainwashLink">
+        <Icon value="Assets\Textures\btn_Synoid_Brainwash_Link_Cancel.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
     <CButton id="SynoidGriffinActivateDefenseFieldPassive">
         <TooltipFlags index="ShowHotkey" value="0"/>
         <TooltipFlags index="ShowLevel" value="0"/>
@@ -39,15 +51,19 @@
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="SynoidMindControlLink">
-        <Icon value="Assets\Textures\btn-ability-zeratul-topbar-stasisbeam.dds"/>
+        <Icon value="Assets\Textures\btn_Synoid_Mind_Control_Link.dds"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CButton>
+    <CButton id="SynoidBrainWashLink">
+        <Icon value="Assets\Textures\btn_Synoid_Brainwash_Link.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="SynoidMindControlStorm">
-        <Icon value="Assets\Textures\btn-upgrade-protoss-fenix-disruptorpurificationecho.dds"/>
+        <Icon value="Assets\Textures\btn_Synoid_Mind_Control_Storm.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="SynoidMindControlTower">
-        <Icon value="Assets\Textures\btn-building-terran-sensortower-covertops.dds"/>
+        <Icon value="Assets\Textures\btn_Synoid_Mind_Control_Tower.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="SynoidSalvage">
@@ -160,7 +176,7 @@
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="MagMine">
-        <Icon value="Assets\Textures\btn-doodad-magmine.dds"/>
+        <Icon value="Assets\Textures\btn_ability_Synoid_Mag_Mine.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="Chopper">
@@ -682,7 +698,7 @@
     </CButton>
     <CButton id="ResearchGruntHealth">
         <Icon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
-        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionarmorlevel0.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
         <EditorCategories value="Race:Synoid"/>
     </CButton>
     <CButton id="WalkerBeacon">

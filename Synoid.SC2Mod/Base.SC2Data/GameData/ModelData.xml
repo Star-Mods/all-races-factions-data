@@ -1,8 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AR2SatcomTowerSecondSpybotWarning" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\ArchonSummoningCircle\ArchonSummoningCircle.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Occlusion value="Hide"/>
+        <RadiusLoose value="0.600000"/>
+        <ScaleMax value="0.600000,0.600000,1.900000"/>
+        <ScaleMin value="0.600000,0.600000,1.900000"/>
+    </CModel>
     <CModel id="AR2SynoidTriggeredExplosion" parent="CommandCenterMorphDeathBase">
         <Model value="Assets\Buildings\Terran\TerranLargeBuildingDeathEx1\TerranLargeBuildingDeathEx1.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
+    </CModel>
+    <CModel id="AR2SatcomTowerSpybotWarning" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Scryer\Scryer.m3"/>
+        <AnimSpeed value="0.400000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <RadiusLoose value="0.600000"/>
+        <ScaleMax value="0.200000,0.200000,1.900000"/>
+        <ScaleMin value="0.200000,0.200000,1.900000"/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.900000"/>
+    </CModel>
+    <CModel id="AR2SatcomTowerSpybotSignalBehavior" parent="PersistentSpellFX">
+        <Model value="Assets\Units\MoebiusSeeker_MP.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="1.300000,1.300000,2.000000"/>
+        <ScaleMin value="1.300000,1.300000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidIronFletcherCharged" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_Missile\Dragoon_Purifier_Coop_Missile.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="0.500000,4.000000,0.500000"/>
+        <ScaleMin value="0.500000,4.000000,0.500000"/>
+    </CModel>
+    <CModel id="SynoidIronFletcherPowerCharging" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_Impact_Charged\Dragoon_Purifier_Coop_AirBomb_Impact_Charged.m3"/>
+        <AnimSpeed value="0.030000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.800000,1.800000,1.800000"/>
+        <ScaleMin value="1.800000,1.800000,1.800000"/>
+    </CModel>
+    <CModel id="SynoidChargedIronFletcherBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Sentry_Purifier_ChronoBeam\Sentry_Purifier_ChronoBeam.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.200000,1.000000,0.200000"/>
+        <ScaleMin value="0.200000,1.000000,0.200000"/>
+    </CModel>
+    <CModel id="SynoidBloodletterAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Sentry_Purifier_ChronoBeam\Sentry_Purifier_ChronoBeam.m3"/>
+        <LowQualityModel value="SentryAttackBeamLow"/>
+        <AnimSpeed value="20.000000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="0.030000,0.200000,0.200000"/>
+        <ScaleMin value="0.030000,0.200000,0.200000"/>
+    </CModel>
+    <CModel id="SynoidAnathemaEMPPSIScrambler" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\Immortal_Collection_Purifier_GravimetricOverload\Immortal_Collection_Purifier_GravimetricOverload.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="SynoidCapitalShipDeath" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\Mutator_MissileMadness_Explosion\Mutator_MissileMadness_Explosion.m3"/>
+        <AnimSpeed value="0.700000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
+    </CModel>
+    <CModel id="SynoidWardenAirshipSearchlightModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Adept_Missile_Upgrade\Adept_Missile_Upgrade.m3"/>
+        <AnimSpeed value="0.400000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.900000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.000000,8.000000,2.000000"/>
+        <ScaleMin value="1.000000,8.000000,2.000000"/>
+    </CModel>
+    <CModel id="SynoidBrainWashLinkConversionFirstImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\AdeptSoulMissileImpact\AdeptSoulMissileImpact.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="2.500000,2.500000,2.000000"/>
+        <ScaleMin value="2.500000,2.500000,2.000000"/>
+    </CModel>
+    <CModel id="SynodBuoyPowerCharging3rdsupport" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Fenix_Whirlwind\Fenix_Whirlwind.m3"/>
+        <AnimSpeed value="0.050000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.000000,1.000000,0.500000"/>
+        <ScaleMin value="1.000000,1.000000,0.500000"/>
+    </CModel>
+    <CModel id="SynoidBrainwashLinkConversionSecondImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\StalkerMissileImpact\StalkerMissileImpact.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="SynoidBrainwashLinkedSecondImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\Artanis_BasicAirAttack_Missile\Artanis_BasicAirAttack_Missile.m3"/>
+        <AnimSpeed value="0.090000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="2.400000,2.400000,2.400000"/>
+        <ScaleMin value="2.400000,2.400000,2.400000"/>
+    </CModel>
+    <CModel id="SynoidBrainwashLinkMissileStageTwo" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Adept_Missile\Adept_Missile.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.200000,2.500000,0.200000"/>
+        <ScaleMin value="0.200000,2.500000,0.200000"/>
+    </CModel>
+    <CModel id="SynoidBuoyPowerCharging" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_Missile\Dragoon_Purifier_Coop_Missile.m3"/>
+        <AnimSpeed value="0.003000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.800000,1.800000,1.800000"/>
+        <ScaleMin value="1.800000,1.800000,1.800000"/>
+    </CModel>
+    <CModel id="SynoidBuoyCharged" parent="WidowMineBase">
+        <Model value="Assets\Units\Sabotage_Drone_MP.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CModel>
+    <CModel id="SynoidBuoyChargingDeath" parent="WidowMineDeathBase">
+        <Model value="Assets\Units\Terran\ShredderEx3Death\ShredderEx3Death.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CModel>
+    <CModel id="SynoidBuoyChargedDeath" parent="WidowMineDeathBase">
+        <Model value="Assets\Units\Terran\ShredderEx3Death\ShredderEx3Death.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CModel>
+    <CModel id="SynoidBuoyPowerCharged" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_Missile\Dragoon_Purifier_Coop_AirBomb_Missile.m3"/>
+        <AnimSpeed value="0.400000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <Occlusion value="Hide"/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="2.600000,2.600000,2.600000"/>
+        <ScaleMin value="2.600000,2.600000,2.600000"/>
+    </CModel>
+    <CModel id="SynodBuoyPowerCharging2ndsupport" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Arbiter_Purifier_Coop_Missile\Arbiter_Purifier_Coop_Missile.m3"/>
+        <AnimSpeed value="0.050000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Lighting value=""/>
+        <OccludingOpacity value="0.500000"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
     <CModel id="SynoidEnthralledHittingImpact" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
@@ -25,7 +186,7 @@
     <CModel id="MindControlStormWarningPersistent" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\Fenix_Whirlwind\Fenix_Whirlwind.m3"/>
         <AnimSpeed value="0.100000"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:Synoid"/>
         <Lighting value=""/>
         <Occlusion value="Hide"/>
         <RadiusLoose value="1.000000"/>
@@ -41,6 +202,12 @@
         <RadiusLoose value="2.000000"/>
         <ScaleMax value="1.100000,1.100000,1.100000"/>
         <ScaleMin value="1.100000,1.100000,1.100000"/>
+    </CModel>
+    <CModel id="SynoidBrainwashLinkMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Adept_Missile\Adept_Missile.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.100000,1.000000,0.100000"/>
+        <ScaleMin value="0.100000,1.000000,0.100000"/>
     </CModel>
     <CModel id="SynoidMindControlTowerBuild" parent="BarracksBuildBase">
         <EditorCategories value="Race:Synoid"/>
@@ -664,6 +831,14 @@
         <ScaleMax value="1.450000,1.450000,1.450000"/>
         <ScaleMin value="1.450000,1.450000,1.450000"/>
     </CModel>
+    <CModel id="SynoidInterferenceMatrixBeam" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\WarpRayMissile\WarpRayMissile.m3"/>
+        <LowQualityModel value="VoidRayAttackBeamLow"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="0.500000,1.000000,1.000000"/>
+        <ScaleMin value="0.500000,1.000000,1.000000"/>
+    </CModel>
     <CModel id="WarDroneImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\ArcadeWraithMissile\ArcadeWraithMissile.m3"/>
         <EditorCategories value="Race:Synoid"/>
@@ -676,6 +851,10 @@
     </CModel>
     <CModel id="WarningCTEModel2" parent="PersistentSpellFX">
         <Model value="Assets\UI\Feedback\AIBeaconClaimPing\AIBeaconClaimPing.m3"/>
+        <EditorCategories value="Race:Synoid"/>
+    </CModel>
+    <CModel id="SynoidBuoyCharging" parent="WidowMineBase">
+        <Model value="Assets\Units\Sabotage_Drone_MP.m3"/>
         <EditorCategories value="Race:Synoid"/>
     </CModel>
     <CModel id="ZerglingHoloReleaseWeapon" parent="MissileFX">
@@ -1545,61 +1724,15 @@
         <UnitGlossaryCamera value="Star2CameraHigh07"/>
     </CModel>
     <CModel id="RancorSynoidDeath" parent="UnitDeath" Race="Terran">
-        <Model value="Assets\Units\Zerg\InfestorSpawnMarineDeath\InfestorSpawnMarineDeath.m3"/>
+        <Model value="Assets\Effects\Terran\TerranLargeUnitDeath\TerranLargeUnitDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
         <EditorCategories value="Race:Synoid"/>
-        <Events>
-            <Variation value="0"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="0.700000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="TerranPreExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="0.270000"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="TerranPreExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="0.530000"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="Terran_ExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="1.100000"/>
-            <Payload value="Terran_ExplosionSmall"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="1.300000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
-        <Events>
-            <Variation value="2"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="0.600000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
         <Radius value="0.900000"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <ScaleMax value="0.500000,0.500000,0.800000"/>
+        <ScaleMin value="0.500000,0.500000,0.800000"/>
         <SelectionRadius value="1.400000"/>
         <ShadowRadius value="2.000000"/>
-        <VariationCount value="3"/>
+        <Lighting value=""/>
     </CModel>
     <CModel id="SynoidWarbot2" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\ARES\ARES.m3"/>

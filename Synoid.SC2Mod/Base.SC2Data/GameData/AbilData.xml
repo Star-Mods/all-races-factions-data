@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CAbilEffectTarget id="ALLRACE2SynoidUltrasonicPulse">
-        <EditorCategories value="Race:Human,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
         <Effect index="0" value="UltrasonicPulsePersistent"/>
         <Flags index="AllowMovement" value="1"/>
         <Cost>
@@ -11,13 +11,87 @@
         </Cost>
         <Range value="10"/>
         <CastOutroTime value="0.5"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidUltrasonicPulse"/>
         <CursorEffect value="UltrasonicPulseSearchArea"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidUltrasonicPulse"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="SynoidBuoyChargePower">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidBuoyChargePower"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="GuardianAspect"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="SynoidBuoyCharging" RandomDelayMin="0.001" RandomDelayMax="0.001"/>
+        <InfoArray Score="1" Unit="SynoidBuoyCharged">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="140"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="140"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="140"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <AbilClassEnableArray index="CAbilMove" value="1"/>
+        <AbilClassEnableArray index="CAbilStop" value="1"/>
+        <Range value="7.5"/>
+    </CAbilMorph>
+    <CAbilMorph id="SynoidIronFletcherChargePower">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidIronFletcherChargePower"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="GuardianAspect"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray>
+            <Unit value="SynoidChargingIronFletcher"/>
+            <CollideRange value="3"/>
+            <RandomDelayMin value="0.001"/>
+            <RandomDelayMax value="0.001"/>
+        </InfoArray>
+        <InfoArray Score="1" Unit="SynoidChargedIronFletcher">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="9"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="9"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="9"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="MorphComplete_Zerg"/>
+        <AbilClassEnableArray index="CAbilMove" value="1"/>
+        <AbilClassEnableArray index="CAbilStop" value="1"/>
+    </CAbilMorph>
+    <CAbilEffectInstant id="SynoidCenserWithdrawBrainwashLink">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovingSuppressed" value="1"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidCenserWithdrawBrainwashLink"/>
+        <SharedFlags index="Disabled" value="1"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="SynoidMindControlLink">
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
         <Effect index="0" value="SynoidMindControlLinkSet"/>
-        <TargetFilters value="-;Self,Player,Ally,Neutral,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="-;Self,Player,Ally,Neutral,Heroic,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="13"/>
         <Arc value="360"/>
         <AutoCastRange value="13"/>
@@ -26,6 +100,20 @@
             <Vital index="Energy" value="150"/>
             <Cooldown TimeUse="10"/>
         </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SynoidCensorBrainWashLink">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SynoidBrainWashLinkSet"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+            <Cooldown TimeUse="10"/>
+        </Cost>
+        <TargetFilters value="-;Self,Player,Ally,Neutral,Heroic,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <AutoCastRange value="6"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidBrainWashLink"/>
+        <Flags index="AllowMovement" value="1"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SynoidMindControlStorm">
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
@@ -100,6 +188,20 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Structures"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SynoidSalvageRefundMindControlTower" parent="Refund">
+        <Name value="Abil/Name/SynoidSalvageRefundMindControlTower"/>
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Structures"/>
+        <Cost>
+            <Resource index="Minerals" value="-300"/>
+            <Display index="Minerals" value="1"/>
+            <Display index="Vespene" value="1"/>
+            <Vital index="Life" value="720"/>
+            <Vital index="Energy" value="240"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SynoidSalvage">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="SynoidSalvageRefundSateliteUplink" parent="Refund">
         <Name value="Abil/Name/SynoidSalvageRefundSateliteUplink"/>
@@ -265,7 +367,7 @@
     </CAbilBehavior>
     <CAbilBehavior id="AnathemaWeaponSwap">
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
-        <CmdButtonArray index="On" DefaultButtonFace="EnableAshigaraBatteries" Requirements="AnathemaAshigaraBatteryLearnt"/>
+        <CmdButtonArray index="On" DefaultButtonFace="EnableAshigaraBatteries"/>
         <CmdButtonArray index="Off" DefaultButtonFace="DisableAshigaraBatteries">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -349,7 +451,7 @@
         <Cost>
             <Vital index="Energy" value="25"/>
         </Cost>
-        <BehaviorArray value="GhostCloak"/>
+        <BehaviorArray value="SynoidBloodletterCloak"/>
     </CAbilBehavior>
     <CAbilResearch id="MDResearch">
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Structures"/>
@@ -645,7 +747,7 @@
             <Vital index="Energy" value="65"/>
             <Charge CountMax="1" CountUse="1" TimeUse="9"/>
         </Cost>
-        <TargetFilters value="Visible;Self,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="8"/>
         <RangeSlop value="4"/>
         <PrepTime value="1.4"/>
@@ -715,7 +817,6 @@
         <CmdButtonArray index="Off" DefaultButtonFace="Cancel">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
-        <Flags index="BestUnit" value="1"/>
         <Flags index="Toggle" value="1"/>
         <Flags index="Transient" value="1"/>
         <BehaviorArray value="GriffonWeaponSwapDefense"/>
@@ -899,7 +1000,7 @@
         <Cost>
             <Cooldown TimeUse="20"/>
         </Cost>
-        <TargetFilters value="Mechanical,Visible;Self,Neutral,Enemy,Missile,Destructible,Buried,UnderConstruction,Dead,Hidden,Invulnerable,Summoned"/>
+        <TargetFilters value="Visible;Self,Neutral,Enemy,Missile,Destructible,Buried,UnderConstruction,Dead,Hidden,Invulnerable,Summoned"/>
         <Range value="7"/>
         <Arc value="360"/>
         <AutoCastFilters value="Visible;Self,Neutral,Enemy,Missile,Destructible,Stasis,UnderConstruction,Dead,Hidden"/>
@@ -1009,6 +1110,17 @@
             <Flags index="ShowInGlossary" value="0"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="SynoidSatcomTowerSpybots">
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SynoidSatcomTowerSpybotSet"/>
+        <Range value="1000"/>
+        <Arc value="360"/>
+        <CursorEffect value="SynoidSatcomTowerSpybotSearchArea"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SatComSpyBot"/>
+        <Cost>
+            <Cooldown TimeUse="140"/>
+        </Cost>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="SynoidSawbladeThrow">
         <Alignment value="Negative"/>
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
@@ -1017,7 +1129,7 @@
             <Cooldown TimeUse="75"/>
         </Cost>
         <TargetFilters value="Visible;Self,Ally,Missile,Buried,Cloaked,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="8"/>
+        <Range value="9"/>
         <AutoCastFilters value="Visible;Self,Player,Ally,Missile,Buried,Cloaked,Stasis,Dead,Hidden,Invulnerable"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="WarhoundSawblade"/>
     </CAbilEffectTarget>
@@ -1041,7 +1153,7 @@
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
         <Effect index="0" value="UmpireLockdownAB"/>
         <Flags index="AbortOnAllianceChange" value="0"/>
-        <TargetFilters value="Mechanical,Visible;Self,Ally,Neutral,Structure,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Ally,Neutral,Structure,Missile,Stasis,UnderConstruction,Dead,Invulnerable"/>
         <Range value="7"/>
         <CancelableArray index="Channel" value="1"/>
         <UninterruptibleArray index="Channel" value="1"/>
@@ -1154,7 +1266,7 @@
             <Button DefaultButtonFace="UmpireCraft"/>
         </InfoArray>
         <InfoArray index="Build10" Unit="SynoidMindControlTower" Time="100">
-            <Button DefaultButtonFace="SynoidMindControlTower"/>
+            <Button DefaultButtonFace="SynoidMindControlTower" Requirements="HaveBioSynthFacility"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilEffectTarget id="UmpireShield">

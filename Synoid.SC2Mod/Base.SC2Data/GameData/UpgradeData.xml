@@ -115,10 +115,10 @@
     </CUpgrade>
     <CUpgrade id="CrematorEnableDefend">
         <Icon value="Assets\Textures\btn-ability-zeratul-sentry-reflectionshield.dds"/>
-        <AffectedUnitArray value="Cremator"/>
-        <EditorCategories value="Race:Synoid,UpgradeType:Talents"/>
         <EffectArray Operation="Set" Reference="Weapon,SynoidCrematorDeflectionBeam,Options[Disabled]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,SynoidCrematorDeflectionBeam,Options[RequireEnabledAttackAbil]" Value="0"/>
+        <EditorCategories value="Race:Synoid,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Cremator"/>
     </CUpgrade>
     <CUpgrade id="DroneFabricationUpgrade">
         <EffectArray Operation="Set" Reference="Effect,SatComWarDronesCP,PeriodCount" Value="3"/>
@@ -129,7 +129,7 @@
     <CUpgrade id="GruntHealth" parent="Research">
         <Flags index="TechTreeCheat" value="1"/>
         <InfoTooltipPriority value="2"/>
-        <Icon value="Assets\Textures\btn-ability-mengsk-trooper-willofthepeople.dds"/>
+        <Icon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
         <Race value="Synd"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
