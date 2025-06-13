@@ -714,7 +714,7 @@
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
-            <Vital index="Energy" value="75"/>
+            <Vital index="Energy" value="100"/>
             <Cooldown TimeUse="15"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="OnwardComrades">
@@ -974,7 +974,7 @@
         </InfoArray>
         <InfoArray index="Train3" Time="50">
             <Button DefaultButtonFace="BuildValkyrie" Requirements="HaveStarshipMaintenancePlant"/>
-            <Unit value="Valkyrie"/>
+            <Unit value="ALLRACE2UEDValkyrie"/>
         </InfoArray>
         <InfoArray index="Train4" Time="90">
             <Button DefaultButtonFace="Honorguard" Requirements="HaveTachyonRelay"/>
@@ -1049,7 +1049,7 @@
         <Flags index="NoDeceleration" value="1"/>
         <Cost>
             <Vital index="Energy" value="75"/>
-            <Cooldown Link="TransfusionTransfusion2TransfusionStrengtheningShieldTransfusionTransfusion2TransfusionProjectedGravityShield"/>
+            <Cooldown Link="TransfusionTransfusion2TransfusionStrengtheningShieldTransfusionTransfusion2TransfusionProjectedGravityShield" TimeUse="5.6"/>
         </Cost>
         <TargetFilters value="Visible;Self,Neutral,Enemy,Structure,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable"/>
         <Range value="8"/>
@@ -1222,6 +1222,7 @@
         <MinAttackSpeedMultiplier value="0.25"/>
         <MaxAttackSpeedMultiplier value="128"/>
         <EditorCategories value="Race:UED,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Barrage" DefaultButtonFace="AttackBarragePeenemunde"/>
     </CAbilAttack>
     <CAbilMove id="moveUED">
         <OrderArray index="0">

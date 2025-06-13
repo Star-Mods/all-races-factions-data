@@ -184,7 +184,7 @@
         <Cost>
             <Cooldown Location="Unit" TimeUse="0.225"/>
         </Cost>
-        <Period value="0.7"/>
+        <Period value="0.583"/>
         <Effect value="ATSLaserBatteryLM3"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>

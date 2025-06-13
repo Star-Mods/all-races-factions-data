@@ -820,7 +820,6 @@
         <InitialEffect value="RetributionFieldDamage2"/>
         <RefreshEffect value="RetributionFieldDamage2"/>
         <Modification MoveSpeedMultiplier="0.8">
-            <StateFlags index="SuppressEnergyRegen" value="1"/>
             <DamageDealtFraction index="Spell" value="-0.5"/>
             <DamageDealtFraction index="Melee" value="-0.5"/>
             <DamageDealtFraction index="Ranged" value="-0.5"/>

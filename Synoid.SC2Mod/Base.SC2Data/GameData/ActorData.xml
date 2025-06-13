@@ -628,8 +628,7 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-swann-hellarmor.dds"/>
-        <SoundArray index="Ready" value="SensorTower_Ready"/>
-        <SoundArray index="What" value="SensorTower_What"/>
+        <SoundArray index="Construction" value="SynoidMindControlTower_What"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\btn_Synoid_Mind_Control_Tower.dds"/>
         <Wireframe>

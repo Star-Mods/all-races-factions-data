@@ -347,7 +347,7 @@
     <CActorRange id="UEDAgentRangePenemundeAttackRange">
         <On Terms="SelectionLocalUpdate.PeenemundeMRLS.Start" Send="Create"/>
         <On Terms="SelectionLocalUpdate.PeenemundeMRLS.Stop" Send="Destroy"/>
-        <Weapon value="UEDPenemundeGunRangeHidden"/>
+        <Weapon value="UEDPenemundeGunRange"/>
         <Icon value="Assets\Textures\radaricon1.dds"/>
         <IconScale value="0.004000,0.004000"/>
         <IconArcLength value="3.250000"/>
@@ -3928,7 +3928,7 @@
         <Magnitude value="25.000000,10.000000"/>
         <Radius value="2.500000"/>
     </CActorForceSphere>
-    <CActorUnit id="Valkyrie" parent="GenericUnitBase" unitName="Valkyrie">
+    <CActorUnit id="Valkyrie" parent="GenericUnitBase" unitName="ALLRACE2UEDValkyrie">
         <Aliases value="_UnitLarge"/>
         <Macros value="PhysicsDeathsSwarmAir"/>
         <Macros value="PhysicsDeathsVoidAir"/>
@@ -3968,12 +3968,22 @@
             <Image value="Assets\Wireframes\wireframe-UED-Valkyrie.dds"/>
         </GroupIcon>
         <LifeArmorIcon value="Assets\textures\btn-upgrade-ued-armor-level0.dds"/>
+        <SoundArray index="Ready" value="Valkyrie_Ready"/>
+        <SoundArray index="Help" value="Valkyrie_Help"/>
+        <SoundArray index="What" value="Valkyrie_What"/>
+        <SoundArray index="Yes" value="Valkyrie_Yes"/>
+        <SoundArray index="Attack" value="Valkyrie_Attack"/>
+        <SoundArray index="Pissed" value="Valkyrie_Pissed"/>
         <SoundArray index="Movement" value="Valkyrie_Move_Start"/>
         <UnitIcon value="Assets\textures\btn-unit-UED-Valkyrie.dds"/>
         <Wireframe>
             <Image value="Assets\Wireframes\wireframe-UED-Valkyrie.dds"/>
         </Wireframe>
         <HeroIcon value="Assets\textures\btn-unit-UED-Valkyrie.dds"/>
+        <Model value="Valkyrie"/>
+        <BuildModel value="Valkyrie"/>
+        <PlacementModel value="Valkyrie"/>
+        <HighlightTooltip value="Unit/Name/Valkyrie"/>
     </CActorUnit>
     <CActorAction id="ValkyrieDamageAttack" parent="GenericAttack" effectImpact="ValkyrieMissileDamage" effectLaunch="ValkyrieDamageMissileLM">
         <LaunchAttachQuery Methods="AMFilterWeaponSetA0 AMPatternLiberator"/>
@@ -4555,6 +4565,7 @@
         <LaunchAssets Sound="Taranis_AttackLaunch"/>
         <ImpactMap index="None" Sound="Taranis_AttackImpact"/>
         <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+        <LaunchSiteOps Ops="SOpAttachWeapon01"/>
     </CActorAction>
     <CActorModel id="TaranisCarpetBombModel" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.TaranisScreecherMissilesCarpetBombSearchArea.Start" Send="Create"/>

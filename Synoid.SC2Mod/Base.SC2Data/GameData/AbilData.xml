@@ -223,6 +223,7 @@
             <Display index="Minerals" value="1"/>
             <Display index="Vespene" value="1"/>
             <Vital index="Life" value="480"/>
+            <Vital index="Energy" value="160"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="SynoidSalvage">
             <Flags index="ToSelection" value="1"/>
@@ -1116,6 +1117,7 @@
         <CursorEffect value="SynoidSatcomTowerSpybotSearchArea"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SatComSpyBot"/>
         <Cost>
+            <Vital index="Energy" value="200"/>
             <Cooldown TimeUse="140"/>
         </Cost>
     </CAbilEffectTarget>

@@ -122,7 +122,7 @@
         <EditorCategories value="Race:UED"/>
     </CButton>
     <CButton id="UEDButtonCitadelUpgrade">
-        <Icon value="Assets\Textures\UEDAuthorizationRequestCitadelMagneticWaveAccelerator.dds"/>
+        <Icon value="Assets\Textures\UEDMagneticWaveAccelerator.dds"/>
         <AlertIcon value="Assets\Textures\UEDAuthorizationRequestCitadelMagneticWaveAccelerator.dds"/>
         <EditorCategories value="Race:UED"/>
     </CButton>

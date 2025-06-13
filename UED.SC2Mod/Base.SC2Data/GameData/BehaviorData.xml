@@ -436,9 +436,6 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-detectionconedebuff.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:UED"/>
         <MaxStackCount value="4"/>
-        <Modification>
-            <StateFlags index="SuppressPassenger" value="1"/>
-        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DrakkarAlgoritmOtklAttack">
         <InfoIcon value="Assets\Textures\btn-ability-terran-detectionconedebuff.dds"/>
@@ -634,7 +631,7 @@
         <InfoIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-energy.dds"/>
         <EditorCategories value="Race:UED,AbilityorEffectType:Units"/>
         <Duration value="17"/>
-        <DamageResponse Location="Attacker" ModifyFraction="0.5">
+        <DamageResponse Location="Attacker" ModifyFraction="0.3">
             <Kind index="Melee" value="0"/>
             <Kind index="Ranged" value="0"/>
             <Kind index="Splash" value="0"/>
@@ -717,12 +714,12 @@
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <BuffFlags index="RefreshStack" value="1"/>
-        <Duration value="20"/>
+        <Duration value="60"/>
         <Modification>
             <StateFlags index="UnitAttrOffLight" value="1"/>
             <StateFlags index="UnitAttrOffArmored" value="1"/>
             <StateFlags index="UnitAttrOffMassive" value="1"/>
-            <VitalMaxArray index="Shields" value="150"/>
+            <VitalMaxArray index="Shields" value="125"/>
         </Modification>
         <RefreshEffect value="StrengtheningShield"/>
     </CBehaviorBuff>

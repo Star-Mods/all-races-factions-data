@@ -455,8 +455,8 @@
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
-        <LifeStart value="800"/>
-        <LifeMax value="800"/>
+        <LifeStart value="900"/>
+        <LifeMax value="900"/>
         <LifeArmor value="1"/>
         <EnergyStart value="300"/>
         <EnergyMax value="300"/>
@@ -2022,8 +2022,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Robotic" value="1"/>
-        <LifeStart value="140"/>
-        <LifeMax value="140"/>
+        <LifeStart value="220"/>
+        <LifeMax value="220"/>
         <LifeArmorName value="Unit/LifeArmorName/SynoidMechPlating"/>
         <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
         <Speed value="2.8007"/>
@@ -3285,6 +3285,9 @@
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
         <AIEvaluateAlias value=""/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.6992"/>
     </CUnit>
     <CUnit id="SateliteUplink">
         <DeathRevealRadius value="3"/>
