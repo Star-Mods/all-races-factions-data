@@ -117,6 +117,12 @@
         <HostSiteOps Ops="SOpAttachCenter UEDSOpMoveAnimationProdactionNode"/>
         <Model value="UEDTeleportationNodeBuildEffect"/>
     </CActorModel>
+    <CActorModel id="UEDPeenemundeMRLSDestructionReinforcingAnimation" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitDeath.PeenemundeMRLS" Send="Create"/>
+        <Model value="ALLRACE2ReinforcinglPeenemundeMRLSDeathModel"/>
+        <Scale value="2.000000"/>
+    </CActorModel>
     <CActorSiteOpLocalOffset id="UEDSOpMoveUpgradeTeleportNode">
         <LocalOffset value="-0.850000,0.050000,-1.930000"/>
     </CActorSiteOpLocalOffset>
@@ -2173,6 +2179,62 @@
         <On Terms="ActorCreation" Send="AnimGroupApply B"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="PeenemundeMRLSDeath" SoundLink="SiegeTank_Explode"/>
+        <DeathArray index="Remove">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Blast">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Disintegrate">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Eat">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Electrocute">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Eviscerate">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Fire">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Freeze">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Impact">
+            <AnimProps value="Death"/>
+            <ModelLink value="PeenemundeMRLSDeath"/>
+            <SoundLink value="SiegeTank_Explode"/>
+            <VoiceLink value="PeenemundeMRLSDeathVoice"/>
+        </DeathArray>
+        <DeathArray index="Silentkill" ModelLink="PeenemundeMRLSDeath"/>
+        <DeathArray index="Squish" ModelLink="PeenemundeMRLSDeath"/>
         <DeathCustoms ModelLink="PeenemundeMRLSDeathRagdoll" Name="RagdollBasic">
             <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
         </DeathCustoms>

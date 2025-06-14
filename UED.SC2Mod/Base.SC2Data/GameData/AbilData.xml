@@ -517,7 +517,7 @@
         <Cost>
             <Vital index="Energy" value="75"/>
         </Cost>
-        <Range value="8"/>
+        <Range value="10"/>
         <CursorEffect value="EMPSearch2"/>
         <AINotifyEffect value="EMPLaunchMissile"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="DeployPsionicSuppressionField"/>

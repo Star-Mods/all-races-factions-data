@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CFootprint id="Footprint2x22">
+    <CFootprint id="UEDFootprint2x2AllowCreep">
         <Layers index="Check">
+            <Sets index="0">
+                <Negative index="Creep" value="0"/>
+            </Sets>
             <Rows value="xx"/>
             <Rows value="xx"/>
         </Layers>
@@ -11,12 +14,15 @@
         </Layers>
         <Shape>
             <Radius value="1.4143"/>
-            <Offsets value="-1,-1;-1,1;1,1;1,-1"/>
-            <Borders value="3,0,2;0,1,2;1,2,2;2,3,2"/>
+            <Offsets value="-1,-1;1,-1;-1,1;1,1"/>
+            <Borders value="0,2,2;1,0,2;2,3,2;3,1,2"/>
         </Shape>
     </CFootprint>
-    <CFootprint id="Footprint2x2Contour3">
+    <CFootprint id="UEDFootprint2x2Contour3AllowCreep">
         <Layers index="Check">
+            <Sets index="0">
+                <Negative index="Creep" value="0"/>
+            </Sets>
             <Rows value="xx"/>
             <Rows value="xx"/>
         </Layers>
@@ -26,8 +32,8 @@
         </Layers>
         <Shape>
             <Radius value="1.1181"/>
-            <Offsets value="-1,0.5;-0.5,1;0.5,1;1,0.5;1,-0.5;0.5,-1;-0.5,-1;-1,-0.5"/>
-            <Borders value="7,0,2;0,1,2;1,2,2;2,3,2;3,4,2;4,5,2;5,6,2;6,7,2"/>
+            <Offsets value="-0.5,-1;0.5,-1;-0.5,1;0.5,1;-1,-0.5;-1,0.5;1,-0.5;1,0.5"/>
+            <Borders value="0,4,2;1,0,2;2,3,2;3,7,2;4,5,2;5,2,2;6,1,2;7,6,2"/>
         </Shape>
     </CFootprint>
     <CFootprint id="Footprint3x3CappedGeyser2">

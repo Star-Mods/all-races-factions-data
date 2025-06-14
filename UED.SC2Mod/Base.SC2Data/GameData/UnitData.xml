@@ -76,8 +76,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -138,8 +138,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <MinimapRadius value="1.25"/>
@@ -903,8 +903,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -1060,7 +1060,8 @@
         <HotkeyCategory value="Unit/Category/UEDUnits"/>
         <EnergyRegenRate value="0.5625"/>
         <CargoSize value="4"/>
-        <PlacementFootprint value="FootprintNoBuild1x1"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
     </CUnit>
     <CUnit id="HonorguardCruiser">
         <DeathRevealRadius value="3"/>
@@ -1186,8 +1187,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -1491,8 +1492,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -2905,8 +2906,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>

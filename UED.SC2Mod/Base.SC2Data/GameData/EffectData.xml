@@ -184,7 +184,6 @@
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="UEDEffektPeriodTransportShuttleOrderOutStructure">
         <ValidatorArray value="UEDPlacementCheckSuplyStructure"/>
-        <ValidatorArray value="UEDTargeNotOnCreep"/>
         <EditorCategories value="Race:UED"/>
         <InitialEffect value="UEDEffektPeriodTransportShuttleOrderOutFirst"/>
     </CEffectCreatePersistent>

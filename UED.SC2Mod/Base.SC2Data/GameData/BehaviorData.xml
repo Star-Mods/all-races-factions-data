@@ -631,7 +631,7 @@
         <InfoIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-energy.dds"/>
         <EditorCategories value="Race:UED,AbilityorEffectType:Units"/>
         <Duration value="17"/>
-        <DamageResponse Location="Attacker" ModifyFraction="0.3">
+        <DamageResponse Location="Attacker" ModifyFraction="0.5">
             <Kind index="Melee" value="0"/>
             <Kind index="Ranged" value="0"/>
             <Kind index="Splash" value="0"/>
