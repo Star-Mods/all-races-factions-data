@@ -576,12 +576,13 @@
     <CEffectDamage id="RaptorGroundDamage" parent="DU_SPELL">
         <ValidatorArray value="noMarkers"/>
         <ImpactLocation Value="TargetUnit"/>
-        <Amount value="35"/>
-        <AttributeBonus index="Structure" value="20"/>
+        <Amount value="13"/>
+        <AttributeBonus index="Armored" value="22"/>
+        <AttributeBonus index="Massive" value="25"/>
     </CEffectDamage>
     <CEffectDamage id="RaptorAirDamage" parent="DU_WEAP_MISSILE">
         <ImpactLocation Value="TargetUnit"/>
-        <Amount value="17"/>
+        <Amount value="11"/>
         <EditorCategories value="Race:UPL"/>
         <Visibility value="Visible"/>
     </CEffectDamage>
@@ -598,7 +599,7 @@
         <ValidatorArray value="NotInvulnerable"/>
         <ValidatorArray value="NotStasis"/>
         <ImpactLocation Value="SourceUnit"/>
-        <Amount value="2"/>
+        <Amount value="3"/>
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RaptorAirLaunchLeft">
@@ -3448,7 +3449,9 @@
         <On Terms="ActorCreation" Send="AnimPlay Phase1 Stand PlayForever"/>
         <On Terms="MotionPhaseStart; MotionPhase 1" Send="AnimPlay Phase2 Turbo PlayForever"/>
     </CActorMissile>
-    <CActorSplat id="RaptorJetScatterBombsCursorSplat" parent="TerranCursorSplat" abil="RaptorJetScatterBombs"/>
+    <CActorSplat id="RaptorJetScatterBombsCursorSplat" parent="TerranCursorSplat" abil="RaptorJetScatterBombs">
+        <Scale value="1.700000"/>
+    </CActorSplat>
     <CActorRange id="RaptorJetScatterBombsRange" parent="RangeAbil" abil="RaptorJetScatterBombs"/>
     <CActorSplat id="Z1FreezeCursorSplat" parent="CursorSplat" abil="Z1Freeze">
         <Macros value="GlobalLoopMacro"/>
@@ -4373,14 +4376,14 @@
     </CModel>
     <CModel id="RaptorGroundMainMissile" parent="MissileFX">
         <Model value="Assets\Effects\UPL\RaptorMissile\RaptorMissile.m3"/>
-        <ScaleMax value="0.800000,0.800000,0.800000"/>
-        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="RaptorGroundSecondaryMissile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MagneticMineMissile\MagneticMineMissile.m3"/>
-        <ScaleMax value="0.800000,0.800000,0.800000"/>
-        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
         <EditorCategories value="Race:UPL"/>
     </CModel>
     <CModel id="TR17Portrait" parent="Portrait" Race="UPL">
@@ -4628,7 +4631,7 @@
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="7"/>
         <MinimumRange value="0.65"/>
-        <Period value="1.12"/>
+        <Period value="1.176"/>
         <Effect value="RoutheTankDamageSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="OspreyGround">
@@ -6154,6 +6157,7 @@
         <AbilArray Link="CSVDeploy"/>
         <AbilArray Link="APCSmokeGrenade"/>
         <AbilArray Link="LotCUPLCSVSupplyLineManagement"/>
+        <AbilArray Link="UPLSpaceTrashCoordination"/>
         <BehaviorArray Link="CSVTransportHealer"/>
         <BehaviorArray Link="Detector10"/>
         <WeaponArray Link="CSV" Turret="CSVTurret"/>
@@ -6175,6 +6179,7 @@
                 <Column value="3"/>
             </LayoutButtons>
             <LayoutButtons Face="CSVUndeploy" Type="AbilCmd" AbilCmd="CSVUndeploy,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="SpaceTrashCoordination" Type="AbilCmd" AbilCmd="UPLSpaceTrashCoordination,Execute" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.9"/>
         <SeparationRadius value="1.1"/>
@@ -6670,7 +6675,7 @@
         <VisionHeight value="4"/>
         <Food value="-3"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="225"/>
+        <CostResource index="Minerals" value="300"/>
         <CostResource index="Vespene" value="125"/>
         <RepairTime value="45"/>
         <AttackTargetPriority value="20"/>
@@ -6703,8 +6708,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <ScoreMake value="350"/>
-        <ScoreKill value="350"/>
+        <ScoreMake value="425"/>
+        <ScoreKill value="425"/>
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="15"/>
         <MinimapRadius value="0.75"/>
@@ -6757,6 +6762,7 @@
         <AbilArray Link="Z1Freeze"/>
         <AbilArray Link="Z1BadgerBomb"/>
         <AbilArray Link="Z1ShieldCancel"/>
+        <AbilArray Link="UPLScoutGrenade"/>
         <WeaponArray Link="Z1"/>
         <WeaponArray Link="Z1DummyWeapon"/>
         <CardLayouts>
@@ -6792,6 +6798,7 @@
                 <Row value="1"/>
                 <Column value="1"/>
             </LayoutButtons>
+            <LayoutButtons Face="UPLScoutGrenade" Type="AbilCmd" AbilCmd="UPLScoutGrenade,Execute" Row="2" Column="3"/>
         </CardLayouts>
         <Radius value="0.625"/>
         <InnerRadius value="0.5"/>

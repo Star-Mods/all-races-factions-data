@@ -28,6 +28,13 @@
         <ScaleMax value="1.300000,1.300000,2.000000"/>
         <ScaleMin value="1.300000,1.300000,2.000000"/>
     </CModel>
+    <CModel id="SynoidSummonGreaterWarDroneImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\Arbiter_Purifier_Coop_Missile_Impact\Arbiter_Purifier_Coop_Missile_Impact.m3"/>
+        <AnimSpeed value="1.800000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="1.600000,1.600000,2.000000"/>
+        <ScaleMin value="1.600000,1.600000,2.000000"/>
+    </CModel>
     <CModel id="SynoidIronFletcherCharged" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_Missile\Dragoon_Purifier_Coop_Missile.m3"/>
         <EditorCategories value="Race:Synoid"/>
@@ -75,6 +82,13 @@
         <EditorCategories value="Race:Synoid"/>
         <ScaleMax value="1.600000,1.600000,1.600000"/>
         <ScaleMin value="1.600000,1.600000,1.600000"/>
+    </CModel>
+    <CModel id="SynoidSummonWarDroneImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\Arbiter_Purifier_Coop_Missile_Impact\Arbiter_Purifier_Coop_Missile_Impact.m3"/>
+        <AnimSpeed value="1.800000"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="SynoidWardenAirshipSearchlightModel" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\Adept_Missile_Upgrade\Adept_Missile_Upgrade.m3"/>
@@ -810,13 +824,13 @@
         <ShadowRadius value="0.285600"/>
     </CModel>
     <CModel id="SynoidWarDrone2" parent="Unit">
-        <Model value="Assets\Units\Unit_SmallFighters_2.m3"/>
+        <Model value="Assets\Models\SynoidGreaterWarDronePrepare.m3"/>
         <EditorCategories value="Race:Synoid"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraMid04"/>
         <Radius value="0.625000"/>
-        <ScaleMax value="1.450000,1.450000,1.450000"/>
-        <ScaleMin value="1.450000,1.450000,1.450000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
         <SelectionRadius value="0.625000"/>
         <ShadowRadius value="0.625000"/>
         <TechPurchaseCamera value="Star2CameraMid04"/>
@@ -824,12 +838,12 @@
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="SynoidGreaterWarDroneDeath2" parent="UnitDeath" Race="Terran">
-        <Model value="Assets\Units\Unit_SmallFighters_2_Death.m3"/>
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
         <LowQualityModel value="TerranSmallUnitDeath"/>
         <EditorCategories value="Race:Synoid"/>
         <Occlusion value="Show"/>
-        <ScaleMax value="1.450000,1.450000,1.450000"/>
-        <ScaleMin value="1.450000,1.450000,1.450000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModel>
     <CModel id="SynoidInterferenceMatrixBeam" parent="MissileFX">
         <Model value="Assets\Effects\Protoss\WarpRayMissile\WarpRayMissile.m3"/>
@@ -844,10 +858,10 @@
         <EditorCategories value="Race:Synoid"/>
     </CModel>
     <CModel id="SynoidGreaterWarDroneWeapon2" parent="MissileFX">
-        <Model value="Assets\Effects\Terran\ArcadeWraithMissile\ArcadeWraithMissile.m3"/>
+        <Model value="Assets\Effects\Terran\BattlecruiserAirMissile\BattlecruiserAirMissile.m3"/>
         <EditorCategories value="Race:Synoid"/>
-        <ScaleMax value="2.000000,2.000000,2.000000"/>
-        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <ScaleMax value="1.000000,3.000000,1.000000"/>
+        <ScaleMin value="1.000000,3.000000,1.000000"/>
     </CModel>
     <CModel id="WarningCTEModel2" parent="PersistentSpellFX">
         <Model value="Assets\UI\Feedback\AIBeaconClaimPing\AIBeaconClaimPing.m3"/>

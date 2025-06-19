@@ -359,6 +359,7 @@ Button/Name/UPLOrion=Build Orion
 Button/Name/UPLPoliceCruiserTransportLoad=Enter Vehicle
 Button/Name/UPLPoliceCruiserTransportUnloadAll=Leave Vehicle
 Button/Name/UPLPoliceOfficer=Police Officer
+Button/Name/UPLResearchMaterialAbsorbptionArmor=Research Material Absorbption Armor
 Button/Name/UPLRnDFacility=Build R & D Facility
 Button/Name/UPLScout=S.C.O.U.T.
 Button/Name/UPLScoutFlameGrenade=Incendiary Grenade
@@ -496,7 +497,7 @@ Button/Tooltip/InfantryOfficerNanoweaveBodyArmor=Provides the <c val="#ColorAtta
 Button/Tooltip/InfantryRifleRangeUpgrade=<c val="ffff8a">Guardian</c> Increases weapon range by <c val="80FFFF">0.5</c>, <c val="ffff8a">Rocket Launcher</c>, <c val="ffff8a">Heavy Gunner</c> and <c val="ffff8a">SCOUT</c> Increases weapon range by <c val="80FFFF">1</c>
 Button/Tooltip/InfantryRocket=Long range shelling infantry with high damage output. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
 Button/Tooltip/InfantryRocket1Range=+1 Attack Range
-Button/Tooltip/InfantryRocketAOEResearched=Rocket Trooper attacks deal 2 splash damage around the attack target in a small radius. The splash counts as spell damage and ignore armor.
+Button/Tooltip/InfantryRocketAOEResearched=Rocket Trooper attacks deal 2 splash damage around the attack target in 0.6 radius. The splash counts as spell damage and ignore armor.
 Button/Tooltip/InfantryRocketAOEResearched2=<c val="ffff8a">Rocket Trooper</c>  attacks deal 2 splash damage around the attack target in a small radius. The splash counts as spell damage and ignore armor.
 Button/Tooltip/KatherineHalsey=Doctor and Researcher
 Button/Tooltip/KatherineHalseyBreatheOff=Catch your breath.  The roaches can hear you now, whether you're in a hiding area or not.
@@ -540,8 +541,8 @@ Button/Tooltip/RallyMiningDrone=Sends constructed worker units to the designated
 Button/Tooltip/RaptorCloak=Temporarily activates the <c val="FFFF80"><d stringref="Unit,RaptorJet,Name"/></c> armor material coating, preventing enemy units from seeing or attacking the unit. A cloaked unit will only be revealed by detectors or effects.<n/><n/>Attacking or using abilities during the effect clears it.<n/><n/><c val="FFFF80">Effect last for <d ref="Behavior,RaptorCloak,Duration"/> seconds</c>
 Button/Tooltip/RaptorCloak2=Activates the <c val="FFFF80"><d stringref="Unit,Condor,Name"/></c> armor material coating when unit is landed, preventing enemy units from seeing or attacking the unit. A cloaked unit will only be revealed by detectors or effects.<n/><n/>
 Button/Tooltip/RaptorCloakAbilUpgrade=Enables <c val="FFFF80"><d stringref="Unit,RaptorJet,Name"/>s</c>  to use <c val="FFFF80"><d stringref="Button,RaptorCloak,Name"/> </c>ability. This allows <c val="FFFF80"><d stringref="Unit,RaptorJet,Name"/>s</c> to become temporarily cloaked when activated, unless the unit is revealed by detectors or effects. Also enable cloaking for landed <c val="FFFF80"><d stringref="Unit,Condor,Name"/>s</c>.
-Button/Tooltip/RaptorIncendiary=Incendiary Missiles<n/><n/><c val="FF80FF">Targets burn for 3 seconds, receiving additional <d ref="Effect,RaptorAirBurningDamage,Amount*(1/Behavior,RaptorAirBurning,Period)"/> Damage / sec</c>
-Button/Tooltip/RaptorJetScatterBombs=Scatters multiple bombs in a large radius, dealing <c val="FFFF80"><d ref="Effect,RaptorGroundDamage,Amount"/> (+<d ref="Effect,RaptorGroundDamage,AttributeBonus[Structure]"/> vs. Structures)</c> damage to ground units
+Button/Tooltip/RaptorIncendiary=Incendiary Missiles<n/><n/><c val="FF80FF">Targets burn for 2.14 seconds, receiving additional <d ref="Effect,RaptorAirBurningDamage,Amount*(1/Behavior,RaptorAirBurning,Period)"/> Damage / sec</c>
+Button/Tooltip/RaptorJetScatterBombs=Scatters multiple bombs in a large radius, dealing <c val="FFFF80"><d ref="Effect,RaptorGroundDamage,Amount"/> (+<d ref="Effect,RaptorGroundDamage,AttributeBonus[Armored]"/> vs. armored)(+<d ref="Effect,RaptorGroundDamage,AttributeBonus[Massive]"/> vs. massive)</c> damage to ground units
 Button/Tooltip/ResearchA6ExplosiveRounds=Deals <c val="80FFFF"><d ref="Effect,A6WeaponDamage,AreaArray[0].Fraction*100"/>%</c> damage as splash to air units near the attack target.
 Button/Tooltip/ResearchCSVSupplyLineManagement=When the CSV is deployed nearby mechanical vehicles gain <c val="80FFFF"><d ref="Behavior,CSVSupplyLineManagementBuff,Modification.AdditiveAttackSpeedFactor*100"/>%</c> increased weapon speed.
 Button/Tooltip/ResearchCondorEnhancedCargo=Increases <c val="FFFF8A">Condors </c>cargo capacity by 6
@@ -550,7 +551,7 @@ Button/Tooltip/ResearchInfantryRifleRangeUpgrade=Increases Infantrymen range by 
 Button/Tooltip/ResearchInfantryRocketAOE=<c val="ffff8a">Rocket Trooper</c>  attacks deal 2 splash damage around the attack target in a small radius. The splash damage counts as spell damage and ignore armor.
 Button/Tooltip/ResearchMiningDroneGrenadeLauncher=Allow Mining Drone to switch to a grenade launcher weapon which attacks at a short range and does more damage. Mining Drone cannot harvest resources, construct building or use any abilities in Grenade Launcher mode.
 Button/Tooltip/ResearchPersonnelCarrier=Increase the vital of <c val="ffff8a">Stinger</c> and <c val="ffff8a">Osprey</c> by.<c val="80FFFF">30</c>, and increase 4 cargo space of <c val="ffff8a">Stinger</c>.
-Button/Tooltip/ResearchRaptorIncendiary=Given <c val="ffff8a">Raptor Jet</c> burning attack, which makes targets burn for 3 seconds, receiving additional <d ref="Effect,RaptorAirBurningDamage,Amount*(1/Behavior,RaptorAirBurning,Period)"/> Damage / sec</c>
+Button/Tooltip/ResearchRaptorIncendiary=Given <c val="ffff8a">Raptor Jet</c> burning attack, which makes targets burn for 2.14 seconds, receiving additional <d ref="Effect,RaptorAirBurningDamage,Amount*(1/Behavior,RaptorAirBurning,Period)"/> Damage / sec</c>
 Button/Tooltip/ResearchZ1EnergyUpgrade=Research Improved Z1 Energy Capacitors. Increases the starting and maximum energy of <c val="ffff8a">Z1</c> by <c val="80FFFF">25</c>
 Button/Tooltip/RiotOfficerShield=Increase <c val="80FFFF">15 vital</c> for <c val="ffff8a">Guardian</c> and enable <c val="80FFFF">Guardian</c> to use <c val="80FFFF">Swap to Shield Mode</c> ability, Increase to <c val="80FFFF">250% health</c> and switch to melee weapon, decrease <c val="80FFFF"> 33% Movement Speed</c>.
 Button/Tooltip/RoutheTankArmorPlating=Adaptive plating which absorbs kinetic and energy attacks better than standard vehicle plating.<n/><n/> increases maximum life by <c val="80FFFF">+75</c>
@@ -562,7 +563,7 @@ Button/Tooltip/SpaceSandbag=Allow <c val="ffff8a">Heavy Gunner</c> to switch to 
 Button/Tooltip/SpaceTrashCoordination=Drops a 4*4 debris at target location. The debris has 150 life and 0 armor, and is capable to blocking unit movement.
 Button/Tooltip/SpartanCompany=Heavy Mobile Artillery. Deals AoE damage on ground units, and massive damage on single air unit.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
 Button/Tooltip/Sprint=Increase 20% movement speed for 11 seconds.
-Button/Tooltip/StarArmor=Increase the armor of <c val="ffff8a">Routhe Tank</c>, <c val="ffff8a">Condor</c>and <c val="ffff8a">Behemoth</c> by 2.
+Button/Tooltip/StarArmor=Increase the armor of <c val="ffff8a">Condor</c>and <c val="ffff8a">Behemoth</c> by 2.
 Button/Tooltip/StarMecha=Increase the health of <c val="ffff8a">CARR</c>, <c val="ffff8a">Z1</c>and <c val="ffff8a">Z2</c> by 40%.
 Button/Tooltip/StartUPLOrion=Fast unit for reconnaissance and sabotage.
 Button/Tooltip/StingerTransportLoad=Loads Infantry into the Stinger.
@@ -611,9 +612,10 @@ Button/Tooltip/UPLPoliceCruiser=Urban Police Vehicle
 Button/Tooltip/UPLPoliceCruiserTransportLoad=Police officers can enter the patrol vehicle.
 Button/Tooltip/UPLPoliceCruiserTransportUnloadAll=Police officers get out of the patrol vehicle.
 Button/Tooltip/UPLPoliceOfficer=Patrol Officer<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
+Button/Tooltip/UPLResearchMaterialAbsorbptionArmor=Increase the armor of <c val="ffff8a">Routhe Tank</c> by 2.
 Button/Tooltip/UPLRiotOfficer=Crowd Control and Special Operations<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
 Button/Tooltip/UPLRnDFacility=Research and Development.  <n/><n/>Research upgrades for your forces.
-Button/Tooltip/UPLScout=Covert Operations capable of long range shelling and mobile harassment. Can use Spring ability. Energy User. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/UPLScout=Covert Operations capable of long range shelling and mobile harassment. <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/UPLScoutFlameGrenade=Deals <c val="FFFF80"><d ref="Effect,UPLScoutFlameGrenadeDamage,Amount"/></c> damage to enemy units targeted area and deals additional <c val="FFFF80"><d ref="Effect,MyraDavisFlameGrenadeDoTDamage,Amount"/></c> damage periodically for <c val="FFFF80"><d ref="Behavior,UPLScoutFlameGrenadeDoTDamage,Duration" /> </c>seconds.<n/><n/><c val="#ColorAttackInfo">Can target ground units.</c>
 Button/Tooltip/UPLScoutGrenade=Deals <d ref="Effect,UPLScoutGrenadeDamage,Amount"/>(+125 vs structure) damage in a <d ref="Effect,UPLScoutGrenadeSearch,AreaArray[0].Radius"/> radius<n/><n/><c val="#ColorAttackInfo">Can Target Ground units.</c>
 Button/Tooltip/UPLSeekerDronExplode=The Seeker Drone detonates at its position, damaging nearby enemy units by 30 and structures by 200 within 2.73 radius.
@@ -628,7 +630,7 @@ Button/Tooltip/UPLSolitaire=Manned Defensive structure.  <n/><n/><c val="#ColorA
 Button/Tooltip/UPLSpecOps=Classified<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
 Button/Tooltip/UPLStinger=Armored transport vehicle with mobile combat capability. Can attack air and ground.
 Button/Tooltip/UPLTrainA6=Mobile Anti-Air Platform<n/><n/><c val="#ColorAttackInfo">Can attack air units</c>
-Button/Tooltip/UPLTrainBehemoth=Slow, Massive anti-ground bombing cruiser, excel at delivering devastating damage to land units below them. Can cause friendly fire.  <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
+Button/Tooltip/UPLTrainBehemoth=Slow, massive anti-ground bombing cruiser, excel at delivering devastating damage to land units below them. Can cause friendly fire.  <n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
 Button/Tooltip/UPLTrainCARR=Combat and Reconnaisance Robot<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>
 Button/Tooltip/UPLTrainCSV=Mobile Operations Center which can provide detection, use smoke grenade ability, and when deployed in siege mode, heal friendly units..<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units</c>,  <n/><c val="FFE303">Detector</c>
 Button/Tooltip/UPLTrainCondor=Reinforced Aerial Transport with great air vision. <n/><n/><c val="FFE303">Detector</c>
@@ -970,7 +972,6 @@ Effect/Name/InfantryMedkit@SupressedRB=SupressedRB
 Effect/Name/InfantryMortarAttacking=InfantryMortarAttacking
 Effect/Name/InfantryMortarAttackingRB=InfantryMortarAttackingRB
 Effect/Name/InfantryMortarDamage=Infantry Mortar Damage
-Effect/Name/InfantryMortarDamageDirected=Infantry Mortar Damage Directed
 Effect/Name/InfantryMortarDelay=Infantry Mortar Delay
 Effect/Name/InfantryMortarDisableWeaponAB=InfantryMortarDisableWeaponAB
 Effect/Name/InfantryMortarDisableWeaponAB2=InfantryMortarDisableWeaponAB Copy
@@ -978,8 +979,6 @@ Effect/Name/InfantryMortarDisableWeaponRB=InfantryMortarDisableWeaponRB
 Effect/Name/InfantryMortarExpire=InfantryMortarExpire
 Effect/Name/InfantryMortarFinal=InfantryMortarFinal
 Effect/Name/InfantryMortarLaunch=Infantry Mortar Launch
-Effect/Name/InfantryMortarLaunchDirected=Infantry Mortar Launch Directed
-Effect/Name/InfantryMortarLaunchDirectedImpactSet=InfantryMortarLaunchDirectedImpactSet
 Effect/Name/InfantryMortarLaunchDummy=Infantry Mortar Launch Dummy
 Effect/Name/InfantryMortarLaunchImpactSet=InfantryMortarLaunchImpactSet
 Effect/Name/InfantryMortarLaunchSwitch=Infantry Mortar Launch Switch
@@ -1036,6 +1035,7 @@ Effect/Name/LillyRollinsHealSmall=LillyRollinsHeal Small
 Effect/Name/LillyRollinsHealSmallAB=LillyRollinsHeal Small AB
 Effect/Name/LillyRollinsHealSmallSet=LillyRollinsHeal Small Set
 Effect/Name/LotCUPLCSVSupplyLineManagementApplytoCSVbehavior=LotC-UPL-CSV-SupplyLineManagement(ApplytoCSVbehavior)
+Effect/Name/LotCUPLInfantryRocketSearchArea=Infantry Rocket Search Area
 Effect/Name/LotCUPLSupplyLineManagement=LotC-UPL-SupplyLineManagement
 Effect/Name/MULEFate2=Space Trash Calldown Fate
 Effect/Name/MakePrecursor2=Make Precursor
@@ -1652,6 +1652,7 @@ Upgrade/Name/UPLInfantryWeaponsLevel3=UPL Infantry Weapons Level 3
 Upgrade/Name/UPLMiningDronesGrenadeLauncher=UPLMiningDronesGrenadeLauncher
 Upgrade/Name/UPLRaptorIncendiary=UPLRaptorIncendiary
 Upgrade/Name/UPLRenameZerg=UPLRenameZerg
+Upgrade/Name/UPLResearchMaterialAbsorptionArmor=Material Absorption Armor
 Upgrade/Name/UPLShipArmor=UPL Ship Armor
 Upgrade/Name/UPLShipPlatingLevel1=UPL Ship Plating Level 1
 Upgrade/Name/UPLShipPlatingLevel2=UPL Ship Plating Level 2

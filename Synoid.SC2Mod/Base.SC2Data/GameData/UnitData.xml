@@ -2802,7 +2802,7 @@
         <Sight value="9"/>
         <CostCategory value="Technology"/>
         <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="150"/>
+        <CostResource index="Vespene" value="100"/>
         <RepairTime value="50"/>
         <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>

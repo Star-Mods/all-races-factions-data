@@ -92,8 +92,8 @@
         <HotkeySet value="Cloak"/>
     </CButton>
     <CButton id="SynoidDeployGreaterWarDrones2">
-        <Icon value="Assets\Textures\btnSynoidGreaterWarDrone.dds"/>
-        <AlertIcon value="Assets\Textures\btnSynoidGreaterWarDrone.dds"/>
+        <Icon value="Assets\Textures\btn-Synoid-Greater-WarDrone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-Synoid-Greater-WarDrone.dds"/>
         <EditorCategories value="Race:Synoid"/>
         <TintRacially value="1"/>
     </CButton>

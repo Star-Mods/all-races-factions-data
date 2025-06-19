@@ -474,7 +474,7 @@
         <EditorCategories value="Race:Synoid"/>
         <WhichLocation Value="TargetPoint"/>
         <Effect value="SynoidSatComGreaterWarDronesCU2"/>
-        <Radius value="1.5"/>
+        <Radius value="1.2"/>
     </CEffectRandomPointInCircle>
     <CEffectSet id="SynoidSatComGreaterWarDronesSet2">
         <EditorCategories value="Race:Synoid"/>
@@ -1534,9 +1534,9 @@
         <ArmorReduction value="1"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Melee"/>
-        <Amount value="22"/>
+        <Amount value="35"/>
         <Death value="Eviscerate"/>
-        <AttributeBonus index="Armored" value="10"/>
+        <AttributeBonus index="Armored" value="28"/>
         <ExcludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="PsiIndoctrinatorAOEAbilAB">

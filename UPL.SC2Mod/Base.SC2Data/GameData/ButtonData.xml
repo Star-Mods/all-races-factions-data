@@ -19,6 +19,10 @@
         <EditorCategories value="Race:UPL"/>
         <Icon value="Assets\Textures\btn-building-BattleStation.dds"/>
     </CButton>
+    <CButton id="UPLResearchMaterialAbsorbptionArmor">
+        <Icon value="Assets\Textures\btn-Routhe-Tank-Material-Absorption-Armor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-Routhe-Tank-Material-Absorption-Armor.dds"/>
+    </CButton>
     <CButton id="UPLSeekerDronExplode">
         <Icon value="Assets\Textures\btn-upgrade-protoss-fenix-purificationblast.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-protoss-fenix-purificationblast.dds"/>

@@ -145,8 +145,9 @@
         <MaxCount value="8"/>
     </CAbilArmMagazine>
     <CButton id="UPLTrainBehemoth">
-        <Icon value="assets\textures\btn-starship.dds"/>
+        <Icon value="Assets\Textures\btn-upl-Behemoth.dds"/>
         <EditorCategories value="Race:UPL"/>
+        <AlertIcon value="Assets\Textures\btn-upl-Behemoth.dds"/>
     </CButton>
     <CActorUnit id="UPLBehemoth" parent="GenericUnitBase" unitName="UPLBehemoth">
         <Macros value="QueueAnim"/>
@@ -180,7 +181,7 @@
         <GroupIcon>
             <Image value="Assets\Textures\wireframe-unit-starship.dds"/>
         </GroupIcon>
-        <HeroIcon value="assets\textures\btn-starship.dds"/>
+        <HeroIcon value="Assets\Textures\btn-upl-Behemoth.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrades-upl-vehicleplating-lvl0.dds"/>
         <NameOffset value="110"/>
         <SoundArray index="Ready" value="HeroNovaMP1_Ready_N1"/>
@@ -193,7 +194,7 @@
         <SoundArray index="Turning" value="Amb_Nova08_ShipBy_C_Slave_Loop"/>
         <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
         <SoundArray index="Click" value="HeroNova_Ready_NP"/>
-        <UnitIcon value="assets\textures\btn-starship.dds"/>
+        <UnitIcon value="Assets\Textures\btn-upl-Behemoth.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\wireframe-unit-starship.dds"/>
         </Wireframe>
