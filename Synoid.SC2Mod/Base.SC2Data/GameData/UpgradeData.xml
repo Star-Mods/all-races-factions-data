@@ -115,10 +115,10 @@
     </CUpgrade>
     <CUpgrade id="CrematorEnableDefend">
         <Icon value="Assets\Textures\btn-ability-zeratul-sentry-reflectionshield.dds"/>
-        <AffectedUnitArray value="Cremator"/>
-        <EditorCategories value="Race:Synoid,UpgradeType:Talents"/>
         <EffectArray Operation="Set" Reference="Weapon,SynoidCrematorDeflectionBeam,Options[Disabled]" Value="0"/>
         <EffectArray Operation="Set" Reference="Weapon,SynoidCrematorDeflectionBeam,Options[RequireEnabledAttackAbil]" Value="0"/>
+        <EditorCategories value="Race:Synoid,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Cremator"/>
     </CUpgrade>
     <CUpgrade id="DroneFabricationUpgrade">
         <EffectArray Operation="Set" Reference="Effect,SatComWarDronesCP,PeriodCount" Value="3"/>
@@ -129,7 +129,7 @@
     <CUpgrade id="GruntHealth" parent="Research">
         <Flags index="TechTreeCheat" value="1"/>
         <InfoTooltipPriority value="2"/>
-        <Icon value="Assets\Textures\btn-ability-mengsk-trooper-willofthepeople.dds"/>
+        <Icon value="Assets\Textures\btn-ability-mengsk-commandcenter-drafttroopers.dds"/>
         <Race value="Synd"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
@@ -303,6 +303,9 @@
         <EffectArray Operation="Set" Reference="Weapon,Synoifbiobattery,Icon" Value="Assets\Textures\Synoid_Mech_Wea_Upg_lv1.dds"/>
         <EffectArray Reference="Effect,SynoidHailstormMissilePodsDamage2,Amount" Value="1"/>
         <EffectArray Reference="Weapon,SynoidHailstormMissilePods2,Level" Value="1"/>
+        <EffectArray Reference="Effect,ALLRACE2GreaterWarDroneImpactDamage2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SynoidGreaterWarDrone2,Icon" Value="Assets\Textures\Synoid_Mech_Wea_Upg_lv1.dds"/>
+        <EffectArray Reference="Weapon,SynoidGreaterWarDrone2,Level" Value="1"/>
         <EditorCategories value="Race:Synoid,UpgradeType:AttackBonus"/>
         <AffectedUnitArray index="0" value="IronFletcher"/>
         <AffectedUnitArray index="1" value="RancorSynoid"/>
@@ -359,6 +362,9 @@
         <EffectArray Reference="Effect,SynoidBioBatteryDamage,Amount" Value="1"/>
         <EffectArray Reference="Effect,SynoidHailstormMissilePodsDamage2,Amount" Value="1"/>
         <EffectArray Reference="Weapon,SynoidHailstormMissilePods2,Level" Value="1"/>
+        <EffectArray Reference="Effect,ALLRACE2GreaterWarDroneImpactDamage2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SynoidGreaterWarDrone2,Icon" Value="Assets\Textures\Synoid_Mech_Wea_Upg_lv2.dds"/>
+        <EffectArray Reference="Weapon,SynoidGreaterWarDrone2,Level" Value="1"/>
         <EditorCategories value="Race:Synoid,UpgradeType:AttackBonus"/>
         <AffectedUnitArray index="0" value="IronFletcher"/>
         <AffectedUnitArray index="1" value="RancorSynoid"/>
@@ -413,6 +419,9 @@
         <EffectArray Operation="Set" Reference="Weapon,Synoifbiobattery,Icon" Value="Assets\Textures\Synoid_Mech_Wea_Upg_lv3.dds"/>
         <EffectArray Reference="Weapon,SynoidHailstormMissilePods2,Level" Value="1"/>
         <EffectArray Reference="Effect,SynoidHailstormMissilePodsDamage2,Amount" Value="1"/>
+        <EffectArray Reference="Effect,ALLRACE2GreaterWarDroneImpactDamage2,Amount" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,SynoidGreaterWarDrone2,Icon" Value="Assets\Textures\Synoid_Mech_Wea_Upg_lv3.dds"/>
+        <EffectArray Reference="Weapon,SynoidGreaterWarDrone2,Level" Value="1"/>
         <EditorCategories value="Race:Synoid,UpgradeType:AttackBonus"/>
         <AffectedUnitArray index="0" value="IronFletcher"/>
         <AffectedUnitArray index="1" value="RancorSynoid"/>

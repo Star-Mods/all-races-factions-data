@@ -11,14 +11,56 @@
     <CValidatorUnitCompareBehaviorCount id="MindControlLinkCompareBehaviorCount">
         <Value value="1"/>
         <Behavior value="SynoidMindControlTowerLinked"/>
+        <Compare value="GE"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorCombine id="SynoidMindControlLinkCombine">
-        <CombineArray value="SynoidRangeCheckLE13"/>
-        <CombineArray value="MindControlLinkCompareBehaviorCount"/>
+    <CValidatorCombine id="SynoidBrainwashLink2ndStageCombine">
+        <Type value="And"/>
+        <CombineArray value="SynoidRangeCheckLE9"/>
+        <CombineArray value="SynoidBrainwashLink2ndStageCompareBehaviorCount"/>
         <CombineArray value="NotOracleStasisTrapped"/>
         <CombineArray value="NotHidden"/>
         <CombineArray value="CasterIsNotHidden"/>
+        <CombineArray value="SynoidBrainwashLink2ndStageCompareBehaviorCountCaster"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SynoidBrainwashLink2ndStageCombineNoCasterLinked">
         <Type value="And"/>
+        <CombineArray value="SourceNotDead"/>
+        <CombineArray value="NotOracleStasisTrapped"/>
+        <CombineArray value="NotHidden"/>
+        <CombineArray value="CasterIsNotHidden"/>
+        <CombineArray value="SynoidBrainwashLink2ndStageCasternotlinked"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SynoidBrainwashLink2ndStageCasternotlinked">
+        <WhichUnit Effect="SynoidBrainWashLinkSet" Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SynoidBrainwashLinkCompareBehaviorCount">
+        <Value value="1"/>
+        <Behavior value="SynoidCensorBrainWashLinkedStageOne"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SynoidBrainwashLink2ndStageCompareBehaviorCountCaster">
+        <WhichUnit Effect="SynoidBrainWashLinkSet" Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="SynoidCensorBrainWash2ndstageCasterBehavior"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SynoidBrainwashLink2ndStageCompareBehaviorCount">
+        <Value value="1"/>
+        <Behavior value="SynoidCensorBrainWash2ndstageBehavior"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SynoidMindControlLinkCombine">
+        <CombineArray value="SynoidRangeCheckLE13"/>
+        <CombineArray value="NotOracleStasisTrapped"/>
+        <CombineArray value="NotHidden"/>
+        <CombineArray value="CasterIsNotHidden"/>
+        <CombineArray value="MindControlLinkCompareBehaviorCount"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SynoidBrainwashLinkCombine">
+        <Type value="And"/>
+        <CombineArray value="SynoidRangeCheckLE9"/>
+        <CombineArray value="SynoidBrainwashLinkCompareBehaviorCount"/>
+        <CombineArray value="NotOracleStasisTrapped"/>
+        <CombineArray value="NotHidden"/>
+        <CombineArray value="CasterIsNotHidden"/>
     </CValidatorCombine>
     <CValidatorLocationCompareRange id="SynoidRangeCheckLE13">
         <WhichLocation Value="TargetUnit"/>
@@ -86,10 +128,11 @@
         <ResultFailed value="CantBuildTooFarFromBuildPowerSource"/>
         <AreaArray Radius="7.5" Validator="BuildRangeMediumBC"/>
         <AreaArray Radius="15" Validator="BuildRangeLargeBC"/>
+        <AreaArray Radius="7.5" Validator="BuildRangeBuoy"/>
         <SearchFilters value="-;Ally,Neutral,Enemy,Stasis,UnderConstruction,Dead"/>
     </CValidatorLocationEnumArea>
     <CValidatorUnitType id="BuildRangeBuoy">
-        <Value value="Buoy"/>
+        <Value value="SynoidBuoyCharged"/>
         <Type value="TechAlias"/>
     </CValidatorUnitType>
     <CValidatorLocationEnumArea id="BuoyFUIA">
@@ -130,6 +173,11 @@
         <Find value="1"/>
         <Value value="CrematorShieldLearned"/>
     </CValidatorPlayerRequirement>
+    <CValidatorLocationCompareRange id="SynoidRangeCheckLE9">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="9"/>
+    </CValidatorLocationCompareRange>
     <CValidatorUnitFilters id="SynoidValidatorTargetIsnotVisible">
         <Filters value="-;Visible"/>
     </CValidatorUnitFilters>
@@ -234,10 +282,6 @@
         <Find value="1"/>
         <Value value="MagmineCloakReq"/>
     </CValidatorPlayerRequirement>
-    <CValidatorCombine id="empvalidator">
-        <CombineArray value="IsMissile"/>
-        <CombineArray value="IsMechanical"/>
-    </CValidatorCombine>
     <CValidatorPlayerRequirement id="SynoidMissileTurretUpgraded">
         <ResultNoPlayer value="Error"/>
         <Find value="1"/>

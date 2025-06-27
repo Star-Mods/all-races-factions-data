@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CModel id="ALLRACE2AdditionalPeenemundeMRLSDeathModel">
-        <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
+        <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Impact\Ghost_Mengsk_COOP_Immolate_Impact.m3"/>
         <Flags index="Download" value="0"/>
         <EditorCategories value="Race:UED"/>
+        <ScaleMax value="2.400000,2.400000,3.000000"/>
+        <ScaleMin value="2.400000,2.400000,3.000000"/>
+    </CModel>
+    <CModel id="ALLRACE2ReinforcinglPeenemundeMRLSDeathModel">
+        <Model value="Assets\Effects\Terran\Mutator_MissileMadness_Explosion\Mutator_MissileMadness_Explosion.m3"/>
+        <EditorCategories value="Race:UED"/>
+        <Flags index="Download" value="0"/>
     </CModel>
     <CModel id="UEDModelFieldOnPsionic" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\Alarak_COOP_LightningStrikes_PowerUp\Alarak_COOP_LightningStrikes_PowerUp.m3"/>
@@ -89,15 +96,8 @@
         <Occlusion value="Show"/>
         <SquibTypeDefault value="Metal"/>
         <Model value="Assets\Models\UED_SpartanAAC_Inquisitor_Tank.m3"/>
-        <RequiredAnims index="0" value="Assets\Units\Terran\Hellion_SwarmAnims\Hellion_SwarmAnims.m3a"/>
-        <RequiredAnims index="1" removed="1"/>
+        <RequiredAnims value="Assets\Units\Terran\Hellion_SwarmAnims\Hellion_SwarmAnims.m3a"/>
         <EditorCategories value="Race:UED"/>
-        <Events index="0" removed="1"/>
-        <Events index="1" removed="1"/>
-        <Events index="2" removed="1"/>
-        <Events index="3" removed="1"/>
-        <Events index="4" removed="1"/>
-        <Events index="5" removed="1"/>
         <PlanetPanelCamera value="Star2CameraMid06"/>
         <Radius value="0.750000"/>
         <ScaleMax value="0.550000,0.550000,0.900000"/>
@@ -939,7 +939,7 @@
         <ScaleMax value="1.250000,1.250000,1.250000"/>
         <ScaleMin value="1.250000,1.250000,1.250000"/>
     </CModel>
-    <CModel id="SuppressionTower"  parent="BuildingEx">
+    <CModel id="SuppressionTower" parent="BuildingEx">
         <SquibTypeDefault value="Metal"/>
         <AttachProps Id="Ref_Hardpoint">
             <Keys index="Turret" value="0"/>
@@ -947,11 +947,10 @@
         <AttachProps Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
         </AttachProps>
-        <Radius value="0.75"/>
+        <Radius value="0.750000"/>
         <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
         <UnitGlossaryCamera value="Star2CameraHigh05"/>
         <PlanetPanelCamera value="Star2CameraHigh05"/>
-
         <Model value="Assets\Models\NC_LaserTurret.m3"/>
         <SelectionRadius value="1.000000"/>
         <ShadowRadius value="1.000000"/>
@@ -959,7 +958,7 @@
         <ScaleMin value="1.090000,1.090000,1.090000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
-    <CModel id="HeavyTower"  parent="BuildingEx">
+    <CModel id="HeavyTower" parent="BuildingEx">
         <SquibTypeDefault value="Metal"/>
         <AttachProps Id="Ref_Hardpoint">
             <Keys index="Turret" value="0"/>
@@ -967,7 +966,7 @@
         <AttachProps Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
         </AttachProps>
-        <Radius value="0.75"/>
+        <Radius value="0.750000"/>
         <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
         <UnitGlossaryCamera value="Star2CameraHigh05"/>
         <PlanetPanelCamera value="Star2CameraHigh05"/>
@@ -1030,52 +1029,6 @@
     <CModel id="PeenemundeMRLSDeath" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Terran\ARESDeath\ARESDeath.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
-        <Events>
-            <Variation value="0"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="0.700000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="TerranPreExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="0.270000"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="TerranPreExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="0.530000"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="Terran_ExplosionSmall"/>
-            <Type value="Sound"/>
-            <Time value="1.100000"/>
-            <Payload value="Terran_ExplosionSmall"/>
-        </Events>
-        <Events>
-            <Variation value="1"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="1.300000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
-        <Events>
-            <Variation value="2"/>
-            <Anim value="Death,00"/>
-            <Name value="Uni_DeathFXincidentallFire"/>
-            <Type value="Sound"/>
-            <Time value="0.600000"/>
-            <Payload value="Uni_DeathFXincidentallFire"/>
-        </Events>
         <Radius value="0.900000"/>
         <SelectionRadius value="1.400000"/>
         <ShadowRadius value="2.000000"/>
@@ -1085,8 +1038,8 @@
     </CModel>
     <CModel id="PeenemundeMRLSDeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
         <Model value="Assets\Effects\Other\FireSquibDeathRagdoll\FireSquibDeathRagdoll.m3"/>
-        <ScaleMax value="0.500000,0.500000,0.500000"/>
-        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <ScaleMax value="1.300000,1.300000,2.400000"/>
+        <ScaleMin value="1.300000,1.300000,2.400000"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
     <CModel id="PeenemundeMRLSPortrait" parent="FXAPortrait" Race="Terran">
@@ -1879,7 +1832,7 @@
         <Lighting value="MarinePortrait"/>
         <EditorCategories value="Race:UED"/>
     </CModel>
-    <CModel id="MissileTurret2"  parent="BuildingEx">
+    <CModel id="MissileTurret2" parent="BuildingEx">
         <SquibTypeDefault value="Metal"/>
         <AttachProps Id="Ref_Hardpoint">
             <Keys index="Turret" value="0"/>
@@ -1887,7 +1840,7 @@
         <AttachProps Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
         </AttachProps>
-        <Radius value="0.75"/>
+        <Radius value="0.750000"/>
         <TechPurchaseCamera value="TechPurchaseMissileTurret"/>
         <UnitGlossaryCamera value="Star2CameraHigh05"/>
         <PlanetPanelCamera value="Star2CameraHigh05"/>

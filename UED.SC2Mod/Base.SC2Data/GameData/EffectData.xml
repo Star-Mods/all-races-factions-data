@@ -184,10 +184,21 @@
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="UEDEffektPeriodTransportShuttleOrderOutStructure">
         <ValidatorArray value="UEDPlacementCheckSuplyStructure"/>
-        <ValidatorArray value="UEDTargeNotOnCreep"/>
         <EditorCategories value="Race:UED"/>
         <InitialEffect value="UEDEffektPeriodTransportShuttleOrderOutFirst"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="UEDProjectedGravityShieldCreatePersistent">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="150"/>
+        <PeriodicEffectArray value="UEDProjectedGravityShieldRemoveBehavior"/>
+        <PeriodicPeriodArray value="0.4"/>
+    </CEffectCreatePersistent>
+    <CEffectRemoveBehavior id="UEDProjectedGravityShieldRemoveBehavior">
+        <ValidatorArray index="0" value="noShields"/>
+        <EditorCategories value="Race:UED"/>
+        <BehaviorLink value="ProjectedGravityShield"/>
+    </CEffectRemoveBehavior>
     <CEffectRemoveBehavior id="UEDRemoveMarkerTransportShuttleStructure">
         <EditorCategories value="Race:UED"/>
         <WhichUnit Value="Caster"/>
@@ -750,7 +761,7 @@
     <CEffectEnumArea id="SearchAreaBlidingFlash">
         <EditorCategories value="Race:UED"/>
         <SearchFilters value="-;Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="2" Effect="OpticalFlareApplyBehavior"/>
+        <AreaArray Radius="3" Effect="OpticalFlareApplyBehavior"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="SearchTowerMining">
         <EditorCategories value="Race:UED"/>
@@ -1509,6 +1520,7 @@
         <ValidatorArray value="UEDTotalValidatorForGravitionShields"/>
         <EditorCategories value="Race:UED"/>
         <EffectArray value="StrengtheningShieldAB"/>
+        <EffectArray value="UEDProjectedGravityShieldCreatePersistent"/>
     </CEffectSet>
     <CEffectCreatePersistent id="Type769BattleRifleMultishot">
         <EditorCategories value="Race:UED"/>
@@ -1552,7 +1564,7 @@
         <EditorCategories value="Race:UED"/>
         <DrainVital value="Energy"/>
         <DrainVitalCostFactor value="0.333"/>
-        <RechargeVitalRate value="9"/>
+        <RechargeVitalRate value="4"/>
     </CEffectCreateHealer>
     <CEffectDamage id="PeenemundeMRLS_Damage">
         <EditorCategories value="Race:UED"/>
@@ -1867,7 +1879,7 @@
     </CEffectLaunchMissile>
     <CEffectDamage id="LongboltMissileU2" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:UED"/>
-        <Amount value="10"/>
+        <Amount value="11"/>
         <AreaArray Radius="0.8" Fraction="1"/>
         <SearchFilters value="Air;-"/>
         <ExcludeArray Value="Target"/>

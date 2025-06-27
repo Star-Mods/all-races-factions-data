@@ -61,31 +61,6 @@
         <WhichUnit Value="Caster"/>
         <BehaviorLink value="InfantryMedkit@Healing"/>
     </CEffectRemoveBehavior>
-    <CEffectDamage id="InfantryMortarDamageDirected" parent="DU_WEAP_SPLASH">
-        <ImpactUnitValidator value="InfantryMortarImpactValidator"/>
-        <Kind value="Ranged"/>
-        <KindSplash value="Splash"/>
-        <Amount value="40"/>
-        <Death value="Blast"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <EditorCategories value="Race:UPL"/>
-    </CEffectDamage>
-    <CEffectSet id="InfantryMortarLaunchDirectedImpactSet">
-        <EffectArray value="InfantryMortarDisableWeaponRB"/>
-        <EffectArray value="InfantryMortarDamageDirected"/>
-        <EditorCategories value="Race:UPL"/>
-        <TargetLocationType value="UnitOrPoint"/>
-    </CEffectSet>
-    <CEffectLaunchMissile id="InfantryMortarLaunchDirected">
-        <LaunchLocation Value="CasterUnit"/>
-        <LaunchEffect value="InfantryMortarDisableWeaponAB"/>
-        <ImpactEffect value="InfantryMortarLaunchDirectedImpactSet"/>
-        <AmmoUnit value="InfantryMortarMissile"/>
-        <ImpactOffset value="0,0,0.1"/>
-        <Movers Link="InfantryMortarMissileMoverClose" IfRangeLTE="4"/>
-        <Movers Link="InfantryMortarMissileMover" IfRangeLTE="1000"/>
-        <EditorCategories value="Race:UPL"/>
-    </CEffectLaunchMissile>
     <CEffectSwitch id="InfantryMortarLaunchSwitch">
         <CaseArray Validator="InfantryMortarWeaponLaunchValidator" Effect="InfantryMortarLaunchDirected"/>
         <CaseDefault value="InfantryMortarLaunch"/>
@@ -102,9 +77,8 @@
         <EditorCategories value="Race:UPL"/>
     </CEffectRemoveBehavior>
     <CEffectSet id="InfantryMortarLaunchImpactSet">
-        <EffectArray value="InfantryMortarDisableWeaponRB"/>
         <EffectArray value="InfantryMortarDamage"/>
-        <TargetLocationType value="UnitOrPoint"/>
+        <TargetLocationType value="Point"/>
         <EditorCategories value="Race:UPL"/>
     </CEffectSet>
     <CEffectModifyUnit id="InfantryMortarSetCooldown">
@@ -113,18 +87,16 @@
         <EditorCategories value="Race:UPL"/>
     </CEffectModifyUnit>
     <CEffectCreatePersistent id="InfantryMortarDelay">
+        <EditorCategories value="Race:UPL"/>
         <WhichLocation Value="TargetUnitOrPoint"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorEndLocation Value="TargetUnitOrPoint"/>
         <Flags index="Channeled" value="1"/>
-        <InitialEffect value="InfantryMortarAttacking"/>
         <ExpireEffect value="InfantryMortarExpire"/>
-        <FinalEffect value="InfantryMortarFinal"/>
         <PeriodCount value="15"/>
         <PeriodicValidator value="InfantryMortarValidator"/>
         <PeriodicEffectArray value="InfantryMortarPeriodicDummy"/>
         <PeriodicPeriodArray value="0.1"/>
-        <EditorCategories value="Race:UPL"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="InfantryMortarAttacking">
         <WhichUnit Value="Caster"/>
@@ -145,7 +117,6 @@
         <TargetLocationType value="UnitOrPoint"/>
     </CEffectSet>
     <CEffectSet id="InfantryMortarExpire">
-        <EffectArray value="InfantryMortarAttackingRB"/>
         <EffectArray value="InfantryMortarLaunch"/>
         <EditorCategories value="Race:UPL"/>
         <TargetLocationType value="UnitOrPoint"/>
@@ -365,15 +336,14 @@
         <EditorCategories value="Race:UPL"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="InfantryMortarLaunch">
+        <EditorCategories value="Race:UPL"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetPoint"/>
+        <ImpactOffset value="0,0,0.1"/>
         <ImpactEffect value="InfantryMortarLaunchImpactSet"/>
         <AmmoUnit value="InfantryMortarMissile"/>
-        <LaunchEffect value="InfantryMortarDisableWeaponAB"/>
-        <ImpactOffset value="0,0,0.1"/>
         <Movers Link="InfantryMortarMissileMoverClose" IfRangeLTE="4"/>
         <Movers Link="InfantryMortarMissileMover" IfRangeLTE="1000"/>
-        <EditorCategories value="Race:UPL"/>
     </CEffectLaunchMissile>
     <CEffectEnumArea id="InfantryFlamethrowerSearch">
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -439,7 +409,7 @@
     </CEffectDamage>
     <CEffectSet id="InfantryRocketImpact">
         <EffectArray value="InfantryRocketDamage"/>
-        <EffectArray value="InfantryRocketDamageBlast"/>
+        <EffectArray value="LotCUPLInfantryRocketSearchArea"/>
         <EditorCategories value="Race:UPL"/>
     </CEffectSet>
     <CEffectDamage id="InfantryRocketDamageBlast" parent="DU_WEAP">
@@ -448,11 +418,10 @@
         <KindSplash value="Splash"/>
         <Amount value="2"/>
         <Death value="Blast"/>
-        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="0.6" Fraction="1"/>
-        <ExcludeArray Value="Target"/>
+        <SearchFlags index="CallForHelp" value="0"/>
         <SearchFlags index="OffsetByUnitRadius" value="0"/>
-        <ValidatorArray value="InfantryRocketAOEResearched"/>
+        <SearchFlags index="OffsetAreaByAngle" value="0"/>
+        <SearchFlags index="SameCliff" value="0"/>
         <ArmorReduction value="0"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="InfantryRocketLaunch">
@@ -521,17 +490,17 @@
     <CEffectDamage id="InfantryMortarDamage" parent="DU_WEAP_SPLASH">
         <Kind value="Ranged"/>
         <KindSplash value="Splash"/>
-        <Amount value="30"/>
+        <Amount value="25"/>
         <Death value="Blast"/>
-        <AreaArray Radius="0.4" Fraction="1" Validator="InfantryMortarImpactTargetFilters"/>
-        <AreaArray Radius="0.7" Fraction="0.5" Validator="InfantryMortarImpactTargetFilters"/>
-        <AreaArray Radius="1" Fraction="0.25" Validator="InfantryMortarImpactTargetFilters"/>
+        <AreaArray Radius="0.4" Fraction="1"/>
+        <AreaArray Radius="0.7" Fraction="0.5"/>
+        <AreaArray Radius="1" Fraction="0.25"/>
         <IncludeArray Effect="InfantryMortarLaunch" Value="Target"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="OffsetByUnitRadius" value="0"/>
-        <ImpactUnitValidator value="InfantryMortarImpactTargetFilters"/>
         <EditorCategories value="Race:UPL"/>
-        <AttributeBonus index="Structure" value="25"/>
+        <AttributeBonus index="Structure" value="35"/>
+        <ImpactLocation Value="TargetPoint"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="InfantryMortarSiegedAB">
         <WhichUnit Value="Caster"/>
@@ -1528,21 +1497,11 @@
         <Magnitude value="23.000000,9.000000"/>
         <Radius value="1.200000,0.200000"/>
     </CActorForceSphere>
-    <CActorAction id="InfantryMortarAttack" parent="GenericAttack" effectImpact="InfantryMortarDamage" effectLaunch="InfantryMortarLaunch">
-        <On Terms="Effect.InfantryMortarDamage.Start" Send="ActionDamage"/>
-        <On Terms="Effect.InfantryMortarDamage.Stop" Send="ActionDamagePhysics"/>
-        <LaunchSiteOps Ops="SOpAttachWeapon"/>
+    <CActorAction id="InfantryMortarAttack" parent="GenericAttack" effectImpact="InfantryMortarLaunchImpactSet">
+        <On index="5" Terms="Effect.InfantryMortarLaunch.Start; At Caster" Send="Create"/>
         <LaunchAssets Model="InfantryMortarLaunch" Sound="InfantryMortar_Launch"/>
         <Missile value="InfantryMortarMissile"/>
         <ImpactMap index="None" Model="InfantryMortarImpact" Sound="InfantryMortar_Impact"/>
-    </CActorAction>
-    <CActorAction id="InfantryMortarAttackDirected" parent="GenericAttack" effectImpact="InfantryMortarDamageDirected" effectLaunch="InfantryMortarLaunchDirected">
-        <LaunchSiteOps Ops="SOpAttachWeapon"/>
-        <LaunchAssets Model="InfantryMortarLaunch" Sound="InfantryMortar_Launch"/>
-        <Missile value="InfantryMortarMissile"/>
-        <ImpactMap index="None" Model="InfantryMortarImpact" Sound="InfantryMortar_Impact"/>
-        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SOpForwardLaunchGuide"/>
-        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="SiegeTankSiegedForce"/>
     </CActorAction>
     <CActorModel id="InfantryMortarSiegeBuff" parent="ModelAddition">
         <On Terms="Behavior.InfantryMortarSiegingzz.On" Send="Create"/>
@@ -3154,9 +3113,10 @@
         <AssetArray TemplateParam="MiningDrone_Yes04"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
-    <CSound id="InfantryRocket_Ready" parent="UPLUnitReady" Unit="InfantryRocket">
-        <AssetArray TemplateParam="InfantryRocket_Ready00"/>
-        <Volume value="-4.500000,-4.500000"/>
+    <CSound id="InfantryRocket_Ready" parent="Ready" Unit="InfantryRocket">
+        <EditorCategories value="Race:UPL"/>
+        <AssetArray TemplateParam="InfantryRocket_Ready00" File="Assets\Sounds\UPLUnitVO\InfantryRocket\infantryrocket_ready00.ogg"/>
+        <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="InfantryRocket_Attack" parent="UPLUnitAck" Unit="InfantryRocket">
         <AssetArray TemplateParam="InfantryRocket_Attack00"/>
@@ -4224,7 +4184,6 @@
         <Race value="UPLL"/>
         <EditorCategories value="UpgradeType:Talents,Race:UPL"/>
         <Icon value="Assets\Textures\btn_UPL_Infantryrocket_Explosive_Rocket.dds"/>
-        <EffectArray Operation="Set" Reference="Effect,InfantryRocketDamage,Chance" Value="1"/>
         <ScoreAmount value="200"/>
         <AffectedUnitArray value="UPLSpecOps"/>
     </CUpgrade>

@@ -76,8 +76,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -138,8 +138,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <MinimapRadius value="1.25"/>
@@ -343,8 +343,8 @@
         <AbilArray Link="attackUED"/>
         <AbilArray Link="AttackRedirectUED"/>
         <AbilArray Link="GoAttackRedirect"/>
-<!--        <AbilArray Link="AbilityFireModeDrakkar"/>-->
-<!--        <AbilArray Link="AbilityFastMoveModeDrakkar"/>-->
+        <!--        <AbilArray Link="AbilityFireModeDrakkar"/>-->
+        <!--        <AbilArray Link="AbilityFastMoveModeDrakkar"/>-->
         <WeaponArray Link="DrakkarMachineGun" Turret="DrakkarAPC"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="moveUED,Move" Row="0" Column="0"/>
@@ -903,8 +903,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -950,7 +950,7 @@
         <LateralAcceleration value="46.0625"/>
         <TurningRate value="360"/>
         <Sight value="11"/>
-        <Food value="-6"/>
+        <Food value="-5"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="225"/>
         <CostResource index="Vespene" value="175"/>
@@ -1060,7 +1060,8 @@
         <HotkeyCategory value="Unit/Category/UEDUnits"/>
         <EnergyRegenRate value="0.5625"/>
         <CargoSize value="4"/>
-        <PlacementFootprint value="FootprintNoBuild1x1"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
     </CUnit>
     <CUnit id="HonorguardCruiser">
         <DeathRevealRadius value="3"/>
@@ -1186,8 +1187,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -1491,8 +1492,8 @@
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>
@@ -1624,8 +1625,8 @@
         <VisionHeight value="4"/>
         <Food value="-2"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="75"/>
-        <CostResource index="Vespene" value="75"/>
+        <CostResource index="Minerals" value="50"/>
+        <CostResource index="Vespene" value="50"/>
         <RepairTime value="40"/>
         <AttackTargetPriority value="20"/>
         <DamageDealtXP value="1"/>
@@ -2398,7 +2399,7 @@
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
         <TacticalAI value="BonesTossGrenadeWeapon"/>
     </CUnit>
-    <CUnit id="Valkyrie">
+    <CUnit id="ALLRACE2UEDValkyrie">
         <DeathRevealRadius value="3"/>
         <Race value="UED"/>
         <Mob value="Multiplayer"/>
@@ -2413,8 +2414,8 @@
         <Attributes index="Mechanical" value="1"/>
         <LifeStart value="200"/>
         <LifeMax value="200"/>
-        <LifeArmorName value="Unit/LifeArmorName/UEDArmor"/>
         <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UEDArmor"/>
         <Mover value="Fly"/>
         <Speed value="3.75"/>
         <Acceleration value="2.5"/>
@@ -2425,7 +2426,7 @@
         <VisionHeight value="4"/>
         <Food value="-3"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Minerals" value="275"/>
         <CostResource index="Vespene" value="125"/>
         <RepairTime value="60"/>
         <AttackTargetPriority value="20"/>
@@ -2462,7 +2463,7 @@
         <GlossaryWeakArray value="Battlecruiser"/>
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="Tempest"/>
-        <GlossaryAlias value="Valkyrie"/>
+        <GlossaryAlias value="ALLRACE2UEDValkyrie"/>
         <HotkeyCategory value="Unit/Category/UEDUnits"/>
     </CUnit>
     <CUnit id="ValkyrieDamageMissile" parent="MISSILE">
@@ -2519,8 +2520,8 @@
         <AbilArray Link="RallyOperationHeadquarters"/>
         <AbilArray Link="CalldownEnrichmentTower"/>
         <AbilArray Link="WarpUEDBeacon"/>
-<!--        <AbilArray Link="UEDCalldownStructure"/>-->
-<!--        <AbilArray Link="ArmSiloWithNuke2"/>-->
+        <!--        <AbilArray Link="UEDCalldownStructure"/>-->
+        <!--        <AbilArray Link="ArmSiloWithNuke2"/>-->
         <BehaviorArray Link="CommandCenterKnockbackBehavior"/>
         <BehaviorArray Link="UEDConstructionVisionDebuff"/>
         <EffectArray index="Create" value="CCCreateSet"/>
@@ -2529,7 +2530,7 @@
             <LayoutButtons Face="Salvager" Type="AbilCmd" AbilCmd="OperationHeadquartersTrain,Train1" Row="0" Column="0"/>
             <LayoutButtons Face="RallyUED" Type="AbilCmd" AbilCmd="RallyOperationHeadquarters,Rally1" Row="1" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5CancelToSelection,CancelLast" Row="2" Column="4"/>
-<!--            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Halt" Row="2" Column="4"/>-->
+            <!--            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Halt" Row="2" Column="4"/>-->
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="CalldownEnrichmentTower" Type="AbilCmd" AbilCmd="CalldownEnrichmentTower,Execute" Row="1" Column="0"/>
 <!--            <LayoutButtons>-->
@@ -2550,22 +2551,22 @@
 <!--            </LayoutButtons>-->
             <LayoutButtons Face="BuildBeacon" Type="AbilCmd" AbilCmd="WarpUEDBeacon,Execute" Row="0" Column="1"/>
         </CardLayouts>
-<!--        <CardLayouts CardId="0002">-->
-<!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
-<!--            <LayoutButtons Face="BuildArsenal" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build2" Row="0" Column="1"/>-->
-<!--            <LayoutButtons Face="VespenePurificationPlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build3" Row="0" Column="2"/>-->
-<!--            <LayoutButtons Face="TeleportationNode" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build4" Row="1" Column="0"/>-->
-<!--            <LayoutButtons Face="TacticsAcademy" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build10" Row="1" Column="1"/>-->
-<!--            <LayoutButtons Face="OperationHeadquarters" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build1" Row="0" Column="0"/>-->
-<!--        </CardLayouts>-->
-<!--        <CardLayouts CardId="0003">-->
-<!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
-<!--            <LayoutButtons Face="FieldBureau" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build6" Row="0" Column="0"/>-->
-<!--            <LayoutButtons Face="MunitionsFactory" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build8" Row="0" Column="1"/>-->
-<!--            <LayoutButtons Face="StarshipMaintenancePlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build9" Row="0" Column="2"/>-->
-<!--            <LayoutButtons Face="MilitaryResearchStation" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build7" Row="1" Column="1"/>-->
-<!--            <LayoutButtons Face="TachyonRelay" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build5" Row="1" Column="2"/>-->
-<!--        </CardLayouts>-->
+        <!--        <CardLayouts CardId="0002">-->
+        <!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
+        <!--            <LayoutButtons Face="BuildArsenal" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build2" Row="0" Column="1"/>-->
+        <!--            <LayoutButtons Face="VespenePurificationPlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build3" Row="0" Column="2"/>-->
+        <!--            <LayoutButtons Face="TeleportationNode" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build4" Row="1" Column="0"/>-->
+        <!--            <LayoutButtons Face="TacticsAcademy" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build10" Row="1" Column="1"/>-->
+        <!--            <LayoutButtons Face="OperationHeadquarters" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build1" Row="0" Column="0"/>-->
+        <!--        </CardLayouts>-->
+        <!--        <CardLayouts CardId="0003">-->
+        <!--            <LayoutButtons Face="Cancel" Type="Submenu" Row="2" Column="4"/>-->
+        <!--            <LayoutButtons Face="FieldBureau" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build6" Row="0" Column="0"/>-->
+        <!--            <LayoutButtons Face="MunitionsFactory" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build8" Row="0" Column="1"/>-->
+        <!--            <LayoutButtons Face="StarshipMaintenancePlant" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build9" Row="0" Column="2"/>-->
+        <!--            <LayoutButtons Face="MilitaryResearchStation" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build7" Row="1" Column="1"/>-->
+        <!--            <LayoutButtons Face="TachyonRelay" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Build5" Row="1" Column="2"/>-->
+        <!--        </CardLayouts>-->
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
         <Footprint value="Footprint5x5Contour"/>
@@ -2905,8 +2906,8 @@
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
+        <Footprint value="UEDFootprint2x2Contour3AllowCreep"/>
+        <PlacementFootprint value="UEDFootprint2x2AllowCreep"/>
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <ScoreResult value="BuildOrder"/>

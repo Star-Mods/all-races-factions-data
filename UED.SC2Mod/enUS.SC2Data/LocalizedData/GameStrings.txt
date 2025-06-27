@@ -194,13 +194,13 @@ Button/Name/CorruptionAbility2=Corruption
 Button/Name/Cremator=Request Cremator
 Button/Name/CrimsonEye=Request Crimson Eye
 Button/Name/CrimsonEyeRepair=Repair
-Button/Name/DeployPsionicSuppressionField=Create an impulse to suppress psionic energy
+Button/Name/DeployPsionicSuppressionField=Create an Impulse to Suppress Psionic Energy
 Button/Name/DesolatorMissileTank=Request Typhoon LMT
 Button/Name/DrakkaAPCrLoad=Load
 Button/Name/DrakkarAPC=Request Drakkar APC
 Button/Name/DrakkarUnloadAll=Unload All
 Button/Name/Drone=Morph to Drone
-Button/Name/DroneRepairModule=Authorize Drone Repair Module
+Button/Name/DroneRepairModule=Authorization request:  Drone Repair Module
 Button/Name/DropArsenal=Drop Arsenal
 Button/Name/DropHeavyTower=Drop Heavy Tower
 Button/Name/DropInfusionTower=Drop Infusion Tower
@@ -235,7 +235,7 @@ Button/Name/PoliticalAdvisor=Request Political Advisor
 Button/Name/PositronicMissileStrike=Launch Positronic Missile Strike
 Button/Name/PrecisionStrike=Precision Strike
 Button/Name/PrecisionStrikeDescription=Peenemunde weapons
-Button/Name/ProjectedGravitySheild=Activate the gravity barrier
+Button/Name/ProjectedGravitySheild=Activate the Gravity Barrier
 Button/Name/RallyUED=Set Rally Point
 Button/Name/RequestInfantry=Request Infantry
 Button/Name/RequestStarships=Request Starships
@@ -257,7 +257,7 @@ Button/Name/TeleportationNode=Calldown Teleportation Node
 Button/Name/TransportShuttle=Request Transport Shuttle
 Button/Name/TransportShuttleLoad=Load
 Button/Name/TransportShuttleUnloadAll=Unload All
-Button/Name/UEDAuthorizeMagneticStablizer=Authorize Magnetic Stablizer
+Button/Name/UEDAuthorizeMagneticStablizer=Authorization Request: Magnetic Stablizer
 Button/Name/UEDBuildAdvanced=Calldown advanced structures
 Button/Name/UEDBuildEazy=Calldown basic structures
 Button/Name/UEDButtonAcelerationMorphNode=Fast teleportation
@@ -291,12 +291,13 @@ Button/Name/UnknownButton22=Research Beathanium Defensive Programming, Level 3
 Button/Name/UnknownButton3=Beatan magnetic field emitter
 Button/Name/UpgradeCrimsonEyeEnergy=Authorization request: Beatanium Generator
 Button/Name/VespenePurificationPlant=Calldown Vespene Purification Plant
+Button/Tooltip/ALLRACE2UEDValkyrie=Dedicated AA corvette, capable of eliminating entire squadrons with a single salvo.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/ArmorpiercingMode2=Allows the Ruby Eye to see camouflaged and buried troops in the field of view, as well as activates the radar.
 Button/Tooltip/Arsenal=Provides Logistics Capacity.<n/>Logistics allow you to deploy additional units.<n/>Can be transformed into a variety of defense towers.
 Button/Tooltip/ArsenalHelpDrop=Provides Logistics Capacity.<n/>Logistics allow you to deploy additional units.<n/>Can be transformed into a variety of defense towers.
 Button/Tooltip/AtmosphericOperationsLoadout=Replacing external fuel tanks with additional energy generators increases the <c val="FFFF80">Strikefighters</c> the starting and a maximum amount of energy by 50 units .
 Button/Tooltip/AttackBarrage2=Attack Ground
-Button/Tooltip/AttackBarragePeenemunde=periodically attack target point
+Button/Tooltip/AttackBarragePeenemunde=periodically attack target point with scattered pattern. Manuel attack ground will be disabled.
 Button/Tooltip/AuthorizeCloakingDrones=Increases <c val="FFFF80">to support shuttles</c> the initial amount of energy by 50 units.
 Button/Tooltip/AuthorizeCommandoTraining=Increases the energy recovery rate of the<c val="FFFF80"> Political Advisor</c> by 25%.
 Button/Tooltip/AuthorizeEnrichedUraniumOrdinance=Equipped with tactical nuclear warheads, Honorguard's Boomerang missiles will be capable of dealing additional damage to the enemies surrounding the main target.
@@ -450,7 +451,6 @@ Button/Tooltip/UnknownButton2=Improves <c val="ffff8a">armor</c> for mechanical 
 Button/Tooltip/UnknownButton22=Improves <c val="ffff8a">armor</c> for mechanical UED units.
 Button/Tooltip/UnknownButton3=Irradiate and reveal everyone with a Beatan magnetic field in the specified area.<n/>Units at the same time <c val="FFFF00">lose invisibility for 10 seconds.
 Button/Tooltip/UpgradeCrimsonEyeEnergy=Increases the energy recovery rate of the <c val="FFFF80"> Crimson Eye</c> by 100%.
-Button/Tooltip/Valkyrie=Dedicated AA corvette, capable of eliminating entire squadrons with a single salvo.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/VespenePurificationPlant=Calldown onto a Vespene Geyser to allow harvesting of vespene gas.
 Cloaking Drone Target Cooldown=Cannot target a unit that received cloaking drone less than 30 seconds ago.
 Commander/Name/UED=UED
@@ -650,6 +650,8 @@ Effect/Name/UEDNukeDetonateCP=UEDNukeDetonateCP
 Effect/Name/UEDNukeGuidedCP=UEDNukeGuidedCP
 Effect/Name/UEDNukeSuicide=UEDNukeSuicide
 Effect/Name/UEDNukeSwitch=UEDNukeSwitch
+Effect/Name/UEDProjectedGravityShieldCreatePersistent=Projected Gravity Shield Create Persistent
+Effect/Name/UEDProjectedGravityShieldRemoveBehavior=Projected Gravity Shield Remove Behavior
 Effect/Name/UEDRemoveMarkerTransportShuttleStructure=Отменить маркер строения
 Effect/Name/UEDResoursesAB=UEDResoursesAB
 Effect/Name/UEDResoursesSearch=UEDResoursesSearch
@@ -795,8 +797,9 @@ RequirementNode/Tooltip/Or3028896835CountUnitMunitionsFactoryCompleteOnly2429269
 RequirementNode/Tooltip/Or3319937022CountUnitArsenalCompleteOnly774868845TechTreeCheatCountUnitMissileTowerCompleteOnlyTechTreeCheatCountUnitHeavyTowerCompleteOnlyTechTreeCheatCountUnitSuppressionTowerCompleteOnlyTechTreeCheatCountUnitInfusionTowerCompleteOnlyTechTreeCheat=Arsenal or Any Tower
 Reward/Name/ued=UED
 UEDErrorChangeGunFly=Nearby you need a Starship maintenance Plant or an Operations Headquarters
-UEDErrorGraviShields=The gravity shield has already been applied.
+UEDErrorGraviShields=
 UI/Building=Building
+UI/HelpMenuDialogTechGlossary_Control_Unit/Category/UEDUnits=UED Units
 UI/Mutating=Morph
 UI/ResourceSupplyToolTip_UED=All living units cost supply. Build Arsenals to increase supply.
 Unit/Category/TerranUnits=Terran
@@ -807,6 +810,7 @@ Unit/LifeArmorName/UEDArmor=UED Adaptive Staballoy Plating
 Unit/LifeArmorName/UEDArmorBio=UED Beathanium-Infused Carapace
 Unit/LifeArmorName/UEDArmorCMC400A=CMC-400A Powered Armor
 Unit/LifeArmorName/ZergGroundArmor=Zerg Ground Carapace
+Unit/Name/ALLRACE2UEDValkyrie=Valkyrie
 Unit/Name/ATALaserBatteryLMWeapon2=ATA Laser Battery
 Unit/Name/ATSLaserBatteryLMWeapon2=ATS Laser Battery
 Unit/Name/ATSLaserBatteryLMWeapon3=ATS Laser Battery
@@ -868,7 +872,6 @@ Unit/Name/UEDSpartanWeaponAir=Spartan AA
 Unit/Name/UEDTossGrenadeWeapon=UEDTossGrenadeWeapon
 Unit/Name/UEDUnitGoliath=Goliath combat robot
 Unit/Name/UEDUnitSpartan=Spartan AAC
-Unit/Name/Valkyrie=Valkyrie
 Unit/Name/ValkyrieDamageMissile=Valkyrie Damage Missile
 Unit/Name/VespenePurificationPlant=Vespene Purification Plant
 Unit/Name/VespenePurificationPlantRich=Rich Vespene Purification Plant
@@ -967,4 +970,3 @@ Weapon/Tip/HighPoweredShot=<c val="#ColorAttackInfo">Minimum Range: 5
 Weapon/Tip/TachyonLaserCannons=
 Weapon/Tip/TyphoonWeaponGrond=<c val="#ColorAttackInfo">Deals damage to an area<n/>within a radius 0.8.
 Weapon/Tip/UEDPenemundeGunRange=<c val="#ColorAttackInfo">Deals damage to an area within<n/>a radius of 1.25.
-UI/HelpMenuDialogTechGlossary_Control_Unit/Category/UEDUnits=UED Units

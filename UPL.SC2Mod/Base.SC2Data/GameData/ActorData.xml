@@ -188,7 +188,6 @@
         <CreepHeightClass value="Default"/>
         <Inherits index="Opacity" value="0"/>
         <Inherits index="Visibility" value="0"/>
-        <FogVisibility value="Visible"/>
     </CActorModel>
     <CActorUnit default="1" id="UPLBuildingBase" parent="GenericUnitStandard">
         <Aliases value="_CreepEngulfable"/>

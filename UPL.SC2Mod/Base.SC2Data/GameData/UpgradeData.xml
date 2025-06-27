@@ -500,14 +500,24 @@
         <Icon value="Assets\Textures\btn-StarArmorIcon2.dds"/>
         <ScoreAmount value="600"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Unit,RoutheTank,LifeArmor" Value="2"/>
         <EffectArray Reference="Unit,Condor,LifeArmor" Value="2"/>
         <EffectArray Reference="Unit,CondorLanded,LifeArmor" Value="2"/>
         <EffectArray Reference="Unit,UPLBehemoth,LifeArmor" Value="2"/>
-        <EffectArray Reference="Unit,RoutheTank,LifeArmorLevel" Value="2"/>
         <EffectArray Reference="Unit,CondorLanded,LifeArmorLevel" Value="2"/>
         <EffectArray Reference="Unit,Condor,LifeArmorLevel" Value="2"/>
         <EffectArray Reference="Unit,UPLBehemoth,LifeArmorLevel" Value="2"/>
+        <EditorCategories value="Race:UPL,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="RoutheTank"/>
+        <AffectedUnitArray value="Condor"/>
+        <AffectedUnitArray value="CondorLanded"/>
+        <AffectedUnitArray value="UPLBehemoth"/>
+    </CUpgrade>
+    <CUpgrade id="UPLResearchMaterialAbsorptionArmor">
+        <Icon value="Assets\Textures\btn-Routhe-Tank-Material-Absorption-Armor.dds"/>
+        <ScoreAmount value="600"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,RoutheTank,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,RoutheTank,LifeArmorLevel" Value="2"/>
         <EditorCategories value="Race:UPL,UpgradeType:ArmorBonus"/>
         <AffectedUnitArray value="RoutheTank"/>
         <AffectedUnitArray value="Condor"/>
@@ -606,6 +616,7 @@
         <EffectArray index="12" Reference="Effect,CSVDamage,Amount" Value="3"/>
         <EffectArray index="15" Reference="Effect,RoutheTankDamageStructure,Amount" Value="5"/>
         <EffectArray index="18" Reference="Effect,RoutheTankDamageDisplay,AttributeBonus[Structure]" Value="5"/>
+        <EffectArray index="24" Reference="Effect,RaptorAirDamage,Amount" Value="1"/>
         <EffectArray index="46" Reference="Effect,Z2Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,StingerWeapon@Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,BehemothBombDamage,Amount" Value="10"/>
@@ -627,6 +638,7 @@
         <EffectArray index="12" Reference="Effect,CSVDamage,Amount" Value="3"/>
         <EffectArray index="15" Reference="Effect,RoutheTankDamageStructure,Amount" Value="5"/>
         <EffectArray index="18" Reference="Effect,RoutheTankDamageDisplay,AttributeBonus[Structure]" Value="5"/>
+        <EffectArray index="24" Reference="Effect,RaptorAirDamage,Amount" Value="1"/>
         <EffectArray index="46" Reference="Effect,Z2Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,StingerWeapon@Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,BehemothBombDamage,Amount" Value="10"/>
@@ -648,6 +660,7 @@
         <EffectArray index="12" Reference="Effect,CSVDamage,Amount" Value="3"/>
         <EffectArray index="15" Reference="Effect,RoutheTankDamageStructure,Amount" Value="5"/>
         <EffectArray index="18" Reference="Effect,RoutheTankDamageDisplay,AttributeBonus[Structure]" Value="5"/>
+        <EffectArray index="24" Reference="Effect,RaptorAirDamage,Amount" Value="1"/>
         <EffectArray index="46" Reference="Effect,Z2Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,StingerWeapon@Damage,Amount" Value="1"/>
         <EffectArray Reference="Effect,BehemothBombDamage,Amount" Value="10"/>

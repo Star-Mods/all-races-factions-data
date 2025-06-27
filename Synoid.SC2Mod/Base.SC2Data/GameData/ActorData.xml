@@ -27,10 +27,533 @@
         <Host Subject=""/>
         <Model value="SynoidPsionicPulsePrecursor"/>
     </CActorModel>
+    <CActorModel id="AR2SatComTpowerSecondSpybotModel" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.SynoidSatcomTowerSpybotCreatePersistent.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 3.400000 DelayDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow OracleRevelationOffSet"/>
+        <Model value="AR2SatcomTowerSecondSpybotWarning"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+    </CActorModel>
     <CActorModel id="AR2SynoidTriggeredExplosion" parent="ModelAnimationStyleOneShotNoOrphan">
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOriginStationary SOp2DRotation"/>
     </CActorModel>
+    <CActorSplat id="AR2SatComSpyBotsCursorSplat" parent="ProtossCursorSplat" abil="SynoidSatcomTowerSpybots"/>
+    <CActorModel id="AR2SatComTpowerSpybotModel" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.SynoidSatcomTowerSpybotCreatePersistent.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 3.400000 DelayDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow OracleRevelationOffSet"/>
+        <Model value="AR2SatcomTowerSpybotWarning"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+    </CActorModel>
+    <CActorModel id="AR2SatcomTowerSpybotSignalBehavior" parent="ModelAnimationStyleContinuous">
+        <Macros value="GlobalLoopMacro"/>
+        <Macros value="GlobalLoopMacroMore"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Behavior.SatcomTowerSpybotRevealBehaviorTemporary.On" Send="Create"/>
+        <On Terms="Behavior.SatcomTowerSpybotRevealBehaviorTemporary.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="SetScale"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000 1.000000"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead SOpMoveUpByDot5"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorRange id="AR2SynoidBuildRangeBuoy" parent="RangeWeapon" unitName="SynoidBuoyCharged" weapon="BuoyDudWeapon" abil="SynoidBuoyChargePower">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <On Terms="UnitCreation.SynoidBuoyCharged" Send="Create"/>
+        <On Terms="AbilMorph.SynoidBuoyChargePower.Finish; MorphTo SynoidBuoyCharged; MorphFrom SynoidBuoyCharging" Send="Create"/>
+        <On Terms="AbilMorph; MorphTo SynoidBuoyCharged; MorphFrom SynoidBuoyCharging" Send="Create"/>
+        <Abil Link="SynoidBuoyChargePower"/>
+        <Range value="7.500000"/>
+    </CActorRange>
+    <CActorSound id="SynoidIronFletcherMorphSound" parent="SoundOneShot">
+        <On Terms="Abil.SynoidIronFletcherChargePower.Start" Send="Create"/>
+        <On Terms="ProgressLevel.SynoidIronFletcherPowerCharging; Level 0" Send="Create"/>
+        <On Terms="UnitDeath.SynoidChargingIronFletcher" Send="Destroy"/>
+        <On Terms="AbilMorph.SynoidIronFletcherChargePower.Cancel" Send="Destroy"/>
+        <Sound value="SynodIronFletcherMorphSound"/>
+    </CActorSound>
+    <CActorUnit id="SynoidChargingIronFletcher" parent="GenericUnitBase" unitName="SynoidChargingIronFletcher">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="TimerExpired; TimerName KillBeam" Target="HellionAttackBeam" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
+        <Model value="ThunderTank"/>
+        <Scale value="0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="Hellion"/>
+        <DeathArray index="Normal" ModelLink="HellionDeath" SoundLink="Hellion_Explode"/>
+        <DeathCustoms ModelLink="ColonistVehiclePhysicsDeath02" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="Hellion"/>
+        <PortraitActor value="HellionPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <BarOffset value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Hellion_Ready"/>
+        <SoundArray index="Help" value="Hellion_Help"/>
+        <SoundArray index="What" value="Hellion_What"/>
+        <SoundArray index="Yes" value="Hellion_Yes"/>
+        <SoundArray index="Attack" value="Hellion_Attack"/>
+        <SoundArray index="Pissed" value="Hellion_Pissed"/>
+        <SoundArray index="Movement" value="Hellion_Movement"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\SynoidIronFletcher.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="SynoidIronFletcherPowerCharged" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidChargedIronFletcher" Send="Create"/>
+        <On Terms="UnitDeath.SynoidChargedIronFletcher" Send="AnimBracketStop"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SynoidChargingIronFletcher; MorphTo SynoidChargedIronFletcher" Send="Create"/>
+        <HostSiteOps Ops="SOpAttachWeapon SOpMoveByDot75"/>
+        <Model value="SynoidIronFletcherCharged"/>
+        <Supporter Subject="_Unit" Scope="Caster"/>
+    </CActorModel>
+    <CActorModel id="SynoidIronFletcherPowerCharging" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidChargingIronFletcher" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom IronFletcher; MorphTo SynoidChargingIronFletcher" Send="Create"/>
+        <On Terms="ActionDamage" Send="ActionDamagePhysics"/>
+        <On Terms="UnitDeath.SynoidChargingIronFletcher" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+    </CActorModel>
+    <CActorUnit id="SynoidChargedIronFletcher" parent="GenericUnitBase" unitName="SynoidChargedIronFletcher">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.250000 KillBeam"/>
+        <On Terms="TimerExpired; TimerName KillBeam" Target="HellionAttackBeam" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
+        <Model value="ThunderTank"/>
+        <Scale value="0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="Hellion"/>
+        <DeathArray index="Normal" ModelLink="HellionDeath" SoundLink="Hellion_Explode"/>
+        <DeathCustoms ModelLink="ColonistVehiclePhysicsDeath02" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="Hellion"/>
+        <PortraitActor value="HellionPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <BarOffset value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Hellion_Ready"/>
+        <SoundArray index="Help" value="Hellion_Help"/>
+        <SoundArray index="What" value="Hellion_What"/>
+        <SoundArray index="Yes" value="Hellion_Yes"/>
+        <SoundArray index="Attack" value="Hellion_Attack"/>
+        <SoundArray index="Pissed" value="Hellion_Pissed"/>
+        <SoundArray index="Movement" value="Hellion_Movement"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\SynoidIronFletcher.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\SynoidIronFletcherWireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="SynoidChargedIronFletcherAttack" parent="GenericAttack" effectImpact="SynoidChagedIronFletcher" effectLaunch="SynoidChargedIronFletcherLM">
+        <LaunchAssets Sound="ChargedIronFletcher_Blast"/>
+        <BeamScope value="Caster"/>
+        <ImpactMap index="None" Model="WarHoundAttackImpact" Sound="IronFletcherChargedRailgun_Impact"/>
+        <ImpactPhysics Name="RailgunImpact" MatchKeys="Basic" Physics="RailgunAttackDeathForce"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+    </CActorAction>
+    <CActorMissile id="SynoidChargedIronFletcherAttackMissile" parent="GenericAttackMissile" unitName="ChargedIronFletcherWeapon">
+        <Model value="Invisible"/>
+    </CActorMissile>
+    <CActorBeamSimple id="SynoidChargedIronFletcherBeam" parent="GenericAttackBeam">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Effect.SynoidChargedIronFletcherLM.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.WarHound.Start" Send="Create WarHoundImpactHoldingSite"/>
+        <On Terms="Effect.WarHound.Start" Send="RefSet ::HostImpact WarHoundImpactHoldingSite"/>
+        <Host Subject="_Selectable"/>
+        <HostLaunch Subject="_Selectable" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon" HoldPosition="1" HoldRotation="1"/>
+        <HostImpact Subject="_Missile" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorBeamSimple id="SynoidBloodletterAttackBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <Macros value="ActionTargetTeleportDestroy"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.100000 SynoidBloodletterAttackActorTimer"/>
+        <On Terms="TimerExpired" Send="AnimBracketStop BSD"/>
+    </CActorBeamSimple>
+    <CActorSound id="SynoidBlimpMovementSound" parent="SoundContinuous">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <InheritType value="OneShot"/>
+        <Supporter Subject=""/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="BlimpMovementSound"/>
+    </CActorSound>
+    <CActorSound id="BrainWashLinkConversionSound" parent="SoundOneShot">
+        <On Terms="Effect.SynoidBrainWasjControlLinkFinalSwitch.Start" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="SynoidBrainWashLinkConversionSound"/>
+    </CActorSound>
+    <CActorSound id="BrainWashLink2ndConversionSound" parent="SoundOneShot">
+        <On Terms="Effect.SynoidCenserBrainwashApplyPermanentBehavior.Start" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Sound value="SynoidBrainWashLink2ndStageConversionSound"/>
+    </CActorSound>
+    <CActorModel id="SynodBuoyPowerCharging3rdsupport" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidBuoyCharging" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Buoy; MorphTo SynoidBuoyCharging" Send="Create"/>
+        <On Terms="ActionDamage" Send="ActionDamagePhysics"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SynoidBuoyCharging; MorphTo SynoidBuoyCharged" Send="Destroy"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+    </CActorModel>
+    <CActorSound id="SynoidAnathemaMovementSound" parent="SoundContinuous">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <InheritType value="OneShot"/>
+        <Supporter Subject=""/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachTarget"/>
+    </CActorSound>
+    <CActorModel id="SynoidCapitalShipDeath" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+    </CActorModel>
+    <CActorModel id="SynoidSummonGreaterWarDroneImpact" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SynoidSatComGreaterWarDronesCU2.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpMoveUpBy5Dot5"/>
+    </CActorModel>
+    <CActorModel id="SynoidSummonWarDroneImpact" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SatComWarDronesCU.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpMoveUpBy5Dot5"/>
+    </CActorModel>
+    <CActorSound id="SynoidWardenAirshipSearchlightStartSound" parent="SoundOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Abil.BlimpSearchlights.SourceChannelStart" Send="Create"/>
+        <On Terms="Abil.BlimpSearchlights.SourceChannelStop" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="SynoidWardenAirshipInterferenceMatrix" parent="SoundContinuous">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <InheritType value="OneShot"/>
+        <FogVisibility value="Dimmed"/>
+        <Supporter Subject=""/>
+        <On Terms="Behavior.UmpireShielding.On" Send="Create"/>
+        <On Terms="Behavior.UmpireShielding.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="SynoidWardenAirshipLockOn" parent="SoundContinuous">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <InheritType value="OneShot"/>
+        <FogVisibility value="Dimmed"/>
+        <Supporter Subject=""/>
+        <On Terms="Behavior.UmpireLockdown.On" Send="Create"/>
+        <On Terms="Behavior.UmpireLockdown.Off" Send="Destroy"/>
+    </CActorSound>
+    <CActorModel id="SynoidWardenAirshipSearchlightLaunching" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Effect.BlimpSpotlightPersistent.Start" Send="Create"/>
+        <On Terms="ActionDamage" Send="ActionDamagePhysics"/>
+        <On Terms="Effect.BlimpSpotlightPersistent.Stop" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachWeapon SOpMoveBy2"/>
+        <Model value="SynoidWardenAirshipSearchlightModel"/>
+    </CActorModel>
+    <CActorModel id="SynoidBrainwashLink2ndStageConversionImpact" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SynoidCenserBrainwashApplyPermanentBehavior.Start" Send="Create"/>
+        <Model value="SynoidBrainwashLinkConversionSecondImpact"/>
+    </CActorModel>
+    <CActorModel id="SynoidBrainwashLink2ndStageLinkedImpact" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Behavior.SynoidCensorBrainWash2ndstageBehavior.On" Send="Create"/>
+        <On Terms="Behavior.SynoidCensorBrainWash2ndstageBehavior.Off" Send="Destroy"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5 SOpAttachCenter"/>
+        <Model value="SynoidBrainwashLinkedSecondImpact"/>
+        <Host Subject="_Unit"/>
+    </CActorModel>
+    <CActorAction id="SynoidCenserBrainWashLinkSiteOperationFinalStage" parent="GenericAttack" effectAttack="" effectImpact="SynoidCensorBrainwashStage2LinkedBehavior" effectLaunch="SynoidBrainwashControlLinkLaunchStageTwo">
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <Missile value="SynoidBrainWashLinkStage2Missile"/>
+        <AccuracyHalfArc value="10.000000"/>
+        <HostImpactSource Subject="VoidRaySwarmEnhancedAttack" ReachAcrossEffectTrees="1"/>
+    </CActorAction>
+    <CActorMissile id="SynoidBrainWashLinkStage2Missile" parent="GenericAttackMissile" unitName="SynoidBrainwashLinkMissile2ndStage">
+        <Model value="SynoidBrainwashLinkMissileStageTwo"/>
+        <DeathActorModel value="StalkerAttackMissile"/>
+    </CActorMissile>
+    <CActorSound id="SynoidBrainwashLinkStage2PeriodicWarning" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Dimmed"/>
+        <On index="0" Terms="Effect.SynoidBrainwashControlLinkLaunchStageTwo.Start" Send="Create"/>
+        <On Terms="SoundDone; SoundIsFinalSound" Send="Destroy"/>
+        <Sound value="SynodCenserBrainwashLinkAttackSoundStageTwo"/>
+    </CActorSound>
+    <CActorModel id="SynoidBuoyPowerCharging" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidBuoyCharging" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Buoy; MorphTo SynoidBuoyCharging" Send="Create"/>
+        <On Terms="ActionDamage" Send="ActionDamagePhysics"/>
+        <On Terms="UnitDeath.SynoidBuoyCharging" Send="Destroy"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+    </CActorModel>
+    <CActorUnit id="SynoidBuoyCharging" parent="GenericUnitStandard" unitName="SynoidBuoyCharging">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergSmallBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create WidowMine_Land"/>
+        <On Terms="ActorCreation" Send="Create GeneratorBuildRangeSplat"/>
+        <Scale value="1.200000"/>
+        <InternalSplatHeight value="MinimumTerrain"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SynoidBuoyChargingDeath" SoundLink="Terran_ExplosionSmall"/>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="WidowMineBurrowDeath" Name="Variation0"/>
+        <DeathCustoms ModelLink="Invisible" Name="Variation1"/>
+        <PlacementModel value="SpiderMinePlacement"/>
+        <PortraitModel value="BuoyPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.8125"/>
+        <BarOffset value="35"/>
+        <BarWidth value="52"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-nova-sabotagedrone.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="10"/>
+        <SoundArray index="Ready" value="WidowMine_Ready"/>
+        <SoundArray index="What" value="WidowMine_What"/>
+        <SoundArray index="Yes" value="WidowMine_Yes"/>
+        <SoundArray index="Attack" value="WidowMine_Attack"/>
+        <SoundArray index="Pissed" value="WidowMine_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-sabotagedroneblackops.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-nova-sabotagedrone.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="SynoidBuoyCharged" parent="GenericUnitStandard" unitName="SynoidBuoyCharged">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergSmallBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create WidowMine_Land"/>
+        <On Terms="ActorCreation" Send="Create GeneratorBuildRangeSplat"/>
+        <Scale value="1.200000"/>
+        <InternalSplatHeight value="MinimumTerrain"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="SynoidBuoyChargedDeath" SoundLink="Terran_ExplosionSmall"/>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="WidowMineBurrowDeath" Name="Variation0"/>
+        <DeathCustoms ModelLink="Invisible" Name="Variation1"/>
+        <PlacementModel value="SpiderMinePlacement"/>
+        <PortraitModel value="BuoyPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLargeVehicle"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.8125"/>
+        <BarOffset value="35"/>
+        <BarWidth value="52"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-nova-sabotagedrone.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="10"/>
+        <SoundArray index="Ready" value="WidowMine_Ready"/>
+        <SoundArray index="What" value="WidowMine_What"/>
+        <SoundArray index="Yes" value="WidowMine_Yes"/>
+        <SoundArray index="Attack" value="WidowMine_Attack"/>
+        <SoundArray index="Pissed" value="WidowMine_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-sabotagedroneblackops.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-nova-sabotagedrone.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="SynoidBuoyPowerCharged" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidBuoyCharged" Send="Create"/>
+        <On Terms="UnitDeath.SynoidBuoyCharged" Send="AnimBracketStop"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SynoidBuoyCharging; MorphTo SynoidBuoyCharged" Send="Create"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+    </CActorModel>
+    <CActorModel id="SynodBuoyPowerCharging2ndsupport" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SynoidBuoyCharging" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom Buoy; MorphTo SynoidBuoyCharging" Send="Create"/>
+        <On Terms="ActionDamage" Send="ActionDamagePhysics"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SynoidBuoyCharging; MorphTo SynoidBuoyCharged" Send="Destroy"/>
+        <HostSiteOps Ops="SOpMoveUpByDot5"/>
+    </CActorModel>
+    <CActorModel id="SynoidBrainWashLinkConversionImpact" parent="ModelAnimationStyleOneShot">
+        <FogVisibility value="Visible"/>
+        <On Terms="Effect.SynoidBrainWasjControlLinkFinalSwitch.Start" Send="Create"/>
+        <Model value="SynoidBrainWashLinkConversionFirstImpact"/>
+    </CActorModel>
+    <CActorMissile id="SynoidBrainWashLinkMissile" parent="GenericAttackMissile" unitName="SynoidBrainwashLinkMissile"/>
+    <CActorSound id="SynoidBrainWashLinkPeriodicWarning" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Dimmed"/>
+        <On Terms="Effect.SynoidBrainWashControlLinkLaunch.Start" Send="Create"/>
+        <Sound value="SynodCensorBrainwashLinkAttackSound"/>
+    </CActorSound>
+    <CActorRange id="SynoidBrainWashLinkRange" parent="RangeAbil" abil="SynoidCensorBrainWashLink">
+        <Range value="6.000000"/>
+    </CActorRange>
+    <CActorRange id="SynoidBrainWashLinkRangeVisibletoall" parent="RangeAbil">
+        <On index="1" Terms="Effect.SynoidBrainWashLinkPersistent.Start" Send="Create"/>
+        <On index="2" Terms="Effect.SynoidBrainWashLinkPersistent.Stop" Send="Destroy"/>
+        <On index="3" removed="1"/>
+        <On index="4" removed="1"/>
+        <Range value="9.000000"/>
+    </CActorRange>
+    <CActorAction id="SynoidBrainWashLinkSiteOperation" parent="GenericAttack" effectAttack="" effectImpact="SynoidCensorBrainwashLinkedBehavior" effectLaunch="SynoidBrainWashControlLinkLaunch">
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <Missile value="SynoidBrainWashLinkMissile"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorSound id="SynoidSatcomTowerSpybotWarningSound" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Visible"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidSatcomTowerSpybotCreatePersistent.Start" Send="Create"/>
+        <On Terms="Effect.SynoidSatcomTowerSpybotCreatePersistent.Stop" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidSatcomTowerSpybotCreatePersistent.Stop" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="SynoidMindControlStormGlobalWarning" parent="SoundContinuous">
+        <On Terms="Effect.SynoidMindControlStormPersistent.Start" Send="Create"/>
+        <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="Destroy"/>
+        <Sound value="SynoidMindControlStormLaunchWarningSound"/>
+    </CActorSound>
     <CActorSound id="SynoidEnthralledHittingImpactSound" parent="SoundOneShot">
         <VisibleTo index="All" value="1"/>
         <On Terms="Effect.Predator2.Start" Send="Create"/>
@@ -67,7 +590,6 @@
         <Abil Link="SynoidMindControlLink"/>
     </CActorRange>
     <CActorRange id="SynoidMindControlLinkRangeVisibletoall" parent="RangeAbil">
-        <VisibleTo index="All" value="1"/>
         <On index="1" Terms="Effect.SynoidMindControlLinkPersistent.Start" Send="Create"/>
         <On index="2" Terms="Effect.SynoidMindControlLinkPersistent.Stop" Send="Destroy"/>
         <On index="3" removed="1"/>
@@ -85,13 +607,11 @@
         <LocalOffset value="-1.000000,-1.000000,-5.000000"/>
     </CActorSiteOpLocalOffset>
     <CActorModel id="SynoidMindControlLinkConversionImpact" parent="ModelAnimationStyleOneShot">
-        <VisibleTo index="All" value="1"/>
         <FogVisibility value="Visible"/>
         <On Terms="Effect.SynoidMindControlLinkFinalSwitch.Start" Send="Create"/>
         <Model value="MindControlLinkConversionFirstImpact"/>
     </CActorModel>
     <CActorSound id="MindControlLinkConversionSound" parent="SoundOneShot">
-        <VisibleTo index="All" value="1"/>
         <On Terms="Effect.SynoidMindControlLinkFinalSwitch.Start" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachTarget"/>
@@ -114,16 +634,15 @@
         <PortraitModel value="SensorTowerPortrait"/>
         <BarOffset value="160"/>
         <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+            <Image value="Assets\Textures\Wireframe_Synoid_Mind_Control_Tower.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-swann-hellarmor.dds"/>
-        <SoundArray index="Ready" value="SensorTower_Ready"/>
-        <SoundArray index="What" value="SensorTower_What"/>
+        <SoundArray index="Construction" value="SynoidMindControlTower_What"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <UnitIcon value="Assets\Textures\btn_Synoid_Mind_Control_Tower.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Terran-SensorTower.dds"/>
+            <Image value="Assets\Textures\Wireframe_Synoid_Mind_Control_Tower.dds"/>
         </Wireframe>
         <HostSiteOps Ops="SOpMoveUpBy5"/>
         <BuildModel value="SynoidMindControlTowerBuild"/>
@@ -136,13 +655,11 @@
         <Sound value="SlaynElementalGrabTentacleAttackEndRelease"/>
     </CActorSound>
     <CActorModel id="SynoidMindControlStormImpactExplosion" parent="ModelAnimationStyleOneShot">
-        <VisibleTo index="All" value="1"/>
         <FogVisibility value="Visible"/>
         <On Terms="Effect.SynoidMindControlStormPersistent.Stop" Send="Create"/>
     </CActorModel>
     <CActorModel id="MindControlStormWarningPersistent" parent="ModelAddition">
         <Aliases index="0" value="MindControlStormWarningPersistent"/>
-        <VisibleTo index="All" value="1"/>
         <Inherits index="BaseModelScale" value="0"/>
         <Inherits index="CastShadows" value="0"/>
         <Inherits index="CloakEffect" value="0"/>
@@ -207,7 +724,7 @@
     <CActorSound id="MindControlStormLaunchSound" parent="SoundOneShot">
         <Flags index="VisionTestCenterOnly" value="1"/>
         <VisibleTo index="All" value="1"/>
-        <FogVisibility value="Dimmed"/>
+        <FogVisibility value="Visible"/>
         <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
         <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
         <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
@@ -218,7 +735,6 @@
     </CActorSound>
     <CActorModel id="MindControlStormWarningImpactArea" parent="ModelAddition">
         <Aliases index="0" value="MindControlStormWarningPersistent"/>
-        <VisibleTo index="All" value="1"/>
         <Inherits index="BaseModelScale" value="0"/>
         <Inherits index="CastShadows" value="0"/>
         <Inherits index="CloakEffect" value="0"/>
@@ -264,6 +780,15 @@
         <On index="4" Terms="Abil.HoloZergling.ButtonHoverOff" Send="Destroy"/>
         <Abil Link="HoloZergling"/>
     </CActorRange>
+    <CActorSound id="SynoidSatcomTowerSpybotFinalSound" parent="SoundOneShot">
+        <Flags index="VisionTestCenterOnly" value="1"/>
+        <VisibleTo index="All" value="1"/>
+        <FogVisibility value="Visible"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.SynoidSatcomeTowerSpybotApplyBehaviorFinal.Start" Send="Create"/>
+    </CActorSound>
     <CActorSplat id="UltrasonicPulseCursorSplat" parent="ProtossCursorSplat" abil="PsiStorm">
         <On index="0" Terms="Abil.ALLRACE2SynoidUltrasonicPulse.Cursor" Send="Create"/>
         <Model value="TerranAOECursorSplat"/>
@@ -307,7 +832,7 @@
         <FogVisibility value="Dimmed"/>
         <On Terms="Effect.AnathemaHomingWeaponLeftLM.Start" Send="Create"/>
         <On Terms="Effect.AnathemaHomingWeaponRightLM.Start" Send="Create"/>
-        <Sound value="SensorTower_MorphToTower"/>
+        <Sound value="Synoid_Anathema_Homing_Missile"/>
     </CActorSound>
     <CActorModel id="RancorSynoidDeath" parent="ModelAnimationStyleOneShot"/>
     <CActorModel id="SynoidBloodletterUltrasonicPulseAreaImpact" parent="ModelAnimationStyleOneShot">
@@ -379,17 +904,16 @@
         <Inherits index="TeamColor" value="0"/>
         <Inherits index="TimeScale" value="0"/>
         <Inherits index="TintColor" value="0"/>
-        <Inherits index="Visibility" value="0"/>
         <Inherits index="WarpGroup" value="0"/>
         <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
         <On index="1" Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
         <On index="2" Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
         <On Terms="Behavior.SynoidUltrasonicPulseStun.On" Send="Create"/>
         <On Terms="Behavior.SynoidUltrasonicPulseStun.Off" Send="AnimBracketStop BSD"/>
-        <Host Subject=""/>
         <HostSiteOps Ops="AttachHeadTop"/>
         <ModelFlags index="AllowHitTest" value="0"/>
         <ModelFlags index="UseSyncSeed" value="0"/>
+        <AutoScaleFactor value="2.000000"/>
     </CActorModel>
     <CActorSound id="SynoidWarDroneDeathExplosionSound" parent="SoundOneShot">
         <Flags index="VisionTestCenterOnly" value="1"/>
@@ -438,11 +962,11 @@
         <LaunchSiteFallback value="MutaliskAttackAirDeathForce"/>
         <LaunchSound value="RoachAttack"/>
     </CActorAction>
-    <CActorSound id="SynoidGreaterWarDroneDeathExplosionSound2" parent="SoundOneShot">
+    <CActorSound id="SynoidGreaterWarDroneDeathExplosionSound" parent="SoundOneShot">
         <Flags index="VisionTestCenterOnly" value="1"/>
         <FogVisibility value="Dimmed"/>
         <On Terms="UnitDeath.SynoidWarDrone2" Send="Create"/>
-        <Sound value="General_Explosion_Debris"/>
+        <Sound value="SynoidGreaterWallDroneExplosion"/>
     </CActorSound>
     <CActorMissile id="ALLRACE2UmpireMPAttackMissile" parent="GenericAttackMissile" unitName="SynoidUmpireSwarmtMPWeapon">
         <Model value="ALLRACE2UmpireMPWeapon"/>
@@ -979,13 +1503,13 @@
         <On Terms="SelectionLocalUpdate.LurkerMPBurrowed.Stop" Send="Destroy"/>
         <Flags index="SuppressSaveLoad" value="1"/>
     </CActorRange>
-    <CActorSound id="BlimpLoadSound" parent="SoundOneShot">
+    <CActorSound id="SynoidBlimpLoadSound" parent="SoundOneShot">
         <On Terms="AbilTransport.BlimpTransport.CargoLoad" Send="Create"/>
-        <Sound value="ColonistBiodome_Load"/>
+        <Sound value="SynoidWardenAirshipLoad"/>
     </CActorSound>
-    <CActorSound id="BlimpUnloadSound" parent="SoundOneShot">
+    <CActorSound id="SynoidBlimpUnloadSound" parent="SoundOneShot">
         <On Terms="AbilTransport.BlimpTransport.CargoUnload" Send="Create"/>
-        <Sound value="ColonistBiodome_Unload"/>
+        <Sound value="SynoidWardenAirshipUnload"/>
     </CActorSound>
     <CActorModel id="ChopperSharpshooterPowerUp" parent="ModelAnimationStyleOneShot">
         <On Terms="Abil.Sharpshooter.SourcePrepStart" Send="Create"/>
@@ -1156,13 +1680,9 @@
         <HeroIcon value="Assets\Textures\btn-unit-alienmech-blight.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionarmorlevel0.dds"/>
         <ShieldArmorIcon value="Assets\Textures\btn-upgrade-stetmann-zerglinghardenedshield.dds"/>
-        <SoundArray index="Ready" value="Goliath_Ready_NP"/>
-        <SoundArray index="Help" value="Goliath_Death_NP"/>
-        <SoundArray index="What" value="Goliath_What_NP"/>
-        <SoundArray index="Yes" value="Goliath_Attack_NP"/>
-        <SoundArray index="Attack" value="Goliath_Attack_NP"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="Synoid_Atrocity_Ready"/>
         <SoundArray index="Pissed" value="Goliath_What_NP"/>
-        <SoundArray index="Movement" value="Goliath_Movement"/>
         <StatusColors index="Shields">
             <ColorArray index="0" value="255,255,255,0"/>
         </StatusColors>
@@ -1285,13 +1805,13 @@
         <HeroIcon value="Assets\Textures\btn-unit-terran-chopper.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <NameOffset value="60"/>
-        <SoundArray index="Ready" value="Wraith_Ready_NP"/>
-        <SoundArray index="Help" value="Wraith_Death_NP"/>
-        <SoundArray index="What" value="Wraith_What_NP"/>
-        <SoundArray index="Yes" value="Wraith_Attack_NP"/>
-        <SoundArray index="Attack" value="Wraith_Attack_NP"/>
+        <SoundArray index="Ready" value="Synoid_Cossack_Ready"/>
+        <SoundArray index="Help" value="Synoid_UmpireCraft_Help"/>
+        <SoundArray index="What" value="Synoid_Cossack_Ready"/>
+        <SoundArray index="Yes" value="Synoid_Cossack_Ready"/>
+        <SoundArray index="Attack" value="Synoid_Cossack_Attack"/>
         <SoundArray index="Pissed" value="Wraith_What_NP"/>
-        <SoundArray index="Movement" value="Wraith_Movement"/>
+        <SoundArray index="Movement" value="BlimpMovement"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-chopper.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\wireframe-terran-chopper.dds"/>
@@ -1573,11 +2093,13 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-troopermengskflamethrower.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="Firebat_Ready"/>
+        <SoundArray index="Birth" value="Synoid_Cremator_Ready"/>
+        <SoundArray index="Ready" value="Synoid_Cremator_Ready"/>
         <SoundArray index="Help" value="Firebat_Help"/>
-        <SoundArray index="What" value="Firebat_What"/>
-        <SoundArray index="Yes" value="Firebat_Yes"/>
-        <SoundArray index="Pissed" value="Firebat_Pissed"/>
+        <SoundArray index="What" value="Synoid_Cremator_What"/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value="Synoid_Cremator_Attack"/>
+        <SoundArray index="Pissed" value="Synoid_Cremator_Pissed"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengskflamethrower.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\wireframe-terran-troopermengskflamethrower.dds"/>
@@ -1693,9 +2215,9 @@
         <BarOffset value="25"/>
         <BarWidth value="100"/>
         <GroupIcon>
-            <Image value="Assets\Textures\btnSynoidGreaterWarDrone.dds"/>
+            <Image value="Assets\Textures\btn-Synoid-Greater-WarDrone.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\wireframe-xanthos-fighterjet.dds"/>
+        <HeroIcon value="Assets\Textures\Synoid-Greater-War-Drone-Wireframe.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
         <SoundArray index="Ready" value=""/>
         <SoundArray index="Help" value=""/>
@@ -1707,18 +2229,19 @@
             <ColorArray index="0" value="255,255,128,0"/>
         </StatusColors>
         <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btnSynoidGreaterWarDrone.dds"/>
+        <UnitIcon value="Assets\Textures\btn-Synoid-Greater-WarDrone.dds"/>
         <VitalColors index="Energy">
             <ColorArray value="255,255,128,0"/>
         </VitalColors>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-xanthos-fighterjet.dds"/>
+            <Image value="Assets\Textures\Synoid-Greater-War-Drone-Wireframe.dds"/>
         </Wireframe>
     </CActorUnit>
     <CActorAction id="SynoidGreaterWarDroneAttack2" parent="GenericAttack" effectImpact="SynoidGreaterWarDroneSet2" effectLaunch="SynoidGreaterWarDroneLM2">
-        <LaunchAssets Sound="Civilian_AttackLaunch"/>
+        <LaunchAssets Model="" Sound="Civilian_AttackLaunch"/>
         <Missile value="SynoidGreaterWarDroneAttackMissile2"/>
         <ImpactMap index="None" Model="WarDroneImpact2" Sound="Terran_SingleBulletAttackImpact"/>
+        <LaunchSiteOps Ops="SOpAttachWeapon SOpMoveByDot75"/>
     </CActorAction>
     <CActorMissile id="SynoidGreaterWarDroneAttackMissile2" parent="GenericAttackMissile" unitName="SynoidSJGriffonWeapon22">
         <On index="1" Terms="UnitBirth" Send="AnimBracketStart Lifetime {} Turbo"/>
@@ -1744,6 +2267,13 @@
         <Model value="WarningCTEModel2"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorSound id="SynoidBuoyMorphSound" parent="SoundOneShot">
+        <On Terms="Abil.SynoidBuoyChargePower.Start" Send="Create"/>
+        <On Terms="ProgressLevel.SynoidBuoyCharging; Level 0" Send="Create"/>
+        <On Terms="UnitDeath.SynoidBuoyCharging" Send="Destroy"/>
+        <On Terms="AbilMorph.SynoidBuoyChargePower.Cancel" Send="Destroy"/>
+        <Sound value="SynodBuoyMorphSound"/>
+    </CActorSound>
     <CActorAction id="ZerglingHoloRelease" parent="GenericAttack" effectImpact="HoloZerglingArrival" effectLaunch="ZerglingHoloReleaseLM">
         <LaunchAssets Sound="HighTemplar_PsionicOrbLaunch"/>
         <ImpactMap index="None" Model="PointDefenseDroneAttackBeamImpact" Sound="ExplosiveGlaiveImpactSound"/>
@@ -1927,13 +2457,6 @@
     </CActorMissile>
     <CActorUnit id="BlimpSynoid" parent="GenericUnitStandardNoAutoSoundLinks" unitName="BlimpSynoid">
         <Aliases value="_UnitHuge"/>
-        <On Terms="ActorCreation" Send="Create BlimpIdleSound"/>
-        <On Terms="ActorCreation" Send="Create BlimpMovementSound"/>
-        <On Terms="ActorCreation" Target="BlimpMovementSound" Send="SoundSetVolume Linear -18.000000@0.000000,-96.000000@1000.000000"/>
-        <On Terms="UnitMovementUpdate.*.Walk" Target="BlimpIdleSound" Send="SoundSetVolume Linear -18.000000@0.000000,-96.000000@1000.000000"/>
-        <On Terms="UnitMovementUpdate.*.Walk" Target="BlimpMovementSound" Send="SoundSetVolume Linear"/>
-        <On Terms="UnitMovementUpdate.*.Stand" Target="BlimpIdleSound" Send="SoundSetVolume Linear"/>
-        <On Terms="UnitMovementUpdate.*.Stand" Target="BlimpMovementSound" Send="SoundSetVolume Linear -18.000000@0.000000,-96.000000@1000.000000"/>
         <On Terms="Abil.BlimpSearchlights.SourceCastStart" Send="Create SoundEmitter UI_alarm_BattlecruiserHangar_stereo"/>
         <On Terms="Abil.BlimpSearchlights.SourceCastStop" Target="SoundEmitter" Send="Destroy"/>
         <Model value="Blimp2"/>
@@ -1960,13 +2483,12 @@
         <GroupSoundArray index="Attack" value="ScienceVessel_Attack"/>
         <GroupSoundArray index="Pissed" value="ScienceVessel_Pissed"/>
         <GroupSoundArray index="Movement" value="ScienceVessel_Movement"/>
-        <SoundArray index="Ready" value="ScienceVessel_Ready"/>
-        <SoundArray index="Help" value="ScienceVessel_Help"/>
-        <SoundArray index="What" value="ScienceVessel_What"/>
-        <SoundArray index="Yes" value="ScienceVessel_Yes"/>
-        <SoundArray index="Attack" value="ScienceVessel_Attack"/>
+        <SoundArray index="Ready" value="Synoid_WardenAirship_Ready"/>
+        <SoundArray index="Help" value="Synoid_UmpireCraft_Help"/>
+        <SoundArray index="What" value="Synoid_WardenAirship_What"/>
+        <SoundArray index="Yes" value="Synoid_WardenAirship_What"/>
         <SoundArray index="Pissed" value="ScienceVessel_Pissed"/>
-        <SoundArray index="Movement" value="ScienceVessel_Movement"/>
+        <SoundArray index="Movement" value="BlimpMovementSound"/>
     </CActorUnit>
     <CActorRange id="BuildRangeMedium">
         <Flags index="SuppressSaveLoad" value="1"/>
@@ -2267,7 +2789,8 @@
     </CActorAction>
     <CActorMissile id="WarDroneAttackMissile" parent="GenericAttackMissile" unitName="SJGriffonWeapon2">
         <On index="1" Terms="UnitBirth" Send="AnimBracketStart Lifetime {} Turbo"/>
-        <Model value="WarDroneWeapon"/>
+        <Model value="LiberatorMissile"/>
+        <Scale value="0.800000"/>
     </CActorMissile>
     <CActorUnit id="HealEmitter" parent="GenericUnitBase" unitName="HealEmitter">
         <Aliases value="_UnitMedium"/>
@@ -2634,13 +3157,12 @@
         <ShieldArmorIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel0.dds"/>
         <SnapshotActor value="Snapshot"/>
         <SoundArray index="Birth" value="SynoidEnthralledReady"/>
-        <SoundArray index="Ready" value="SynoidEnthralledReady"/>
-        <SoundArray index="Help" value="Ravasaur_Help"/>
-        <SoundArray index="What" value="Ravasaur_What"/>
-        <SoundArray index="Yes" value="Ravasaur_Yes"/>
-        <SoundArray index="Attack" value="Ravasaur_Attack"/>
+        <SoundArray index="Ready" value="Synoid_Enthralled_Ready"/>
+        <SoundArray index="Help" value="Synoid_Enthralled_Help"/>
+        <SoundArray index="What" value="Synoid_Enthralled_What"/>
+        <SoundArray index="Yes" value="Synoid_Enthralled_Yes"/>
+        <SoundArray index="Attack" value="Synoid_Enthralled_Attack"/>
         <SoundArray index="Pissed" value="Ravasaur_Pissed"/>
-        <SoundArray index="Movement" value="Ravasaur_Movement"/>
         <SoundArray index="Turning" value="Ravasaur_Turning"/>
         <SoundArray index="Board" value="Ravasaur_Board"/>
         <SoundArray index="Click" value="Ravasaur_Click"/>
@@ -2901,11 +3423,12 @@
         <HeroIcon value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
         <HighlightTooltip value="Unit/Name/Spectre"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-dominionarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="Spectre_Ready"/>
-        <SoundArray index="Help" value="Spectre_Help"/>
-        <SoundArray index="What" value="Spectre_What"/>
-        <SoundArray index="Yes" value="Spectre_Yes"/>
-        <SoundArray index="Attack" value="Spectre_Attack"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="Synoid_Bloodletter_Ready"/>
+        <SoundArray index="Help" value="Synoid_Bloodletter_Help"/>
+        <SoundArray index="What" value="Synoid_Bloodletter_What"/>
+        <SoundArray index="Yes" value="Synoid_Bloodletter_Yes"/>
+        <SoundArray index="Attack" value="Synoid_Bloodletter_Attack"/>
         <SoundArray index="Pissed" value="Spectre_Pissed"/>
         <UnitIcon value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
         <Wireframe>
@@ -2913,9 +3436,13 @@
         </Wireframe>
     </CActorUnit>
     <CActorAction id="BloodletterUnitAttack" parent="GenericAttack" effectAttack="BloodletterU">
-        <LaunchAssets Model="MagrailMunition_Launch" Sound="Nova_SniperRifle_AttackLaunch_Boomy"/>
-        <ContainerAssets Model="SpecterAttackLaunch" Sound="Spectre_AttackLaunch"/>
+        <LaunchAssets Sound="Nova_SniperRifle_AttackLaunch_Boomy"/>
+        <ContainerAssets Sound="Spectre_AttackLaunch"/>
         <ImpactMap index="None" Model="SpecterAttackImpact" Sound="Spectre_AttackImpact"/>
+        <Beam value="SynoidBloodletterAttackBeam"/>
+        <AcquisitionYawHalfArc value="15.000000"/>
+        <AcquisitionPitchHalfArc value="10.000000"/>
+        <AccuracyHalfArc value="5.000000"/>
     </CActorAction>
     <CActorUnit id="Hangar" parent="TerranBuildingEx" unitName="Hangar">
         <Aliases value="_UnitHuge"/>
@@ -3023,7 +3550,7 @@
         <Host Subject="_Unit"/>
         <Sound value="PsiDecimator_PreExplosion_PowerFlux"/>
     </CActorSound>
-    <CActorUnit id="UmpireCraft2" parent="GenericUnitStandard" unitName="NOMAD">
+    <CActorUnit id="SynoidNomad" parent="GenericUnitStandard" unitName="NOMAD">
         <Aliases value="_UnitLarge"/>
         <Macros value="BuildAnim"/>
         <Macros value="RavenSpellAnim"/>
@@ -3090,6 +3617,7 @@
             <Image value="Assets\Textures\Wireframe-Terran-Raven.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-raven.dds"/>
+        <HighlightTooltip value="Unit/Name/SynoidNomad"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <SoundArray index="Ready" value="Raven_Ready"/>
         <SoundArray index="Help" value="Raven_Help"/>
@@ -3101,7 +3629,6 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Raven.dds"/>
         </Wireframe>
-        <HighlightTooltip value="Unit/Name/UmpireCraft2"/>
     </CActorUnit>
     <CActorUnit id="UmpireEMPEmitter" parent="GenericUnitBase" unitName="EMPEmitter">
         <Aliases value="_UnitMedium"/>
@@ -3519,11 +4046,11 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-griffon.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
-        <SoundArray index="Ready" value="Diamondback_Ready"/>
-        <SoundArray index="Help" value="Diamondback_Help"/>
-        <SoundArray index="What" value="Diamondback_What"/>
-        <SoundArray index="Yes" value="Diamondback_Yes"/>
-        <SoundArray index="Attack" value="Diamondback_Attack"/>
+        <SoundArray index="Ready" value="Synoid_Griffon_Ready"/>
+        <SoundArray index="Help" value="Synoid_UmpireCraft_Help"/>
+        <SoundArray index="What" value="Synoid_Griffon_What"/>
+        <SoundArray index="Yes" value="Synoid_Griffon_Yes"/>
+        <SoundArray index="Attack" value="Synoid_Griffon_Attack"/>
         <SoundArray index="Pissed" value="Diamondback_Pissed"/>
         <SoundArray index="Movement" value="Wraith_Movement"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-griffon.dds"/>
@@ -3710,7 +4237,7 @@
         <On Terms="Behavior.AnathemaLightningStormStun.Off" Send="AnimBracketStop BSD"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
-        <Model value="SJHyperionLightningStormImpactModel"/>
+        <Model value="SynoidAnathemaEMPPSIScrambler"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
     <CActorModel id="AnathemaLightningStormModel" parent="ModelAnimationStyleOneShot">
@@ -3977,7 +4504,7 @@
         <DeathCustoms index="10" removed="1"/>
         <DeathCustoms index="11" removed="1"/>
         <DeathCustoms index="12" removed="1"/>
-        <DeathActorModel value="UnitDeathModel"/>
+        <DeathActorModel value="SynoidCapitalShipDeath"/>
         <PlacementModel value="SynoidPirateCapitalShip"/>
         <PortraitModel value="SynoidCapitalShipPortrait"/>
         <TerrainSquibs index="0" removed="1"/>
@@ -3992,6 +4519,14 @@
             <Image index="0" value="Assets\Textures\wireframe-terran-cerberus.dds"/>
         </Wireframe>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Birth" value="Synoid_Anathema_Ready"/>
+        <SoundArray index="Ready" value="Synoid_Anathema_Ready"/>
+        <SoundArray index="Help" value="Synoid_Anathema_Help"/>
+        <SoundArray index="What" value="Synoid_Anathema_What"/>
+        <SoundArray index="Yes" value="Synoid_Anathema_Yes"/>
+        <SoundArray index="Attack" value="Synoid_Anathema_Attack"/>
+        <SoundArray index="Pissed" value="Synoid_Anathema_Pissed"/>
+        <SoundArray index="Movement" value="SynoidAnathemaMovementSound"/>
     </CActorUnit>
     <CActorSiteOpLocalOffset id="SOpMoveUpBy5Dot5">
         <LocalOffset value="0.000000,0.000000,5.500000"/>
@@ -4181,11 +4716,12 @@
         <EditorCategories value=""/>
         <On Terms="Effect.UmpireShieldingAB2.Start" Send="Create"/>
         <On Terms="Effect.UmpireShieldingBeamEnd.Start" Send="AnimBracketStop BSD"/>
-        <Model value="SynoidNanoRepairBeam"/>
+        <Model value="ArchonAttackBeam"/>
         <HostLaunch Subject="_Selectable"/>
         <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
         <HostImpact Subject="_Selectable" Scope="Target"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
+        <Scale value="0.100000,1.000000,0.100000"/>
     </CActorBeamSimple>
     <CActorModelMaterial id="UmpireShieldingGlaze" parent="GlazeParent">
         <On Terms="Behavior.UmpireShielding.On" Send="Create"/>
@@ -4259,12 +4795,12 @@
         <HeroIcon value="Assets\Textures\btn-unit-collection-defensivematrixdrone-covertops.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
         <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
-        <SoundArray index="Ready" value="WidowMine_Ready"/>
+        <SoundArray index="Ready" value="Synoid_TankBuster_What"/>
         <SoundArray index="Help" value="WidowMine_Attack"/>
-        <SoundArray index="What" value="WidowMine_What"/>
-        <SoundArray index="Yes" value="WidowMine_Yes"/>
-        <SoundArray index="Attack" value="WidowMine_Yes"/>
-        <SoundArray index="Pissed" value="WidowMine_Pissed"/>
+        <SoundArray index="What" value="Synoid_TankBuster_What"/>
+        <SoundArray index="Yes" value="Synoid_TankBuster_Attack"/>
+        <SoundArray index="Attack" value="Synoid_TankBuster_Attack"/>
+        <SoundArray index="Pissed" value=""/>
         <SoundArray index="Movement" value="WidowMine_ArmedBeep"/>
         <StatusColors index="Shields">
             <ColorArray index="0" value="255,0,128,0"/>
@@ -4640,10 +5176,12 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-raven.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
-        <SoundArray index="Ready" value="Raven_Ready"/>
-        <SoundArray index="Help" value="Raven_Help"/>
-        <SoundArray index="What" value="Raven_What"/>
-        <SoundArray index="Yes" value="Raven_Yes"/>
+        <SoundArray index="Birth" value="Amb_ElectricArc_UmojanLabScienceComplex"/>
+        <SoundArray index="Ready" value="Synoid_UmpireCraft_Ready"/>
+        <SoundArray index="Help" value="Synoid_UmpireCraft_Help"/>
+        <SoundArray index="What" value="Synoid_UmpireCraft_What"/>
+        <SoundArray index="Yes" value="Synoid_UmpireCraft_What"/>
+        <SoundArray index="Attack" value="Synoid_UmpireCraft_Attack"/>
         <SoundArray index="Pissed" value="Raven_Pissed"/>
         <SoundArray index="Movement" value="Raven_Movement"/>
         <UnitIcon value="Assets\Textures\talent-swann-level05-vespenedrone.dds"/>
@@ -4876,7 +5414,7 @@
         <EditorCategories value=""/>
         <On Terms="Effect.UmpireLockdownAB.Start" Send="Create"/>
         <On Terms="Effect.lockdownbeamend.Start" Send="AnimBracketStop BSD"/>
-        <Model value="DiamondbackAttackBeam"/>
+        <Model value="SynoidInterferenceMatrixBeam"/>
         <HostLaunch Subject="_Selectable"/>
         <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
         <HostImpact Subject="_Selectable" Scope="Target"/>
@@ -4934,8 +5472,9 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
         <MaxScale value="1.400000"/>
-        <AutoScaleFactor value="0.700000"/>
-        <AutoScaleFromSelectionFactor value="0.700000"/>
+        <AutoScaleFactor value="0.400000"/>
+        <AutoScaleFromSelectionFactor value="0.400000"/>
+        <Scale value="2.000000"/>
     </CActorModel>
     <CActorAction id="WarhoundStingerAttack" parent="GenericAttack" effectImpact="WarhoundStingerU" effectLaunch="WarhoundStingerLM">
         <LaunchAssets Model="MagrailMunition_Launch" Sound="Loki_CannonLaunch"/>
@@ -4995,7 +5534,7 @@
             <VoiceLink value="ShadowUnit_DeathVox"/>
             <Name value="Shadow"/>
         </DeathCustoms>
-        <DeathActorModel value="UnitDeathModelUnscaled"/>
+        <DeathActorModel value="RancorSynoidDeath"/>
         <PlacementModel value="Rancor"/>
         <PortraitModel value="Lurker_RCZ_Portrait"/>
         <StandAnimTurnTime value="3.33"/>

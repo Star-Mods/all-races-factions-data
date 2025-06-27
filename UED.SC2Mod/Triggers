@@ -2405,7 +2405,7 @@
         </Element>
         <Element Type="Param" Id="B61AED76">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="4A15EC5F"/>
-            <Value>Valkyrie</Value>
+            <Value>ALLRACE2UEDValkyrie</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Unit"/>
         </Element>

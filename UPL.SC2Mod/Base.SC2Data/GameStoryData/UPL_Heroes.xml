@@ -461,7 +461,7 @@
         <EditorCategories value="AbilityorEffectType:Units,Race:UPL"/>
         <Effect index="0" value="UPLScoutGrenadeLaunch"/>
         <Cost>
-            <Vital index="Energy" value="100"/>
+            <Vital index="Energy" value="75"/>
             <Charge>
                 <CountMax value="2"/>
                 <CountStart value="1"/>
@@ -2519,18 +2519,12 @@
         <ShieldArmorName value="Unit/ShieldArmorName/UPLScoutShields"/>
         <LateralAcceleration value="46.0625"/>
         <RepairTime value="41.667"/>
-        <AbilArray Link="Sprint"/>
-        <AbilArray Link="UPLSpaceTrashCoordination"/>
-        <AbilArray Link="UPLScoutGrenade"/>
         <BehaviorArray Link="ClaymoreMineHaveCharges"/>
         <BehaviorArray Link="InfantryMedkit"/>
         <BehaviorArray Link="InfantryMedkit@Handler"/>
         <WeaponArray Link="UPLScout"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="Sprint" Type="AbilCmd" AbilCmd="Sprint,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="UPLScoutGrenade" Type="AbilCmd" AbilCmd="UPLScoutGrenade,Execute" Row="2" Column="2"/>
-            <LayoutButtons Face="SpaceTrashCoordination" Type="AbilCmd" AbilCmd="UPLSpaceTrashCoordination,Execute" Row="2" Column="1"/>
-            <LayoutButtons Face="InfantryMedkit" Type="Passive" Requirements="InfantryMedkit@ChargeAvailable" Row="2" Column="3"/>
+            <LayoutButtons Face="InfantryMedkit" Type="Passive" Requirements="InfantryMedkit@ChargeAvailable" Row="2" Column="0"/>
             <LayoutButtons>
                 <Face value="InfantryMedkit"/>
                 <Type value="Passive"/>
@@ -2538,7 +2532,7 @@
                 <Requirements value="InfantryMedkit@Have"/>
                 <ShowInGlossary value="0"/>
                 <Row value="2"/>
-                <Column value="3"/>
+                <Column value="0"/>
             </LayoutButtons>
         </CardLayouts>
         <SubgroupPriority value="43"/>
@@ -2553,9 +2547,6 @@
         <InnerRadius value="0.3125"/>
         <LifeStart value="70"/>
         <LifeMax value="70"/>
-        <EnergyStart value="25"/>
-        <EnergyMax value="150"/>
-        <EnergyRegenRate value="0.3984"/>
         <ScoreMake value="75"/>
         <ScoreKill value="75"/>
         <Speed value="3"/>

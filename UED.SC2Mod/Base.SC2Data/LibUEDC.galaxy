@@ -234,7 +234,7 @@ bool libUEDC_gt_EffectSpawnunit_Func (bool testConds, bool runActions) {
         return true;
     }
     else {
-        if (((UnitGetType(EventUnit()) == "Strikefighter") || (UnitGetType(EventUnit()) == "Napoleon") || (UnitGetType(EventUnit()) == "Typhoon") || (UnitGetType(EventUnit()) == "CitadelAAT") || (UnitGetType(EventUnit()) == "PeenemundeMRLS") || (UnitGetType(EventUnit()) == "Valkyrie") || (UnitGetType(EventUnit()) == "TransportShuttle") || (UnitGetType(EventUnit()) == "DrakkarAPC"))) {
+        if (((UnitGetType(EventUnit()) == "Strikefighter") || (UnitGetType(EventUnit()) == "Napoleon") || (UnitGetType(EventUnit()) == "Typhoon") || (UnitGetType(EventUnit()) == "CitadelAAT") || (UnitGetType(EventUnit()) == "PeenemundeMRLS") || (UnitGetType(EventUnit()) == "ALLRACE2UEDValkyrie") || (UnitGetType(EventUnit()) == "TransportShuttle") || (UnitGetType(EventUnit()) == "DrakkarAPC"))) {
             libNtve_gf_AttachModelToUnit(EventUnit(), "UEDUnitCreatedEffectMedium", "Ref_Center");
             libUEDC_gf_Randomsoundonpoint("unitcompleteUED", "TeleportationNodeUnitSpawnSound", "unitcompleteUED", null, null, null, null, null, null, null, 3, 80.0, 12, PlayerGroupAll(), UnitGetPosition(EventUnit()));
             UnitBehaviorAdd(EventUnit(), "GlazeTeleportationEffect", EventUnit(), 1);

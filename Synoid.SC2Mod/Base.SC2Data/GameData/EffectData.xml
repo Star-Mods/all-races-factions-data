@@ -12,6 +12,99 @@
         <AreaArray Radius="5" Effect="ALLRACE2GriffonInterferenceMatrixAreaSwitch"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CEffectDamage id="SynoidChagedIronFletcher">
+        <EditorCategories value="Race:Synoid"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Armored" value="20"/>
+        <ArmorReduction value="1"/>
+        <Kind value="Ranged"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectSet id="ChargedIronFletcherImpactSet">
+        <EditorCategories value="Race:Synoid"/>
+        <EffectArray value="SynoidChagedIronFletcher"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="SynoidChargedIronFletcherLM">
+        <EditorCategories value="Race:Synoid"/>
+        <ImpactEffect value="ChargedIronFletcherImpactSet"/>
+        <AmmoUnit value="ChargedIronFletcherWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectModifyUnit id="SynoidBloodletterU">
+        <ValidatorArray value="TargetIsEnemy"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ImpactUnit Value="Source"/>
+        <VitalArray index="Energy">
+            <Change value="10"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="SynoidBrainWashLinkApplyHiddenBehaviortoCaster">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <WhichUnit Effect="SynoidBrainWashLinkSet" Value="Caster"/>
+        <Behavior value="SynoidCensorBrainWashHiddenCasterBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidCenserBrainwashApplyPermanentBehavior">
+        <ValidatorArray index="0" value="SynoidBrainwashLink2ndStageCombineNoCasterLinked"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <Behavior value="SynoidMindControlPermanentBehavior2"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="SynoidBrainwashControlLinkLaunchStageTwo">
+        <ValidatorArray index="0" value="SynoidRangeCheckLE9"/>
+        <ValidatorArray value="NotHidden"/>
+        <ValidatorArray value="NotOracleStasisTrapped"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ImpactEffect value="SynoidCensorBrainwashStage2LinkedBehavior"/>
+        <AmmoUnit value="SynoidBrainwashLinkMissile2ndStage"/>
+        <Movers Link="SynoidCenserBrainwashLink2ndStageMover" IfRangeLTE="500"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="SynoidBrainWashLinkApplyBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <Behavior value="SynoidCensorBrainWash2ndstageBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidBrainWashLinkApplyBehaviortoCaster">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <WhichUnit Effect="SynoidBrainWashLinkSet" Value="Caster"/>
+        <Behavior value="SynoidCensorBrainWash2ndstageCasterBehavior"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="SynoidBrainwashLinkFinalSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SynoidBrainWashLinkApplyBehavior"/>
+        <EffectArray value="SynoidBrainWashLinkApplyBehaviortoCaster"/>
+        <EffectArray value="SynoidBrainwashLinkMindControllingStagePersistent"/>
+        <EffectArray value="SynoidBrainWashLinkApplyHiddenBehaviortoCaster"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="SynoidBrainwashLinkMindControllingStagePersistent">
+        <EditorCategories value=""/>
+        <PeriodicPeriodArray value="0.2"/>
+        <PeriodCount value="140"/>
+        <PeriodicEffectArray value="SynoidBrainwashControlLinkLaunchStageTwo"/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodicValidator value="SynoidBrainwashLink2ndStageCombine"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <FinalEffect value="SynoidCenserBrainwashApplyPermanentBehavior"/>
+    </CEffectCreatePersistent>
+    <CEffectRemoveBehavior id="SynoidCenserWithdrawBrainwashLink">
+        <EditorCategories value="Race:Synoid"/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="SynoidCensorBrainWash2ndstageCasterBehavior"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="SynoidCensorBrainwashStage2LinkedBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Behavior value="SynoidCensorBrainWash2ndstageBehavior"/>
+    </CEffectApplyBehavior>
     <CEffectEnumArea id="SynoidEnthralledAttackSearch">
         <EditorCategories value="Race:Synoid"/>
         <ImpactLocation Value="SourceUnit"/>
@@ -23,6 +116,10 @@
         <SearchFlags index="OffsetAreaByAngle" value="0"/>
         <SearchFlags index="SameCliff" value="1"/>
     </CEffectEnumArea>
+    <CEffectSwitch id="SynoidBrainWasjControlLinkFinalSwitch">
+        <EditorCategories value="Race:Synoid"/>
+        <CaseArray Validator="SynoidBrainwashLinkCombine" Effect="SynoidBrainwashLinkFinalSet"/>
+    </CEffectSwitch>
     <CEffectLaunchMissile id="SynoidMindControlLinkLaunch">
         <ValidatorArray index="0" value="SynoidRangeCheckLE13"/>
         <ValidatorArray value="NotHidden"/>
@@ -31,6 +128,15 @@
         <LaunchOffset value="0,0,5"/>
         <ImpactEffect value="SynoidMindControlTowerLinkedBehavior"/>
         <AmmoUnit value="SynoidMindControlLinkMissile"/>
+        <Movers Link="Frenzy" IfRangeLTE="500"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="SynoidBrainWashControlLinkLaunch">
+        <ValidatorArray index="0" value="SynoidRangeCheckLE9"/>
+        <ValidatorArray value="NotHidden"/>
+        <ValidatorArray value="NotOracleStasisTrapped"/>
+        <EditorCategories value="Race:Synoid"/>
+        <ImpactEffect value="SynoidCensorBrainwashLinkedBehavior"/>
+        <AmmoUnit value="SynoidBrainwashLinkMissile"/>
         <Movers Link="Frenzy" IfRangeLTE="500"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="SynoidMindControlLinkPersistent">
@@ -45,13 +151,29 @@
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <WhichLocation Value="TargetUnit"/>
-        <PeriodicValidator value="SynoidRangeCheckLE13"/>
+        <PeriodicValidator value="SynoidMindControlLinkCombine"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SynoidBrainWashLinkPersistent">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="SynoidBrainWashControlLinkLaunch"/>
+        <FinalEffect value="SynoidBrainWasjControlLinkFinalSwitch"/>
+        <PeriodCount value="30"/>
+        <PeriodicValidator value="SynoidBrainwashLinkCombine"/>
+        <PeriodicEffectArray value="SynoidBrainWashControlLinkLaunch"/>
+        <PeriodicPeriodArray value="0.28"/>
     </CEffectCreatePersistent>
     <CEffectSet id="SynoidMindControlLinkSet">
         <EditorCategories value="Race:Synoid"/>
         <EffectArray value="SynoidMindControlLinkPersistent"/>
+        <EffectArray value="SynoidMindControlTowerLinkedBehaviorInitializaton"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <AINotifyFlags index="MajorDanger" value="1"/>
+        <ValidatorArray value="NotFrenzied"/>
     </CEffectSet>
     <CEffectDamage id="MindControlStormAntiStructureDamage">
         <EditorCategories value="Race:Synoid"/>
@@ -62,7 +184,7 @@
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <AINotifyFlags index="MajorDanger" value="1"/>
         <Behavior value="SynoidMindControlPermanentBehavior"/>
-        <ValidatorArray index="0" removed="1"/>
+        <ValidatorArray index="0" value="NotFrenzied"/>
     </CEffectApplyBehavior>
     <CEffectSwitch id="SynoidBloodletterPsionicPulseTargetSwitch">
         <EditorCategories value="Race:Synoid"/>
@@ -88,6 +210,14 @@
         <EditorCategories value="Race:Synoid"/>
         <CaseArray Validator="SynoidMindControlLinkCombine" Effect="MindControlStormApplyBehavior"/>
     </CEffectSwitch>
+    <CEffectSet id="SynoidBrainWashLinkSet">
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <EffectArray value="SynoidBrainWashLinkPersistent"/>
+        <EffectArray value="SynoidCensorBrainwashLinkedBehavior"/>
+        <ValidatorArray value="NotFrenzied"/>
+    </CEffectSet>
     <CEffectCreatePersistent id="SynoidMindControlStormPersistent">
         <EditorCategories value="Race:Synoid"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
@@ -129,10 +259,58 @@
         <ResponseFlags index="Flee" value="1"/>
         <Behavior value="SynoidMindControlTowerLinked"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidCensorBrainwashLinkedBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Behavior value="SynoidCensorBrainWashLinkedStageOne"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidMindControlTowerLinkedBehaviorInitializaton">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <AINotifyFlags index="MajorDanger" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Behavior value="SynoidMindControlTowerLinked"/>
+        <Flags index="UseDuration" value="1"/>
+        <Duration value="1"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SynoidPsionicPulseStunCasterAB">
         <EditorCategories value="Race:Synoid"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="SynoidBloodLetterCasterStunned"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="SynoidSatcomTowerSpybotCreatePersistent">
+        <EditorCategories value="Race:Synoid"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SynoidSatcomTowerSpybotSearchArea"/>
+        <PeriodicPeriodArray value="3.5"/>
+        <RevealRadius value="2"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="SynoidSatcomTowerSpybotSearchArea">
+        <EditorCategories value="Race:Synoid"/>
+        <AreaArray Radius="2" Effect="SynoidSatcomeTowerSpybotApplyBehavior"/>
+    </CEffectEnumArea>
+    <CEffectSet id="SynoidSatcomTowerSpybotSet">
+        <EditorCategories value="Race:Synoid"/>
+        <EffectArray value="SynoidSatcomTowerSpybotCreatePersistent"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="SynoidSatcomeTowerSpybotApplyBehavior">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <AINotifyFlags index="MinorDanger" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Behavior value="SatcomTowerSpybotRevealBehaviorTemporary"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SynoidSatcomeTowerSpybotApplyBehaviorFinal">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value="Race:Synoid"/>
+        <Behavior value="SatcomTowerSpybotRevealBehaviorPermanent"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SynoidUltrasonicPulseApplyBehavior">
         <ValidatorArray index="0" removed="1"/>
@@ -296,7 +474,7 @@
         <EditorCategories value="Race:Synoid"/>
         <WhichLocation Value="TargetPoint"/>
         <Effect value="SynoidSatComGreaterWarDronesCU2"/>
-        <Radius value="1.5"/>
+        <Radius value="1.2"/>
     </CEffectRandomPointInCircle>
     <CEffectSet id="SynoidSatComGreaterWarDronesSet2">
         <EditorCategories value="Race:Synoid"/>
@@ -619,6 +797,7 @@
         <EditorCategories value="Race:Synoid"/>
         <EffectArray value="BloodletterU"/>
         <EffectArray value="BloodletterBleedAB"/>
+        <EffectArray value="SynoidBloodletterU"/>
     </CEffectSet>
     <CEffectSet id="BombBotPiercingCharge">
         <EditorCategories value="Race:Synoid"/>
@@ -655,7 +834,7 @@
         </Marker>
         <LaunchLocation Value="CasterUnit"/>
         <ExcludeArray/>
-        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <TargetSorts>
             <SortArray value="TSMarker"/>
         </TargetSorts>
@@ -694,7 +873,7 @@
         <EditorCategories value="Race:Synoid"/>
         <LaunchLocation Value="CasterUnit"/>
         <ExcludeArray/>
-        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray MaxCount="1" Radius="6" Effect="ChopperSharpshooterCPersistent"/>
         <Marker>
             <MatchFlags index="Id" value="1"/>
@@ -708,7 +887,7 @@
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetUnit"/>
         <ExcludeArray/>
-        <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray MaxCount="1" Radius="6" Effect="ChopperSharpshooterAU"/>
         <Marker>
             <MatchFlags index="Id" value="1"/>
@@ -1275,7 +1454,6 @@
     <CEffectSet id="IronFletcherImpactSet">
         <EditorCategories value="Race:Synoid"/>
         <EffectArray value="IronFletcher"/>
-        <EffectArray value="IronFletcherStackAB"/>
     </CEffectSet>
     <CEffectApplyBehavior id="IronFletcherStackAB">
         <EditorCategories value="Race:Synoid"/>
@@ -1356,9 +1534,9 @@
         <ArmorReduction value="1"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Melee"/>
-        <Amount value="22"/>
+        <Amount value="35"/>
         <Death value="Eviscerate"/>
-        <AttributeBonus index="Armored" value="10"/>
+        <AttributeBonus index="Armored" value="28"/>
         <ExcludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="PsiIndoctrinatorAOEAbilAB">
@@ -1489,7 +1667,6 @@
         <AttributeBonus index="Armored" value="5"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
-        <LeechFraction index="Energy" value="0.75"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="InterceptorDroneAB">
         <EditorCategories value="Race:Synoid"/>
@@ -1548,7 +1725,7 @@
         <PeriodicPeriodArray value="0.8"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SynoidLightningStormAB">
-        <ValidatorArray index="0" value="IsMechanical"/>
+        <ValidatorArray index="0" removed="1"/>
         <EditorCategories value="Race:Synoid"/>
         <Behavior value="AnathemaLightningStormStun"/>
     </CEffectApplyBehavior>
@@ -1564,7 +1741,6 @@
         <AreaArray Radius="1" RadiusBonus="0.5" Effect="AnathemaLightningStormSet"/>
     </CEffectEnumArea>
     <CEffectSet id="AnathemaLightningStormSet">
-        <ValidatorArray value="empvalidator"/>
         <EditorCategories value="Race:Synoid"/>
         <EffectArray value="AnathemaLightningStormDamage"/>
         <EffectArray value="SynoidLightningStormAB"/>

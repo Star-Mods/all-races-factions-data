@@ -119,7 +119,7 @@
         </DeathCustoms>
         <UnitKillRank Text="UnitKillRank/UPLSpecOps"/>
         <SoundArray index="Birth" value=""/>
-        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Ready" value="InfantryRocket_Ready"/>
         <SoundArray index="Help" value="InfantryRocket_Help"/>
         <SoundArray index="What" value="InfantryRocket_What"/>
         <SoundArray index="Yes" value="InfantryRocket_Yes"/>

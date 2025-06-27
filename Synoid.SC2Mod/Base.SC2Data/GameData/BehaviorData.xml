@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="SynoidBloodletterCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SatcomTowerSpybotRevealBehaviorPermanent">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-shortsighted.dds"/>
+        <BehaviorCategories index="Reveal" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Duration value="340"/>
+        <RevealUnit Value="Target"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SynoidBloodLetterCasterStunned">
         <InfoFlags index="Hidden" value="1"/>
         <BehaviorCategories index="Stun" value="1"/>
@@ -9,6 +29,30 @@
         <Modification>
             <StateFlags index="Stun" value="1"/>
         </Modification>
+        <InfoIcon value="Assets\Textures\btn_Synoid_Psionic_Pulse_Ability.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidCensorBrainWash2ndstageCasterBehavior">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Duration value="28"/>
+        <Modification MoveSpeedMultiplier="0.1">
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="RevealProgress" value="1"/>
+            <AbilLinkEnableArray value="SynoidCenserWithdrawBrainwashLink"/>
+            <AbilLinkDisableArray value="MeditruckHeal"/>
+        </Modification>
+        <TimeScaleSource Value="Caster"/>
+        <Period value="28"/>
+        <PeriodCount value="1"/>
+        <InfoIcon value="Assets\Textures\btn_Synoid_Brainwash_Link.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidCensorBrainWashHiddenCasterBehavior">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <TimeScaleSource Value="Caster"/>
+        <Duration value="28"/>
+        <Period value="28"/>
+        <PeriodCount value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SynoidMindControlPermanentBehavior">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -20,10 +64,49 @@
         </Modification>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidCensorBrainWash2ndstageBehavior">
+        <Alignment value="Negative"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Duration value="1"/>
+        <Modification AttackTargetPriority="-1">
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <BehaviorCategoriesEnable index="Stun" value="1"/>
+        </Modification>
+        <InfoIcon value="Assets\Textures\btn_Synoid_Brainwash_Link.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidMindControlPermanentBehavior2">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <BehaviorCategories index="User8" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Player Value="Caster"/>
+        <Modification>
+            <BehaviorCategoriesEnable index="User8" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SynoidMindControlTowerLinked">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <Duration value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SatcomTowerSpybotRevealBehaviorTemporary">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-shortsighted.dds"/>
+        <BehaviorCategories index="Reveal" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Duration value="3"/>
+        <FinalEffect value="SynoidSatcomeTowerSpybotApplyBehaviorFinal"/>
+        <Modification>
+            <StateFlags index="SuppressCloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SynoidCensorBrainWashLinkedStageOne">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
+        <Duration value="0.7"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SynoidUltrasonicPulseStun">
         <Alignment value="Negative"/>
@@ -37,7 +120,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SynoidUmpireRushActive">
         <Alignment value="Positive"/>
-        <InfoIcon value="Assets\Textures\btn-upgrade-terran-jotunboosters.dds"/>
+        <InfoIcon value="Assets\Textures\UmpireRush.dds"/>
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
@@ -125,7 +208,7 @@
         <RemoveValidatorArray value="NotOracleStasisTrapped"/>
         <BuffFlags index="Countdown" value="0"/>
         <Duration value="0.2"/>
-        <Modification MoveSpeedMultiplier="0.7"/>
+        <Modification MoveSpeedMultiplier="0.6"/>
         <DamageResponse>
             <Kind index="Spell" value="0"/>
             <Kind index="Splash" value="0"/>
@@ -157,6 +240,7 @@
         <DeathType value="Silentkill"/>
         <MaxStackCount value="99"/>
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-viking-piercingattacks.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BombDisruption">
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
@@ -179,6 +263,7 @@
             <StateFlags index="Cloak" value="1"/>
         </Modification>
         <DisableValidatorArray value="BuoyFUIA"/>
+        <InfoIcon value="Assets\Textures\btn-unit-terran-sabotagedroneblackops.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CrematorDefendEnable">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -233,6 +318,7 @@
             <WeaponEnableArray value="SynoidCapitalShip"/>
             <WeaponDisableArray value="AnathemaHoming"/>
         </Modification>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-battlecruiser-laser.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HealSearch">
         <InfoFlags index="Hidden" value="1"/>
@@ -327,7 +413,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="LightsOut">
         <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-behavior-incapacitated.dds"/>
+        <InfoIcon value="Assets\Textures\btn-unit-terran-tychusfirebat-revive.dds"/>
         <BehaviorCategories index="Stun" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <DisplayDuration index="Self" value="1"/>
@@ -443,6 +529,7 @@
             <StateFlags index="SuppressCloak" value="1"/>
             <LifeArmorBonus value="-5"/>
         </Modification>
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-fenix-arbiterchampiondetectionresearch.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SpyBotRevelation">
         <Alignment value="Negative"/>
@@ -507,7 +594,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="AnathemaLightningStormStun">
         <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-purifierstasisending.dds"/>
         <BehaviorCategories index="Stun" value="1"/>
         <EditorCategories value="Race:Synoid,AbilityorEffectType:Units"/>
         <Duration value="5"/>
@@ -723,7 +810,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="midastouch">
         <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-ability-protoss-phaseshift.dds"/>
+        <InfoIcon value="Assets\Textures\btn_MidasIgnitor_Explode_Ability.dds"/>
         <EditorCategories value="AbilityorEffectType:Units,Race:Synoid"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
@@ -733,7 +820,6 @@
         <InitialEffect value="RetributionFieldDamage2"/>
         <RefreshEffect value="RetributionFieldDamage2"/>
         <Modification MoveSpeedMultiplier="0.8">
-            <StateFlags index="SuppressEnergyRegen" value="1"/>
             <DamageDealtFraction index="Spell" value="-0.5"/>
             <DamageDealtFraction index="Melee" value="-0.5"/>
             <DamageDealtFraction index="Ranged" value="-0.5"/>
