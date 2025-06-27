@@ -2532,22 +2532,22 @@
 <!--            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="UEDCalldownStructure,Halt" Row="2" Column="4"/>-->
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="CalldownEnrichmentTower" Type="AbilCmd" AbilCmd="CalldownEnrichmentTower,Execute" Row="1" Column="0"/>
-            <LayoutButtons>
-                <Face value="UEDBuildEazy"/>
-                <Type value="Submenu"/>
-                <Requirements value="HaveUEDCommander"/>
-                <SubmenuCardId value="0002"/>
-                <Row value="2"/>
-                <Column value="0"/>
-            </LayoutButtons>
-            <LayoutButtons>
-                <Face value="UEDBuildAdvanced"/>
-                <Type value="Submenu"/>
-                <Requirements value="HaveUEDCommander"/>
-                <SubmenuCardId value="0003"/>
-                <Row value="2"/>
-                <Column value="1"/>
-            </LayoutButtons>
+<!--            <LayoutButtons>-->
+<!--                <Face value="UEDBuildEazy"/>-->
+<!--                <Type value="Submenu"/>-->
+<!--                <Requirements value="HaveUEDCommander"/>-->
+<!--                <SubmenuCardId value="0002"/>-->
+<!--                <Row value="2"/>-->
+<!--                <Column value="0"/>-->
+<!--            </LayoutButtons>-->
+<!--            <LayoutButtons>-->
+<!--                <Face value="UEDBuildAdvanced"/>-->
+<!--                <Type value="Submenu"/>-->
+<!--                <Requirements value="HaveUEDCommander"/>-->
+<!--                <SubmenuCardId value="0003"/>-->
+<!--                <Row value="2"/>-->
+<!--                <Column value="1"/>-->
+<!--            </LayoutButtons>-->
             <LayoutButtons Face="BuildBeacon" Type="AbilCmd" AbilCmd="WarpUEDBeacon,Execute" Row="0" Column="1"/>
         </CardLayouts>
 <!--        <CardLayouts CardId="0002">-->

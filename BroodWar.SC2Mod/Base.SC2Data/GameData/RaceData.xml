@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
   <CRace id="BWTe">
+      <Flags index="Selectable" value="1"/>
+      <Flags index="TrialAllowed" value="1"/>
     <AttributeId value="BWTe"/>
     <RaceIcon value="@UI/RaceIcon/Terr"/>
     <GameMusic value="Music_TerrLow_SCI"/>
@@ -45,6 +47,8 @@
     <Icon value="Assets\Textures\icon-1v1-BWTerran.dds"/>
   </CRace>
   <CRace id="BWPr">
+      <Flags index="Selectable" value="1"/>
+      <Flags index="TrialAllowed" value="1"/>
     <AttributeId value="BWPr"/>
     <RaceIcon value="@UI/RaceIcon/Prot"/>
     <GameMusic value="Music_ProtLow_SCI"/>
@@ -89,6 +93,8 @@
     <Icon value="Assets\Textures\icon-1v1-BWProtoss.dds"/>
   </CRace>
   <CRace id="BWZe">
+      <Flags index="Selectable" value="1"/>
+      <Flags index="TrialAllowed" value="1"/>
     <AttributeId value="BWZe"/>
     <RaceIcon value="@UI/RaceIcon/Zerg"/>
     <GameMusic value="Music_ZergLow_SCI"/>
